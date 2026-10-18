@@ -18,6 +18,8 @@ jobs:
       - uses: quarto-dev/quarto-actions/setup@v2
         with:
           version: '1.10.18'
+      - name: Generate indexes
+        run: python3 scripts/build_public.py
       - name: Render
         run: quarto render
       - name: Check site

@@ -44,9 +44,9 @@
     "quarto",
     "research-workflows"
   ],
-  "repository_url": null,
-  "site_url": null,
-  "publication_status": "ready-for-first-upload",
+  "repository_url": "https://github.com/heshuaihan/Experitome",
+  "site_url": "https://heshuaihan.github.io/Experitome/",
+  "publication_status": "repository-published",
   "prepared_on": "2026-10-18",
   "naming_status": "confirmed",
   "name_check_date": "2026-10-18",
@@ -72,5 +72,6 @@
   "tagline_zh": "源于实践，助力发现。",
   "brand_asset": "assets/experitome-hero.png",
   "brand_asset_version": "v3",
-  "repository_description": "Built on experience. Made for discovery. A research knowledge library connecting protocols, analysis, and supporting data."
+  "repository_description": "Built on experience. Made for discovery. A research knowledge library connecting protocols, analysis, and supporting data.",
+  "website_status": "deployment-not-yet-verified"
 }

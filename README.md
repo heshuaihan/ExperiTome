@@ -4,7 +4,13 @@
 
 **源于实践，助力发现。**
 
-[实验方法](protocols/index.qmd) · [分析流程](analysis/index.qmd) · [配套数据](data/index.qmd) · [项目介绍](about.qmd) · [发展路线](roadmap.qmd)
+## 网页阅读
+
+**[打开 Experitome 网站 →](https://heshuaihan.github.io/Experitome/)**
+
+[实验方法](https://heshuaihan.github.io/Experitome/protocols/index.html) · [分析流程](https://heshuaihan.github.io/Experitome/analysis/index.html) · [配套数据](https://heshuaihan.github.io/Experitome/data/index.html) · [项目介绍](https://heshuaihan.github.io/Experitome/about.html) · [发展路线](https://heshuaihan.github.io/Experitome/roadmap.html)
+
+浏览实验路线、操作步骤、试剂与配液，使用目录导航和全文搜索查找所需内容。
 
 Experitome is an open-source project for organizing research experience, experimental protocols, data resources, and analysis workflows into a connected, traceable knowledge library. Beginning with life-science methods, it aims to help researchers build and maintain their own reusable research libraries. Chinese-first documentation; English support planned.
 
@@ -43,7 +49,7 @@ Install Quarto 1.10.18 and Python 3. Run `quarto render`, then open `_site/index
 
 ## GitHub Pages
 
-The source package includes `.github/workflows/publish.yml`. In repository Settings → Pages select GitHub Actions. Updates to main and manual workflow runs build, check and deploy; pull requests build and check only. Formal repository and website URLs will be added after first publication.
+The source package includes `.github/workflows/publish.yml`. In repository Settings → Pages select GitHub Actions. Updates to main and manual workflow runs build, check and deploy; pull requests build and check only. Repository: https://github.com/heshuaihan/Experitome. Website target: https://heshuaihan.github.io/Experitome/.
 
 Keep `.github/` and the supplied `.gitignore`; do not upload the rendered `_site/`, `.quarto/`, private manuscripts, original reports, third-party full-text PDFs, raw datasets or internal snapshots.
 

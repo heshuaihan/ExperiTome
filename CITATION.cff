@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "Please cite the relevant source publications for scientific methods and datasets. Cite this repository for its original documentation and curation. A repository URL will be added after publication."
+message: "Please cite the relevant source publications for scientific methods and datasets. Cite this repository for its original documentation and curation."
 type: software
 title: "Experitome: Protocols, Analysis and Data"
 version: "0.1.0-dev"
@@ -14,3 +14,5 @@ keywords:
   - proteomics
   - reproducible analysis
   - data curation
+repository-code: "https://github.com/heshuaihan/Experitome"
+url: "https://heshuaihan.github.io/Experitome/"

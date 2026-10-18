@@ -54,6 +54,6 @@ The Hong Kong University of Science and Technology (Guangzhou)
 
 ## 使用与引用
 
-优先引用各方法、数据和工具的原始出处；引用本库的整理与说明时，请注明 **Shuaihan He, Experitome**、对应条目及版本/访问日期。正式仓库地址在上线后补入引用文件。
+优先引用各方法、数据和工具的原始出处；引用本库的整理与说明时，请注明 **Shuaihan He, Experitome**、对应条目及版本/访问日期。项目仓库为[heshuaihan/Experitome](https://github.com/heshuaihan/Experitome)；网页阅读入口为[Experitome](https://heshuaihan.github.io/Experitome/)，在Pages部署完成后可用。
 
 [许可范围](licensing/index.qmd) · [版本与维护](review/index.qmd) · [内容路线图](roadmap.qmd)

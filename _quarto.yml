@@ -103,6 +103,7 @@ project:
     - materials/reagent_catalog.csv
     - templates/*.txt
 website:
+  site-url: https://heshuaihan.github.io/Experitome/
   title: Experitome
   search: true
   navbar:
