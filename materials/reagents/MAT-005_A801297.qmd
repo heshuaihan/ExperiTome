@@ -1,0 +1,31 @@
+---
+title: "冰乙酸"
+subtitle: "MAT-005 · Macklin · A801297"
+last_reviewed: "2026-10-18"
+---
+
+## 产品信息
+
+| 项目 | 内容 |
+|---|---|
+| 名称 | Acetic acid glacial LC-MS grade |
+| 厂家 / 货号 | Macklin / **A801297** |
+| 规格、等级及形式 | LC-MS 级；官方规格含量99.7–100% |
+| 身份状态 | 来源记载；库存批次另行登记 |
+| 使用模块 | [MOD-PROT-003](../../protocols/modules/MOD-PROT-003_胰酶消化.qmd) · [MOD-PROT-004](../../protocols/modules/MOD-PROT-004_C18-StageTip脱盐.qmd) |
+
+## 配制与使用
+
+0.5%（v/v）：50 µL 冰乙酸，以水定容至10 mL。
+
+## 保存与取用
+
+原液按瓶签；工作液标注配制日期。
+
+## 依据
+
+研究资料附录 A.1，PDF 第 65 页（SRC-016）。规格来自原始记录；标注“官方”的字段另经厂家资料核对。批号、实物包装量、开封日期、效期与库存位置由实验室另行登记。
+
+[产品资料](https://www.macklin.cn/products/A801297)
+
+[返回试剂与货号库](../index.qmd)

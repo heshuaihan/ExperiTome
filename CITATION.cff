@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "Please cite the relevant source publications for scientific methods and datasets. Cite this repository for its original documentation and curation. A repository URL will be added after publication."
+type: software
+title: "Experitome: Protocols, Analysis and Data"
+version: "0.1.0-dev"
+authors:
+  - family-names: "He"
+    given-names: "Shuaihan"
+    affiliation: "Bioscience and Biomedical Engineering Thrust; Brain and Intelligence Research Institute; The Hong Kong University of Science and Technology (Guangzhou)"
+abstract: "An open-source project organizing practical research experience, experimental protocols, data resources, and analysis workflows into a traceable, reusable knowledge library. Current draft methods focus on C. elegans proteomics and TurboID. Data and analysis collections, exchange tools, and AI-assisted discovery are planned."
+keywords:
+  - experimental protocols
+  - research resources
+  - proteomics
+  - reproducible analysis
+  - data curation

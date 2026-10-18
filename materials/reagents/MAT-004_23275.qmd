@@ -1,0 +1,31 @@
+---
+title: "比色肽段定量试剂盒"
+subtitle: "MAT-004 · Thermo Scientific · 23275"
+last_reviewed: "2026-10-18"
+---
+
+## 产品信息
+
+| 项目 | 内容 |
+|---|---|
+| 名称 | Pierce Quantitative Colorimetric Peptide Assay |
+| 厂家 / 货号 | Thermo Scientific / **23275** |
+| 规格、等级及形式 | 500 assays；含 1 mg/mL 消化肽段标准品 |
+| 身份状态 | 实验室已确认使用 |
+| 使用模块 | [MOD-PROT-005](../../protocols/modules/MOD-PROT-005_肽段定量与上样.qmd) |
+
+## 配制与使用
+
+工作液 A:B:C=50:48:2；常规20+180 µL，省样10+180 µL。
+
+## 保存与取用
+
+组分4°C；工作液室温≤30 min。
+
+## 依据
+
+研究资料附录 A.1，PDF 第 64 页（SRC-016）；手稿 Methods（SRC-001）。规格来自原始记录；标注“官方”的字段另经厂家资料核对。批号、实物包装量、开封日期、效期与库存位置由实验室另行登记。
+
+[产品资料](https://www.thermofisher.cn/order/catalog/product/23275) · [官方指南](https://documents.thermofisher.com/TFS-Assets/LSG/manuals/23275_quantpeptide_color_UG.pdf)
+
+[返回试剂与货号库](../index.qmd)

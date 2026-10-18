@@ -1,0 +1,17 @@
+---
+title: "BCA 蛋白定量 · 补充依据"
+description: "参数解释、历史方案与适用范围。"
+search: false
+---
+
+[返回当前操作](../../protocols/modules/MOD-PROT-001_蛋白定量与留样.qmd) · [版本记录](../versions/MOD-PROT-001.qmd)
+
+本页保存从操作正文移出的比较和说明。执行时以当前模块为准；历史方案需整体选择，不与主流程拼接。
+
+## 补充说明
+
+- [A55865 官方产品页](https://www.thermofisher.cn/order/catalog/product/A55865)。
+- [官方指南 MAN0029423 B.0（2023-11-17）](https://assets.thermofisher.com/TFS-Assets/LSG/manuals/MAN0029423-BCAProteinWithDIlutionFreeBSA-UG.pdf) · [官方来源](https://assets.thermofisher.com/TFS-Assets/LSG/manuals/MAN0029423-BCAProteinWithDIlutionFreeBSA-UG.pdf)。
+- [Thermo Fisher 蛋白定量概览](https://www.thermofisher.com/tw/zt/home/life-science/protein-biology/protein-assays-analysis/protein-assays.html)：BCA 线性响应的 R² >0.95 为产品概览参考，不是 A55865 每批样品的强制放行阈值。
+- [兼容性表 TR0068](https://assets.thermofisher.com/TFS-Assets/LSG/Application-Notes/TR0068-Protein-assay-compatibility.pdf) · [官方来源](https://assets.thermofisher.com/TFS-Assets/LSG/Application-Notes/TR0068-Protein-assay-compatibility.pdf)。
+- [标准曲线计算 TR0057.4](https://assets.thermofisher.com/TFS-Assets/LSG/Application-Notes/TR0057-Read-std-curves.pdf) · [官方来源](https://assets.thermofisher.com/TFS-Assets/LSG/Application-Notes/TR0057-Read-std-curves.pdf)。

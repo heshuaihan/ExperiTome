@@ -1,0 +1,40 @@
+---
+title: "TurboID 富集缓冲液"
+buffer_id: "BUF-TURBOID-001"
+status: "草案"
+version: "0.2"
+description: "HEPES/NaCl 稀释、树脂预洗、洗涤和洗脱配方。"
+---
+
+## 材料
+
+| 材料 | 厂家 / 货号 | 储备液 |
+|---|---|---|
+| [HEPES](../reagents/MAT-058_H433401.qmd) | Aladdin H433401 | 1 M；原记录pH7.0–7.6 |
+| [NaCl](../reagents/MAT-043_S3014.qmd) | Sigma-Aldrich S3014 | 1.5 M |
+| [SDS](../reagents/MAT-059_A600485.qmd) | Sangon A600485 | 10%（w/v） |
+| [尿素](../reagents/MAT-067_51456.qmd) | Sigma-Aldrich 51456 | 固体 |
+| [生物素](../reagents/MAT-051_B6220.qmd) | Macklin B6220 | 200 mM；洗脱储液溶剂待补 |
+
+## 配方（最终50 mL）
+
+| 溶液 | 加入量 | 终浓度 |
+|---|---|---|
+| 稀释液/树脂预洗液 | 1 M HEPES 2.5 mL；1.5 M NaCl 5 mL；水补至50 mL | 50 mM HEPES、150 mM NaCl |
+| Wash I | 1 M HEPES 2.5 mL；1.5 M NaCl 5 mL；10% SDS 1 mL；水补至50 mL | 50 mM HEPES、150 mM NaCl、0.2% SDS |
+| Wash II | 尿素18.018 g；1 M HEPES 2.5 mL；1.5 M NaCl 5 mL；10% SDS 0.5 mL；水补至50 mL | 6 M尿素、50 mM HEPES、150 mM NaCl、0.1% SDS |
+| 洗脱液 | 1 M HEPES 2.5 mL；200 mM biotin 2.5 mL；10% SDS 10 mL；1.5 M NaCl 5 mL；水补至50 mL | 50 mM HEPES、10 mM biotin、2% SDS、150 mM NaCl |
+
+## 配制
+
+1. 在部分配方用水中依次加入HEPES、NaCl及所需SDS，充分混匀。
+2. Wash II加入尿素至完全溶解；洗脱液加入已知浓度的biotin储液，检查混合后无析出。
+3. 以水定容，混匀，测量并记录最终pH、批次及配制日期。HEPES原液的pH范围不等同于完整缓冲液的实测pH；最终目标pH尚列于[待补信息](../../review/readiness.qmd)。
+
+按比例缩放全部组分；储液体积计入终体积。尿素液现配使用；其余缓冲液的保存期限按实验室批次记录，不推定统一效期。
+
+## 依据
+
+原始富集配方SRC-004；储液规格见对应试剂条目。[来源差异](../../review/MOD-TURBOID-001_富集审核.qmd)。
+
+[返回富集操作](../../protocols/modules/MOD-TURBOID-001_链霉亲和素富集.qmd)

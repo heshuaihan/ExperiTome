@@ -1,0 +1,72 @@
+---
+title: "TurboID 生物素标记与验证：来源对照"
+description: "对照实验室记录、公开线虫 TurboID protocol 和生物素储液资料，并记录已统一与待确认条件。"
+search: false
+---
+
+本页区分本实验室当前采用的条件与公开方法。实验室历史记录和文献参数存在差异；引用文献不代表本实验室已经独立验证。
+
+## 来源对照
+
+| 条件 | SRC-003：2025 质谱流程 | SRC-004：2026 质谱流程 | SRC-005：WB/IF 记录 | 公开方法 | 当前模块 |
+|---|---|---|---|---|---|
+| 标记前线虫洗涤 | M9 洗 3 次 | M9 洗 3 次 | M9 洗 3 次 | Artan 等公开方法也采用标记前 M9 洗 3 次 | 采用 3 次 |
+| 生物素终浓度和标记时间 | 1 mM，2 h | 1 mM，2 h | 1 mM，2 h | Artan 等使用 1 mM、2 h；近期神经 TurboID protocol 也以 1 mM 为例 | 采用 1 mM、2 h |
+| 生物素储液 | 100 mM，DMSO | 200 mM，DMSO | 100 mM，DMSO；分装 −20°C 避光 | Sanchez 与 Feldman 的 protocol 储液说明记载 100 mM DMSO、−20°C 分装数月；该注释位于 WB 洗脱段附近，不据此认定其线虫标记反应使用该储液。供应商列出的 DMSO 溶解度约 49 mg/mL，即约 200.6 mM | 按实验室建议先用 200 mM DMSO 储液；1 mM 终浓度约带入 0.5% DMSO。接近溶解上限，须确认完全溶解 |
+| MG1655 比例 | 30 mL 体系中 6 mL，约 20% | 50 mL 体系中 10 mL，约 20% | 通常约 10% | 公开方法通常写加入 MG1655、菌液铺板或浓缩菌液，并未形成统一的液体体积百分比 | 按用户确认，统一为最终标记体系 20%（v/v） |
+| 虫体与孵育体系体积 | 按虫量调整 | 虫体体积与孵育液约 1:10 | 未注明 | 公开液体标记方法未规定与本地相同的固定体积比 | 用户说明通常收集量不足 5 mL，以约 50 mL 体系/离心管充分孵育；1:10 是经验尺度，非每批固定比例。记录实际虫体量、体系体积和容器 |
+| 连续两代预培养 | 未记载 | 未记载 | 建议用生物素缺陷菌在生长板预培养两代 | Branon、Sanchez/Feldman 等方法将线虫连续两代饲养于生物素合成缺陷型 MG1655 bioB::kan，以限制食物提供的生物素；不是完全清除虫体生物素 | 用户确认本地用 MG1655（无 kan 抗性）连续两代；与文献 bioB::kan 不同。仅记录本地操作，不推断具有相同的生物素耗竭效果 |
+| 线虫正式培养温度 | 记录未注明 | 记录未注明 | 按实验室培养条件 | 公开线虫 TurboID 研究通常按各自线虫培养方法养虫；不能替代本地条件 | 正式培养统一按 20°C |
+| 标记温度与避光 | 未注明 | 未注明 | 室温、避光 | Artan 等的 2 h 标记方法为约 22°C；各 protocol 的光照条件不一致 | 常温、避光孵育 2 h；记录实际室温 |
+| 标记后洗涤 | 充分润洗，未注明次数与时长 | 充分润洗，未注明次数与时长 | M9 洗 5 次，每次 5 min | Artan 等方法采用 M9 洗 3 次；Sanchez/Feldman 的不同样品支路按洗至上清澄清或约 5 次处理 | 按用户确认，M9 洗 5 次，每次 5 min |
+| 沉降和保存 | 未详述 | 冰上沉降；可液氮速冻并 −80°C 保存 | WB 样品可液氮速冻 | Sanchez/Feldman protocol 记录冰上沉降、液氮速冻及 −80°C 保存；其数月保存描述限于该来源条件 | 冰上沉降；可液氮速冻后 −80°C 保存；本实验室不标注未验证的保存期限 |
+| WB/IF 验证 | 不适用 | 不适用 | 有历史方法记录 | Sanchez/Feldman 公开 protocol 有 WB 与 IF 示例，适用于其构建和样品条件 | 操作细节留待本模块最后确认 |
+
+## 已统一条件
+
+- 标记体系中 MG1655 为 **20%（v/v）**，以最终标记体系体积为分母。历史 WB/IF 来源中的 10% 不再作为当前模块配方。
+- 线虫通常收集量不足 **5 mL**，按用户说明以约 **50 mL 体系/离心管**充分孵育；约 1:10 是常用体积尺度，记录每次实际虫体量、体系总体积和容器，不要求达到精确比例。
+- 用户确认本地标记前连续两代使用**MG1655（无 kan 抗性）**，正式培养按 **20°C** 执行。文献低生物素设计使用 **MG1655 bioB::kan**；两者不是同一菌株。本地两代培养按实际做法记录，不称为生物素耗竭处理，也不外推文献中的低生物素效果。
+- 线虫正式培养温度为 **20°C**；标记孵育单独按常温、避光 **2 h** 执行，并记录实际室温。
+- 生物素储液先按 **200 mM DMSO** 计算，理由为减少带入标记体系的 DMSO；该浓度来源于用户转述的实验室建议，不是文献推荐条件。
+- 标记后用 M9 润洗 **5 次、每次 5 min**。公开方法另有 3 次洗涤，因此正文明确这是本实验室采用的统一条件。
+- 洗涤后在冰上沉降；可液氮速冻并置 −80°C 保存。未给本实验室设定保存期限。
+- 标记终浓度 **1 mM**、标记 **2 h**，与两份本地质谱记录及多份公开线虫方法相符。
+
+## 生物素储液浓度判断
+
+生物素分子量为 244.31。以 DMSO 配制时，100 mM 相当于约 24.4 mg/mL；200 mM 相当于约 48.9 mg/mL（例如称取 48.9 mg 并用 DMSO 定容至 1 mL）。供应商页面报告 25°C 下 DMSO 溶解度为 49 mg/mL（约 200.6 mM），因此 200 mM 已接近该数值所示的溶解上限，可能对 DMSO 含水量、温度和具体批次敏感。该溶解度数据不是 TurboID 实验的推荐储液浓度。使用前确认储液澄清、无结晶或沉淀；若未完全溶解，实际有效浓度不确定。
+
+Sanchez/Feldman 线虫 TurboID protocol 的储液注释记载 **100 mM 生物素/DMSO**、分装后 −20°C 保存数月；注释位置在 WB 洗脱步骤附近，因此它证明这是一种可用储液配法，但不单独证明该文用它配制线虫标记反应。本地 SRC-003、SRC-005 也记录了 100 mM DMSO 储液；SRC-004 记录有 200 mM。用户转述同门传达的老师建议为采用 200 mM，以减少加入反应的 DMSO。本模块据此先按 200 mM 计算，不把此选择写成论文结论或通用标准。2026 年神经 protocol 另有一种含 KOH、并调至 pH 6 的水相配方用于制备 100 mM 生物素；溶剂和配方体系不同，不能与 DMSO 储液的保存条件混用。
+
+### DMSO 暴露量与文献依据
+
+由 200 mM DMSO 储液配成 1 mM 生物素时，储液占最终标记体系 **0.5%（v/v）**，相应带入 DMSO 约 0.5%；使用 100 mM 储液时则为约 1%。因此改用 200 mM 可将这一步的 DMSO 体积分数减半。举例：50 mL 最终体系加入 250 µL 200 mM 储液；在 20%（v/v）MG1655 条件下，再加入 10 mL 菌液，最后用 M9 补足至 50 mL。
+
+线虫研究显示 DMSO 影响依赖浓度、暴露时长、品系和观察指标。AlOkda 与 Van Raamsdonk 报告，在其测试条件下 0.5% DMSO 与正常发育相容，对生育力和运动影响较小；Calahorro 等则观察到 DMSO 可影响咽泵行为，效应随暴露时间和品系变化，1% 条件下数小时内可见明显抑制。这些结果支持尽量控制溶剂量的谨慎做法，但不能直接证明 0.5% 对本模块的 2 h 液体 TurboID 标记完全无影响，也没有针对本模块菌液比例、构建和发育阶段的直接验证。200 mM 的选择记录为实验室建议（用户转述同门转达老师意见），不是上述论文提出的储液规范。
+
+## 公开来源检索与归档
+
+本轮检索了 TurboID 原始论文及线虫操作方法，重点收录同行评审的原始研究、详细 protocol 和近年的神经 TurboID 方法。整理笔记见[来源索引](../sources/index.qmd)，全部条目见 `sources/source_register.csv`。结果为实用来源整理，不是穷尽性系统综述；外部方法仅用于比较和追溯，不作为实验室已验证条件。
+
+| 来源 | 公开资料 | 可用于本模块的内容 | 不应外推的内容 |
+|---|---|---|---|
+| SRC-037 | Branon et al., 2018, *Nature Biotechnology*, “Efficient proximity labeling in living cells and organisms with TurboID”, DOI: 10.1038/nbt.4201 | TurboID 原始研究；线虫低生物素条件使用生物素合成缺陷型 MG1655bioB:kan。Alice Y. Ting 为共同作者 | 本地使用的 MG1655（无 kan 抗性）不是该菌株；该文不是本实验室液体 2 h 标记的完整操作单，也未支持 20% 菌液或 5 × 5 min 洗涤 |
+| SRC-038 | Sanchez & Feldman, 2021, *STAR Protocols* 2(4):100986, “A proximity labeling protocol to probe proximity interactions in C. elegans”, DOI: 10.1016/j.xpro.2021.100986 | 线虫 TurboID 的详细操作 protocol；公开 100 mM DMSO 生物素储液；含线虫洗涤、冰上沉降、液氮速冻和 WB/IF 示例。其两代低生物素预培养使用 MG1655 bioB::kan。Jessica L. Feldman 是共同作者，文中致谢 Alice Y. Ting | 其生物素合成缺陷菌与本地 MG1655 不同；使用的组织、构建、培养和验证条件也与本实验室不完全相同，不能把其全部参数照搬 |
+| SRC-039 | Artan et al., 2021, *Journal of Biological Chemistry* 297(3):101094, “Interactome analysis of Caenorhabditis elegans synapses by TurboID-based proximity labeling”, DOI: 10.1016/j.jbc.2021.101094 | 线虫 MG1655、标记前 M9 洗 3 次、1 mM 生物素、约 22°C 标记 2 h、标记后 M9 洗 3 次和冰上沉降 | 文中没有规定可与本地 20% v/v 直接对应的液体菌液比例 |
+| SRC-040 | Artan et al., 2022, *Journal of Biological Chemistry* 298:102343, “Depletion of endogenously biotinylated carboxylases enhances the sensitivity of TurboID-mediated proximity labeling in C. elegans”, DOI: 10.1016/j.jbc.2022.102343 | 继续采用 1 mM 生物素、MG1655、室温 2 h 的线虫标记方法，并提供降低内源生物素化背景的设计 | 重点是背景控制和蛋白质组灵敏度，不是菌液比例或洗涤时间的通用标准 |
+| SRC-041 | Hertz et al., 2022, *Bio-protocol* 12(8):e4386, “Visualization and Purification of Caenorhabditis elegans Germ Granule Proteins Using Proximity Labeling”, DOI: 10.21769/BioProtoc.4386 | TurboID 生殖颗粒定位、链霉亲和素 blot 和富集流程的详细范例 | 实验对象和样品支路不同，不作为本模块标记条件的直接替代 |
+| SRC-042 | Rahmani & Chew, 2026, *Bio-protocol* 16(18), “Proximity Labeling in Caenorhabditis elegans to detect Neuronal Proteins During Memory Formation”, DOI: 10.21769/BioProtoc.5821 | 新近公开的线虫神经 TurboID protocol；将 100 mM 生物素用于制备 1 mM 标记体系，并用 MG1655 bioB::kan 限制背景生物素 | 其菌液铺板和约 6 h 训练标记设计不同于本地液体 2 h 体系 |
+| SRC-035–SRC-036 | Santa Cruz Biotech 与 Selleck 生物素产品资料 | DMSO 中约 49 mg/mL（约 200.6 mM）的溶解度参考；Selleck 还注明含水 DMSO 会降低溶解度 | 不是特定品牌批次的保证值，也不代表 200 mM 是推荐工作浓度 |
+| SRC-044 | AlOkda & Van Raamsdonk, 2022, *MicroPublication Biology*, DOI: 10.17912/micropub.biology.000634 | 线虫 DMSO 暴露研究；在其测试条件下 0.5% 与正常发育相容，对生育力和运动影响较小 | 不是本模块 2 h 液体标记条件的验证；结果依赖具体生理读数与暴露方案 |
+| SRC-045 | Calahorro et al., 2021, *Toxicology Reports* 8:1240–1247, DOI: 10.1016/j.toxrep.2021.06.007 | DMSO 对线虫咽泵的时间依赖和品系依赖效应；1% 条件下数小时暴露可抑制咽泵 | 研究的暴露介质和生理终点不同于本模块 TurboID 标记 |
+
+## 留待最后确认
+
+WB/IF 的留样量、固定/透化、抗体或链霉亲和素检测、成像与 WB 步骤，按用户安排留到最后确认。
+
+## 实验室来源
+
+- SRC-003：2025-08-08 TurboID 质谱全流程记录。
+- SRC-004：2026-05-07 TurboID 质谱全流程记录。
+- SRC-005：实验室生物素标记及 WB/IF 验证记录。

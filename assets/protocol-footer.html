@@ -1,0 +1,45 @@
+<script>
+(() => {
+ const meta = document.querySelector('.protocol-detail main .protocol-meta');
+ if (meta) {
+  const tools = document.createElement('div');
+  tools.className = 'reading-tools';
+  const printButton = document.createElement('button');
+  printButton.type = 'button';
+  printButton.textContent = '打印 / 保存 PDF';
+  printButton.addEventListener('click', () => window.print());
+  tools.append(printButton);
+  const explanations = [...document.querySelectorAll('details.rationale')];
+  if (explanations.length) {
+   const expand = document.createElement('button');
+   expand.type = 'button';
+   expand.textContent = '展开原理说明';
+   expand.setAttribute('aria-expanded', 'false');
+   expand.addEventListener('click', () => {
+    const open = expand.getAttribute('aria-expanded') !== 'true';
+    explanations.forEach(el => { el.open = open; });
+    expand.setAttribute('aria-expanded', String(open));
+    expand.textContent = open ? '收起原理说明' : '展开原理说明';
+   });
+   tools.append(expand);
+  }
+  meta.after(tools);
+ }
+ document.querySelectorAll('main table').forEach(table => {
+  if (table.parentElement.classList.contains('table-scroll')) return;
+  const wrapper = document.createElement('div');
+  wrapper.className = 'table-scroll';
+  table.before(wrapper);
+  wrapper.append(table);
+ });
+ let folded = [];
+ window.addEventListener('beforeprint', () => {
+  folded = [...document.querySelectorAll('details.rationale:not([open])')];
+  folded.forEach(el => { el.open = true; });
+ });
+ window.addEventListener('afterprint', () => {
+  folded.forEach(el => { el.open = false; });
+  folded = [];
+ });
+})();
+</script>

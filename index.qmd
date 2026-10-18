@@ -1,0 +1,79 @@
+---
+title: "Experitome"
+subtitle: "Built on experience. Made for discovery."
+description: "从实际研究经验出发，连接实验方法、数据与分析，建设可追溯、可复用的研究知识库。"
+body-classes: "library-home research-home"
+---
+
+::: {.brand-hero}
+![](assets/experitome-hero.png){fig-alt="Experitome。Built on experience. Made for discovery. 一本研究记录展开为实验方法、分析流程和配套数据三条主线。"}
+:::
+
+::: {.library-lead}
+从实际研究经验出发，连接实验方法、数据资源与分析流程，让研究积累能够被理解、交流和复用。
+:::
+
+::: {.library-meta}
+Shuaihan He · 中文内容优先 · 持续维护
+:::
+
+## Explore
+
+::: {.route-grid .research-grid}
+::: {.route-card}
+### Protocols
+
+从实验路线进入，查看编号步骤、配液、试剂与设备。
+
+**当前：**2条路线 · 8个核心模块 · 方法草案
+
+[进入实验方法 →](protocols/index.qmd)
+:::
+
+::: {.route-card}
+### Analysis
+
+记录实际使用的分析方法、代码、参数和输出，方便回查与复核。
+
+**建设中：**条目结构与模板
+
+[查看分析流程规划 →](analysis/index.qmd)
+:::
+
+::: {.route-card}
+### Data
+
+整理配套数据、处理结果与补充材料，记录来源、字段和版本。
+
+**建设中：**条目结构与模板
+
+[查看数据资源规划 →](data/index.qmd)
+:::
+:::
+
+## 从经验到复用
+
+- **经验：**保留实际操作中的关键参数、适用条件、判断终点与使用反馈；注明哪些内容来自实践、文献或厂家说明。
+- **交流：**围绕具体方法和版本讨论问题，逐步积累能够帮助下一位使用者的经验。
+- **AI 协同检索：**探索帮助研究者查找、关联和核对资料的工具，保留来源并提示缺失信息。
+
+当前提供中文方法库与配套资源；独立交流平台、AI 检索及 Skill 属于后续规划。
+
+## 当前实验路线
+
+- [线虫总蛋白质组](protocols/worm/PROT-WORM-001_线虫蛋白质质谱样品制备.qmd)：裂解 → BCA → 沉淀/复溶 → 消化 → 脱盐 → 肽段定量。
+- [TurboID](protocols/turboid/PROT-TURBOID-001_TurboID链霉亲和素富集质谱.qmd)：标记 → 裂解 → BCA → 亲和富集 → 沉淀/复溶 → 消化 → 脱盐 → 肽段定量。
+
+## 配套资源
+
+::: {.module-actions}
+[试剂与货号](materials/index.qmd)
+[配液](materials/buffers/index.qmd)
+[仪器](instruments/index.qmd)
+[来源](sources/index.qmd)
+[版本记录](review/versions/index.qmd)
+:::
+
+由 **何帅涵（Shuaihan He）** 个人维护。当前从线虫蛋白质组学与TurboID起步，按实际研究需要逐步扩展。
+
+[About](about.qmd) · [Roadmap](roadmap.qmd) · [License & Attribution](licensing/index.qmd)

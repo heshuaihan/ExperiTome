@@ -1,0 +1,35 @@
+---
+title: "HEPES 储备液"
+subtitle: "MAT-058 · Aladdin · H433401"
+last_reviewed: "2026-10-18"
+---
+
+## 产品信息
+
+| 项目 | 内容 |
+|---|---|
+| 名称 | HEPES, sterile-filtered 1 M pH 7.0-7.6 |
+| 厂家 / 货号 | Aladdin / **H433401** |
+| 规格、等级及形式 | 1 M，无菌过滤；原 protocol/附录记录pH7.0–7.6 |
+| 身份状态 | 来源记载；库存批次另行登记 |
+| 使用模块 | [MOD-WORM-001](../../protocols/modules/MOD-WORM-001_线虫收集与裂解.qmd) · [MOD-TURBOID-001](../../protocols/modules/MOD-TURBOID-001_链霉亲和素富集.qmd) |
+
+## 配制与使用
+
+50 mM终浓度：每50 mL加2.5 mL 1 M储液；完整裂解液另调至pH7.4。
+
+[配液表](../buffers/BUF-WORM-001_SDS裂解液.qmd)。
+
+原 protocol 与研究附录均标 **pH 7.0–7.6**。本轮官方产品页确认1 M、无菌过滤及2–8°C保存；页面未给出本批精确pH，因此不将“7.4”写成原液固定值。完整裂解液的pH7.4另由配液步骤测量调整。富集缓冲液应记录配成后的实测pH。
+
+## 保存与取用
+
+官方产品页2–8°C；原液准确pH查批次COA，不能直接等同7.4。
+
+## 依据
+
+研究资料附录 A.1，PDF 第 65 页（SRC-016）。规格来自原始记录；标注“官方”的字段另经厂家资料核对。批号、实物包装量、开封日期、效期与库存位置由实验室另行登记。
+
+[产品资料](https://www.aladdinsci.com/us_en/hepes-solution-aladdin-scientific-h433401.html)
+
+[返回试剂与货号库](../index.qmd)

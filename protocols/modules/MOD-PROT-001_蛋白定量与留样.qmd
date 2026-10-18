@@ -1,0 +1,210 @@
+---
+title: "BCA 蛋白定量"
+subtitle: "Pierce A55865 · 酶标仪微孔板法"
+description: "测定裂解液或沉淀后复溶蛋白浓度，用于投入量及胰酶用量计算。"
+protocol_id: "MOD-PROT-001"
+category: "样品定量 / 蛋白质组学"
+status: "草案"
+version: "0.4"
+view_id: "zh-detailed"
+presentation_updated: "2026-10-18"
+created: "2026-09-29"
+last_reviewed: "2026-10-17"
+official_review: "核心参数已复查"
+layout_status: "中文详细版；正文与维护资料分离"
+order: 20
+reagent_ids: [MAT-002]
+buffer_ids: [BUF-BCA-001]
+review_page: "../../review/MOD-PROT-001_BCA审核.qmd"
+keywords: [BCA, A55865, protein quantitation, 蛋白浓度]
+body-classes: "protocol-detail"
+---
+
+{{< include _meta/MOD-PROT-001.md >}}
+
+::: {.module-summary}
+::: {.summary-purpose}
+测定总蛋白浓度，计算后续步骤需要取用的样品体积或胰酶质量。
+:::
+
+**输入：**澄清线虫裂解液，或沉淀后尚未还原、烷基化的复溶蛋白。每次只取独立小份用于测定。
+
+**输出：**经预稀释倍数回算的蛋白浓度（µg/µL）、剩余样品的可用蛋白量及测定记录。
+
+**适用：**常规总蛋白质组和 TurboID 制样中的蛋白定量；消化后肽段使用[肽段定量模块](MOD-PROT-005_肽段定量与上样.qmd)。
+
+**预计时间：**约 45–60 min，包含 37°C 孵育 30 min；实际准备及冷却时间随批量变化。
+:::
+
+::: {.workflow-strip}
+[收集与裂解](MOD-WORM-001_线虫收集与裂解.qmd) → **BCA** → [链霉亲和素富集](MOD-TURBOID-001_链霉亲和素富集.qmd) / [蛋白沉淀](MOD-PROT-002_蛋白沉淀.qmd)  
+[蛋白沉淀与复溶](MOD-PROT-002_蛋白沉淀.qmd) → **BCA** → [还原、烷基化与消化](MOD-PROT-003_胰酶消化.qmd)
+:::
+
+## 实验前准备
+
+### 设备、耗材与试剂
+
+| 项目 | 准备要求 |
+|---|---|
+| 酶标仪 | 可在 562 nm 测吸光度；准备板图与读数方法 |
+| 96 孔微孔板、封板材料 | 适合可见光吸光度测量，所用孔板能承受 37°C 孵育 |
+| 移液器、枪头、稀释管、试剂槽 | 能准确移取 10、25 和 200 µL；多道加样时按标品条方向排板 |
+| 孵育与混匀设备 | 37°C 板孵育条件；可充分混匀微孔板 |
+| [Pierce A55865](../../materials/reagents/MAT-002_A55865.qmd) | 试剂 A、B 与预配梯度 BSA 标品；记录批号和效期 |
+| 水与 [BCA 工作液](../../materials/buffers/BUF-BCA-001_工作液.qmd) | 水用于当前方法的样品预稀释和空白；A:B = 50:1 配制工作液 |
+
+佩戴实验服、手套和护目镜；试剂及测定后废液按产品 SDS 和实验室规定处置。
+
+### 选择本批反应体系
+
+{{< include _shared/bca-conditions.md >}}
+
+
+
+<details class="rationale">
+<summary>深入了解：为什么 10 µL 体系的定量下限更高？</summary>
+
+同一浓度下，10 µL 加入的蛋白量只有 25 µL 的 40%。工作液体积相同，低浓度的显色信号更弱，更难可靠地区分背景与波动。这是机制解释；125 µg/mL 本身来自厂家的体系工作范围，不能按体积比直接推算。“样品体积有限”也不等于“样品浓度低”。
+</details>
+
+
+### 材料与货号
+
+| 材料 | 厂家 / 货号 | 规格或用途 |
+|---|---|---|
+| [BCA 蛋白检测试剂盒](../../materials/reagents/MAT-002_A55865.qmd) | Thermo Scientific · **A55865** | 预配梯度 BSA；500 mL 套装 |
+
+## 操作步骤
+
+::: {.protocol-step #step-1}
+### [1]{.step-number} 排板并计算试剂用量
+
+在板图上标明空白、7 个 BSA 浓度和各样品的编号、预稀释倍数及重复孔。按全部孔数计算工作液最低用量：**孔数 × 200 µL**，另留移液余量。
+
+例：8 个标准/空白点和 10 个样品均做双重复，共 36 孔，最低需要 7.2 mL 工作液。
+
+:::
+
+::: {.protocol-step #step-2}
+### [2]{.step-number} 准备标品和水空白
+
+按瓶签方向使用 7 个预配 BSA 标准：**125、250、500、750、1,000、1,500、2,000 µg/mL**。向标品条空管中加入水，作为当前方法的零蛋白空白。开封后用配套条盖密封，方向标识对准 2 mg/mL 管；用后将标品条放回 **4°C**。
+
+<details class="rationale">
+<summary>深入了解：空白和标准曲线分别解决什么问题？</summary>
+
+空白扣除试剂和稀释液产生的背景；已知浓度的 BSA 将显色强度转换为浓度。标准与样品要采用相同加样量、显色条件和读数波长。当前水空白对应实验室已确认做法；若样品基质改变或出现基质干扰，需结合无蛋白基质空白检查影响，详见审核页。
+
+依据：[A55865 指南第 2–3 页](https://assets.thermofisher.com/TFS-Assets/LSG/manuals/MAN0029423-BCAProteinWithDIlutionFreeBSA-UG.pdf#page=2)。
+</details>
+:::
+
+::: {.protocol-step #step-3}
+### [3]{.step-number} 取样并预稀释
+
+从混匀的原样品中取独立小份，用水预稀释并记录倍数 **D = 稀释后总体积 / 原样品体积**：
+
+- **澄清裂解液：**通常先做 5–10 倍稀释；例如 10 µL 样品加 40 µL 水为 5 倍，10 µL 加 90 µL 水为 10 倍。
+- **含尿素的复溶蛋白：**使待测样品在加入工作液前的尿素浓度 **<3 M**；8 M 尿素样品做 5 倍稀释后为 1.6 M。随后按曲线范围调整蛋白浓度。
+
+保留原样品用于后续实验。BCA 显色后的孔内样品不再用于富集或消化。
+
+<details class="rationale">
+<summary>深入了解：SDS、EDTA 和尿素如何核对兼容性？</summary>
+
+2% SDS、20 mM EDTA 裂解液做 5–10 倍预稀释后，分别为 0.2%–0.4% SDS 和 2–4 mM EDTA。A55865 指南列出 SDS 5%、EDTA 10 mM、尿素 3 M 的单组分兼容浓度。这里比较的是加入工作液之前的待测样品浓度。实验室沿用现有水稀释方案；单组分表不能单独证明所有混合基质都无偏差。
+
+沉淀后蛋白定量安排在加 TCEP、IAA 等还原/烷基化试剂之前。还原剂或螯合剂可能影响铜显色反应；试剂变化时重新查[官方兼容性表](https://assets.thermofisher.com/TFS-Assets/LSG/Application-Notes/TR0068-Protein-assay-compatibility.pdf)。
+</details>
+:::
+
+::: {.protocol-step #step-4}
+### [4]{.step-number} 配制 BCA 工作液
+
+将试剂 **A 与 B 按体积比 50:1** 混匀。例如 **5 mL A + 100 µL B = 5.1 mL 工作液**。加入 B 后的短暂浑浊应在混匀后消失，工作液呈澄清绿色。详细配制和保存见[BUF-BCA-001](../../materials/buffers/BUF-BCA-001_工作液.qmd)。
+
+:::
+
+::: {.protocol-step #step-5}
+### [5]{.step-number} 加样、加工作液并混匀
+
+按板图向各孔加入所选体系的 **25 µL 或 10 µL** 标品、空白或预稀释样品。每孔加入 **200 µL 工作液**，在板振荡器上充分混匀 **30 s**，随后封板或加盖。
+
+检查孔内有无气泡、漏加或明显体积差异；读数光路中的气泡应在不损失样品的情况下消除。[依据：官方指南第 3 页](https://assets.thermofisher.com/TFS-Assets/LSG/manuals/MAN0029423-BCAProteinWithDIlutionFreeBSA-UG.pdf#page=3)。
+:::
+
+::: {.protocol-step #step-6}
+### [6]{.step-number} 孵育、冷却并读取吸光度
+
+整板在 **37°C 孵育 30 min**，随后冷却到室温，在酶标仪上以 **562 nm** 读取所有孔。标准、空白和样品一起孵育、冷却及读数，记录实际时间和温度。
+
+<details class="rationale">
+<summary>深入了解：为什么是 562 nm，为什么需要统一时间？</summary>
+
+蛋白参与碱性条件下的铜离子还原，生成的 Cu⁺ 与 BCA 形成紫色复合物，在 562 nm 有强吸收。BCA 显色没有严格的终点，冷却后仍缓慢继续，因此同一批应保持一致的孵育与读数节奏。该过程直接来自厂家对测定原理的说明。
+
+依据：[A55865 指南第 1、3 页](https://assets.thermofisher.com/TFS-Assets/LSG/manuals/MAN0029423-BCAProteinWithDIlutionFreeBSA-UG.pdf)。
+</details>
+:::
+
+::: {.protocol-step #step-7}
+### [7]{.step-number} 扣空白、拟合标准曲线并检查结果
+
+计算空白重复孔的平均吸光度，从每个标准和样品孔中扣除该均值。用 **BSA 浓度（µg/mL）** 为横轴、对应标准点的平均净吸光度为纵轴建立曲线。实验室通常使用线性拟合；记录 R²，并回算各样品重复孔的浓度。
+
+检查标准点走势、重复孔是否一致，以及样品是否位于本批标准曲线的有效范围内。R² 可作拟合质量初筛，但不能单独判定结果合格；曲线明显异常、重复孔明显分歧或样品超范围时，先按下方故障排查检查并重测；保留原始孔数据和处理说明。
+
+<details class="rationale">
+<summary>深入了解：曲线一定要用直线吗？</summary>
+
+Thermo 的蛋白定量概览将 BCA 的线性响应曲线 **R² >0.95** 列为产品性能参考；A55865 指南没有规定适用于每批样品的统一 R² 放行阈值。可把 **R² >0.95** 用作初筛参考，同时检查标准点走势、重复孔一致性和样品是否落在工作范围内。若线性拟合不适合标准点，可采用二次或其他合适的模型；需注明实际模型并检查残差，不将四参数拟合与二次多项式视为同一种模型。因此按实验室惯例先做线性拟合；若标准点呈明显弯曲或线性拟合不合适，改用合适的拟合方式，不以高 R² 代替对曲线和样品范围的检查。重复孔数值接受标准尚未由实验室设定，本页不编造固定 CV 阈值。
+</details>
+:::
+
+::: {.protocol-step #step-8}
+### [8]{.step-number} 回算原液浓度并交接样品
+
+仅回乘样品在加入工作液前的实际预稀释倍数 **D**：
+
+::: {.formula-box}
+**原液浓度（µg/µL）= 曲线结果（µg/mL）× D ÷ 1,000**  
+**可用蛋白量（µg）= 原液浓度（µg/µL）× 原液剩余体积（µL）**  
+**取样体积（µL）= 目标蛋白量（µg）÷ 原液浓度（µg/µL）**
+:::
+
+例：曲线结果 500 µg/mL、5 倍预稀释，则原液为 **2.5 µg/µL**；取 20 µg 蛋白需要 **8 µL** 原液。
+
+标准与样品采用相同加样体系，**不再额外回乘 225/25 或 210/10** 的显色体系稀释比例。[计算依据：Thermo TR0057](https://assets.thermofisher.com/TFS-Assets/LSG/Application-Notes/TR0057-Read-std-curves.pdf)。
+
+记录浓度、剩余体积和取用量，按工作流转入富集、沉淀或消化。同一次实验中需要比较的不同组，可依据 BCA 结果用与下游兼容的稀释液调整至相同蛋白浓度；再按用途（如 WB、IP）分装每管所需的蛋白质量。具体质量由实验设计和下游用途决定，不设统一数值。分装时标明样品组别、浓度、每管蛋白质量和用途；如需保存，按单次用量分装、液氮速冻后置于 −80°C，减少临用计算和反复冻融。
+:::
+
+## 完成与交接
+
+- 标准曲线、空白与样品重复孔均有可追溯原始读数。
+- 样品落在本批曲线有效范围内，异常孔已检查或重测。
+- 原液浓度已正确回乘预稀释倍数，并记录为 µg/µL。
+- 后续取样量按**剩余原液**计算；测定小份和孔内反应液单独处理。
+- 同次实验需比较的组别已按 BCA 结果调整至相同蛋白浓度，并按下游用途分装所需蛋白质量；具体留样量按实验设计记录。
+- 标品条密封后放回 4°C，A、B 试剂按产品要求室温保存。
+
+## 故障排查
+
+| 现象 | 优先检查 | 处理 |
+|---|---|---|
+| 样品高于最高标准点 | 预稀释倍数、孔号 | 增加预稀释后重测，回乘新倍数 |
+| 样品低于所选体系的有效范围 | 预稀释倍数、所选加样体系 | 若预稀释过多，降低预稀释后重测。10 µL 体系的工作范围为 125–2,000 µg/mL；低值改用 25 µL 体系（20–2,000 µg/mL）。若 25 µL 体系仍低于 20 µg/mL，不外推，改用覆盖该浓度的标准曲线或适合低浓度的定量方法 |
+| 重复孔明显分歧 | 气泡、移液、混匀、漏加 | 检查原始读数和板图，说明异常并重新测定 |
+| 空白高或整条曲线异常 | WR 比例、污染、孵育及波长 | 排除设置/配液问题，必要时重配工作液和曲线 |
+| 同一样品不同稀释倍数回算不一致 | 曲线范围、混合基质干扰 | 检查稀释计算并对照兼容性资料；必要时做基质检查 |
+
+## 依据与维护
+
+- [A55865 官方产品页](https://www.thermofisher.cn/order/catalog/product/A55865)。
+- [官方指南 MAN0029423 B.0（2023-11-17）](https://assets.thermofisher.com/TFS-Assets/LSG/manuals/MAN0029423-BCAProteinWithDIlutionFreeBSA-UG.pdf) · [官方来源](https://assets.thermofisher.com/TFS-Assets/LSG/manuals/MAN0029423-BCAProteinWithDIlutionFreeBSA-UG.pdf)。
+- [Thermo Fisher 蛋白定量概览](https://www.thermofisher.com/tw/zt/home/life-science/protein-biology/protein-assays-analysis/protein-assays.html)：BCA 线性响应的 R² >0.95 为产品概览参考，不是 A55865 每批样品的强制放行阈值。
+- [兼容性表 TR0068](https://assets.thermofisher.com/TFS-Assets/LSG/Application-Notes/TR0068-Protein-assay-compatibility.pdf) · [官方来源](https://assets.thermofisher.com/TFS-Assets/LSG/Application-Notes/TR0068-Protein-assay-compatibility.pdf)。
+- [标准曲线计算 TR0057.4](https://assets.thermofisher.com/TFS-Assets/LSG/Application-Notes/TR0057-Read-std-curves.pdf) · [官方来源](https://assets.thermofisher.com/TFS-Assets/LSG/Application-Notes/TR0057-Read-std-curves.pdf)。
+
+[参数解释与历史方案](../../review/details/MOD-PROT-001.qmd) · [版本记录](../../review/versions/MOD-PROT-001.qmd) · [全链路待完善事项](../../review/readiness.qmd)

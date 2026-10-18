@@ -1,0 +1,59 @@
+---
+title: "About Experitome"
+description: "项目定位、维护者与内容范围。"
+---
+
+**Experitome** 是从实际研究经验出发，连接实验方法、数据资源与分析流程的开源项目，由何帅涵（Shuaihan He）发起并维护。
+
+**Built on experience. Made for discovery.**  
+源于实践，助力发现。
+
+Protocols. Analysis. Data.
+
+## 名称与愿景
+
+**Experi + tome → Experitome。** Experi 取自 experiment，也呼应 experience；tome 表达经过整理、能够持续积累的知识。结尾的 ome 还带有生命科学中“集合”的联想。这是项目赋予组合词的品牌含义。
+
+愿景是将研究中的方法、数据与经验组织成可追溯、可复用的知识，帮助研究者建立和维护自己的研究知识库。
+
+## 经验、交流与 AI 协作
+
+- **Built from experience：**关注真正使用过的方法与体验，记录关键细节、适用条件和失败经验。文献整理和待尝试的方法单独标明来源与状态。
+- **Connected through exchange：**围绕具体步骤、条件和版本交流反馈，保留不同使用场景与贡献者的经验。
+- **Discover with AI：**逐步探索有出处的协同检索、资料关联和整理；提取结果由使用者核对，原文未提供的条件明确标为缺失。
+
+当前以方法库为起点；Skill、独立交流平台和 AI 协同检索尚在规划。
+
+## 内容范围
+
+| 入口 | 内容 | 当前状态 |
+|---|---|---|
+| [Protocols](protocols/index.qmd) | 可执行的实验步骤、配液、材料与设备 | 已有中文详细版；方法仍为草案 |
+| [Analysis](analysis/index.qmd) | 分析方法、脚本说明、参数与结果解释 | 规划与条目模板；尚无正式公开分析流程 |
+| [Data](data/index.qmd) | 示例数据、处理结果、补充材料及其来源与授权 | 规划与条目模板；尚无正式公开数据集 |
+
+当前以线虫蛋白质组学、TurboID及相关制样为起点，后续根据实际研究需要增加内容。页面主体先维护中文，英文版在中文内容确定后逐步同步。
+
+## 维护者
+
+**何帅涵 · Shuaihan He**  
+博士生 · PhD student
+
+香港科技大学（广州）  
+生命科学与生物医学工程学域 · 脑与智能研究所
+
+Bioscience and Biomedical Engineering Thrust  
+Brain and Intelligence Research Institute  
+The Hong Kong University of Science and Technology (Guangzhou)
+
+本项目由个人维护。单位信息用于作者身份说明，不代表学校或研究所的官方发布与认可。原始方法、数据和工具的贡献在各条目中注明出处。
+
+## 维护原则
+
+操作步骤呈现当前方案，修订历史单独维护。实验室经验、文献条件与尚未确认的信息分别标注；原始数据、处理结果、解释及限制保留可追溯关系。
+
+## 使用与引用
+
+优先引用各方法、数据和工具的原始出处；引用本库的整理与说明时，请注明 **Shuaihan He, Experitome**、对应条目及版本/访问日期。正式仓库地址在上线后补入引用文件。
+
+[许可范围](licensing/index.qmd) · [版本与维护](review/index.qmd) · [内容路线图](roadmap.qmd)

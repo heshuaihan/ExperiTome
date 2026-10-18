@@ -1,0 +1,40 @@
+---
+title: "BCA 工作液"
+subtitle: "BUF-BCA-001 · A:B = 50:1"
+description: "用于 A55865 微孔板蛋白定量，每孔加入 200 µL。"
+buffer_id: "BUF-BCA-001"
+status: "官方配方已复查"
+version: "1.0"
+last_reviewed: "2026-09-30"
+reagent_ids: [MAT-002]
+---
+
+::: {.module-summary}
+**用途：**[BCA 蛋白定量](../../protocols/modules/MOD-PROT-001_蛋白定量与留样.qmd)中的显色工作液。
+
+**原料：**[Pierce A55865](../reagents/MAT-002_A55865.qmd) 所附试剂 A 和 B。混合比例为 **A:B = 50:1（体积比）**，无需另行调 pH。
+:::
+
+## 配制步骤
+
+1. 按板图计算总孔数，包含全部标准、空白和样品的重复孔。最低用量为 **总孔数 × 200 µL**，另留移液余量。
+2. 选择合适配制规模，按下表先取 A，再加入 B。
+3. 充分混匀。短暂浑浊应消失，成品呈澄清绿色。
+4. 标记“BCA WR”、配制时间、A/B 批号和操作者，供本批标准及样品共同使用。
+
+| 试剂 A | 试剂 B | 工作液总体积 |
+|---:|---:|---:|
+| 5 mL | 100 µL | 5.1 mL |
+| 10 mL | 200 µL | 10.2 mL |
+
+任意目标总体积 V：**A = V × 50/51；B = V × 1/51**。体积单位保持一致。
+
+## 保存与使用
+
+官方说明室温、密闭容器中可稳定数天，未给出固定天数。本流程建议按本批需求配制；如保留余液，记录配制日期并按产品说明和实际状态决定使用。不得仅凭颜色正常推定所有储存条件均合格。
+
+出现变色或污染迹象时弃用；配液容器和枪头保持洁净。剩余试剂与测定废液按实验室化学废液规定处理。
+
+## 依据
+
+[MAN0029423 B.0，第 3 页](https://assets.thermofisher.com/TFS-Assets/LSG/manuals/MAN0029423-BCAProteinWithDIlutionFreeBSA-UG.pdf#page=3) · [官方来源](https://assets.thermofisher.com/TFS-Assets/LSG/manuals/MAN0029423-BCAProteinWithDIlutionFreeBSA-UG.pdf)。配方复查 2026-09-30。

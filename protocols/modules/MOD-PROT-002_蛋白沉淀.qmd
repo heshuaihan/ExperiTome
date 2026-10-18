@@ -1,0 +1,123 @@
+---
+title: "蛋白沉淀与复溶"
+subtitle: "丙酮沉淀 · 线虫总蛋白与 TurboID 样品"
+description: "按实验室记录用丙酮沉淀蛋白、洗涤并以尿素缓冲液复溶，之后进入 BCA 定量或胰酶消化。"
+protocol_id: "MOD-PROT-002"
+category: "样品清理 / 蛋白质组学"
+status: "草案"
+version: "0.5"
+view_id: "zh-detailed"
+created: "2026-09-29"
+last_reviewed: "2026-10-18"
+layout_status: "中文详细版；正文与维护资料分离"
+order: 40
+review_page: "../../review/MOD-PROT-002_沉淀审核.qmd"
+keywords: [protein precipitation, acetone, urea, Tris]
+presentation_updated: "2026-10-18"
+body-classes: "protocol-detail"
+---
+
+{{< include _meta/MOD-PROT-002.md >}}
+
+::: {.module-summary}
+::: {.summary-purpose}
+用冷丙酮沉淀和洗涤蛋白，去除样品中的 SDS 等组分，再以尿素/Tris 缓冲液复溶，衔接 BCA 定量和胰酶消化。
+:::
+
+**输入：**澄清线虫总蛋白裂解液，或 TurboID 链霉亲和素富集后的洗脱物；记录样品类型、体积和蛋白量。
+
+**输出：**丙酮洗涤后的蛋白沉淀，以及以新鲜 8 M urea、100 mM Tris（pH 8.5）复溶的蛋白样品。
+
+**主方法：**冷丙酮沉淀。其他沉淀方法见[备选方案](../../review/details/MOD-PROT-002.qmd)。
+:::
+
+::: {.workflow-strip}
+[线虫裂解与 BCA](MOD-WORM-001_线虫收集与裂解.qmd) / [TurboID 富集](MOD-TURBOID-001_链霉亲和素富集.qmd) → **丙酮沉淀与复溶** → [BCA 定量](MOD-PROT-001_蛋白定量与留样.qmd) → [胰酶消化](MOD-PROT-003_胰酶消化.qmd)
+:::
+
+## 实验前准备
+
+| 项目 | 准备要求 |
+|---|---|
+| 样品 | 澄清裂解液或 TurboID 洗脱物；记录样品体积、来源、BCA 浓度及投入蛋白量。普通 lysate 常用 20–40 µg，是为适配后续自制脱盐柱；常规、无额外处理的试验中，按实验室经验，消化后用于质谱上样的量充足。特殊处理或 TurboID 洗脱物需按实际样品另行评估。 |
+| 丙酮 | 预冷至 −20°C；按样品体积准备 4 倍体积。 |
+| 离心设备 | 首次沉淀收集为 4°C、12,000 rpm、10 min。离心机及转子信息见[仪器设备目录](../../instruments/index.qmd)，未确认转子前不换算 ×g。 |
+| 沉淀管 | 使用经本实验室确认可用于丙酮和相应离心条件的离心管。 |
+| 复溶液 | 新鲜 8 M urea、100 mM Tris，pH 8.5；按约 20 µL 分次加入。 |
+
+
+### 材料与货号
+
+| 材料 | 厂家 / 货号 | 规格或用途 |
+|---|---|---|
+| [丙酮](../../materials/reagents/MAT-066_179124.qmd) | Sigma-Aldrich · **179124** | ACS reagent，≥99.5%（官方179124） |
+| [尿素](../../materials/reagents/MAT-067_51456.qmd) | Sigma-Aldrich · **51456** | BioUltra，Molecular Biology，99%（T） |
+| [Tris-HCl 储备液](../../materials/reagents/MAT-068_T885402.qmd) | Macklin · **T885402** | 1 M，pH8.5 |
+| [水（质谱用）](../../materials/reagents/MAT-100_identity.qmd) | 待登记 · **待补** | LC-MS级或经确认适用的超纯水 |
+
+## 操作步骤
+
+::: {.protocol-step #step-1}
+### [1]{.step-number} 记录样品并预冷丙酮
+
+记录样品编号、样品类型（普通线虫 lysate 或 TurboID 洗脱物）、样品体积、BCA 浓度及蛋白投入量。将所需丙酮预冷至 **−20°C**。普通 lysate 常取 **20–40 µg 蛋白**，这个量用于衔接实验室自制脱盐柱；对于没有额外处理的常规试验，按实验室经验，消化后用于质谱上样的量充足。若有特殊处理或样品属于 TurboID 洗脱物，按实际样品和下游需求记录，不直接套用该用量。
+:::
+
+::: {.protocol-step #step-2}
+### [2]{.step-number} 加入冷丙酮并沉淀
+
+按 **4 倍样品体积**加入 −20°C 预冷丙酮，混匀后置 **−20°C 至少 1 h 或过夜**。
+
+例：100 µL 样品加入 400 µL 丙酮。记录实际样品体积、丙酮体积及沉淀时间。
+:::
+
+::: {.protocol-step #step-3}
+### [3]{.step-number} 离心收集蛋白沉淀
+
+在 **4°C、12,000 rpm、10 min** 离心，保留沉淀并移除上清。设备和转子信息见[仪器目录](../../instruments/index.qmd)。
+:::
+
+::: {.protocol-step #step-4}
+### [4]{.step-number} 用冷丙酮洗涤沉淀
+
+按起始样品体积的 **8 倍**加入冰冷丙酮，每轮洗涤并重悬沉淀；共洗涤 **3 次**。用于去除 SDS。例：100 µL 起始样品，每轮加入 800 µL 冰冷丙酮。每轮洗后以 **12,000 rpm** 离心、保留沉淀并弃去洗液；洗后离心时长与温度列于[待完善事项](../../review/readiness.qmd)，执行前写入批次计划。[洗液体积依据与备选方法](../../review/details/MOD-PROT-002.qmd)。
+:::
+
+::: {.protocol-step #step-5}
+### [5]{.step-number} 去除残余丙酮
+
+移尽洗液后，在适用于挥发性有机溶剂的**化学通风橱**中开盖，使残余丙酮挥发。经验时间约 **10 min**；以无可见残余丙酮、沉淀仍易复溶为判断，避免继续放置至沉淀过干。时间随残留量和沉淀状态调整。设备适用条件见[仪器目录](../../instruments/index.qmd#溶剂挥发设备)。
+:::
+
+::: {.protocol-step #step-6}
+### [6]{.step-number} 用尿素/Tris 缓冲液复溶
+
+使用新鲜 **8 M urea、100 mM Tris（pH 8.5）**。每次约加 **20 µL**，逐步加入沉淀并混匀，直至蛋白完全溶解。**超声用于助溶，不作为固定步骤；样品混匀后仍难溶时，可选择超声辅助。**若使用超声，记录设备、模式/功率、时间和温度，并避免样品明显升温。
+
+配制 10 mL：4.8048 g urea，用 100 mM Tris（pH 8.5）溶解并定容；现配使用。
+:::
+
+::: {.protocol-step #step-7}
+### [7]{.step-number} 取样定量并交接
+
+从充分混匀的复溶样品中取独立小份做[BCA 定量](MOD-PROT-001_蛋白定量与留样.qmd)，按该模块要求预稀释尿素样品；待测样品加入 BCA 工作液前，尿素浓度需低于 **3 M**。其余样品用于后续[还原、烷基化与胰酶消化](MOD-PROT-003_胰酶消化.qmd)。记录最终蛋白浓度、复溶总体积和可用蛋白量。
+:::
+
+## 完成与交接
+
+- 记录样品来源、样品体积、蛋白投入量、丙酮比例及沉淀时间。
+- 记录离心机、转子、每轮洗涤体积和离心条件。
+- 记录沉淀干燥设备/方式、复溶缓冲液批次和复溶体积；如使用超声助溶，记录其条件。
+- BCA 定量使用独立小份，测定后样品按后续消化步骤交接。
+
+
+
+::: {.callout-note title="与 StageTip 载量衔接"}
+20–40 µg 是蛋白投入量，约 25 µg/根是肽段载量经验，不能直接视为同一口径。消化后按预计肽段量分柱，不因前处理可能有损失而默认 40 µg 输入可由单根 StageTip 承载。
+:::
+
+## 依据与维护
+
+[丙酮主流程的参数审核](../../review/MOD-PROT-002_沉淀审核.qmd)。[TCA、TCA-丙酮及甲醇/氯仿备选](../../review/details/MOD-PROT-002.qmd)。
+
+[参数解释与历史方案](../../review/details/MOD-PROT-002.qmd) · [版本记录](../../review/versions/MOD-PROT-002.qmd) · [全链路待完善事项](../../review/readiness.qmd)

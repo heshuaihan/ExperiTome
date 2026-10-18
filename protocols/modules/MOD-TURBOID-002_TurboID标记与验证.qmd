@@ -1,0 +1,97 @@
+---
+title: "TurboID 生物素标记与验证"
+protocol_id: "MOD-TURBOID-002"
+category: "线虫 / TurboID / 标记验证"
+status: "草案"
+version: "0.7"
+created: "2026-09-29"
+last_reviewed: "2026-10-17"
+keywords: [TurboID, biotin labeling, streptavidin-HRP, western blot, immunofluorescence]
+description: "在裂解前进行线虫 TurboID 生物素标记，并连接至质谱、WB 或 IF 分支。"
+order: 5
+layout_status: "中文详细版；正文与维护资料分离"
+presentation_updated: "2026-10-18"
+body-classes: "protocol-detail"
+---
+
+{{< include _meta/MOD-TURBOID-002.md >}}
+
+::: {.module-summary}
+::: {.summary-purpose}
+在裂解前向 TurboID 线虫提供生物素，完成标记后洗去游离底物。
+:::
+
+**输入：**同步化线虫、MG1655（无 kan 抗性）、M9、200 mM 生物素/DMSO 储液。
+
+**输出：**洗涤后的虫体，进入收集与裂解；WB/IF 按实验设计另行留样。
+:::
+
+## 实验前准备
+
+| 项目 | 条件 |
+|---|---|
+| 培养 | 本地 MG1655 连续两代，正式培养 **20°C**。该菌未确认为 bioB 缺陷株，不将两代培养标成生物素耗竭。 |
+| 生物素储液 | **200 mM / DMSO**；按 48.9 mg/mL 计算。使用前确认完全溶解，无结晶或沉淀。 |
+| 最终标记体系 | **1 mM 生物素、20%（v/v）MG1655 菌液**，其余用 M9 补足。储液带入 DMSO 约 0.5%。 |
+| 规模 | 虫体通常不足 5 mL，常用约 50 mL 孵育体系/50 mL 离心管；记录实际虫体量、体系体积和容器。 |
+
+### 材料与货号
+
+| 材料 | 厂家 / 货号 | 规格或用途 |
+|---|---|---|
+| [D-生物素](../../materials/reagents/MAT-051_B6220.qmd) | Macklin · **B6220** | D-生物素；等级及包装见瓶签 |
+| [二甲基亚砜（DMSO）](../../materials/reagents/MAT-052_BL165B.qmd) | Biosharp · **BL165B** | DMSO；等级见瓶签 |
+
+## 操作步骤
+
+::: {.protocol-step #step-1}
+### [1]{.step-number} 准备线虫
+
+用 MG1655（无 kan 抗性）连续培养 **两代**；正式培养 **20°C**。记录品系、发育阶段、培养代数和菌液批次。
+:::
+
+::: {.protocol-step #step-2}
+### [2]{.step-number} 收集并预洗
+
+用 M9 轻柔重悬、沉降、弃上清，共洗 **3 次**，避免吸走虫体。
+:::
+
+::: {.protocol-step #step-3}
+### [3]{.step-number} 配制标记体系
+
+生物素终浓度 **1 mM**，菌液占最终体系 **20%（v/v）**。以 50 mL 液相配方为例：10 mL 菌液、250 µL 200 mM 生物素储液，再以 M9 补至 50 mL；每批记录虫体及残留 M9 如何计入实际孵育体积。约 1:10 仅为实验室常用规模，不要求收满 5 mL 虫体。
+:::
+
+::: {.protocol-step #step-4}
+### [4]{.step-number} 标记
+
+在**常温、遮光**条件下孵育 **2 h**；记录实际室温。
+:::
+
+::: {.protocol-step #step-5}
+### [5]{.step-number} 洗去游离生物素
+
+使用新鲜 M9 润洗 **5 次，每次 5 min**。每轮重悬、沉降并移除上清，减少菌液和游离生物素带入富集。
+:::
+
+::: {.protocol-step #step-6}
+### [6]{.step-number} 收集并交接
+
+洗后在**冰上沉降**，移除多余上清。立即进入[线虫收集与裂解](MOD-WORM-001_线虫收集与裂解.qmd)，或液氮速冻后 **−80°C** 保存并记录日期。已完成的标记后 5 × 5 min 洗涤在下一模块不重复执行。
+:::
+
+::: {.protocol-step #step-7}
+### [7]{.step-number} 验证取样
+
+如需 WB/IF，按实验设计在适合相应用途的节点另留样品并独立编号。验证步骤留待后续维护。
+:::
+
+## 完成与交接
+
+记录品系/阶段、MG1655 批次、生物素浓度、菌液比例、实际体积、标记温度与时间、洗涤和冻存信息。
+
+## 依据与维护
+
+[公开方法与本地菌株差异](../../review/MOD-TURBOID-002_标记与验证审核.qmd)。生物素 200 mM、菌液 20% 和洗涤 5 × 5 min 为实验室采用条件。
+
+[参数解释与历史方案](../../review/details/MOD-TURBOID-002.qmd) · [版本记录](../../review/versions/MOD-TURBOID-002.qmd) · [全链路待完善事项](../../review/readiness.qmd)

@@ -1,0 +1,31 @@
+---
+title: "高容量链霉亲和素琼脂糖"
+subtitle: "MAT-097 · Thermo Scientific · 20357"
+last_reviewed: "2026-10-18"
+---
+
+## 产品信息
+
+| 项目 | 内容 |
+|---|---|
+| 名称 | High Capacity Streptavidin Agarose Resin |
+| 厂家 / 货号 | Thermo Scientific / **20357** |
+| 规格、等级及形式 | 2 mL沉降树脂，提供为4 mL 50%浆液 |
+| 身份状态 | 实验室已确认使用 |
+| 使用模块 | [MOD-TURBOID-001](../../protocols/modules/MOD-TURBOID-001_链霉亲和素富集.qmd) |
+
+## 配制与使用
+
+所有10×预洗/洗涤、2×洗脱按纯沉降树脂体积；2 µL混匀浆液约为1 µL树脂。
+
+## 保存与取用
+
+4°C；勿冻存。
+
+## 依据
+
+原始 protocol / 手稿；来源编号 SRC-046;SRC-047。规格来自原始记录；标注“官方”的字段另经厂家资料核对。批号、实物包装量、开封日期、效期与库存位置由实验室另行登记。
+
+[产品资料](https://www.thermofisher.cn/order/catalog/product/20357)
+
+[返回试剂与货号库](../index.qmd)

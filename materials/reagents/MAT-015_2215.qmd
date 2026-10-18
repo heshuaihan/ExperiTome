@@ -1,0 +1,31 @@
+---
+title: "Empore C18 萃取膜"
+subtitle: "MAT-015 · 3M · 2215"
+last_reviewed: "2026-10-18"
+---
+
+## 产品信息
+
+| 项目 | 内容 |
+|---|---|
+| 名称 | Empore C18 membrane discs for homemade StageTip |
+| 厂家 / 货号 | 3M / **2215** |
+| 规格、等级及形式 | C18膜，原记录3M 2215 |
+| 身份状态 | 来源记载；库存批次另行登记 |
+| 使用模块 | [MOD-PROT-004](../../protocols/modules/MOD-PROT-004_C18-StageTip脱盐.qmd) |
+
+## 配制与使用
+
+冲切3层膜片装入200 µL枪头。
+
+## 保存与取用
+
+膜片洁净保存；活化后至上样避免膜片长时间干燥。
+
+## 依据
+
+研究资料附录 A.1，PDF 第 66 页（SRC-016）。规格来自原始记录；标注“官方”的字段另经厂家资料核对。批号、实物包装量、开封日期、效期与库存位置由实验室另行登记。
+
+[产品资料](https://www.emporesci.com/product-page/empore-2215-2315-c18-disk)
+
+[返回试剂与货号库](../index.qmd)

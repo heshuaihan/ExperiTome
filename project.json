@@ -1,0 +1,76 @@
+{
+  "name": "Experitome",
+  "repository_name": "experitome",
+  "working_name": false,
+  "tagline": "Built on experience. Made for discovery.",
+  "description_en": "An open-source project connecting research experience, protocols, data resources, and analysis workflows in a traceable, reusable knowledge library. Chinese-first; exchange and AI-assisted discovery are planned.",
+  "description_zh": "从实际研究经验出发，连接实验方法、数据资源与分析流程，建设可追溯、可复用的研究知识库；逐步探索经验交流与 AI 协同检索。",
+  "language": "zh",
+  "planned_languages": [
+    "en"
+  ],
+  "site_version": "0.1.0-dev",
+  "maintainer": {
+    "name_en": "Shuaihan He",
+    "name_zh": "何帅涵",
+    "role_en": "PhD student",
+    "role_zh": "博士生",
+    "affiliations_en": [
+      "Bioscience and Biomedical Engineering Thrust",
+      "Brain and Intelligence Research Institute",
+      "The Hong Kong University of Science and Technology (Guangzhou)"
+    ],
+    "affiliations_zh": [
+      "生命科学与生物医学工程学域",
+      "脑与智能研究所",
+      "香港科技大学（广州）"
+    ],
+    "github_username": "heshuaihan",
+    "orcid": null,
+    "public_email": null
+  },
+  "content_license": "CC-BY-4.0",
+  "code_license": "MIT",
+  "dataset_license": "per-dataset",
+  "topics": [
+    "research-resources",
+    "protocols",
+    "reproducible-research",
+    "bioinformatics",
+    "proteomics",
+    "caenorhabditis-elegans",
+    "turboid",
+    "data-curation",
+    "quarto",
+    "research-workflows"
+  ],
+  "repository_url": null,
+  "site_url": null,
+  "publication_status": "ready-for-first-upload",
+  "prepared_on": "2026-10-18",
+  "naming_status": "confirmed",
+  "name_check_date": "2026-10-18",
+  "name_confirmed_on": "2026-10-18",
+  "content_pillars": [
+    "Protocols",
+    "Analysis",
+    "Data"
+  ],
+  "brand_values": [
+    "Built from experience",
+    "Connected through exchange",
+    "Discover with AI"
+  ],
+  "feature_status": {
+    "protocol_library": "draft-content",
+    "data_collection": "planned",
+    "analysis_collection": "planned",
+    "community_platform": "planned",
+    "ai_assisted_discovery": "planned",
+    "skill": "planned"
+  },
+  "tagline_zh": "源于实践，助力发现。",
+  "brand_asset": "assets/experitome-hero.png",
+  "brand_asset_version": "v3",
+  "repository_description": "Built on experience. Made for discovery. A research knowledge library connecting protocols, analysis, and supporting data."
+}

@@ -1,0 +1,92 @@
+---
+title: "还原、烷基化与胰酶消化 · 补充依据"
+description: "参数解释、历史方案与适用范围。"
+search: false
+---
+
+## 当前方案与厂家用语
+
+常规采用约2 M尿素，低尿素备选按1 M计算；正文不再列“边界目标”或重复分层提示。**Pierce指南原文仍为尿素低于1 M**，因此实验室名义1 M备选不标为严格满足该条厂家要求。需严格按该条执行时，按实际总体系确保低于1 M。
+
+TCEP/IAA常规1 M/500 mM及100 mM工作液备选均保留。终止消化后4°C、12,000 rpm、10 min，取上清；不能立即继续时−20°C。以下为既往核查过程与文献比较。
+
+
+[返回当前操作](../../protocols/modules/MOD-PROT-003_胰酶消化.qmd) · [版本记录](../versions/MOD-PROT-003.qmd)
+
+本页保存从操作正文移出的比较和说明。执行时以当前模块为准；历史方案需整体选择，不与主流程拼接。
+
+## 输入与来源条件
+
+蛋白沉淀后的复溶已安排在前一模块 [MOD-PROT-002](../../protocols/modules/MOD-PROT-002_蛋白沉淀.qmd)，其中规定新鲜 8 M urea、100 mM Tris pH 8.5 分次加入，超声仅作为难溶时的可选助溶手段。原始流程的后续“加 59.5 µL Tris、得到约 80 µL、尿素约 2 M”计算只适用于 8 M urea 起始体积恰为 20 µL 的例子；本模块按实际复溶体积计算尿素稀释量。
+
+| 添加物 | 来源记载 | 来源目标或备注 |
+|---|---|---|
+| TCEP | 老版记录：0.1 µL 1 M | 约 5 mM，按 20 µL 起始样品估算；室温 20 min。保留老师旧版储备液记录 |
+| IAA | 老版记录：0.4 µL 500 mM，避光 | 约 10 mM，按 20 µL 起始样品估算；室温 15 min。保留老师旧版储备液记录 |
+| Tris pH 8.5 | 约 59.5 µL 加入 20 µL 样品 | 来源按约 80 µL 计算，尿素仍为约 2 M；这是老师旧版条件 |
+| CaCl₂ | 0.8 µL 100 mM | 来源目标约 1 mM；需按最终体积复算 |
+| 甲胺 | 1.632 µL 来源所称 1 M 工作液 | 目标约 20 mM；母液换算需按瓶签复核 |
+| Trypsin | 20 µg 冻干酶以 20 µL 50 mM 乙酸复溶，得到 1 µg/µL | 常用质量比记作酶:蛋白 = 1:50；消化时间按 Pierce 指南 37°C、4–24 h |
+| 甲酸 | 来源按样品体积约 0.5–1.0% 加入 | 以实测 pH 2–3 为目标 |
+
+## 原储备液记录
+
+| 储备液 | 文件中记录的配法 | 待核实点 |
+|---|---|---|
+| 100 mM Tris pH 8.5 | 1 M Tris pH 8.5 与水按 1:9 稀释 | 按目标体积配制并复测 pH |
+| 8 M urea / 100 mM Tris | 4.8048 g urea 溶于 100 mM Tris 并定容至 10 mL | 按原记录新鲜配制；实际溶解体积逐管记录 |
+| 1 M TCEP | 1 g 定容至 3.49 mL LC-MS 水 | 该换算对应 TCEP hydrochloride；需核对瓶签化学形式和分子量 |
+| 500 mM IAA | 1 g 定容至 10.8 mL 水，避光 | 原文写分装 −80°C；Thermo 指南建议现配并避光，储存稳定性未由该指南确认 |
+| 100 mM CaCl₂ | 0.11098 g 定容至 10 mL | 此质量按无水 CaCl₂ 计算；按瓶签水合形式复核 |
+| 1 M 甲胺工作液 | 老版记录：40 wt% 母液 1 mL 加水 11.9 mL；原文按 12.9 M 估算 | 用户确认实验室货号为 Aladdin M102702；官方 SDS 未列浓度，瓶签/COA 信息待用户补充；SDS 记载 2–8°C 保存、对光和热敏感 |
+| Trypsin 1 µg/µL | 当前采用：20 µg 冻干酶以 20 µL 50 mM 乙酸复溶 | 与 Pierce 90057 指南一致；单次用量分装后 −80°C 保存 |
+
+## 厂家核查与方法差异
+
+### 尿素条件：老师旧版约 2 M 与调整方案
+
+老师旧版条件保留为约 **2 M 尿素**：若样品含 20 µL 8 M urea，加入约 59.5 µL Tris 后，总体积约 80 µL，尿素约 2 M。该条件作为历史配方记录，不标记为 Pierce 90057 厂家推荐条件。
+
+可调整为 **1 M 尿素目标**：同一管含 20 µL 8 M urea 时，消化前总体积达到 160 µL，尿素恰为 1 M。计算总体积时应包括 Tris、还原/烷基化试剂及其他组分。Thermo Pierce 90057 用户指南要求 **低于 1 M**，因此 1 M 是边界值，不满足厂家原文要求；若按厂家指南执行，应将总体积配到大于 160 µL。例：总体积为 200 µL 时，尿素约 0.8 M。
+
+按浓度守恒计算：
+
+`消化前尿素浓度 = 8 M × 8 M urea 体积 / 消化前总反应体积`
+
+若实际使用多个 20 µL 溶解增量，应代入实际 8 M urea 体积重新计算。稀释后再加酶；记录采用的是老师旧版约 2 M、调整目标 1 M，还是厂家指南边界内的 <1 M 条件。
+
+文献对照：2026 年一篇 *C. elegans* IP-MS 方法使用 2 M urea、20 mM 甲胺和 Promega V5117 trypsin。该文说明 2 M 是一种已发表的线虫 IP-MS 条件，但使用的胰酶产品与本模块记录的 Pierce 90057 不同，不能替代 90057 用户指南。
+
+### TCEP、IAA 工作液及淬灭
+
+老师旧版的 1 M TCEP 与 500 mM IAA 储备液及对应加入量继续保留为来源记录。为减少小体积加样，可另配较低浓度工作液；例如 100 mM TCEP 和新鲜 100 mM IAA。若起始样品为 20 µL，分别按“还原阶段约 5 mM”和“加入 IAA 后约 10 mM”估算，约需 1.05 µL TCEP 工作液和 2.34 µL IAA 工作液。该工作液浓度是可选的移液调整，不替代老师旧版记录；实际样品体积不同则按实际体积重算；IAA 现配、避光。
+
+TCEP 储备液的“1 g / 3.49 mL = 1 M”只适用于 TCEP hydrochloride；若瓶中是其他化学形式，浓度会不同。还原和烷基化阶段的 pH 应保持在 7–9；若使用 TCEP-HCl，需留意其对小体积样品 pH 的影响。
+
+**IAA 后未另加淬灭剂不据此判为错误。** Pierce 指南的操作示例使用 DTT 还原，因此示例中用 DTT 将 IAA 淬灭；Thermo 的质谱技术问答说明，使用 TCEP 还原时不需要该淬灭步骤。两种还原体系应分开理解。
+
+### Trypsin 复溶、保存与加酶量
+
+稿件方法记录的产品货号为 Pierce 90057。当前采用厂家复溶条件：20 µg 冻干酶加入 20 µL 50 mM 乙酸，配成 1 mg/mL（1 µg/µL）；按单次用量分装后 −80°C 保存。Thermo 指南还称，50 mM 乙酸中的复溶液 −20°C 可稳定超过 1 年；长期保存建议 −80°C 单次分装。
+
+Thermo 指南给出的酶:蛋白质量比范围为 1:20–1:100；实验室常用 1:50 位于该范围内。加酶质量应按 BCA 测得的蛋白质量计算：
+
+`trypsin 质量 = 蛋白质量 / 50`（若采用 1:50）
+
+按当前 1 µg/µL 复溶液和 1:50 比例，10、20、40 µg 蛋白分别需 0.2、0.4、0.8 µL trypsin。实际用量按 BCA 蛋白质量和所选比例计算，并记录蛋白质量、目标比例和实际加酶量。消化时间按厂家指南记录为 37°C、4–24 h；指南未要求该步骤避光。
+
+### 其他终浓度与样品基质
+
+- **CaCl₂：** Thermo 将 1 mM CaCl₂ 列为可选条件，可能改善修饰 trypsin 的活性。若按 `<1 M urea` 增加反应体积，100 mM CaCl₂ 工作液也须按新的消化总体积计算；1 mM 目标对应每 100 µL 终体积加 1 µL 100 mM 储备液。
+- **甲胺：** 20 mM 在 2026 年线虫 IP-MS 方法中有先例。用户确认实验室货号为 Aladdin M102702。官方 SDS 确认该货号是一甲胺水溶液，列出密度 0.897 g/mL，建议 2–8°C 保存并注明对光和热敏感；浓度栏未提供含量，瓶签/COA 信息待用户补充，补充前不按未经核实的 12.9 M 假设计算。
+- **pH 与终止：** Pierce trypsin 最大活性 pH 为 7–9，样品的 100 mM Tris pH 8.5 落在范围内；说明书称酶在 pH <4 可逆失活，并明确以 −20°C 保存终止消化。进入 C18 前以甲酸经验用量 0.5–1.0%（v/v）作为主要加样参考，再以实测 pH 2–3 确认酸化终点；由 pH <4 推断酸化可抑制 trypsin 活性，但这不等同于说明书指定的 −20°C 终止操作。由于 Tris 与甲胺会缓冲，记录实测终点 pH 和实际甲酸用量。
+- **盐与 SDS：** 指南提示单价盐（例如 NaCl）高于 100 mM 可能干扰 trypsin；本流程经过丙酮沉淀，但洗脱/洗液带入的盐残留量未测。指南提到的温和变性条件包括 0.1% SDS，并写明 SDS 样品可不稀释；这不能证明原始 2% SDS 裂解液在未经清理时可直接消化。丙酮沉淀后残留 SDS 和盐需按实际清理流程评估。
+
+## 原始参考
+
+- 实验室消化流程：SRC-001、SRC-002、SRC-003。
+- 厂家指南 SRC-010：[Pierce Trypsin Protease, MS Grade User Guide, MAN0011821](https://documents.thermofisher.com/TFS-Assets/LSG/manuals/MAN0011821_Pierce_Trypsin_Protease_MS_Grade_UG.pdf)。
+- Thermo 质谱技术问答 SRC-056：[DTT 或 TCEP 用于 IAA 烷基化时的淬灭说明](https://www.thermofisher.cn/cn/en/home/life-science/protein-biology/protein-mass-spectrometry-analysis/mass-spectrometry-analysis-technical-handbooks-zh.html)。
+- 甲胺试剂记录 SRC-058：[Aladdin M102702 官方 SDS](https://ald-pub-files.oss-cn-shanghai.aliyuncs.com/aladdin/pdp/sds/cn/M102702-CN_23a07ce95a5b0a178bd4f8ce8ba1649e.pdf)：确认产品名称、密度及 2–8°C 避光/避热储存提示；SDS 未列出浓度，瓶签浓度仍待记录。
+- 线虫方法对照 SRC-055：Wang & Dong, 2026, [A practical guide to sample preparation for immunoprecipitation coupled with mass spectrometry analysis of *C. elegans* proteins](https://doi.org/10.17912/micropub.biology.002087)。
+- 甲胺密度参照 SRC-057：[Sigma-Aldrich 426466 产品页](https://www.sigmaaldrich.com/VC/en/product/sial/426466)；仅当实验室瓶签为该产品时适用。

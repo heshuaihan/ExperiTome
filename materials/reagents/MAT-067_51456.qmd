@@ -1,0 +1,33 @@
+---
+title: "尿素"
+subtitle: "MAT-067 · Sigma-Aldrich · 51456"
+last_reviewed: "2026-10-18"
+---
+
+## 产品信息
+
+| 项目 | 内容 |
+|---|---|
+| 名称 | Urea |
+| 厂家 / 货号 | Sigma-Aldrich / **51456** |
+| 规格、等级及形式 | BioUltra，Molecular Biology，99%（T）（官方51456） |
+| 身份状态 | 来源记载；库存批次另行登记 |
+| 使用模块 | [MOD-PROT-002](../../protocols/modules/MOD-PROT-002_蛋白沉淀.qmd) · [MOD-PROT-003](../../protocols/modules/MOD-PROT-003_胰酶消化.qmd) · [MOD-TURBOID-001](../../protocols/modules/MOD-TURBOID-001_链霉亲和素富集.qmd) |
+
+## 配制与使用
+
+8 M/100 mM Tris pH8.5：4.8048 g尿素，配至10 mL；富集Wash II为6 M。
+
+[配液表](../buffers/BUF-TURBOID-001_富集缓冲液.qmd)。
+
+## 保存与取用
+
+复溶液现配使用；消化37°C，不额外加热尿素液。
+
+## 依据
+
+研究资料附录 A.1，PDF 第 65 页（SRC-016）。规格来自原始记录；标注“官方”的字段另经厂家资料核对。批号、实物包装量、开封日期、效期与库存位置由实验室另行登记。
+
+[产品资料](https://www.sigmaaldrich.com/US/en/product/sigma/51456)
+
+[返回试剂与货号库](../index.qmd)

@@ -1,0 +1,25 @@
+---
+title: "方法来源"
+subtitle: "官方说明书与公开方法"
+---
+
+官方资料用于核对产品和通用操作，实验室经验用于记录本地采用条件。二者不能相互替代；完整版本变更见[版本记录](../review/versions/index.qmd)。
+
+## 核心参考
+
+| 模块 | 主要来源 |
+|---|---|
+| 线虫裂解 | [A32965 官方指南](https://assets.thermofisher.com/TFS-Assets/LSG/manuals/MAN0016069_216214_PierceProteaseInhibitorTablets_PI.pdf)；[线虫蛋白提取方法](https://pmc.ncbi.nlm.nih.gov/articles/PMC7441831/) |
+| BCA | [A55865 指南 MAN0029423](https://assets.thermofisher.com/TFS-Assets/LSG/manuals/MAN0029423-BCAProteinWithDIlutionFreeBSA-UG.pdf)；[兼容性](https://assets.thermofisher.com/TFS-Assets/LSG/Application-Notes/TR0068-Protein-assay-compatibility.pdf)；[标准曲线计算](https://assets.thermofisher.com/TFS-Assets/LSG/Application-Notes/TR0057-Read-std-curves.pdf) |
+| TurboID 标记 | [本地条件与公开方法比较](../review/MOD-TURBOID-002_标记与验证审核.qmd)；MG1655 本地菌株与文献 bioB::kan 不同 |
+| 链霉亲和素 | [官方树脂指南](https://assets.thermofisher.com/TFS-Assets/LSG/manuals/MAN0011198_Pierce_Streptavidin_Agarose_Resins_UG.pdf)；[20357 产品页](https://www.thermofisher.cn/order/catalog/product/20357) |
+| 蛋白沉淀 | [GeLC-MS/MS 方法](https://pmc.ncbi.nlm.nih.gov/articles/PMC4959781/)；[沉淀洗涤实例](https://pmc.ncbi.nlm.nih.gov/articles/PMC4732721/) |
+| Trypsin | [90057 指南 MAN0011821](https://documents.thermofisher.com/TFS-Assets/LSG/manuals/MAN0011821_Pierce_Trypsin_Protease_MS_Grade_UG.pdf) |
+| StageTip | [Rappsilber et al., 2007](https://www.nature.com/articles/nprot.2007.261)；[A801297 规格书](https://api.macklin.cn/api/specification/download?item_code=A801297&lang=cn) |
+| 肽段定量 | [Pierce 23275 官方说明书](https://documents.thermofisher.com/TFS-Assets/LSG/manuals/23275_quantpeptide_color_UG.pdf)；[产品 FAQ](https://www.thermofisher.cn/order/catalog/product/23275/faqs) |
+
+## 阅读依据
+
+[试剂资料复核记录](../review/reagents_20261018.qmd)汇总原始资料位置、HEPES及关键化学品规格、本轮补全范围与未取得的证据。
+
+文献的样品基质、酶产品或菌株不同，结论只按其实际范围引用。公开页面使用官方/期刊链接，第三方全文和个人原始资料保留在本地档案；来源失效时可凭题名、DOI 或说明书编号重新查找。

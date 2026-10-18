@@ -1,0 +1,28 @@
+---
+title: "GitHub首次发布步骤"
+search: false
+---
+
+## 离线准备
+
+已准备：正式英文项目名Experitome、中文网站、作者及单位、内容/代码许可、引用文件、贡献说明、数据/分析条目模板和自动发布配置。方法仍按各模块草案状态维护。
+
+## 登录后按顺序操作
+
+1. 在GitHub Desktop登录账号。2FA是双重验证；苹果手机扫码也可能属于通行密钥验证，按GitHub官方页面与已绑定设备提示完成。登录验证在你自己的设备上处理。[官方说明](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/accessing-github-using-two-factor-authentication)
+2. 在Desktop新建本地仓库，Name填`experitome`，主分支`main`。Local path选独立发布位置；README、Git ignore、License暂不让软件重复生成，准备包已包含这些文件。
+3. 解压发布包，把里面`experitome/`目录的**内容**复制到本地仓库根目录；根目录直接看到`_quarto.yml`、`README.md`、`.github/`、`LICENSE`、`LICENSES/`，不再套一层文件夹。保留Desktop创建的`.git/`，不从原始研究工作区复制文件。
+4. 核对Changes列表，Summary写首次发布说明，Commit to main。点Publish repository；若采用免费公开Pages，取消Keep this code private，将仓库发布为公开。
+5. 网页仓库Settings → Pages → Build and deployment → Source选GitHub Actions。
+6. Actions → Publish Experitome → Run workflow，选择main。构建/检查/部署成功后，在Pages设置查看正式网址。
+7. 补齐网站与仓库地址、CITATION.cff中的仓库URL及作者GitHub链接；再确认首页、搜索、中文路径、手机宽度和下载文件。
+
+参考：[GitHub Desktop入门](https://docs.github.com/en/desktop/overview/creating-your-first-repository-using-github-desktop) · [Pages配置](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)。
+
+## 日常更新
+
+本地研究主本修改 → 生成公开版 → 同步独立发布仓库 → 在Desktop审阅变更 → Commit to main → Push origin。每次发布只同步获准公开的源文件；大型数据单独登记存储地址与许可。
+
+## 上线前剩余信息
+
+仓库/网站地址；GitHub用户名为heshuaihan，项目名称已确定为Experitome，公开署名与单位已按本人指示从已有资料核对。本地发布目录准备完成后，在Desktop完成提交与公开发布，再启用Pages并记录正式网址。

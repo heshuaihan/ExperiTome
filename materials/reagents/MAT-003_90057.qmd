@@ -1,0 +1,31 @@
+---
+title: "质谱级胰蛋白酶"
+subtitle: "MAT-003 · Thermo Scientific · 90057"
+last_reviewed: "2026-10-18"
+---
+
+## 产品信息
+
+| 项目 | 内容 |
+|---|---|
+| 名称 | Pierce Trypsin Protease MS Grade |
+| 厂家 / 货号 | Thermo Scientific / **90057** |
+| 规格、等级及形式 | 5 × 20 µg 冻干酶 |
+| 身份状态 | 来源记载；库存批次另行登记 |
+| 使用模块 | [MOD-PROT-003](../../protocols/modules/MOD-PROT-003_胰酶消化.qmd) |
+
+## 配制与使用
+
+每 20 µg 酶加 20 µL 50 mM 乙酸，1 µg/µL。
+
+## 保存与取用
+
+复溶后单次分装、−80°C；避免反复冻融。
+
+## 依据
+
+研究资料附录 A.1，PDF 第 64 页（SRC-016）；手稿 Methods（SRC-001）。规格来自原始记录；标注“官方”的字段另经厂家资料核对。批号、实物包装量、开封日期、效期与库存位置由实验室另行登记。
+
+[产品资料](https://www.thermofisher.cn/order/catalog/product/90057) · [官方指南](https://assets.thermofisher.com/TFS-Assets/LSG/manuals/MAN0011821_Pierce_Trypsin_Protease_MS_Grade_UG.pdf)
+
+[返回试剂与货号库](../index.qmd)

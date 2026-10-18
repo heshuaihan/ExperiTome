@@ -1,0 +1,58 @@
+---
+title: "Protocols"
+subtitle: "实验方法与工作流 · 中文详细版"
+description: "总蛋白质组与 TurboID 两条路线，八个操作模块。"
+body-classes: "library-home"
+---
+
+::: {.library-lead}
+从实验路线进入，按编号步骤完成操作；配方、来源与版本记录随时可查。
+:::
+
+::: {.library-meta}
+2 条路线 · 8 个模块 · 中文详细版 · 方法草案
+:::
+
+## 选择实验路线
+
+::: {.route-grid}
+::: {.route-card}
+### 01 · 总蛋白质组
+
+从线虫裂解液出发，制备适合 LC-MS/MS 分析的肽段。
+
+裂解 → BCA → 沉淀/复溶 → 消化 → 脱盐 → 肽段定量
+
+[查看总蛋白工作流 →](worm/PROT-WORM-001_线虫蛋白质质谱样品制备.qmd)
+:::
+
+::: {.route-card}
+### 02 · TurboID
+
+标记邻近蛋白，经链霉亲和素富集后接入共用制样路线。
+
+标记 → 裂解 → BCA → 亲和富集 → 沉淀/复溶 → 消化 → 脱盐 → 肽段定量
+
+[查看 TurboID 工作流 →](turboid/PROT-TURBOID-001_TurboID链霉亲和素富集质谱.qmd)
+:::
+:::
+
+## 操作模块
+
+每页依次提供输入/输出、准备、编号步骤和交接要求。核心内容已完成一轮初审；[待完善事项](../review/readiness.qmd)集中记录执行缺项。
+
+::: {.module-index}
+{{< include _modules.md >}}
+:::
+
+## 配套资料
+
+::: {.module-actions}
+[试剂与货号](../materials/index.qmd)
+[配液](../materials/buffers/index.qmd)
+[仪器设置](../instruments/index.qmd)
+[来源](../sources/index.qmd)
+[版本记录](../review/versions/index.qmd)
+:::
+
+执行记录注明方法版本和实际条件。页面完成整理、官方资料复查和实验室验证分别登记。

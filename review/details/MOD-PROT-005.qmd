@@ -1,0 +1,24 @@
+---
+title: "肽段定量与上样 · 补充依据"
+description: "参数解释、历史方案与适用范围。"
+search: false
+---
+
+[返回当前操作](../../protocols/modules/MOD-PROT-005_肽段定量与上样.qmd) · [版本记录](../versions/MOD-PROT-005.qmd)
+
+本页保存从操作正文移出的比较和说明。执行时以当前模块为准；历史方案需整体选择，不与主流程拼接。
+
+## 当前选择与加样依据
+
+工作液 **A:B:C = 50:48:2**、**37°C 15 min**、**480 nm**与23275官方说明一致。在用试剂盒23275已由实验室确认。常规20+180 µL；实验室省样方案为**10 µL稀释样品+180 µL工作液**，不另补水，标准品和空白同步采用10+180 µL。两个体系各用匹配曲线；官方标称范围不自动移用到改动体系。样品充足至少双孔，样品少时可单孔估测量级。
+
+## 来源说明
+
+- [Pierce Quantitative Colorimetric Peptide Assay 23275 官方说明书](https://documents.thermofisher.com/TFS-Assets/LSG/manuals/23275_quantpeptide_color_UG.pdf)：试剂盒组成、保存、标准曲线、50:48:2 工作液、微孔板步骤、480 nm 读数、工作范围、拟合选项及干扰物。
+- [Thermo Fisher 23275 官方产品页](https://www.thermofisher.cn/order/catalog/product/23275) · [官方 FAQ：标准品溶剂为 50 mM 碳酸氢铵](https://www.thermofisher.cn/order/catalog/product/23275/faqs)。
+- 实验室历史来源：SRC-001、SRC-003、SRC-004；条件差异留在来源记录中。
+- 关联：[C18 StageTip 脱盐](../../protocols/modules/MOD-PROT-004_C18-StageTip脱盐.qmd) · [货号与身份状态](../../materials/index.qmd)。
+
+## 拟合术语核查
+
+厂家原文使用 “four-parameter (quadratic)” 的表述；四参数模型与二次多项式并非同一种数学模型。操作正文采用线性优先、备选模型注明实际算法的写法，不沿用两者等同的表述。

@@ -1,0 +1,45 @@
+---
+title: "Pierce BCA 蛋白检测试剂盒"
+subtitle: "MAT-002 · Thermo Scientific · A55865"
+description: "预配梯度 BSA 标品试剂盒的组成、保存及官方资料。"
+entry_id: "MAT-002"
+catalog_number: "A55865"
+status: "实验室已确认使用"
+last_reviewed: "2026-09-30"
+---
+
+::: {.module-summary}
+**用途：**总蛋白 BCA 定量。实验室已确认使用 A55865，含预配梯度 BSA 标品，500 mL 规格。
+
+**操作入口：**[MOD-PROT-001 · BCA 蛋白定量](../../protocols/modules/MOD-PROT-001_蛋白定量与留样.qmd)。
+:::
+
+## 组成与保存
+
+| 组分 | A55865 内容 | 保存条件 |
+|---|---|---|
+| BCA 试剂 A | 500 mL | 室温；以瓶签及效期为准 |
+| BCA 试剂 B | 25 mL | 室温；以瓶签及效期为准 |
+| 预配 BSA 标品 | 2 条，每条 8 管；7 个浓度各 1 mL，另有空管 | 未开封按产品室温要求；开封后密封置 4°C |
+| [BCA 工作液](../buffers/BUF-BCA-001_工作液.qmd) | A:B = 50:1，本批按需配制 | 厂家称室温密闭可稳定数天；保留时记录配制日期 |
+
+标品浓度为 0.125、0.25、0.5、0.75、1、1.5 和 2 mg/mL。标品条原液含 0.9% saline 与 0.05% sodium azide。空管由使用者加入空白液；当前实验室使用水。
+
+开封后将条盖方向标识对准 2 mg/mL 管并压紧各盖。出现变色或污染迹象的试剂按指南弃用。
+
+## 使用关联
+
+- [BCA 定量操作](../../protocols/modules/MOD-PROT-001_蛋白定量与留样.qmd)：裂解液或沉淀后复溶蛋白。
+- [工作液配制](../buffers/BUF-BCA-001_工作液.qmd)：体积计算、混匀与保存。
+- [参数审核](../../review/MOD-PROT-001_BCA审核.qmd)：现行方法、官方依据和修订历史。
+
+## 官方资料
+
+| 资料 | 官方链接 | 本地归档 / 版本 |
+|---|---|---|
+| A55865 产品页 | [产品身份与规格](https://www.thermofisher.cn/order/catalog/product/A55865) | SRC-026；核对 2026-09-30 |
+| A55864/A55865 用户指南 | [MAN0029423](https://assets.thermofisher.com/TFS-Assets/LSG/manuals/MAN0029423-BCAProteinWithDIlutionFreeBSA-UG.pdf) | [SRC-025](https://assets.thermofisher.com/TFS-Assets/LSG/manuals/MAN0029423-BCAProteinWithDIlutionFreeBSA-UG.pdf)；B.0，2023-11-17 |
+| 兼容性表 | [TR0068](https://assets.thermofisher.com/TFS-Assets/LSG/Application-Notes/TR0068-Protein-assay-compatibility.pdf) | [SRC-021](https://assets.thermofisher.com/TFS-Assets/LSG/Application-Notes/TR0068-Protein-assay-compatibility.pdf)；COL35319 1222 |
+| 标准曲线计算 | [TR0057](https://assets.thermofisher.com/TFS-Assets/LSG/Application-Notes/TR0057-Read-std-curves.pdf) | [SRC-023](https://assets.thermofisher.com/TFS-Assets/LSG/Application-Notes/TR0057-Read-std-curves.pdf)；TR0057.4 |
+
+当前批号、开封日期、效期、剩余量和库存位置在每次实验记录或库存台账中填写。

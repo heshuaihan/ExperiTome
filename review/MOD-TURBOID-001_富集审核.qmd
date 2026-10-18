@@ -1,0 +1,86 @@
+---
+title: "TurboID 链霉亲和素富集：参数审核"
+description: "记录原始实验差异、当前用户确认的统一条件、厂商树脂指南及待补参数。"
+last_reviewed: "2026-10-18"
+search: false
+---
+
+[中文详细版](../protocols/modules/MOD-TURBOID-001_链霉亲和素富集.qmd) · [中文速查版](../sources/index.qmd) · [维护顺序](../sources/index.qmd)。
+
+## 本轮整理范围
+
+将两份实验室 TurboID 质谱流程（SRC-003、SRC-004）与 Pierce Streptavidin Agarose Resins 指南（SRC-007）对照。下表记录两份原始文件当时写下的条件；其后用户已确认当前实验统一采用 HEPES/NaCl 基础液，并采用 SRC-004 的 95°C 洗脱条件。原始 DOCX 与厂商 PDF 保留不变，当前执行条件另列如下。
+
+### 当前执行选择（用户确认）
+
+| 步骤 | 当前条件 |
+|---|---|
+| 样品稀释 | 50 mM HEPES、150 mM NaCl；按实际 SDS 起始浓度计算至 0.5% |
+| 树脂预洗 | 用约 10 倍珠体积的 50 mM HEPES、150 mM NaCl 清除树脂储存液；按记录 2,000 rpm，时间和转子待补 |
+| Wash I / II | 分别为 50 mM HEPES、150 mM NaCl、0.2% SDS；以及 6 M urea、50 mM HEPES、150 mM NaCl、0.1% SDS；各 2 轮 |
+| 洗脱 | SRC-004：10 mM biotin、2% SDS、50 mM HEPES、150 mM NaCl；95°C、5 min、800 rpm，共 7 轮；每轮后 2,000 rpm、1 min 收集上清 |
+
+用户已明确 PBS 不再用于当前稀释液、珠子预洗液、Wash I/II 或洗脱液。此项是实验室当前统一决定；历史记录中的 PBS 配方仅在下表和来源文件中保留。
+
+## 两份实验记录对照
+
+| 条件 | SRC-003：2025-08-08 原始记录 | SRC-004：2026-05-07 原始记录 | 原始记录差异 |
+|---|---|---|---|
+| 样品 SDS 稀释 | PBS 稀释至 0.5% | HEPES 50 mM、NaCl 150 mM 稀释至 0.5% | 配对记录；上游当前裂解液名义约 1% SDS，等体积无 SDS 缓冲液为理论计算，需按实际起始浓度核算 |
+| 树脂预洗 | PBS 约 10× 珠体积；2,000 rpm | PBS 约 10× 珠体积；2,000 rpm | 记录没有写时间、转子和 RCF；补齐实际离心条件 |
+| 结合 | 室温旋转 2 h | 室温旋转 2 h | 共用记录条件 |
+| 树脂估算 | 混匀悬液约 5 µg/µL；沉降树脂约 10 µg/µL | 混匀悬液约 5 µg/µL；沉降树脂约 10 µg/µL | 实验室估算口径，非由厂家总蛋白结合容量保证；不混用体积基准 |
+| Wash I | PBS + 0.2% SDS | HEPES/NaCl 基础液 + 0.2% SDS | 成套版本 |
+| Wash II | PBS + 6 M urea + 0.1% SDS | 6 M urea + HEPES/NaCl + 0.1% SDS | 两种 wash I/II 各 2 轮；每轮约 10× 珠体积 |
+| 洗脱液 | 20 mM biotin、2% SDS、PBS；旁注曾试 10 mM | 10 mM biotin、2% SDS、HEPES/NaCl | 浓度与缓冲液成套选择 |
+| 洗脱处理 | 75°C、10 min，重复 7 轮 | 95°C、5 min、800 rpm，重复 7 轮 | 不交叉拼合温度、时间或洗脱液 |
+| 收集上清 | 实验室记录的分离参数不完整 | 2,000 rpm、1 min | SRC-004 未注明转子/RCF；SRC-003 需查执行记录 |
+| 7 轮去向 | 记录未说明是否逐轮合并 | 记录未说明是否逐轮合并 | 维持逐轮标记，待确认合并规则及进入质谱的轮次 |
+
+## 配方转录核对
+
+以下为 SRC-004 的 50 mL 配方原记录转录，用于追溯来源；当前操作选择见上表。珠子预洗清除储存液的缓冲液已按用户决定统一为 HEPES/NaCl，即使历史配方记录采用 PBS。
+
+| 溶液 | 组分及加入量 | 记录目标终浓度 |
+|---|---|---|
+| Dilution buffer | 1 M HEPES 2.5 mL；1.5 M NaCl 5 mL；水补至 50 mL | 50 mM HEPES、150 mM NaCl |
+| Wash I | 上述基础液；另加 10% SDS 1 mL；水补至 50 mL | 50 mM HEPES、150 mM NaCl、0.2% SDS |
+| Wash II | 尿素 18.018 g；1 M HEPES 2.5 mL；1.5 M NaCl 5 mL；10% SDS 0.5 mL；水补至 50 mL | 6 M urea、50 mM HEPES、150 mM NaCl、0.1% SDS |
+| Elution buffer（SRC-004） | 1 M HEPES 2.5 mL；200 mM biotin 2.5 mL；10% SDS 10 mL；1.5 M NaCl 5 mL；水补至 50 mL | 50 mM HEPES、10 mM biotin、2% SDS、150 mM NaCl |
+
+SRC-003 的 50 mL 洗脱液记录为 biotin 0.24431 g、SDS 1 g，以 PBS 配制，目标为 20 mM biotin、2% SDS。SRC-003 两种洗液以 PBS 为基础。该配方只作为历史来源记录；当前流程使用上方列出的 HEPES/NaCl 条件。
+
+## 厂商资料能确认什么
+
+用户提供的 [Thermo Fisher 20357 产品页](https://www.thermofisher.cn/order/catalog/product/20357)与实验室记录的产品名称相符，当前登记为**疑似货号 20357，待瓶签/采购记录确认**。该页列明规格为 2 mL；说明书 MAN0011198 Rev. B 进一步明确这是 **2 mL 沉降树脂、4 mL 总体积**，即随货为 50% 水相悬液，含 0.02% sodium azide。产品到货后 4°C 保存、不要冷冻。以生物素化 BSA 测量的容量至少为 10 mg/mL 沉降树脂；该数值不能直接代表本 TurboID 裂解液中总蛋白的结合容量。
+
+### 厂家说明书中的操作示例
+
+说明书开头指出，这些是产品应用示例，具体系统需优化。与本实验室批次富集最相关的内容如下，但用途各异：
+
+| 厂家示例 | 说明书步骤概要 | 与本地 TurboID 的关系 |
+|---|---|---|
+| 生物素化分子离心柱法 | 树脂和试剂平衡至室温；先以 500 × g 离心 1 min 去保存液；每次加 1 个柱床体积 Binding Buffer，以 500 × g 离心 1 min，重复 3 次；加入生物素化样品并室温孵育 10 min；以 1 个柱床体积 Binding Buffer 洗涤 5 次，每次 500 × g、1 min；加入 5–10 个柱床体积 8 M guanidine·HCl（pH 1.5）洗脱，立即脱盐或透析 | 这是离心柱/柱床流程，离心力按 ×g 给出；不能把柱体积、500 × g 或 8 M guanidine 条件直接替换到本地批次悬液流程 |
+| 批量免疫沉淀 | 先将抗原与生物素化抗体混合；加树脂后混合孵育 1 h（室温或 4°C）；每次用 0.5–1.0 mL Binding Buffer 清洗，约 2,500 × g 离心 1–2 min，至少重复 4 次 | 这是抗体捕获抗原的 batch IP，结合对象和 TurboID 直接捕获生物素化蛋白的裂解液不同；仅可作为树脂批次清洗操作的参考 |
+| [ActivX 探针标记蛋白批次捕获（MAN0011768）](https://documents.thermofisher.com/TFS-Assets/LSG/manuals/MAN0011768_ActivX_Serine_Hydrolase_Probes_UG.pdf) | 说明书直接列出 20357：1 mg 蛋白样品标记后，加 500 µL 10 M urea/lysis buffer 至总体积 1 mL（约 5 M 尿素）；加入 50 µL 50% 树脂悬液（约 25 µL 沉降树脂），室温旋转 1 h；说明书注明无需先去除树脂保存液，需充分混匀并用宽口吸头取样；1,000 × g 离心 1 min；以 500 µL 5 M urea/lysis buffer 洗 3 次，每次 1,000 × g、1 min；加 2× Laemmli 还原上样缓冲液并煮沸 5 min | 这是 Thermo 使用同一货号的批次蛋白捕获参照，支持“旋转孵育、尿素洗涤”作为有厂家先例的操作思路；但其目标是 ActivX 探针标记的丝氨酸水解酶，最终用于 WB，样品标记、尿素体系、珠量和洗脱均不能直接视为 TurboID 质谱的推荐条件 |
+| [ActivX 活性位点肽段富集（MAN0011768 的 MS 支路）](https://documents.thermofisher.com/TFS-Assets/LSG/manuals/MAN0011768_ActivX_Serine_Hydrolase_Probes_UG.pdf) | 蛋白经还原/烷基化、脱盐及胰酶消化后，加入 50 µL 50% 20357 树脂悬液，室温旋转 1 h；依次以 Pierce IP Lysis Buffer 洗 3 次、PBS 洗 4 次、LC-MS 水洗 4 次；以 50% ACN/0.1% TFA 洗脱肽段 3 次并合并、冻干 | 这条 MS 支路捕获的是 ActivX 标记的活性位点肽段，不是完整生物素化蛋白；只能说明厂家也会在蛋白消化后用 20357 做肽段级富集，不能替代本地 TurboID 蛋白级捕获 |
+
+MAN0011198 对通用生物素化分子写明可用 **8 M guanidine·HCl，pH 1.5**，或将树脂在 **SDS-PAGE sample buffer 中煮沸**洗脱；MAN0011768 的特定 ActivX 蛋白捕获也用 Laemmli 缓冲液煮沸。两份文件都没有提供本地记录中的 10/20 mM 游离 biotin、75/95°C 多轮洗脱配方。MAN0011198 还提醒，8 M guanidine·HCl 可能不可逆损伤目标蛋白，并可能造成 streptavidin 亚基脱落、降低树脂容量。故本地的 biotin/SDS 加热洗脱应标为实验室自定流程，不能称作厂家推荐条件。
+
+MAN0011768 的 20357 示例最接近本地批次捕获步骤，但所用 ActivX 探针和样品体系不同。该文件要求标记后加入尿素使蛋白变性，并指出尿素缓冲液当天配制；其流程也避免在细胞裂解时使用 SDS 等变性去污剂。此说明不能反推本地 TurboID/SDS 裂解液必须改成相同的尿素条件。
+
+## 待确认问题
+
+| 编号 | 问题 | 状态/后续处理 |
+|---|---|---|
+| TURBOID-ENR-01 | 当前使用哪套洗液/洗脱记录？ | 已确认：当前所有缓冲液均采用 HEPES/NaCl，洗脱按 SRC-004 的 95°C 条件；SRC-003 仅保留历史对照 |
+| TURBOID-ENR-02 | 树脂是否为 Thermo Pierce High Capacity Streptavidin Agarose 20357？瓶签/采购记录能否确认？ | 用户提供的 20357 产品页与记录名称吻合；暂列疑似货号，待实物身份确认 |
+| TURBOID-ENR-03 | 7 轮洗脱液是否合并？若不全部合并，哪些轮进入质谱样品？ | 待确认；在主方法保持逐轮标记 |
+| TURBOID-ENR-04 | 预洗/各轮清洗的离心时间和转子是什么？SRC-003 的历史 75°C 洗脱后怎样分离树脂？ | 当前预洗及洗涤分离先记录 2,000 rpm；部分时间、转子型号和半径待补；历史 SRC-003 条件不完整 |
+| TURBOID-ENR-05 | 2,000 rpm、1 min 收集洗脱上清时使用的转子是什么？ | SRC-004 有 rpm 和时间，无转子/RCF；记录实际型号 |
+| TURBOID-ENR-06 | SRC-004 洗脱配方所用 200 mM biotin stock 的溶剂是什么？ | 原记录未注明；不将标记用的 DMSO 储液自动视作同一储液 |
+
+## 版本入口
+
+[统一版本记录](versions/MOD-TURBOID-001.qmd)。
+

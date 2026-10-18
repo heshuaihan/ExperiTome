@@ -1,0 +1,181 @@
+project:
+  type: website
+  output-dir: _site
+  pre-render:
+    - python scripts/build_public.py
+  render:
+    - about.qmd
+    - analysis/index.qmd
+    - data/index.qmd
+    - index.qmd
+    - instruments/index.qmd
+    - licensing/index.qmd
+    - materials/buffers/BUF-BCA-001_工作液.qmd
+    - materials/buffers/BUF-TURBOID-001_富集缓冲液.qmd
+    - materials/buffers/BUF-WORM-001_SDS裂解液.qmd
+    - materials/buffers/index.qmd
+    - materials/index.qmd
+    - materials/reagents/MAT-001_P1048.qmd
+    - materials/reagents/MAT-002_A55865.qmd
+    - materials/reagents/MAT-003_90057.qmd
+    - materials/reagents/MAT-004_23275.qmd
+    - materials/reagents/MAT-005_A801297.qmd
+    - materials/reagents/MAT-015_2215.qmd
+    - materials/reagents/MAT-043_S3014.qmd
+    - materials/reagents/MAT-047_C1016.qmd
+    - materials/reagents/MAT-051_B6220.qmd
+    - materials/reagents/MAT-052_BL165B.qmd
+    - materials/reagents/MAT-054_A600560.qmd
+    - materials/reagents/MAT-058_H433401.qmd
+    - materials/reagents/MAT-059_A600485.qmd
+    - materials/reagents/MAT-060_1340GR100.qmd
+    - materials/reagents/MAT-065_T917415.qmd
+    - materials/reagents/MAT-066_179124.qmd
+    - materials/reagents/MAT-067_51456.qmd
+    - materials/reagents/MAT-068_T885402.qmd
+    - materials/reagents/MAT-069_I799261.qmd
+    - materials/reagents/MAT-070_M102702.qmd
+    - materials/reagents/MAT-071_F809715.qmd
+    - materials/reagents/MAT-072_M813903.qmd
+    - materials/reagents/MAT-073_A864782.qmd
+    - materials/reagents/MAT-096_A32965.qmd
+    - materials/reagents/MAT-097_20357.qmd
+    - materials/reagents/MAT-098_90516.qmd
+    - materials/reagents/MAT-099_1122-01.qmd
+    - materials/reagents/MAT-100_identity.qmd
+    - materials/reagents/MAT-101_identity.qmd
+    - materials/reagents/MAT-102_identity.qmd
+    - materials/reagents/MAT-103_identity.qmd
+    - protocols/index.qmd
+    - protocols/modules/MOD-PROT-001_蛋白定量与留样.qmd
+    - protocols/modules/MOD-PROT-002_蛋白沉淀.qmd
+    - protocols/modules/MOD-PROT-003_胰酶消化.qmd
+    - protocols/modules/MOD-PROT-004_C18-StageTip脱盐.qmd
+    - protocols/modules/MOD-PROT-005_肽段定量与上样.qmd
+    - protocols/modules/MOD-TURBOID-001_链霉亲和素富集.qmd
+    - protocols/modules/MOD-TURBOID-002_TurboID标记与验证.qmd
+    - protocols/modules/MOD-WORM-001_线虫收集与裂解.qmd
+    - protocols/turboid/PROT-TURBOID-001_TurboID链霉亲和素富集质谱.qmd
+    - protocols/worm/PROT-WORM-001_线虫蛋白质质谱样品制备.qmd
+    - review/MOD-PROT-001_BCA审核.qmd
+    - review/MOD-PROT-002_沉淀审核.qmd
+    - review/MOD-TURBOID-001_富集审核.qmd
+    - review/MOD-TURBOID-002_标记与验证审核.qmd
+    - review/MOD-WORM-001_裂解审核.qmd
+    - review/details/MAT-096.qmd
+    - review/details/MOD-PROT-001.qmd
+    - review/details/MOD-PROT-002.qmd
+    - review/details/MOD-PROT-003.qmd
+    - review/details/MOD-PROT-004.qmd
+    - review/details/MOD-PROT-005.qmd
+    - review/details/MOD-TURBOID-001.qmd
+    - review/details/MOD-TURBOID-002.qmd
+    - review/details/MOD-WORM-001.qmd
+    - review/details/index.qmd
+    - review/index.qmd
+    - review/launch-checklist.qmd
+    - review/materials_identity.qmd
+    - review/project-identity.qmd
+    - review/publishing.qmd
+    - review/readiness.qmd
+    - review/reagents_20261018.qmd
+    - review/versions/MOD-PROT-001.qmd
+    - review/versions/MOD-PROT-002.qmd
+    - review/versions/MOD-PROT-003.qmd
+    - review/versions/MOD-PROT-004.qmd
+    - review/versions/MOD-PROT-005.qmd
+    - review/versions/MOD-TURBOID-001.qmd
+    - review/versions/MOD-TURBOID-002.qmd
+    - review/versions/MOD-WORM-001.qmd
+    - review/versions/PROT-TURBOID-001.qmd
+    - review/versions/PROT-WORM-001.qmd
+    - review/versions/index.qmd
+    - roadmap.qmd
+    - sources/index.qmd
+  resources:
+    - LICENSE
+    - LICENSES/*.txt
+    - LICENSES/*.json
+    - AUTHORS.md
+    - CONTRIBUTING.md
+    - CITATION.cff
+    - assets/**
+    - materials/reagent_catalog.csv
+    - templates/*.txt
+website:
+  title: Experitome
+  search: true
+  navbar:
+    logo: assets/mark.svg
+    left:
+      - text: Protocols
+        href: protocols/index.qmd
+      - text: Analysis
+        href: analysis/index.qmd
+      - text: Data
+        href: data/index.qmd
+      - text: Resources
+        href: materials/index.qmd
+      - text: About
+        href: about.qmd
+  sidebar:
+    style: docked
+    collapse-level: 1
+    contents:
+      - index.qmd
+      - protocols/index.qmd
+      - analysis/index.qmd
+      - data/index.qmd
+      - section: 实验路线
+        contents:
+          - protocols/worm/PROT-WORM-001_线虫蛋白质质谱样品制备.qmd
+          - protocols/turboid/PROT-TURBOID-001_TurboID链霉亲和素富集质谱.qmd
+      - section: 操作模块
+        contents:
+          - protocols/modules/MOD-TURBOID-002_TurboID标记与验证.qmd
+          - protocols/modules/MOD-WORM-001_线虫收集与裂解.qmd
+          - protocols/modules/MOD-PROT-001_蛋白定量与留样.qmd
+          - protocols/modules/MOD-TURBOID-001_链霉亲和素富集.qmd
+          - protocols/modules/MOD-PROT-002_蛋白沉淀.qmd
+          - protocols/modules/MOD-PROT-003_胰酶消化.qmd
+          - protocols/modules/MOD-PROT-004_C18-StageTip脱盐.qmd
+          - protocols/modules/MOD-PROT-005_肽段定量与上样.qmd
+      - section: 配套资料
+        contents:
+          - materials/index.qmd
+          - materials/buffers/index.qmd
+          - instruments/index.qmd
+          - sources/index.qmd
+          - about.qmd
+          - roadmap.qmd
+          - licensing/index.qmd
+      - section: 版本与维护
+        contents:
+          - review/versions/index.qmd
+          - review/readiness.qmd
+          - review/index.qmd
+  page-footer:
+    left: "Experitome · Shuaihan He"
+    right:
+      - text: "Content: CC BY 4.0 · Code: MIT"
+        href: licensing/index.qmd
+format:
+  html:
+    theme:
+      - cosmo
+      - assets/protocol.scss
+    include-after-body: assets/protocol-footer.html
+    toc: true
+    toc-title: 本页导航
+    toc-depth: 2
+    lang: zh
+    link-external-newwindow: true
+    callout-appearance: simple
+    callout-icon: false
+    smooth-scroll: true
+    anchor-sections: true
+    grid:
+      sidebar-width: 220px
+      body-width: 820px
+      margin-width: 180px
+      gutter-width: 24px

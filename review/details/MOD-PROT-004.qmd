@@ -1,0 +1,23 @@
+---
+title: "C18 StageTip 脱盐 · 补充依据"
+description: "参数解释、历史方案与适用范围。"
+search: false
+---
+
+[返回当前操作](../../protocols/modules/MOD-PROT-004_C18-StageTip脱盐.qmd) · [版本记录](../versions/MOD-PROT-004.qmd)
+
+本页保存从操作正文移出的比较和说明。执行时以当前模块为准；历史方案需整体选择，不与主流程拼接。
+
+## 载量与来源
+
+- 实验室流程：SRC-002、SRC-003、SRC-004；具体版本差异留在来源文件中。
+- [Rappsilber、Mann 与 Ishihama，Nature Protocols 2007](https://www.nature.com/articles/nprot.2007.261)：图 1 示意膜片冲切和推入枪头，表 3 列出 3M Empore C18 货号 2215，表 4 列出 200 µL 枪头所用 Hamilton 90516 针和 1122-01 推杆；论文不验证本实验室 3 层装填的容量或流速。
+- [麦克林 A801297 官方规格书](https://api.macklin.cn/api/specification/download?item_code=A801297&lang=cn)：产品为冰乙酸，规格为 LC-MS 级。
+- [Empore StageTips 厂商宣传册](../../sources/index.qmd)：厂商产品资料；宣传册中的预包装产品号不代表实验室自制 StageTip 使用相同货号。
+- 已归档的[StageTips 原文 PDF](https://www.nature.com/articles/nprot.2007.261)。
+
+## 尚需补记
+
+- 高盐样品采用 2 轮还是 3 轮洗涤由预实验确定。
+- 按 50 µL 冰乙酸/10 mL 配方，乙酸记为 0.5%（v/v）；−80°C 保存期限仍待记录。
+- 肽段定量方法、复溶体积及平台上样体积在模块 005 继续审阅。

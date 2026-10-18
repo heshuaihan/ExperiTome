@@ -1,0 +1,101 @@
+---
+title: "TurboID 链霉亲和素富集与洗脱"
+subtitle: "生物素化蛋白捕获 · 中文详细版"
+description: "从线虫 TurboID 裂解液捕获生物素化蛋白，保留输入、流穿和洗脱样品节点。"
+protocol_id: "MOD-TURBOID-001"
+category: "TurboID / 亲和富集"
+status: "草案"
+version: "0.8"
+created: "2026-09-29"
+last_reviewed: "2026-10-18"
+layout_status: "中文详细版；正文与维护资料分离"
+order: 30
+review_page: "../../review/MOD-TURBOID-001_富集审核.qmd"
+keywords: [TurboID, streptavidin, biotin, enrichment, flow-through]
+presentation_updated: "2026-10-18"
+body-classes: "protocol-detail"
+---
+
+{{< include _meta/MOD-TURBOID-001.md >}}
+
+::: {.module-summary}
+::: {.summary-purpose}
+捕获 TurboID 裂解液中的生物素化蛋白，洗涤后加热洗脱。
+:::
+
+**输入：**BCA 定量后的澄清裂解液、链霉亲和素琼脂糖树脂和 HEPES/NaCl 缓冲液。
+
+**输出：**输入留样、FT 和各轮洗脱物；用于质谱的洗脱物进入蛋白沉淀。
+:::
+
+## 实验前准备
+
+| 项目 | 条件 |
+|---|---|
+| 稀释液/珠子预洗 | 50 mM HEPES、150 mM NaCl。 |
+| Wash I | 50 mM HEPES、150 mM NaCl、0.2% SDS。 |
+| Wash II | 6 M urea、50 mM HEPES、150 mM NaCl、0.1% SDS。 |
+| 洗脱液 | 10 mM biotin、2% SDS、50 mM HEPES、150 mM NaCl；[配液表](../../materials/buffers/BUF-TURBOID-001_富集缓冲液.qmd)。 |
+| 树脂 | 高容量链霉亲和素琼脂糖，50% slurry，4°C 保存，不冷冻。所有倍数均按**沉降后的纯树脂体积**计算；2 µL 混匀悬液约对应 1 µL 树脂。 |
+| 管与设备 | 标记输入、FT 及 7 轮洗脱收集管；旋转混匀、95°C 混匀加热及离心设备。详见[仪器目录](../../instruments/index.qmd)。 |
+
+所有预洗、结合后分离、洗涤及洗脱上清收集均采用 **2,000 rpm、5 min**。预洗轮数及 7 轮洗脱物的合并范围见[执行缺项](../../review/readiness.qmd)。
+
+### 材料与货号
+
+| 材料 | 厂家 / 货号 | 规格或用途 |
+|---|---|---|
+| [氯化钠](../../materials/reagents/MAT-043_S3014.qmd) | Sigma-Aldrich · **S3014** | 纯度及包装见在用瓶签 |
+| [D-生物素](../../materials/reagents/MAT-051_B6220.qmd) | Macklin · **B6220** | D-生物素；等级及包装见瓶签 |
+| [HEPES 储备液](../../materials/reagents/MAT-058_H433401.qmd) | Aladdin · **H433401** | 1 M，无菌过滤，pH7.0–7.6 |
+| [十二烷基硫酸钠（SDS）](../../materials/reagents/MAT-059_A600485.qmd) | Sangon Biotech · **A600485** | 纯度见瓶签 |
+| [尿素](../../materials/reagents/MAT-067_51456.qmd) | Sigma-Aldrich · **51456** | BioUltra，Molecular Biology，99%（T） |
+| [高容量链霉亲和素琼脂糖](../../materials/reagents/MAT-097_20357.qmd) | Thermo Scientific · **20357** | 2 mL沉降树脂，提供为4 mL 50%浆液 |
+
+## 操作步骤
+
+::: {.protocol-step #step-1}
+### [1]{.step-number} 留取输入并稀释
+
+混匀裂解液，留取输入样品。用 HEPES/NaCl 稀释液将 SDS 调至 **0.5%**；按上游名义 1% SDS 估算，样品与稀释液等体积混合。起始浓度不同时按 C₁V₁ = C₂V₂ 重算，记录实际加入体积。
+:::
+
+::: {.protocol-step #step-2}
+### [2]{.step-number} 预洗树脂
+
+轻柔充分重悬，按约 **10 倍沉降树脂体积**加入 HEPES/NaCl 缓冲液，分离树脂并弃保存液，再重悬、分离。每次 **2,000 rpm、5 min**；预洗轮数按本批计划记录。
+:::
+
+::: {.protocol-step #step-3}
+### [3]{.step-number} 旋转结合
+
+将样品加入预洗树脂，**室温旋转 2 h**。实验室用量估算为 **10 µg 总蛋白/µL 沉降树脂**（相当于 5 µg/µL 50% 混匀悬液）；这属于本地总蛋白用量经验。结合后 **2,000 rpm 离心 5 min** 分离树脂，保留上清为 **FT**。
+:::
+
+::: {.protocol-step #step-4}
+### [4]{.step-number} 依次清洗
+
+Wash I、Wash II **各洗 2 轮**，每轮约 **10 倍沉降树脂体积**。充分重悬后以 **2,000 rpm、5 min** 分离，移除上清，再加入下一轮新洗液。
+:::
+
+::: {.protocol-step #step-5}
+### [5]{.step-number} 加热洗脱
+
+每轮加入约 **2 倍沉降树脂体积**洗脱液，在 **95°C、800 rpm 混匀 5 min**，随后 **2,000 rpm 离心 5 min** 收集上清；重复 **7 轮**。800 rpm 为加热混匀设置。逐轮标号并记录体积。
+:::
+
+::: {.protocol-step #step-6}
+### [6]{.step-number} 交接沉淀
+
+按预先设定的收集方案合并相应轮次的洗脱物，记录所含轮次及总体积。将选定洗脱物交接至[蛋白沉淀与复溶](MOD-PROT-002_蛋白沉淀.qmd)，保留输入、FT 及轮次记录。
+:::
+
+## 完成与交接
+
+记录总蛋白投入量、树脂悬液/沉降体积、缓冲液批次、每轮洗脱体积和最终合并体积；进入下一步的样品编号应与输入、FT 对应。
+
+## 依据与维护
+
+[Pierce 树脂官方指南](https://assets.thermofisher.com/TFS-Assets/LSG/manuals/MAN0011198_Pierce_Streptavidin_Agarose_Resins_UG.pdf)用于产品身份核对；本地加热洗脱采用实验室记录。[完整参数审核](../../review/MOD-TURBOID-001_富集审核.qmd)。
+
+[参数解释与历史方案](../../review/details/MOD-TURBOID-001.qmd) · [版本记录](../../review/versions/MOD-TURBOID-001.qmd) · [全链路待完善事项](../../review/readiness.qmd)

@@ -1,0 +1,25 @@
+---
+title: "试剂资料复核记录 · 2026-10-18"
+search: false
+---
+
+## 原始资料
+
+逐项读取手稿 Methods、原始制样 protocol（SRC-002、SRC-003、SRC-004）及研究资料附录 A.1（SRC-016，PDF第63–66页）。已有97条身份全部展示；补入文献StageTip冲切工具两项及水、NaOH、研磨珠、枪头/低吸附管四项缺号材料，共103项。私人源文件全文不纳入公开包。
+
+## 重点补全
+
+丙酮179124、尿素51456、Tris-HCl T885402、CaCl₂ C1016、DMSO BL165B、甲酸F809715、甲醇M813903、乙腈A864782等与核心模块建立双向关联；给出原始配方支持的储液及工作液计算。甲醇A506806和M813903分开，历史树脂20359和在用20357分开，历史P1048与在用A32965分开。
+
+## 本轮官方核查
+
+- [HEPES H433401](https://www.aladdinsci.com/us_en/hepes-solution-aladdin-scientific-h433401.html)：1 M、无菌过滤、2–8°C。原protocol与附录标pH7.0–7.6；未取得本批pH7.4证明。
+- [CaCl₂ C1016](https://www.sigmaaldrich.com/US/en/product/sigald/c1016)：无水颗粒，≥93.0%，分子量110.98；称量按实际COA含量核算。
+- [丙酮179124](https://www.sigmaaldrich.com/US/en/product/sigald/179124)：ACS reagent，≥99.5%。
+- [尿素51456](https://www.sigmaaldrich.com/US/en/product/sigma/51456)：BioUltra、Molecular Biology、99%（T）。
+- [23275官方说明书](https://documents.thermofisher.com/TFS-Assets/LSG/manuals/23275_quantpeptide_color_UG.pdf)：标准步骤20+180 µL；实验室省样10+180 µL单列，标准与样品匹配，不把官方量程不经核查套用于改动体系。
+- [CDC/NIH BMBL第6版，附录A](https://www.cdc.gov/labs/media/pdfs/2025/08/SF__19a_308133-A_BMBL6_00-BOOK-WEB-final-3.pdf)：挥发性化学品操作优先使用化学通风橱；生物安全柜需结合类型及外排结构判断，普通循环式柜不视为等效。
+
+麦克林T917415、I799261、A864782的官方产品/规格接口本轮未取得可读内容；不补写未经核实的盐型、纯度或LC-MS等级。IAA常规配液按184.96计算，TCEP原1 g/3.49 mL所隐含的盐型待实物核对。甲胺M102702含量由实验室后补。
+
+[试剂库](../materials/index.qmd) · [执行缺项](readiness.qmd)

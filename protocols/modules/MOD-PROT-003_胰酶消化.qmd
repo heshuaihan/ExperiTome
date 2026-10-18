@@ -1,0 +1,113 @@
+---
+title: "还原、烷基化与胰酶消化"
+protocol_id: "MOD-PROT-003"
+category: "蛋白质组学 / 酶解"
+status: "草案"
+version: "0.6"
+created: "2026-09-29"
+last_reviewed: "2026-10-18"
+keywords: [trypsin, reduction, alkylation, TCEP, iodoacetamide, urea]
+description: "对已复溶蛋白进行还原、烷基化和胰酶消化，并酸化后交接 C18 脱盐。"
+order: 50
+layout_status: "中文详细版；正文与维护资料分离"
+presentation_updated: "2026-10-18"
+body-classes: "protocol-detail"
+---
+
+{{< include _meta/MOD-PROT-003.md >}}
+
+::: {.module-summary}
+::: {.summary-purpose}
+将复溶蛋白依次还原、烷基化并用 trypsin 消化，酸化后进入 C18 脱盐。
+:::
+
+**输入：**8 M 尿素/100 mM Tris pH 8.5 复溶蛋白及 BCA 结果。
+
+**输出：**实测 pH 2–3 的肽段消化液。
+:::
+
+## 实验前准备
+
+| 项目 | 条件 |
+|---|---|
+| 剩余样品 | BCA 取样后更新剩余体积及蛋白质量。所有加样计算以实际进入本模块的样品为准。 |
+| TCEP | 目标约 5 mM；常规使用 1 M 储液，可选 100 mM 工作液方便移液。 |
+| IAA | 目标约 10 mM；常规使用 500 mM 储液，可选新鲜 100 mM 工作液；避光。 |
+| 消化添加液 | 100 mM CaCl₂、1 M 甲胺工作液；甲胺工作液应由已知实际含量的原液配制。 |
+| Trypsin | 用 **20 µg + 20 µL 50 mM 乙酸**，即 **1 µg/µL**；单次分装，−80°C 保存。 |
+| 其他 | 100 mM Tris pH 8.5、甲酸、37°C 孵育、pH 检测用品。 |
+
+::: {.callout-note title="消化体系"}
+常规采用约 **2 M 尿素**；低尿素备选方案按 **1 M** 计算。TCEP/IAA 常规使用 1 M/500 mM 储液，也可成组改用 100 mM 工作液，按实际体积重算。
+:::
+
+### 材料与货号
+
+| 材料 | 厂家 / 货号 | 规格或用途 |
+|---|---|---|
+| [质谱级胰蛋白酶](../../materials/reagents/MAT-003_90057.qmd) | Thermo Scientific · **90057** | 5 × 20 µg 冻干酶 |
+| [冰乙酸](../../materials/reagents/MAT-005_A801297.qmd) | Macklin · **A801297** | LC-MS 级；官方规格含量99.7–100% |
+| [氯化钙](../../materials/reagents/MAT-047_C1016.qmd) | Sigma-Aldrich · **C1016** | 无水颗粒，≥93.0% |
+| [TCEP 还原剂](../../materials/reagents/MAT-065_T917415.qmd) | Macklin · **T917415** | TCEP；盐型以在用瓶签/COA为准 |
+| [尿素](../../materials/reagents/MAT-067_51456.qmd) | Sigma-Aldrich · **51456** | BioUltra，Molecular Biology，99%（T） |
+| [Tris-HCl 储备液](../../materials/reagents/MAT-068_T885402.qmd) | Macklin · **T885402** | 1 M，pH8.5 |
+| [碘乙酰胺（IAA）](../../materials/reagents/MAT-069_I799261.qmd) | Macklin · **I799261** | IAA；配液分子量184.96 |
+| [一甲胺](../../materials/reagents/MAT-070_M102702.qmd) | Aladdin · **M102702** | 实际含量及化学形式见瓶签/COA |
+| [甲酸](../../materials/reagents/MAT-071_F809715.qmd) | Macklin · **F809715** | LC-MS级 |
+| [水（质谱用）](../../materials/reagents/MAT-100_identity.qmd) | 待登记 · **待补** | LC-MS级或经确认适用的超纯水 |
+
+## 操作步骤
+
+::: {.protocol-step #step-1}
+### [1]{.step-number} 核算样品与加酶量
+
+以 BCA 浓度 × **实际剩余原液体积**得到消化蛋白质量。常用酶:蛋白质量比 **1:50**，厂家范围 **1:20–1:100**。所需 trypsin 质量 = 蛋白质量/50；按 1 µg/µL 换算加样体积。
+:::
+
+::: {.protocol-step #step-2}
+### [2]{.step-number} TCEP 还原
+
+加入 TCEP 至约 **5 mM**，混匀后**室温 20 min**。以进入本步骤的 20 µL 样品为例：常规加入约 0.1 µL 1 M；或 1.05 µL 100 mM 工作液。样品体积不同时重算。
+:::
+
+::: {.protocol-step #step-3}
+### [3]{.step-number} IAA 烷基化
+
+加入新鲜 IAA 至约 **10 mM**，混匀后**室温、避光 15 min**。20 µL 起始样品常规约加 0.4 µL 500 mM；采用前步 100 mM TCEP 工作液时，可加约 2.34 µL 100 mM IAA。两套体积成组使用，按实际阶段总体积核算。
+:::
+
+::: {.protocol-step #step-4}
+### [4]{.step-number} 选择并稀释尿素
+
+用 100 mM Tris pH 8.5 稀释，计入 TCEP、IAA、CaCl₂、甲胺和酶液体积。以**本模块实际剩余 20 µL、8 M 尿素样品**为例：常规总体系约 **80 µL（2 M）**；备选总体系约 **160 µL（1 M）**。若此前取走 BCA 小份或增加复溶液，应更新尿素物质量，不沿用原始 20 µL。
+
+**目标总体系 = 进入本模块的尿素浓度 × 样品体积 ÷ 目标尿素浓度。**
+:::
+
+::: {.protocol-step #step-5}
+### [5]{.step-number} 加入 CaCl₂ 和甲胺
+
+CaCl₂ 目标约 **1 mM**；100 mM 储液按最终体积的 1/100 加入。甲胺目标约 **20 mM**；1 M 工作液按最终体积的 1/50 加入。最终 80 µL 体系加入 0.8 µL CaCl₂ 和 1.6 µL 甲胺；最终 160 µL 体系加入 1.6 µL CaCl₂ 和 3.2 µL 甲胺。所有添加液均计入最终体积。甲胺原液含量核对见[试剂条目](../../materials/reagents/MAT-070_M102702.qmd)。
+:::
+
+::: {.protocol-step #step-6}
+### [6]{.step-number} 加入 trypsin 并消化
+
+按实测蛋白量加入 trypsin，混匀后 **37°C 消化 4–24 h**。记录本批选定时长和加酶前 pH（指南活性范围 pH 7–9）。消化期间无需专门遮光。
+:::
+
+::: {.protocol-step #step-7}
+### [7]{.step-number} 酸化并交接
+
+甲酸经验用量 **0.5–1.0%（v/v）**，混匀后以**实测 pH 2–3**为终点，记录实际加入量。酸化后于 **4°C、12,000 rpm 离心 10 min**，取澄清上清进入[C18 脱盐](MOD-PROT-004_C18-StageTip脱盐.qmd)；已完成此步且上清澄清时，不重复离心。不能立即继续时 **−20°C** 冻存；解冻后检查澄清度。
+:::
+
+## 完成与交接
+
+记录消化蛋白质量、剩余体积、储备液浓度、各步加入量、选定尿素条件、酶:蛋白比例、37°C 孵育时长及酸化后 pH。
+
+## 依据与维护
+
+[Pierce 90057 指南 MAN0011821](https://documents.thermofisher.com/TFS-Assets/LSG/manuals/MAN0011821_Pierce_Trypsin_Protease_MS_Grade_UG.pdf)。[消化条件依据与甲胺核对](../../review/details/MOD-PROT-003.qmd)。
+
+[参数解释与历史方案](../../review/details/MOD-PROT-003.qmd) · [版本记录](../../review/versions/MOD-PROT-003.qmd) · [全链路待完善事项](../../review/readiness.qmd)

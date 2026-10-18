@@ -1,0 +1,24 @@
+{
+  "retrieved_on": "2026-10-18",
+  "sources": [
+    {
+      "file": "CC-BY-4.0.txt",
+      "url": "https://creativecommons.org/licenses/by/4.0/legalcode.txt",
+      "bytes": 18657,
+      "sha256": "9ba9550ad48438d0836ddab3da480b3b69ffa0aac7b7878b5a0039e7ab429411",
+      "distributed_file": "LICENSES/CC-BY-4.0.txt"
+    },
+    {
+      "file": "MIT.json",
+      "url": "https://api.github.com/licenses/mit",
+      "bytes": 1956,
+      "sha256": "15b2a5994e7c6e3db7437919f9374593dfc8c0e79eae0f4645e1286d2487deb4",
+      "distributed_file": "LICENSES/MIT.txt",
+      "template_substitutions": {
+        "[year]": "2026",
+        "[fullname]": "Shuaihan He"
+      },
+      "distributed_sha256": "183616c2b1c997da49174c21b465912072c92aeb84bc1afeb4fe96e9b303e773"
+    }
+  ]
+}

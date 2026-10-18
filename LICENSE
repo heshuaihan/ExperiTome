@@ -1,0 +1,41 @@
+Experitome — Licensing overview
+
+Copyright (c) 2026 Shuaihan He, for original contributions.
+
+This repository uses different licenses for content and code. These are not
+alternative licenses for the same material.
+
+1. Original documentation and curation
+
+Unless an individual item states otherwise, original protocol descriptions,
+explanatory documentation, authored figures, and original curation annotations
+are licensed under Creative Commons Attribution 4.0 International
+(SPDX-License-Identifier: CC-BY-4.0).
+Full license: LICENSES/CC-BY-4.0.txt
+https://creativecommons.org/licenses/by/4.0/
+
+2. Original software
+
+Unless an individual file states otherwise, original software in scripts/,
+original executable JavaScript and styling in assets/, original SVG artwork,
+and build configuration (_quarto.yml and .github/workflows/) are licensed under
+the MIT License (SPDX-License-Identifier: MIT).
+Full license: LICENSES/MIT.txt
+
+3. Datasets and third-party material
+
+The content license covers only rights held by the author in original material.
+It does not relicense third-party papers, manuals, figures, software, databases,
+dataset contents, trademarks, or institutional logos. Their original terms apply.
+External links and citations do not transfer ownership or grant additional rights.
+
+Each future dataset must identify its own license, provenance, and redistribution
+conditions. A dataset without an explicit license is not automatically licensed
+under CC BY 4.0 or MIT by its appearance in this repository. Authored descriptions
+of datasets and the underlying datasets must be considered separately.
+
+Author affiliation identifies the maintainer; it does not imply institutional
+ownership, sponsorship, approval, or endorsement of this personal resource.
+
+Readable scope and attribution guidance: licensing/index.qmd
+Authorship: AUTHORS.md

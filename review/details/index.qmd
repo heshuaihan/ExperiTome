@@ -1,0 +1,16 @@
+---
+title: "补充依据与历史方案"
+description: "从操作正文移出的解释、来源比较和备选方案。"
+search: false
+---
+
+操作时从当前模块开始；需要了解参数原因或选择备选方法时，再打开对应依据页。
+
+- [BCA 蛋白定量](MOD-PROT-001.qmd)
+- [蛋白沉淀与复溶](MOD-PROT-002.qmd)
+- [还原、烷基化与胰酶消化](MOD-PROT-003.qmd)
+- [C18 StageTip 脱盐](MOD-PROT-004.qmd)
+- [肽段定量与上样](MOD-PROT-005.qmd)
+- [TurboID 链霉亲和素富集与洗脱](MOD-TURBOID-001.qmd)
+- [TurboID 生物素标记与验证](MOD-TURBOID-002.qmd)
+- [线虫收集与裂解](MOD-WORM-001.qmd)
