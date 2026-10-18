@@ -39,6 +39,6 @@ search: false
 
 ## 发布状态
 
-中文详细版持续维护。个人署名与单位、CC BY 4.0内容许可及MIT代码许可文件已准备；项目名称确定为Experitome，愿景为“Built on experience. Made for discovery.”。GitHub账号为heshuaihan，正式仓库与网站地址待发布后补齐。原始私人文件和第三方全文PDF保留本地，公开版使用来源链接。
+中文详细版持续维护。个人署名与单位、CC BY 4.0内容许可及MIT代码许可文件已准备；项目名称确定为Experitome，愿景为“Built on experience. Made for discovery.”。GitHub账号为heshuaihan，仓库已上传至[heshuaihan/Experitome](https://github.com/heshuaihan/Experitome)，网站部署待确认。原始私人文件和第三方全文PDF保留本地，公开版使用来源链接。
 
 [材料资料复核记录](reagents_20261018.qmd) · [发布准备](publishing.qmd)
