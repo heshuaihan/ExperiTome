@@ -1,0 +1,55 @@
+---
+title: "1 · DIA-NN 数据分析：设置怎么选"
+subtitle: "ANA-DIANN-002 · v0.2.0 · 方法草案"
+description: "先按实验与仪器选设置，运行DIA-NN，再进入报告筛选。"
+---
+
+先用DIA-NN处理仪器数据，得到主报告，再进入[2 · 数据filter](diann-filter.qmd)。本页给常规蛋白定量的选择起点，特殊PTM/多重标记实验另定流程。
+
+## 先照这张表选
+
+| 要选什么 | 常规情况怎么选 | 什么时候改 |
+|---|---|---|
+| 软件版本 | **官网最新稳定版**，从[官方入口](https://github.com/vdemichev/DiaNN)获取；不在通用页固定旧版本号 | 复现旧结果时保留原版；每次运行仍记录具体版本/edition |
+| 输入格式 | 按仪器选择原生格式：Thermo `.raw`、Bruker `.d`、Sciex `.wiff`；也支持`.mzML`、`.dia` | 依赖与系统限制看[官网格式说明](https://github.com/vdemichev/DiaNN#raw-data-formats)；Linux原生版不支持`.wiff`；mzML需centroided谱图 |
+| Threads | 先用软件默认或按本机CPU、内存和同时运行任务设置 | 不固定20；内存吃紧或电脑还要工作时降低并发 |
+| Cross-run normalisation | **一般开启，选RT-dependent** | IP/亲和富集是主要例外：按本库实验约定优先关闭，再结合对照、内参与QC评估；不要套用总蛋白分布假设 |
+| 下游再归一化 | 已在DIA-NN做RT-dependent时，默认不额外做 | 只有数据评估支持时增加，并记录方法和依据 |
+| MS1/MS2 accuracy | 按下方仪器表选 | `0`表示自动，不表示0 ppm误差；正式分析尽量用代表性run核定并固定 |
+| Precursor charge | timsTOF常用起点为**2–4** | 官网明确常规timsTOF预测库最低电荷设2；上限按采集方法与谱库调整。2–4不是所有仪器统一要求 |
+| Precursor/fragment m/z | 与实际采集窗口相符 | 不照搬某次日志的300–1800/200–1800；范围过宽扩大搜索空间 |
+| FASTA与谱库 | 物种/样本匹配的FASTA；已有合适库就用，否则先生成预测库 | 保存版本、来源及哈希；预测库生成与原始数据搜索分开运行 |
+| 酶切与修饰 | 跟实际样品制备一致；常规trypsin可从1次漏切开始；做过C烷基化才设相应固定修饰 | 不为“更全”打开所有可变修饰；PTM实验另选目标修饰 |
+| MBR | 常规小/中型多run实验可开启 | 已有高质量、项目匹配的DIA经验库时通常关闭；大型项目可先建经验库再搜索 |
+| 定量模式 | 常规定量可从QuantUMS开始 | 比较LC-MS方法性能时按官网用Legacy；不能只凭PG.MaxLFQ列名判定模式 |
+| 主报告 | 保存`report.parquet`、pipeline和日志 | 自定义filter用主报告；矩阵用于快速看数，不替代全部前体信息 |
+
+软件/格式、accuracy和模式建议按[官网当前说明](https://github.com/vdemichev/DiaNN)核对（2026-10-19）。IP选择及“2–4起点”是本库实用约定；官网明确的分别是归一化分布假设和timsTOF最低电荷2，不把实验约定冒充软件强制规则。
+
+## accuracy：按仪器选起点
+
+| 仪器/情形 | MS1 accuracy | MS2 accuracy | 使用说明 |
+|---|---|---|---|
+| timsTOF | 15 ppm | 15 ppm | 官网推荐起点；仍需结合本机状态与数据检查 |
+| Orbitrap Astral | 4 ppm | 10 ppm | MS1建议基于240k Orbitrap分辨率；采集设置不同时重新核定 |
+| TripleTOF 6600 / ZenoTOF | 20 ppm | 20 ppm | 官网推荐起点 |
+| 其他配置/尚无经验 | 先设0自动 | 先设0自动 | 代表性run试跑，查看推荐值后固定生产设置；不默认套15 |
+
+Scan window尚无经验时也可先自动，再按代表性run核定。[官网仪器参数建议](https://github.com/vdemichev/DiaNN#changing-default-settings)强调自动优化受首个run影响；先试跑再固定，不把旧日志数值当通用参数。
+
+## 最短操作顺序
+
+1. 核对样本、仪器和采集方法，选官网最新稳定版，确定FASTA/谱库。
+2. 按上表选normalisation、accuracy、电荷、m/z、酶切与修饰；用少量代表性run试跑。
+3. 查看日志警告、鉴定量和软件QC，保存正式pipeline，再跑完整数据。
+4. 保存主报告、日志和设置记录；进入[报告filter](diann-filter.qmd)，再做矩阵、样本QC和统计。
+
+## 想回查时，留下什么
+
+填写[设置记录空表](diann/settings-record.template.json)：实际软件版本、输入清单、FASTA/谱库版本与哈希、关键选择及完成状态。通用页写“最新稳定版”，运行记录写具体版本。
+
+工具包中的`diann_settings.py`提取日志显式参数，使用方式见[工具说明](diann/README.md.txt)。历史日志核对留在[上轮维护记录](../maintenance/entries/2026-10-19-03.qmd)，不作为本页默认推荐。`--rt-profiling`是谱库RT/IM处理；归一化看Cross-run normalisation及实际日志。
+
+## 版本
+
+v0.2.0 · 2026-10-19：先运行DIA-NN，再filter；从解释旧日志改成按情形选设置，补仪器推荐与IP例外。v0.1.0工具包保留。[本轮维护](../maintenance/entries/2026-10-19-04.qmd)

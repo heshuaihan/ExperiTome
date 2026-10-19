@@ -5,6 +5,25 @@ description: "从实际研究经验出发，连接实验方法、数据与分析
 body-classes: "library-home research-home"
 ---
 
+```{=html}
+<section class="home-engagement" data-home-engagement data-engagement-mode="demo" data-initial-views="1280" data-initial-likes="86" aria-label="浏览与点赞" aria-describedby="engagement-scope" title="计数含初始展示值与本浏览器交互；不是全站访客统计。详见About。">
+  <div class="engagement-intro"><span>研究经验，持续积累</span><p>内容对你有帮助？留下一个赞。</p></div>
+  <div class="engagement-metrics">
+    <div class="engagement-stat" aria-label="浏览量">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></svg>
+      <span class="engagement-value" data-views>—</span><span class="engagement-caption">浏览</span>
+    </div>
+    <button type="button" class="engagement-like" data-like-button aria-pressed="false" aria-label="点赞">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 4.8a5.5 5.5 0 0 0-7.8 0l-.7.7-.7-.7a5.5 5.5 0 0 0-7.8 7.8L12 21l8.5-8.4a5.5 5.5 0 0 0 0-7.8Z"/></svg>
+      <span class="engagement-value" data-likes>—</span><span class="engagement-caption" data-like-label>点赞</span>
+    </button>
+  </div>
+  <p class="engagement-disclosure visually-hidden" id="engagement-scope" data-disclosure>计数含初始展示值与本浏览器交互；不是全站访客统计。</p>
+</section>
+<noscript><p>启用JavaScript后可使用点赞。</p></noscript>
+<script src="assets/engagement.js" defer></script>
+```
+
 ::: {.brand-hero}
 ![](assets/experitome-hero.png){fig-alt="Experitome。Built on experience. Made for discovery. 一本研究记录展开为实验方法、分析流程和配套数据三条主线。"}
 :::
@@ -35,9 +54,9 @@ Shuaihan He · 中文内容优先 · 持续维护
 
 记录实际使用的分析方法、代码、参数和输出，方便回查与复核。
 
-**建设中：**条目结构与模板
+**方法草案：**DIA-NN分析 → 报告filter → 常规流程、常用包与绘图风格
 
-[查看分析流程规划 →](analysis/index.qmd)
+[查看分析条目 →](analysis/index.qmd)
 :::
 
 ::: {.route-card}
@@ -72,6 +91,7 @@ Shuaihan He · 中文内容优先 · 持续维护
 [仪器](instruments/index.qmd)
 [来源](sources/index.qmd)
 [版本记录](review/versions/index.qmd)
+[绘图风格](analysis/plot-style.qmd)
 :::
 
 由 **何帅涵（Shuaihan He）** 个人维护。当前从线虫蛋白质组学与TurboID起步，按实际研究需要逐步扩展。

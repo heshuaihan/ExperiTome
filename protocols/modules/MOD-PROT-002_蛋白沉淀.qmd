@@ -5,15 +5,21 @@ description: "按实验室记录用丙酮沉淀蛋白、洗涤并以尿素缓冲
 protocol_id: "MOD-PROT-002"
 category: "样品清理 / 蛋白质组学"
 status: "草案"
-version: "0.5"
+standard_version: "0.1"
+document_status: "结构初审"
+validation_status: "未登记验证证据"
+version: "0.6"
 view_id: "zh-detailed"
 created: "2026-09-29"
-last_reviewed: "2026-10-18"
+last_reviewed: "2026-10-19"
 layout_status: "中文详细版；正文与维护资料分离"
+reagent_ids: [MAT-066, MAT-067, MAT-068, MAT-100]
+buffer_ids: []
+instrument_ids: []
 order: 40
 review_page: "../../review/MOD-PROT-002_沉淀审核.qmd"
 keywords: [protein precipitation, acetone, urea, Tris]
-presentation_updated: "2026-10-18"
+presentation_updated: "2026-10-19"
 body-classes: "protocol-detail"
 ---
 
@@ -53,7 +59,19 @@ body-classes: "protocol-detail"
 | [丙酮](../../materials/reagents/MAT-066_179124.qmd) | Sigma-Aldrich · **179124** | ACS reagent，≥99.5%（官方179124） |
 | [尿素](../../materials/reagents/MAT-067_51456.qmd) | Sigma-Aldrich · **51456** | BioUltra，Molecular Biology，99%（T） |
 | [Tris-HCl 储备液](../../materials/reagents/MAT-068_T885402.qmd) | Macklin · **T885402** | 1 M，pH8.5 |
-| [水（质谱用）](../../materials/reagents/MAT-100_identity.qmd) | 待登记 · **待补** | LC-MS级或经确认适用的超纯水 |
+| [水（在用）](../../materials/reagents/MAT-100_identity.qmd) | Macklin · **W750078** | 在用货号已确认；等级/批次待核 |
+
+## 时间安排
+
+| 阶段 | 已知耗时 | 口径 |
+|---|---|---|
+| −20°C沉淀 | 至少1 h或过夜 | 两种安排分别记录 |
+| 首次离心 | 10 min | 4°C、12,000 rpm |
+| 3轮洗涤及离心 | 30 min | 每轮4°C洗5 min，再4°C离心5 min |
+| 丙酮挥发 | 约10 min | 经验参考，以残余溶剂/复溶状态判定 |
+| 复溶及定量 | 随样品变化 | 未给实测统一时长 |
+
+采用1 h沉淀时，已知环节约110 min，另加准备、转移、复溶及定量；不能写成整批保证完成时间。
 
 ## 操作步骤
 
@@ -80,7 +98,7 @@ body-classes: "protocol-detail"
 ::: {.protocol-step #step-4}
 ### [4]{.step-number} 用冷丙酮洗涤沉淀
 
-按起始样品体积的 **8 倍**加入冰冷丙酮，每轮洗涤并重悬沉淀；共洗涤 **3 次**。用于去除 SDS。例：100 µL 起始样品，每轮加入 800 µL 冰冷丙酮。每轮洗后以 **12,000 rpm** 离心、保留沉淀并弃去洗液；洗后离心时长与温度列于[待完善事项](../../review/readiness.qmd)，执行前写入批次计划。[洗液体积依据与备选方法](../../review/details/MOD-PROT-002.qmd)。
+按起始样品体积的 **8 倍**加入冰冷丙酮，每轮洗涤并重悬沉淀；共洗涤 **3 次**。用于去除 SDS。例：100 µL 起始样品，每轮加入 800 µL 冰冷丙酮。每轮在 **4°C 洗涤5 min**，随后以 **4°C、12,000 rpm 离心5 min**，保留沉淀并弃去洗液（2026-10-19用户确认）。这与首次收集沉淀的10 min离心分开记录；洗涤混匀方式未额外规定，按实际批次记录。[洗液体积依据与备选方法](../../review/details/MOD-PROT-002.qmd)。
 :::
 
 ::: {.protocol-step #step-5}
@@ -115,6 +133,22 @@ body-classes: "protocol-detail"
 ::: {.callout-note title="与 StageTip 载量衔接"}
 20–40 µg 是蛋白投入量，约 25 µg/根是肽段载量经验，不能直接视为同一口径。消化后按预计肽段量分柱，不因前处理可能有损失而默认 40 µg 输入可由单根 StageTip 承载。
 :::
+
+## 预期结果与检查
+
+获得可复溶并可按BCA要求测定的蛋白样品。检查移除洗液时是否损失沉淀、复溶后是否均一；记录复溶体积、浓度及估算蛋白质量。只有输入和输出采用可比较的定量口径且已扣除留样时，才计算回收率。本地尚未建立回收率或残余SDS的通用合格阈值。
+
+## 故障排查
+
+| 步骤 / 现象 | 先检查 | 处理与记录 |
+|---|---|---|
+| 步骤3–4：沉淀不明显或随洗液丢失 | 输入量、沉淀位置、吸液方式 | 不用“肉眼无沉淀”推定无蛋白；记录异常，按剩余样品评估后续定量 |
+| 步骤6：难以复溶 | 丙酮残留、是否过干、复溶液及实际体积 | 按步骤6分次加液；超声仅为可选助溶，实际使用时登记设备/条件 |
+| 步骤7：BCA不在标曲范围或受尿素影响 | 预稀释倍数、基质/空白及尿素浓度 | 按BCA模块重新安排测定，记录稀释倍数；不用不可靠浓度计算回收率 |
+
+## 局限与适用范围
+
+总蛋白lysate和TurboID洗脱物的基质与蛋白量不同；当前没有证明相同回收率。低量样品、反复洗涤和过干造成的影响需本地验证。−20°C“过夜”是沉淀阶段安排，不作为复溶蛋白可长期保存的依据。
 
 ## 依据与维护
 

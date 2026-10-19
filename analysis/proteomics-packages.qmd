@@ -1,0 +1,48 @@
+---
+title: "常用分析包：按任务选"
+subtitle: "ANA-PROT-002 · v0.1.0 · 方法草案"
+description: "从实际R/Python代码提炼的工具选择，先用最小组合。"
+---
+
+包名来自7处活动/正式代码区的静态检查：132个R/Python脚本，另核对10份README/运行合同。出现过某个包不代表每个分析都依赖它，也不代表本机已安装或版本已验证。先选任务，再选工具；不用一次装齐所有包。
+
+## 懒人先选一条路线
+
+| 你要做什么 | 优先组合 | 选它的原因 |
+|---|---|---|
+| 沿用论文常规LFQ差异分析 | R：`tidyverse` + `arrow` + `limma`；输出表用`writexl` | 最接近论文已有脚本；表整理、Parquet与模型在一条路线内 |
+| 只做DIA-NN报告filter | Python：`pandas` + `pyarrow` | 已有[通用工具包](diann-filter.qmd)，无需先搭整套统计环境 |
+| 整理矩阵、QC与独立单图 | Python：`pandas`、`numpy`、`scipy`、`matplotlib`；PCA加`scikit-learn` | 与小鼠项目及论文QC图的已有实现衔接 |
+| GO/KEGG ORA | R：`clusterProfiler` + 物种匹配注释包；或Python：`gseapy` | 论文R路线和小鼠Python路线都已有实例；先定ID和背景 |
+| 全量排序通路分析 | R：`fgsea` | 跨物种/动态项目已有实现；需要完整排序而非只给显著名单 |
+| 跨组学/跨物种联合证据 | R：`ActivePathways`等专用分支 | 属于进阶分析，常规两组LFQ不需要先装 |
+
+## 按功能找包
+
+| 功能 | 实例中出现的包 | 使用习惯 |
+|---|---|---|
+| 读Parquet/大表 | R `arrow`；Python `pyarrow`、`pandas` | 尽量只读所需列；定型矩阵保存后复用 |
+| 表格整理 | `tidyverse`（含dplyr/tidyr等）、`pandas` | ID保留字符串，连接检查一对多，缺失不静默填0 |
+| Excel交付 | `readxl`、`writexl`、`openpyxl` | 原始分析表与展示工作簿分开；导出后查行数、列名和空值 |
+| 配置/运行记录 | R `yaml`；Python发行包`PyYAML`（导入名yaml） | 参数放配置，实际运行保存副本，避免改一处漏一处 |
+| 统计模型 | `limma`；辅助统计`scipy` | 先确定生物重复、方向与设计；保存完整模型表再筛选 |
+| 静态图 | R `ggplot2`、`scales`；Python `matplotlib`、`seaborn` | 独立panel、统一配色/单位，图不反过来成为唯一数值来源 |
+| PCA | `scikit-learn`（导入名sklearn） | 输入矩阵方向是样本×特征；明确log、中心化、是否标准化和缺失策略 |
+| 富集与注释 | `clusterProfiler`、`org.Ce.eg.db`、`gseapy`、`fgsea` | org.Ce.eg.db对应线虫，不能用于小鼠；记录数据库/注释版本 |
+| 进阶整合/排版 | `ActivePathways`、`patchwork` | 按需启用；与常规核心依赖分开 |
+
+具体外观约定与可复用主题见[绘图风格：大字、简轴、无背景](plot-style.qmd)。
+
+## 环境怎么留
+
+新项目用独立环境，软件采用当时可用的稳定版本，跑通后锁定**实际使用版本**。复现论文则优先复用其原环境信息；不要为了“最新”在旧项目原地升级。当前静态盘点不提供一份假定所有R包互相兼容的统一锁文件。
+
+Python保存`python --version`和`python -m pip freeze`；R保存`sessionInfo()`及相关Bioconductor版本。可在项目中采用renv等环境锁定方案，但它是后续维护选项，不把它写成现有项目已统一使用的工具。外部注释/在线服务还需记录获取日期、版本或本地缓存。
+
+通用DIA-NN筛选包的`requirements.txt`是其单独验证过的小环境，不代表以上全部研究代码的环境。
+
+## 官方入口
+
+[limma](https://bioconductor.org/packages/release/bioc/html/limma.html) · [clusterProfiler](https://bioconductor.org/packages/release/bioc/html/clusterProfiler.html) · [GSEApy](https://gseapy.readthedocs.io/en/latest/gseapy_example.html) · [scikit-learn PCA](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html) · [fgsea](https://bioconductor.org/packages/release/bioc/html/fgsea.html)
+
+v0.1.0 · 2026-10-19。包用途与选择依据活动代码和官方说明整理，未运行安装、升级或全套研究分析。[实例来源](practice-cases.qmd) · [本轮维护](../maintenance/entries/2026-10-19-04.qmd)

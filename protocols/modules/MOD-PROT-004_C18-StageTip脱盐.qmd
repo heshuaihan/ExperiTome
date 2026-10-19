@@ -57,8 +57,9 @@ body-classes: "protocol-detail"
 | [乙腈](../../materials/reagents/MAT-073_A864782.qmd) | Macklin · **A864782** | 无水级；质谱用途等级待核对 |
 | [StageTip冲切钝头针](../../materials/reagents/MAT-098_90516.qmd) | Hamilton · **90516** | 16G钝头针 |
 | [StageTip推杆](../../materials/reagents/MAT-099_1122-01.qmd) | Hamilton · **1122-01** | 配套推杆 |
-| [水（质谱用）](../../materials/reagents/MAT-100_identity.qmd) | 待登记 · **待补** | LC-MS级或经确认适用的超纯水 |
-| [StageTip枪头与低吸附收集管](../../materials/reagents/MAT-103_identity.qmd) | 待登记 · **待补** | 200 µL枪头；低吸附管具体型号待补 |
+| [水（在用）](../../materials/reagents/MAT-100_identity.qmd) | Macklin · **W750078** | 在用货号已确认；等级/批次待核 |
+| [StageTip枪头](../../materials/reagents/MAT-103_identity.qmd) | Axygen · **待补** | 200 µL；型号待补 |
+| [低吸附收集管](../../materials/reagents/MAT-104_identity.qmd) | Thermo Fisher · **待补** | 容量/系列/货号待补 |
 
 ## 操作步骤
 

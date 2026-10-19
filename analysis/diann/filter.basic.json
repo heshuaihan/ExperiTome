@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "description": "Editable starting example for non-multiplexed protein-group main reports; not a universal standard. Review against DIA-NN version and analysis mode.",
+  "filters": [
+    ["Q.Value", "<", 0.01],
+    ["Global.Q.Value", "<", 0.01],
+    ["PG.Q.Value", "<", 0.05],
+    ["Global.PG.Q.Value", "<", 0.01]
+  ],
+  "exclude_protein_group_contains": [],
+  "minimum_distinct_peptides": 0,
+  "peptide_count_scope": "protein_group"
+}

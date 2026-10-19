@@ -49,7 +49,7 @@ body-classes: "protocol-detail"
 |---|---|---|
 | [比色肽段定量试剂盒](../../materials/reagents/MAT-004_23275.qmd) | Thermo Scientific · **23275** | 500 assays；含 1 mg/mL 消化肽段标准品 |
 | [甲酸](../../materials/reagents/MAT-071_F809715.qmd) | Macklin · **F809715** | LC-MS级 |
-| [水（质谱用）](../../materials/reagents/MAT-100_identity.qmd) | 待登记 · **待补** | LC-MS级或经确认适用的超纯水 |
+| [水（在用）](../../materials/reagents/MAT-100_identity.qmd) | Macklin · **W750078** | 在用货号已确认；等级/批次待核 |
 
 ## 操作步骤
 

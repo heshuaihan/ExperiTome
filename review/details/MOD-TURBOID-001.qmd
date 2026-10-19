@@ -10,7 +10,7 @@ search: false
 
 ## 缓冲液与树脂资料
 
-用户提供的 Thermo Fisher **20357** 产品页与实验室记录中的 “Pierce High Capacity Streptavidin Agarose” 名称相符，暂列为可能型号；实际瓶签或采购记录尚未核实。官方说明书标明 20357 为 **2 mL 沉降树脂、4 mL 总体积**，以 **50% 水相悬液**供应，含 0.02% sodium azide；到货后 **4°C 保存、不可冷冻**。说明书给出的结合容量以生物素化 p-NPE 和生物素化 BSA 测定，至少为 **100 µg biotinylated p-NPE/mL 沉降树脂**和 **10 mg biotinylated BSA/mL 沉降树脂**。2 mL 50% slurry 相当于 1 mL 沉降树脂。
+用户提供的 Thermo Fisher **20357** 产品页与实验室记录中的 “Pierce High Capacity Streptavidin Agarose” 名称相符，已于2026-10-18由用户确认在用；具体批号另记。官方说明书标明 20357 为 **2 mL 沉降树脂、4 mL 总体积**，以 **50% 水相悬液**供应，含 0.02% sodium azide；到货后 **4°C 保存、不可冷冻**。说明书给出的结合容量以生物素化 p-NPE 和生物素化 BSA 测定，至少为 **100 µg biotinylated p-NPE/mL 沉降树脂**和 **10 mg biotinylated BSA/mL 沉降树脂**。2 mL 50% slurry 相当于 1 mL 沉降树脂。
 
 实验室记录中的 **5 µg/µL 混匀悬液**与 **10 µg/µL 沉降树脂**是按总蛋白质量估算树脂量的口径。它与厂家按生物素化 BSA 报告的数字在单位换算上相近，但测量对象不同，不能据此把厂家容量等同于 TurboID 裂解液总蛋白容量。
 
@@ -33,4 +33,4 @@ Thermo Fisher 另有一份 ActivX 活性位点探针说明书，明确用 20357 
 
 早期 SRC-003 中以 PBS 为基础的配方已退出当前操作；历史记录及与 SRC-004 的差异保留在[参数审核页](../MOD-TURBOID-001_富集审核.qmd)，不再作为并列执行方案。
 
-SRC-004 的 elution 配方写有 **200 mM biotin stock 2.5 mL**，但未注明该储备液的溶剂；不要默认它与标记用的 DMSO 生物素储备液相同，需查配液记录或标签。
+SRC-004未写洗脱biotin储液溶剂；2026-10-19用户补充确认，标记及洗脱储液均为200 mM biotin/DMSO。50 mL洗脱液加入2.5 mL储液，名义DMSO为5%（v/v）。HEPES原液及富集缓冲液具体pH未测定；常规7轮全部合并，逐轮效率检测时分收。

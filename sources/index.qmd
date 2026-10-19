@@ -18,6 +18,10 @@ subtitle: "官方说明书与公开方法"
 | StageTip | [Rappsilber et al., 2007](https://www.nature.com/articles/nprot.2007.261)；[A801297 规格书](https://api.macklin.cn/api/specification/download?item_code=A801297&lang=cn) |
 | 肽段定量 | [Pierce 23275 官方说明书](https://documents.thermofisher.com/TFS-Assets/LSG/manuals/23275_quantpeptide_color_UG.pdf)；[产品 FAQ](https://www.thermofisher.cn/order/catalog/product/23275/faqs) |
 
+## 编写规范参考
+
+[Nature Protocols官方格式指南](https://www.nature.com/nprot/for-authors/protocols)（SRC-063）；[STAR Protocols发表实例](https://pmc.ncbi.nlm.nih.gov/articles/PMC10323129/)（SRC-064）。STAR作者网页仍受限，但本轮已取得官方作者Word模板和资源表，并补MDAR、MIAPE和FAIR参考，见[官方文件与适用范围](../standards/reference-frameworks.qmd)；不把发表实例的实验条件套用于本地实验。
+
 ## 阅读依据
 
 [试剂资料复核记录](../review/reagents_20261018.qmd)汇总原始资料位置、HEPES及关键化学品规格、本轮补全范围与未取得的证据。

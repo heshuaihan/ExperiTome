@@ -52,7 +52,7 @@ $border-color: #dbe4e8;
 body { text-rendering: optimizeLegibility; }
 .navbar { border-bottom: 1px solid var(--lab-line); }
 .navbar-brand { font-size: 1.1rem; font-weight: 650; }
-.navbar-logo { max-height: 30px; }
+.navbar-logo { width: 36px; height: 36px; max-height: 36px; object-fit: contain; }
 #quarto-content { padding-top: 1.7rem; }
 #title-block-header { margin-bottom: 1.2rem; }
 #title-block-header .title { font-size: clamp(1.75rem, 3vw, 2.3rem); line-height: 1.35; letter-spacing: .02em; }
@@ -168,3 +168,22 @@ code { font-size: .85em; color: #2f6463; background: #eef4f4; }
 .brand-hero { margin: .25rem 0 1.35rem; }
 .brand-hero p, .brand-hero figure { margin: 0; }
 .brand-hero img { display: block; width: 100%; height: auto; border-radius: 8px; }
+
+/* Homepage preview counters: explicitly disclosed demo values, browser-local interaction. */
+.home-engagement { display: grid; grid-template-columns: 1fr auto; align-items: center; column-gap: 1.4rem; row-gap: .25rem; margin: .2rem 0 1rem; padding: .9rem 1.1rem .6rem; background: #fff; border: 1px solid var(--lab-line); border-radius: 10px; }
+.engagement-intro > span { color: var(--lab-ink); font-size: 1rem; font-weight: 650; }
+.engagement-intro p { margin: .05rem 0 0; color: var(--lab-muted); font-size: .8rem; }
+.engagement-metrics { display: flex; align-items: center; gap: 1.35rem; }
+.engagement-stat, .engagement-like { display: grid; grid-template-columns: 22px auto; align-items: center; column-gap: .55rem; row-gap: 0; }
+.engagement-stat svg, .engagement-like svg { width: 22px; height: 22px; grid-row: span 2; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.engagement-stat { color: var(--lab-teal); }
+.engagement-like { color: var(--lab-teal); border: 1px solid #cbdedb; border-radius: 8px; padding: .35rem .7rem; background: #f7fbfa; cursor: pointer; min-width: 102px; }
+.engagement-like:hover { border-color: var(--lab-teal); background: #edf6f3; }
+.engagement-like[aria-pressed="true"] { color: #a94550; border-color: #dcaab0; background: #fff5f5; }
+.engagement-like[aria-pressed="true"] svg { fill: #a94550; }
+.engagement-like:focus-visible { outline: 3px solid #9cc5bf; outline-offset: 4px; }
+.engagement-value { font-size: 1.35rem; font-weight: 700; line-height: 1.15; font-variant-numeric: tabular-nums; }
+.engagement-caption { font-size: .72rem; color: var(--lab-muted); line-height: 1.45; text-align: left; }
+.engagement-disclosure { grid-column: 1 / -1; margin: 0; text-align: right; font-size: .7rem; color: #6c7d87; }
+@media (max-width: 600px) { .home-engagement { grid-template-columns: 1fr; gap: .7rem; } .engagement-metrics { justify-content: space-between; } .engagement-disclosure { text-align: left; } }
+@media print { .home-engagement { display: none !important; } }

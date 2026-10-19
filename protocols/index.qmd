@@ -51,6 +51,7 @@ body-classes: "library-home"
 [试剂与货号](../materials/index.qmd)
 [配液](../materials/buffers/index.qmd)
 [仪器设置](../instruments/index.qmd)
+[编写标准与模板](../standards/index.qmd)
 [来源](../sources/index.qmd)
 [版本记录](../review/versions/index.qmd)
 :::

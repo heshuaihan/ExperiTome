@@ -40,7 +40,7 @@ body-classes: "protocol-detail"
 | 项目 | 准备要求 |
 |---|---|
 | 洗涤与收集 | M9、离心管及移液用品 |
-| 研磨 | 0.5 mm 氧化锆珠、合适研磨管；研磨仪预冷至 −30°C |
+| 研磨 | 0.5 mm 氧化锆珠、合适研磨管；[宁波新芝SCIENTZ-48L](../../instruments/index.qmd)（照片与附录对应）；研磨仪预冷至 −30°C |
 | 裂解液 | [BUF-WORM-001](../../materials/buffers/BUF-WORM-001_SDS裂解液.qmd)：加样前含 2% SDS、50 mM HEPES、150 mM NaCl、0.1% Tween-20、20 mM EDTA，pH 7.4；以 1 M NaOH 滴定；与等体积样品混合后，名义 SDS 约 1% |
 | 抑制剂 | [A32965](../../materials/reagents/MAT-096_A32965.qmd)：1 片以无酶水配至最终 1 mL（名义 50×），按单次用量分装、−20°C 保存；每 50 mL 裂解液终体积加 1 mL |
 | 回收与澄清 | 可刺孔的研磨管、1.5 mL 收集管、15 mL 外管；可容纳 15 mL 管的水平转子优先 |

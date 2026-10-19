@@ -1,0 +1,80 @@
+---
+title: "2 · DIA-NN 报告filter"
+subtitle: "ANA-DIANN-001 · v0.2.0 · 方法草案"
+description: "通用行筛选、可配置阈值、逐步审计与定量值保留。"
+---
+
+先完成[1 · DIA-NN数据分析与设置](diann-settings.qmd)，再处理这里的`report.parquet`主报告。此步骤只做报告filter；之后按[常规分析流程](proteomics-workflow.qmd)进入样本QC和统计。
+
+[下载通用工具包](diann/Experitome_DIA-NN_starter_v0.2.0.zip) · [基础设置与记录](diann-settings.qmd) · [Analysis入口](index.qmd)
+
+## 输入与运行
+
+需要Python、pandas和pyarrow；验证环境为Python 3.13.4、pandas 2.3.3、pyarrow 24.0.0。先解压工具包，在解压目录运行：
+
+```powershell
+python -m pip install -r requirements.txt
+python diann_filter.py --input example_report.csv --config filter.basic.json --output-dir example_basic
+python diann_filter.py --input "D:/data/report.parquet" --config filter.basic.json --output-dir "D:/data/qc_run01"
+```
+
+支持主报告Parquet和列结构等价的CSV/TSV。输入必须含`Run`、`Protein.Group`及配置引用的所有列。矩阵文件缺少前体质量列，不能当作主报告输入。输出目录必须是新目录；脚本不覆盖旧结果。
+
+这是整表内存版，保留输入全部列。大报告应先确认内存容量；当前未实现分块或超大数据处理。跨版本报告需先核对列名、分析模式和字段含义；缺列直接报错，不悄悄跳过条件。本版面向常规非多重标记蛋白组；plexDIA、PTM位点或DDA需要另行定义过滤规则。
+
+## 可修改的过滤条件
+
+[基础配置](diann/filter.basic.json)提供以下起点，所有条件取交集：
+
+| 列 | 示例条件 | 作用层级 |
+|---|---|---|
+| `Q.Value` | `< 0.01` | 单run前体 |
+| `Global.Q.Value` | `< 0.01` | 实验整体前体 |
+| `PG.Q.Value` | `< 0.05` | 单run蛋白组 |
+| `Global.PG.Q.Value` | `< 0.01` | 实验整体蛋白组 |
+
+这是可编辑起点，不是所有项目必须采用的标准。q-value筛选应先作用于主报告行，再做任何后续汇总。字段与模式说明见[DIA-NN官方主报告说明](https://github.com/vdemichev/DiaNN#main-output-reference)。官方在线文档随版本更新，不能用当前默认值倒推历史运行。
+
+[扩展示例](diann/filter.extended.example.json)另保留截图中的三条条件：`Lib.Peptidoform.Q.Value < 0.01`、`Quantity.Quality > 0.5`、`PG.MaxLFQ.Quality > 0.7`。前一条需对应Peptidoforms及MBR/相应经验谱库模式；后两条需有可用的QuantUMS质量指标。0.5与0.7是示例取值，应评估保留量与质量后再定，不作为通用软件默认值。
+
+```powershell
+python diann_filter.py --input example_report.csv --config filter.extended.example.json --output-dir example_extended
+```
+
+严格`<`与`>`沿用截图口径，等于边界会被排除；如需包含边界，明确改成`<=`或`>=`。过滤列的空值、非数值和无穷值均视为不通过，并在审计中计数。原列内容不被数值转换覆盖。
+
+## 可选的污染与肽段支持规则
+
+基础配置不默认删除任何污染标签，也不要求两条肽段；按数据库和分析目的决定是否开启。
+
+| 配置项 | 含义 |
+|---|---|
+| `exclude_protein_group_contains` | 按Protein.Group中的字面标签删除整行；区分大小写，不使用正则表达式。混合组只要有一个成员含标签也删除；需检查是否符合本项目污染物策略 |
+| `minimum_distinct_peptides` | 0表示关闭；2表示至少两种不同的Stripped.Sequence。空序列不计；电荷态/修饰形式不额外增加计数 |
+| `peptide_count_scope: protein_group` | 在通过行过滤、污染标签过滤后的整份报告中，按Protein.Group累计不同序列；不保证每个run都有两条 |
+| `peptide_count_scope: run_protein_group` | 在每个Run × Protein.Group内要求足够的不同序列 |
+
+扩展示例采用`cRAP`、至少2种序列、整报告计数。这是从既有流程抽出的可选组合；两种不同序列不等同于两条蛋白特异肽。本版不额外强制`Proteotypic == 1`。
+
+## 输出与归一化
+
+| 输出 | 内容 |
+|---|---|
+| `filtered_report.parquet` | 保留行及全部原列；原始定量值、零值和缺失值保持原样 |
+| `run_counts.csv` | 各run筛选前后行数、保留蛋白组数；包含保留0行的run |
+| `audit.json` | 按顺序每步删除量、无效过滤值计数、输入/输出/脚本/配置哈希与软件版本 |
+| `config.used.json` | 本次实际配置副本 |
+
+**默认下游策略：DIA-NN已采用RT-dependent归一化并经日志/流程确认后，不再额外归一化；只有数据评估支持时才添加，记录方法、依据和前后影响。** 本脚本始终只筛选，不执行任何归一化或补值。上游状态尚未确认时，先保留“未确认”，不假定已做，也不自动补做。
+
+IP/亲和富集另定上游归一化策略，不直接套用总蛋白默认设置。
+
+主报告中的`PG.MaxLFQ`可能在同一run、同一蛋白组的多个前体行重复出现，不能将这些值相加得到蛋白丰度。行筛选不会重新运行DIA-NN蛋白定量，也不能声称PG.MaxLFQ已仅基于剩余肽段重算。技术重复合并、矩阵转换、对数变换及缺失值决策应在独立的下游分析中明确。
+
+## 检查、版本与来源
+
+工具包含人工合成示例，无私人样本数据；可运行`python -m unittest -v test_diann.py`。测试覆盖边界、缺列、非数值/无穷值、不同肽段计数范围、污染标签、原值保留及日志解析。检查不等于证明这些阈值适合所有研究。
+
+2026-10-19 · v0.2.0：改为流程第2步，衔接常规分析与IP例外；筛选算法及示例阈值不变。v0.1.0工具包保留。原创代码MIT，说明CC BY 4.0；DIA-NN及第三方依赖遵循各自许可。
+
+依据：用户截图、既有流程只读核对及[DIA-NN官方文档](https://github.com/vdemichev/DiaNN)。当前在线文档于2026-10-19核对；本地提供的日志来自DIA-NN 2.6.0 Academia，不能将其个别运行条件当作通用推荐。[本轮维护记录](../maintenance/entries/2026-10-19-04.qmd)

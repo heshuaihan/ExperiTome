@@ -13,7 +13,7 @@ search: false
 - 实验室流程：SRC-002、SRC-003、SRC-004；具体版本差异留在来源文件中。
 - [Rappsilber、Mann 与 Ishihama，Nature Protocols 2007](https://www.nature.com/articles/nprot.2007.261)：图 1 示意膜片冲切和推入枪头，表 3 列出 3M Empore C18 货号 2215，表 4 列出 200 µL 枪头所用 Hamilton 90516 针和 1122-01 推杆；论文不验证本实验室 3 层装填的容量或流速。
 - [麦克林 A801297 官方规格书](https://api.macklin.cn/api/specification/download?item_code=A801297&lang=cn)：产品为冰乙酸，规格为 LC-MS 级。
-- [Empore StageTips 厂商宣传册](../../sources/index.qmd)：厂商产品资料；宣传册中的预包装产品号不代表实验室自制 StageTip 使用相同货号。
+- Empore StageTips 厂商宣传册（本地档案，不随公开版提供）：厂商产品资料；宣传册中的预包装产品号不代表实验室自制 StageTip 使用相同货号。
 - 已归档的[StageTips 原文 PDF](https://www.nature.com/articles/nprot.2007.261)。
 
 ## 尚需补记

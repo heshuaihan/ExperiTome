@@ -1,0 +1,36 @@
+# Experitome clean XY style v0.1.0 | SPDX-License-Identifier: MIT
+# Starting point for a 7-8 inch wide standalone figure; inspect at final size.
+figure.figsize: 7.2, 4.8
+figure.dpi: 150
+font.family: sans-serif
+font.sans-serif: Arial, DejaVu Sans
+font.size: 16
+axes.labelsize: 18
+axes.titlesize: 20
+axes.titleweight: bold
+axes.labelcolor: black
+axes.edgecolor: black
+axes.linewidth: 1.1
+axes.grid: False
+axes.spines.top: False
+axes.spines.right: False
+axes.spines.left: True
+axes.spines.bottom: True
+axes.facecolor: none
+figure.facecolor: none
+xtick.labelsize: 16
+ytick.labelsize: 16
+xtick.top: False
+ytick.right: False
+xtick.direction: out
+ytick.direction: out
+legend.fontsize: 14
+legend.frameon: False
+lines.linewidth: 1.8
+lines.markersize: 6
+savefig.dpi: 600
+savefig.transparent: True
+savefig.facecolor: none
+pdf.fonttype: 42
+ps.fonttype: 42
+svg.fonttype: none

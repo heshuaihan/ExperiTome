@@ -24,7 +24,7 @@ P1048 的 50× 目录标示不适用于当前 A32965 片剂。旧记录的差异
 
 - [P1048 官方产品入口](https://www.beyotime.com/product/P1048.htm)。
 - [官方目录](https://www.beyotime.com/goods.do?lcode=001002004002&method=lcode)。
-- [本次核查记录](../../sources/index.qmd)。
+- 本次核查记录（本地档案，不随公开版提供）。
 
 本次已核对目录身份，专用完整说明书尚未取得；保存温度、期限、组分及操作配比待说明书和实际瓶签核实，不填写推断值。
 

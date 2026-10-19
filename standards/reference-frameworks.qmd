@@ -1,0 +1,51 @@
+---
+title: "参考规范与官方文件"
+description: "STAR、Nature Protocols、MDAR、MIAPE与FAIR的作用、取得状态及本地映射。"
+last_reviewed: "2026-10-19"
+---
+
+**STAR Protocols有官方说明及模板。**此前作者网页访问403，限制的是访问，不是文件是否存在。本轮从出版方直接取得并校验Word模板及资源表；网页仍停在安全验证，未确认当前作者页全部要求或模板是否为最新修订。
+
+## 官方文件与取得状态
+
+| 规范 / 原始文件 | 官方来源 | 本轮状态 |
+|---|---|---|
+| STAR Protocols作者页 | [作者入口](https://www.cell.com/star-protocols/authors) | 访问受限；不将其写成无官方说明 |
+| STAR作者模板 | [出版方Word文件](https://www.cell.com/pb-assets/journals/EM/STAR%20Protocols/CellPress_STARProtocolsTemplate-1643228778990.docx) · [官方来源](https://www.cell.com/pb-assets/journals/EM/STAR%20Protocols/CellPress_STARProtocolsTemplate-1643228778990.docx) | 已下载，163,208字节；DOCX结构有效；链接中的数字不当作最新版本证明 |
+| STAR / Cell Press资源表 | [官方表格模板](https://www.cell.com/pb-assets/journals/research/cell/methods/table-template1.docx) · [官方来源](https://www.cell.com/pb-assets/journals/research/cell/methods/table-template1.docx) | 已下载并校验；由作者模板内部链接定位 |
+| Nature Protocols格式 | [官方格式指南](https://www.nature.com/nprot/for-authors/protocols) | 官方索引正文已核查；本轮未另存官方完整模板，不冒充已下载 |
+| MDAR框架 | [工作组OSF项目](https://osf.io/2k3va/) · [框架PDF](https://osf.io/download/xfpn4/) | 官方项目直接取得，2页 |
+| MDAR作者清单 | [官方来源](https://osf.io/download/bj3mu/) | 官方项目直接取得，5页 |
+| MDAR解释文件 | [官方来源](https://osf.io/download/xzy4s/) | 官方项目直接取得，22页 |
+| MIAPE-MS 2.98 | [HUPO-PSI原文件](https://github.com/HUPO-PSI/MIAPE/blob/main/MIAPE_MS_2.98.pdf) · [官方来源](https://github.com/HUPO-PSI/MIAPE/blob/main/MIAPE_MS_2.98.pdf) | 7页；文件内日期2012-08-13 |
+| MIAPE-MSI 1.1 | [HUPO-PSI原文件](https://github.com/HUPO-PSI/MIAPE/blob/main/MIAPE_MSI_1.1.pdf) · [官方来源](https://github.com/HUPO-PSI/MIAPE/blob/main/MIAPE_MSI_1.1.pdf) | 8页；用于鉴定/数据处理记录 |
+| MIAPE-Quant 1.0 | [HUPO-PSI原文件](https://github.com/HUPO-PSI/MIAPE/blob/main/MIAPE_Quant_v1.0_Final_0.pdf) · [官方来源](https://github.com/HUPO-PSI/MIAPE/blob/main/MIAPE_Quant_v1.0_Final_0.pdf) | 10页；文件内日期2012-10-24 |
+| MIAPE-CC 1.1 | [HUPO-PSI原文件](https://github.com/HUPO-PSI/MIAPE/blob/main/MIAPE_CC_1.1.pdf) · [官方来源](https://github.com/HUPO-PSI/MIAPE/blob/main/MIAPE_CC_1.1.pdf) | 5页；用于色谱过程记录 |
+| FAIR原则 | [原始论文](https://www.nature.com/articles/sdata201618) · [GO FAIR Foundation](https://www.gofair.foundation/fair-principles) | 原始论文信息及官方原则核查；官方网页另存本地，不称作期刊模板 |
+
+取得日期：2026-10-19。7份PDF和2份DOCX都已检验文件类型/结构并计算SHA-256；PDF页数已核对。原文件保留在本地，不修改为本库内容，也不自动打入将来的公开包。OSF文件修改时间另记于下载清单，不等同文件内修订日期；旧年份的MIAPE仍是[官方索引](https://www.psidev.info/miape)列出的发布版，适用范围按模块判断。
+
+## 各自解决什么问题
+
+| 层面 | 本库采用内容 | 应用位置与边界 |
+|---|---|---|
+| STAR：操作文章结构 | 关键资源表、预期结果、局限、排障；主要阶段的时间和步骤关联 | 本地模板信息架构；原模板强调这四个部分不可缺。长短和投稿细节日后按当前作者页复核 |
+| Nature Protocols：执行细节 | 编号动作、材料设置、关键点、暂停与排障、时间、结果判断 | 编号步骤与BUF/INS；转子未知时仍标缺，不伪造×g |
+| MDAR：研究设计与报告 | 材料身份、样本量依据、重复定义、纳入/排除、随机化/盲法及不适用原因、分析和可用性记录 | PROT路线及RUN/VAL；这是信息完整性的参考，不强迫每种实验采用同一种设计。[框架背景](https://www.cos.io/blog/the-mdar-framework-a-new-tool-for-life-sciences-reporting) |
+| MIAPE：蛋白质组学记录 | 色谱、仪器采集、鉴定、定量分别记录，保存软件/数据库/参数与结果的对应关系 | [LC-MS与分析记录模板](../templates/lcms-analysis-record.md.txt)；不把信息报告要求写成“应该怎样制样”的操作结论 |
+| FAIR：可发现、可访问、互操作、可复用 | 稳定编号、版本、结构化元数据、来源、文件校验和许可/访问范围 | 全库ID、来源表、维护日志和归档清单；FAIR不要求全部立即公开。[官方解释](https://www.go-fair.org/resources/faq/what-fair-is-not/) |
+
+这是针对当前线虫/蛋白质组学库的选择性映射；不宣称已经通过这些规范的全面符合性审核。没有动物/临床适用场景的专门条款不机械写入所有方法。
+
+## 本轮转化为哪些实际字段
+
+1. 操作模板补“设计依据、纳入/排除及随机化/盲法的适用性”，未知时显式标记。
+2. RUN/VAL保留生物学和技术重复定义，写清量化分母、原始数据及处理版本；不能事后选择成功批次代替整体表现。
+3. LC-MS/分析记录分别登记样品前处理版本、液相/采集、鉴定/定量、数据库与文件关联。
+4. 每轮总体维护写独立日志；材料、方法、模板、库维护编号分别使用，避免一个版本号承担所有含义。
+
+## 仍可能需要协助的文件
+
+当前已取得的模板足以继续本地规范建设；若作者页仍无法打开且未来需要正式投稿，需重新取得**当时最新的STAR作者说明及当前模板**。届时可由维护者下载后补入本库。现在不因网页访问受限停止其他整理，也不把现有副本称作已确认最新。
+
+[返回编写标准](index.qmd) · [本轮总维护记录](../maintenance/entries/2026-10-19-02.qmd)

@@ -29,7 +29,7 @@ Protocols. Analysis. Data.
 | 入口 | 内容 | 当前状态 |
 |---|---|---|
 | [Protocols](protocols/index.qmd) | 可执行的实验步骤、配液、材料与设备 | 已有中文详细版；方法仍为草案 |
-| [Analysis](analysis/index.qmd) | 分析方法、脚本说明、参数与结果解释 | 规划与条目模板；尚无正式公开分析流程 |
+| [Analysis](analysis/index.qmd) | DIA-NN设置/filter、常规流程、常用包、实例习惯与绘图风格 | 6项方法草案、通用代码及模板 |
 | [Data](data/index.qmd) | 示例数据、处理结果、补充材料及其来源与授权 | 规划与条目模板；尚无正式公开数据集 |
 
 当前以线虫蛋白质组学、TurboID及相关制样为起点，后续根据实际研究需要增加内容。页面主体先维护中文，英文版在中文内容确定后逐步同步。
@@ -57,3 +57,7 @@ The Hong Kong University of Science and Technology (Guangzhou)
 优先引用各方法、数据和工具的原始出处；引用本库的整理与说明时，请注明 **Shuaihan He, Experitome**、对应条目及版本/访问日期。项目仓库为[heshuaihan/Experitome](https://github.com/heshuaihan/Experitome)；网页阅读入口为[Experitome](https://heshuaihan.github.io/Experitome/)，在Pages部署完成后可用。
 
 [许可范围](licensing/index.qmd) · [版本与维护](review/index.qmd) · [内容路线图](roadmap.qmd)
+
+## 首页计数口径
+
+首页浏览量与点赞数包含初始展示值和本浏览器的交互记录，不是全站实时汇总或独立访客统计。点赞可取消，刷新保留本浏览器状态；组件不向第三方发送统计请求。

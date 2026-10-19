@@ -5,14 +5,20 @@ description: "从线虫 TurboID 裂解液捕获生物素化蛋白，保留输入
 protocol_id: "MOD-TURBOID-001"
 category: "TurboID / 亲和富集"
 status: "草案"
-version: "0.8"
+standard_version: "0.1"
+document_status: "结构初审"
+validation_status: "未登记验证证据"
+version: "0.9"
 created: "2026-09-29"
-last_reviewed: "2026-10-18"
+last_reviewed: "2026-10-19"
 layout_status: "中文详细版；正文与维护资料分离"
+reagent_ids: [MAT-014, MAT-043, MAT-051, MAT-058, MAT-059, MAT-067, MAT-097]
+buffer_ids: [BUF-TURBOID-001]
+instrument_ids: []
 order: 30
 review_page: "../../review/MOD-TURBOID-001_富集审核.qmd"
 keywords: [TurboID, streptavidin, biotin, enrichment, flow-through]
-presentation_updated: "2026-10-18"
+presentation_updated: "2026-10-19"
 body-classes: "protocol-detail"
 ---
 
@@ -25,7 +31,7 @@ body-classes: "protocol-detail"
 
 **输入：**BCA 定量后的澄清裂解液、链霉亲和素琼脂糖树脂和 HEPES/NaCl 缓冲液。
 
-**输出：**输入留样、FT 和各轮洗脱物；用于质谱的洗脱物进入蛋白沉淀。
+**输出：**输入留样、FT 和常规合并的7轮洗脱物；合并洗脱物进入蛋白沉淀。检测各轮洗脱效率时另按轮次分收。
 :::
 
 ## 实验前准备
@@ -35,11 +41,11 @@ body-classes: "protocol-detail"
 | 稀释液/珠子预洗 | 50 mM HEPES、150 mM NaCl。 |
 | Wash I | 50 mM HEPES、150 mM NaCl、0.2% SDS。 |
 | Wash II | 6 M urea、50 mM HEPES、150 mM NaCl、0.1% SDS。 |
-| 洗脱液 | 10 mM biotin、2% SDS、50 mM HEPES、150 mM NaCl；[配液表](../../materials/buffers/BUF-TURBOID-001_富集缓冲液.qmd)。 |
+| 洗脱液 | 10 mM biotin、2%（w/v）SDS、50 mM HEPES、150 mM NaCl；200 mM biotin/DMSO储液带入5%（v/v）DMSO；[配液表](../../materials/buffers/BUF-TURBOID-001_富集缓冲液.qmd)。 |
 | 树脂 | 高容量链霉亲和素琼脂糖，50% slurry，4°C 保存，不冷冻。所有倍数均按**沉降后的纯树脂体积**计算；2 µL 混匀悬液约对应 1 µL 树脂。 |
-| 管与设备 | 标记输入、FT 及 7 轮洗脱收集管；旋转混匀、95°C 混匀加热及离心设备。详见[仪器目录](../../instruments/index.qmd)。 |
+| 管与设备 | 标记输入、FT及合并洗脱收集管；检测逐轮效率时另备7轮分收管；旋转混匀、95°C 混匀加热及离心设备。详见[仪器目录](../../instruments/index.qmd)。 |
 
-所有预洗、结合后分离、洗涤及洗脱上清收集均采用 **2,000 rpm、5 min**。预洗轮数及 7 轮洗脱物的合并范围见[执行缺项](../../review/readiness.qmd)。
+所有预洗、结合后分离、洗涤及洗脱上清收集均采用 **2,000 rpm、5 min**。预洗总轮数仍需按批次补记；7轮洗脱常规全部合并，检测各轮效率时分收。
 
 ### 材料与货号
 
@@ -51,6 +57,19 @@ body-classes: "protocol-detail"
 | [十二烷基硫酸钠（SDS）](../../materials/reagents/MAT-059_A600485.qmd) | Sangon Biotech · **A600485** | 纯度见瓶签 |
 | [尿素](../../materials/reagents/MAT-067_51456.qmd) | Sigma-Aldrich · **51456** | BioUltra，Molecular Biology，99%（T） |
 | [高容量链霉亲和素琼脂糖](../../materials/reagents/MAT-097_20357.qmd) | Thermo Scientific · **20357** | 2 mL沉降树脂，提供为4 mL 50%浆液 |
+
+HEPES原液和完整富集缓冲液的具体pH均**未测定**（用户2026-10-19确认）；原资料pH范围不作为实测值。
+
+## 时间安排
+
+| 阶段 | 已知耗时 | 口径 |
+|---|---|---|
+| 预洗 | 每次离心5 min | 总轮数待补，不估算总时长 |
+| 结合及分离 | 2 h + 5 min | 不含加样/转移 |
+| Wash I / II | 4次离心，共20 min | 不含重悬/移液；洗涤接触时长未单独测定 |
+| 7轮洗脱 | 加热及离心合计70 min | 每轮5 + 5 min；不含设备升温/转移 |
+
+已知固定环节合计215 min，另加预洗、准备和移液；这不是实测整批完成时间。
 
 ## 操作步骤
 
@@ -81,18 +100,34 @@ Wash I、Wash II **各洗 2 轮**，每轮约 **10 倍沉降树脂体积**。充
 ::: {.protocol-step #step-5}
 ### [5]{.step-number} 加热洗脱
 
-每轮加入约 **2 倍沉降树脂体积**洗脱液，在 **95°C、800 rpm 混匀 5 min**，随后 **2,000 rpm 离心 5 min** 收集上清；重复 **7 轮**。800 rpm 为加热混匀设置。逐轮标号并记录体积。
+每轮加入约 **2 倍沉降树脂体积**洗脱液，在 **95°C、800 rpm 混匀 5 min**，随后 **2,000 rpm 离心 5 min** 收集上清；重复 **7 轮**。800 rpm 为加热混匀设置。常规收集至同一样品的合并管，记录每轮回收体积；如需检查各轮洗脱效率，按E1–E7分管收集并另记检测取样量。每轮均先完成加热及离心，再转移上清。
 :::
 
 ::: {.protocol-step #step-6}
 ### [6]{.step-number} 交接沉淀
 
-按预先设定的收集方案合并相应轮次的洗脱物，记录所含轮次及总体积。将选定洗脱物交接至[蛋白沉淀与复溶](MOD-PROT-002_蛋白沉淀.qmd)，保留输入、FT 及轮次记录。
+常规将同一样品的**E1–E7全部合并**，记录7轮回收总体积。仅在检测逐轮效率时分收；检测后是否合并及取样损耗另记，不将缺轮样品标成完整7轮合并物。将合并洗脱物交接至[蛋白沉淀与复溶](MOD-PROT-002_蛋白沉淀.qmd)，保留输入、FT 及轮次记录。
 :::
 
 ## 完成与交接
 
 记录总蛋白投入量、树脂悬液/沉降体积、缓冲液批次、每轮洗脱体积和最终合并体积；进入下一步的样品编号应与输入、FT 对应。
+
+## 预期结果与检查
+
+常规得到同一样品7轮合并洗脱液，并保留输入和FT的对应编号。按预定WB或其他适用检测比较输入、FT与洗脱物；本库尚未规定经验证的最低回收率、富集倍数或第7轮残留阈值，不将“得到上清”视为富集效率已合格。
+
+## 故障排查
+
+| 步骤 / 现象 | 先检查 | 处理与记录 |
+|---|---|---|
+| 步骤2–4：树脂随上清流失 | 树脂是否沉降、吸液位置、转子/管型 | 停止转移，按当前2,000 rpm/5 min检查分离状态；记录损失，不擅自用未知×g替代 |
+| 步骤5：需要判断逐轮效率 | 是否已按E1–E7分收且各轮检测上样量可比 | 另走效率检测分支；已合并样品不能追溯逐轮分布 |
+| 步骤5：洗脱液出现析出 | biotin储液是否均一、DMSO带入量和配液记录 | 核对配方及外观，记录偏差；不自行改变biotin或SDS浓度并称作同版本 |
+
+## 局限与适用范围
+
+本页是实验室当前采用的草案。预洗总轮数、转子/×g及富集缓冲液实测pH未齐；输入/FT/洗脱的定量性能验证仍需批次证据。未建立洗脱后统一暂停保存期限，按计划接入沉淀；若暂停，记录温度与时长并标为批次偏差。
 
 ## 依据与维护
 

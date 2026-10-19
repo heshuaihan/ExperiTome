@@ -1,7 +1,7 @@
 ---
 title: "D-生物素"
 subtitle: "MAT-051 · Macklin · B6220"
-last_reviewed: "2026-10-18"
+last_reviewed: "2026-10-19"
 ---
 
 ## 产品信息
@@ -16,7 +16,7 @@ last_reviewed: "2026-10-18"
 
 ## 配制与使用
 
-标记用200 mM：48.86 mg以DMSO定容至1 mL。洗脱用也按200 mM计算，溶剂待配液记录补充。
+标记和洗脱均采用200 mM biotin/DMSO储液：48.86 mg以DMSO定容至1 mL。2026-10-19由用户确认两者溶剂均为DMSO。按10 mM biotin配洗脱液时，储液带入DMSO为5%（v/v，配方计算值）。
 
 [配液表](../buffers/BUF-TURBOID-001_富集缓冲液.qmd)。
 

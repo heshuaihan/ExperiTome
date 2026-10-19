@@ -33,8 +33,8 @@ The current release is a static methods library. A dedicated community platform,
 | Collection | Current scope |
 |---|---|
 | Protocols | 8 Chinese detailed modules, 2 C. elegans proteomics/TurboID routes; methods remain drafts |
-| Materials | 103 material identities, including 30 core materials; buffers and instrument settings |
-| Analysis | Planned; methods, code, parameters and reproducible workflow templates; no released workflow collection yet |
+| Materials | 104 material identities, including 30 core materials; buffers and instrument settings |
+| Analysis | 6 draft guides: DIA-NN settings/filter, routine workflows, package choices, reusable practices and plot style; generic starter code and synthetic example |
 | Data | Planned; example inputs, processed results and supplementary tables; no released dataset collection yet |
 
 ## Author

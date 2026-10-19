@@ -1,0 +1,33 @@
+---
+title: "补充确认与设备核对 · 2026-10-19"
+search: false
+---
+
+## 本次已落实
+
+| 用户补充 | 当前写法 | 来源与边界 |
+|---|---|---|
+| 7轮洗脱 | 常规全部合并；检测各轮效率时分收 | SRC-061；不推定逐轮效率已经测得 |
+| biotin储液 | 标记及洗脱均为200 mM / DMSO | SRC-061；50 mL洗脱配方带入5% DMSO为计算值 |
+| HEPES与富集缓冲液pH | 未测定 | 来源范围和配方目标不作为实测值 |
+| 丙酮洗涤 | 每轮4°C洗5 min，随后4°C、12,000 rpm离心5 min，共3轮 | 首次沉淀离心仍为4°C、12,000 rpm、10 min |
+| 水 | Macklin W750078 | 用户提供厂家链接；未取得可读等级规格，不推定LC-MS级 |
+| 耗材 | Axygen枪头；Thermo Fisher低吸附管 | 分为MAT-103及MAT-104；货号、系列待补 |
+| 甲酸照片 | F809715-100ml，100 mL | 瓶签批号本地登记；用户已确认并非甲胺，M102702继续待补 |
+| 设备照片 | 8台仪器型号登记 | 具体离心步骤与转子未逐台确认；照片读数不当作默认实验条件 |
+
+## 原文检索范围与发现
+
+只读检索sources中现有DOCX：手稿Methods、两份富集流程、总蛋白制样源文件及WB/IF记录；核对SRC-016 PDF第63–67页附录资源表。DOCX定位采用文档XML段落序号，便于本地复核，不等同于Word显示页码。匹配摘录和原始文件哈希保留在本地维护输出，原文未改。
+
+SRC-016 PDF第66页（印刷页59）列有SCIENTZ 48L，与照片SCIENTZ-48L对应；并列有Savant SpeedVac SPD140DDA-230、T100、ChemiDoc MP、LSM 980 Airyscan 2、Orbitrap Astral、Exploris 480、timsTOF HT、Vanquish Neo和nanoElute 2。它们属于文档记载，不全部等同当前每一步使用的设备。
+
+本次检索未得到NaOH货号、Axygen枪头货号、Thermo低吸附管系列/货号、研磨珠厂家、转子型号、酶标仪或95°C/800 rpm加热混匀设备的确切型号；保留缺项，不按常见品牌补写。
+
+## 文档规范建设
+
+新增[Experitome Protocol编写标准v0.1](../standards/index.qmd)、[质量检查与迁移清单](../standards/quality-checklist.qmd)及模板。富集v0.9、沉淀v0.6是首批标准结构样板，其余六模块保留现有方法并列明下一轮迁移范围。
+
+模板和结构整理不把方法升级成“已验证”。本轮没有开展实验、测量pH、鉴定转子或检测洗脱效率。
+
+[当前待完善事项](readiness.qmd) · [仪器设备](../instruments/index.qmd)

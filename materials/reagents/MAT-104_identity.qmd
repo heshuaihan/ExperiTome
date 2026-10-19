@@ -1,0 +1,26 @@
+---
+title: "低吸附收集管"
+subtitle: "MAT-104 · Thermo Fisher Scientific · 待补"
+last_reviewed: "2026-10-19"
+---
+
+## 产品信息
+
+| 项目 | 内容 |
+|---|---|
+| 厂家 / 货号 | Thermo Fisher Scientific / **待补** |
+| 规格、等级及形式 | 用户称低吸附；具体容量、系列、材质待补 |
+| 身份状态 | Thermo Fisher品牌已确认；系列/货号待补 |
+| 使用模块 | [MOD-PROT-004](../../protocols/modules/MOD-PROT-004_C18-StageTip脱盐.qmd) |
+
+## 使用与规格
+
+用于 C18 洗脱物收集；用户确认品牌为 Thermo Fisher Scientific。容量、系列、货号及针对蛋白/肽段的低吸附性能待核，不自动写成某个具体 LowBind/LoBind 系列。
+
+枪头另见 [MAT-103](MAT-103_identity.qmd)。
+
+## 来源与维护
+
+SRC-002、SRC-004；用户2026-10-19确认Thermo Fisher。产品身份确认、批次身份与实验室性能验证分别登记。
+
+[返回试剂与货号库](../index.qmd)

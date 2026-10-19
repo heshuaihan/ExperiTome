@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "description": "Optional seven-rule example from the supplied screenshot. Lib.Peptidoform filter requires the matching mode/library, quality filters require valid QuantUMS metrics. Thresholds and cRAP tag are editable, not universal defaults.",
+  "filters": [
+    ["Q.Value", "<", 0.01],
+    ["Global.Q.Value", "<", 0.01],
+    ["PG.Q.Value", "<", 0.05],
+    ["Global.PG.Q.Value", "<", 0.01],
+    ["Lib.Peptidoform.Q.Value", "<", 0.01],
+    ["Quantity.Quality", ">", 0.5],
+    ["PG.MaxLFQ.Quality", ">", 0.7]
+  ],
+  "exclude_protein_group_contains": ["cRAP"],
+  "minimum_distinct_peptides": 2,
+  "peptide_count_scope": "protein_group"
+}

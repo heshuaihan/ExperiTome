@@ -9,11 +9,11 @@ search: false
 | 模块 | 编号 | 当前方法版本 |
 |---|---|---|
 | [BCA 蛋白定量](MOD-PROT-001.qmd) | MOD-PROT-001 | 0.4 |
-| [蛋白沉淀与复溶](MOD-PROT-002.qmd) | MOD-PROT-002 | 0.5 |
+| [蛋白沉淀与复溶](MOD-PROT-002.qmd) | MOD-PROT-002 | 0.6 |
 | [还原、烷基化与胰酶消化](MOD-PROT-003.qmd) | MOD-PROT-003 | 0.6 |
 | [C18 StageTip 脱盐](MOD-PROT-004.qmd) | MOD-PROT-004 | 0.5 |
 | [肽段定量与上样](MOD-PROT-005.qmd) | MOD-PROT-005 | 0.3 |
-| [TurboID 链霉亲和素富集与洗脱](MOD-TURBOID-001.qmd) | MOD-TURBOID-001 | 0.8 |
+| [TurboID 链霉亲和素富集与洗脱](MOD-TURBOID-001.qmd) | MOD-TURBOID-001 | 0.9 |
 | [TurboID 生物素标记与验证](MOD-TURBOID-002.qmd) | MOD-TURBOID-002 | 0.7 |
 | [线虫收集与裂解](MOD-WORM-001.qmd) | MOD-WORM-001 | 0.7 |
 

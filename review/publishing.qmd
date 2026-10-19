@@ -3,7 +3,7 @@ title: "网站维护与发布"
 search: false
 ---
 
-本目录为Experitome的中文网站源文件。项目名为英文，内容以中文为主；Data与Analysis为建设中的栏目。安装 Quarto 1.10.18 与 Python 3 后，运行 `quarto render`，生成 `_site/`；构建前自动更新模块元信息和材料索引。
+本目录为Experitome的中文网站源文件。项目名为英文，内容以中文为主；Analysis包含DIA-NN设置/filter、常规流程、常用包、实例习惯和绘图风格，Data仍为规划。安装 Quarto 1.10.18 与 Python 3 后，运行 `quarto render`，生成 `_site/`；构建前自动更新模块元信息和材料索引。
 
 ## 维护
 

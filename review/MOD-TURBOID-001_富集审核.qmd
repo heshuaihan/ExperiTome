@@ -5,7 +5,11 @@ last_reviewed: "2026-10-18"
 search: false
 ---
 
-[中文详细版](../protocols/modules/MOD-TURBOID-001_链霉亲和素富集.qmd) · [中文速查版](../sources/index.qmd) · [维护顺序](../sources/index.qmd)。
+::: {.callout-note title="当前状态 · 2026-10-19"}
+本页保留来源审核过程；本次闭合项和当前缺项分别见[补充确认](updates_20261019.qmd)与[当前清单](readiness.qmd)。表中历史待确认不覆盖当前方法。
+:::
+
+[中文详细版](../protocols/modules/MOD-TURBOID-001_链霉亲和素富集.qmd) · 中文速查版（本地档案，不随公开版提供） · 维护顺序（本地档案，不随公开版提供）。
 
 ## 本轮整理范围
 
@@ -74,11 +78,11 @@ MAN0011768 的 20357 示例最接近本地批次捕获步骤，但所用 ActivX 
 | 编号 | 问题 | 状态/后续处理 |
 |---|---|---|
 | TURBOID-ENR-01 | 当前使用哪套洗液/洗脱记录？ | 已确认：当前所有缓冲液均采用 HEPES/NaCl，洗脱按 SRC-004 的 95°C 条件；SRC-003 仅保留历史对照 |
-| TURBOID-ENR-02 | 树脂是否为 Thermo Pierce High Capacity Streptavidin Agarose 20357？瓶签/采购记录能否确认？ | 用户提供的 20357 产品页与记录名称吻合；暂列疑似货号，待实物身份确认 |
-| TURBOID-ENR-03 | 7 轮洗脱液是否合并？若不全部合并，哪些轮进入质谱样品？ | 待确认；在主方法保持逐轮标记 |
-| TURBOID-ENR-04 | 预洗/各轮清洗的离心时间和转子是什么？SRC-003 的历史 75°C 洗脱后怎样分离树脂？ | 当前预洗及洗涤分离先记录 2,000 rpm；部分时间、转子型号和半径待补；历史 SRC-003 条件不完整 |
-| TURBOID-ENR-05 | 2,000 rpm、1 min 收集洗脱上清时使用的转子是什么？ | SRC-004 有 rpm 和时间，无转子/RCF；记录实际型号 |
-| TURBOID-ENR-06 | SRC-004 洗脱配方所用 200 mM biotin stock 的溶剂是什么？ | 原记录未注明；不将标记用的 DMSO 储液自动视作同一储液 |
+| TURBOID-ENR-02 | 树脂是否为 Thermo Pierce High Capacity Streptavidin Agarose 20357？瓶签/采购记录能否确认？ | 2026-10-18用户确认在用20357；具体库存批号另记 |
+| TURBOID-ENR-03 | 7 轮洗脱液是否合并？若不全部合并，哪些轮进入质谱样品？ | 2026-10-19确认：常规E1–E7全部合并；仅逐轮效率检测时分收 |
+| TURBOID-ENR-04 | 预洗/各轮清洗的离心时间和转子是什么？SRC-003 的历史 75°C 洗脱后怎样分离树脂？ | 当前各次树脂分离2,000 rpm、5 min；转子和半径待补；SRC-003仍属历史条件 |
+| TURBOID-ENR-05 | 2,000 rpm、1 min 收集洗脱上清时使用的转子是什么？ | 1 min为历史SRC-004记录，当前已统一5 min；转子/×g仍待补 |
+| TURBOID-ENR-06 | SRC-004 洗脱配方所用 200 mM biotin stock 的溶剂是什么？ | 原记录未注明；2026-10-19用户确认标记与洗脱均为DMSO，当前50 mL洗脱配方名义DMSO 5% |
 
 ## 版本入口
 

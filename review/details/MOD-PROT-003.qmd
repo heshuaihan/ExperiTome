@@ -38,7 +38,7 @@ TCEP/IAA常规1 M/500 mM及100 mM工作液备选均保留。终止消化后4°C�
 | 1 M TCEP | 1 g 定容至 3.49 mL LC-MS 水 | 该换算对应 TCEP hydrochloride；需核对瓶签化学形式和分子量 |
 | 500 mM IAA | 1 g 定容至 10.8 mL 水，避光 | 原文写分装 −80°C；Thermo 指南建议现配并避光，储存稳定性未由该指南确认 |
 | 100 mM CaCl₂ | 0.11098 g 定容至 10 mL | 此质量按无水 CaCl₂ 计算；按瓶签水合形式复核 |
-| 1 M 甲胺工作液 | 老版记录：40 wt% 母液 1 mL 加水 11.9 mL；原文按 12.9 M 估算 | 用户确认实验室货号为 Aladdin M102702；官方 SDS 未列浓度，瓶签/COA 信息待用户补充；SDS 记载 2–8°C 保存、对光和热敏感 |
+| 1 M 甲胺工作液 | 老版记录：40 wt% 母液 1 mL 加水 11.9 mL；原文按12.9 M估算，保留为历史记录 | 新瓶签已确认M102702-100ml、40 wt.%水溶液。SDS记录参考密度0.897（该表项未列单位/温度）；按体积换算先核定口径，不直接沿用旧固定倍数 |
 | Trypsin 1 µg/µL | 当前采用：20 µg 冻干酶以 20 µL 50 mM 乙酸复溶 | 与 Pierce 90057 指南一致；单次用量分装后 −80°C 保存 |
 
 ## 厂家核查与方法差异
@@ -78,7 +78,7 @@ Thermo 指南给出的酶:蛋白质量比范围为 1:20–1:100；实验室常�
 ### 其他终浓度与样品基质
 
 - **CaCl₂：** Thermo 将 1 mM CaCl₂ 列为可选条件，可能改善修饰 trypsin 的活性。若按 `<1 M urea` 增加反应体积，100 mM CaCl₂ 工作液也须按新的消化总体积计算；1 mM 目标对应每 100 µL 终体积加 1 µL 100 mM 储备液。
-- **甲胺：** 20 mM 在 2026 年线虫 IP-MS 方法中有先例。用户确认实验室货号为 Aladdin M102702。官方 SDS 确认该货号是一甲胺水溶液，列出密度 0.897 g/mL，建议 2–8°C 保存并注明对光和热敏感；浓度栏未提供含量，瓶签/COA 信息待用户补充，补充前不按未经核实的 12.9 M 假设计算。
+- **甲胺：** 20 mM在2026年线虫IP-MS方法中有先例。2026-10-19新瓶签确认Aladdin M102702-100ml、40 wt.%水溶液（SRC-079）。SDS参考密度表项为0.897，未列单位/温度，本轮重新下载复核；不将原先写出的g/mL口径当该批实测值。建议2–8°C、避光/避热；本批COA未提供，不沿用12.9 M假设。
 - **pH 与终止：** Pierce trypsin 最大活性 pH 为 7–9，样品的 100 mM Tris pH 8.5 落在范围内；说明书称酶在 pH <4 可逆失活，并明确以 −20°C 保存终止消化。进入 C18 前以甲酸经验用量 0.5–1.0%（v/v）作为主要加样参考，再以实测 pH 2–3 确认酸化终点；由 pH <4 推断酸化可抑制 trypsin 活性，但这不等同于说明书指定的 −20°C 终止操作。由于 Tris 与甲胺会缓冲，记录实测终点 pH 和实际甲酸用量。
 - **盐与 SDS：** 指南提示单价盐（例如 NaCl）高于 100 mM 可能干扰 trypsin；本流程经过丙酮沉淀，但洗脱/洗液带入的盐残留量未测。指南提到的温和变性条件包括 0.1% SDS，并写明 SDS 样品可不稀释；这不能证明原始 2% SDS 裂解液在未经清理时可直接消化。丙酮沉淀后残留 SDS 和盐需按实际清理流程评估。
 
@@ -87,6 +87,6 @@ Thermo 指南给出的酶:蛋白质量比范围为 1:20–1:100；实验室常�
 - 实验室消化流程：SRC-001、SRC-002、SRC-003。
 - 厂家指南 SRC-010：[Pierce Trypsin Protease, MS Grade User Guide, MAN0011821](https://documents.thermofisher.com/TFS-Assets/LSG/manuals/MAN0011821_Pierce_Trypsin_Protease_MS_Grade_UG.pdf)。
 - Thermo 质谱技术问答 SRC-056：[DTT 或 TCEP 用于 IAA 烷基化时的淬灭说明](https://www.thermofisher.cn/cn/en/home/life-science/protein-biology/protein-mass-spectrometry-analysis/mass-spectrometry-analysis-technical-handbooks-zh.html)。
-- 甲胺试剂记录 SRC-058：[Aladdin M102702 官方 SDS](https://ald-pub-files.oss-cn-shanghai.aliyuncs.com/aladdin/pdp/sds/cn/M102702-CN_23a07ce95a5b0a178bd4f8ce8ba1649e.pdf)：确认产品名称、密度及 2–8°C 避光/避热储存提示；SDS 未列出浓度，瓶签浓度仍待记录。
+- 甲胺试剂记录SRC-058：[Aladdin M102702官方SDS](https://ald-pub-files.oss-cn-shanghai.aliyuncs.com/aladdin/pdp/sds/cn/M102702-CN_23a07ce95a5b0a178bd4f8ce8ba1649e.pdf)，原件SRC-081；新瓶签SRC-079已补40 wt.%水溶液，SDS本身仍不提供批次COA/实测含量。
 - 线虫方法对照 SRC-055：Wang & Dong, 2026, [A practical guide to sample preparation for immunoprecipitation coupled with mass spectrometry analysis of *C. elegans* proteins](https://doi.org/10.17912/micropub.biology.002087)。
 - 甲胺密度参照 SRC-057：[Sigma-Aldrich 426466 产品页](https://www.sigmaaldrich.com/VC/en/product/sial/426466)；仅当实验室瓶签为该产品时适用。

@@ -17,7 +17,7 @@ https://creativecommons.org/licenses/by/4.0/
 2. Original software
 
 Unless an individual file states otherwise, original software in scripts/,
-original executable JavaScript and styling in assets/, original SVG artwork,
+original Python tools in analysis/diann/, original executable JavaScript and styling in assets/, original SVG artwork,
 and build configuration (_quarto.yml and .github/workflows/) are licensed under
 the MIT License (SPDX-License-Identifier: MIT).
 Full license: LICENSES/MIT.txt

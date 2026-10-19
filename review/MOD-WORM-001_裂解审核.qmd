@@ -6,7 +6,7 @@ last_reviewed: "2026-10-17"
 search: false
 ---
 
-[中文详细版](../protocols/modules/MOD-WORM-001_线虫收集与裂解.qmd) · [中文速查版](../sources/index.qmd) · [维护顺序](../sources/index.qmd)。
+[中文详细版](../protocols/modules/MOD-WORM-001_线虫收集与裂解.qmd) · 中文速查版（本地档案，不随公开版提供） · 维护顺序（本地档案，不随公开版提供）。
 
 ## 本轮依据
 

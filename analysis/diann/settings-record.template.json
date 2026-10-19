@@ -1,0 +1,30 @@
+{
+  "record_version": "0.2",
+  "diann_version_and_edition": null,
+  "pipeline_file": null,
+  "log_file_and_sha256": null,
+  "raw_data_format_and_run_list": null,
+  "fasta_version_and_sha256": null,
+  "contaminant_database_and_tags": null,
+  "spectral_library_source_version_and_sha256": null,
+  "enzyme_missed_cleavages_peptide_length": null,
+  "fixed_and_variable_modifications": null,
+  "precursor_charge_and_mz_fragment_mz": null,
+  "ms1_ms2_tolerance_ppm_and_scan_window": null,
+  "fdr_mbr_peptidoforms": null,
+  "quantification_strategy_and_training": null,
+  "upstream_normalization": {
+    "intended_policy": "Ordinary total proteome: RT-dependent in DIA-NN. IP/affinity enrichment: default off or assess separately according to design; verify actual log/pipeline.",
+    "observed_setting": null,
+    "evidence": null,
+    "conflict_to_resolve": null
+  },
+  "downstream_normalization": {
+    "default": "none after confirmed DIA-NN RT-dependent normalization",
+    "additional_method": null,
+    "qc_evidence_and_reason_if_added": null
+  },
+  "filter_config_version_and_sha256": null,
+  "completion_warnings_and_output_checks": null,
+  "operator_date_and_notes": null
+}

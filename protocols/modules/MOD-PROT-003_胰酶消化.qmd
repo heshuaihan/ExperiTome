@@ -5,7 +5,7 @@ category: "蛋白质组学 / 酶解"
 status: "草案"
 version: "0.6"
 created: "2026-09-29"
-last_reviewed: "2026-10-18"
+last_reviewed: "2026-10-19"
 keywords: [trypsin, reduction, alkylation, TCEP, iodoacetamide, urea]
 description: "对已复溶蛋白进行还原、烷基化和胰酶消化，并酸化后交接 C18 脱盐。"
 order: 50
@@ -52,9 +52,9 @@ body-classes: "protocol-detail"
 | [尿素](../../materials/reagents/MAT-067_51456.qmd) | Sigma-Aldrich · **51456** | BioUltra，Molecular Biology，99%（T） |
 | [Tris-HCl 储备液](../../materials/reagents/MAT-068_T885402.qmd) | Macklin · **T885402** | 1 M，pH8.5 |
 | [碘乙酰胺（IAA）](../../materials/reagents/MAT-069_I799261.qmd) | Macklin · **I799261** | IAA；配液分子量184.96 |
-| [一甲胺](../../materials/reagents/MAT-070_M102702.qmd) | Aladdin · **M102702** | 实际含量及化学形式见瓶签/COA |
+| [一甲胺](../../materials/reagents/MAT-070_M102702.qmd) | Aladdin · **M102702-100ml** | 瓶签40 wt.%水溶液；先按已知含量配1 M工作液，不把商品原液直接加入 |
 | [甲酸](../../materials/reagents/MAT-071_F809715.qmd) | Macklin · **F809715** | LC-MS级 |
-| [水（质谱用）](../../materials/reagents/MAT-100_identity.qmd) | 待登记 · **待补** | LC-MS级或经确认适用的超纯水 |
+| [水（在用）](../../materials/reagents/MAT-100_identity.qmd) | Macklin · **W750078** | 在用货号已确认；等级/批次待核 |
 
 ## 操作步骤
 

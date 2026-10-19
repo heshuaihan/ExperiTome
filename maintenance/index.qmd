@@ -1,0 +1,45 @@
+---
+title: "总维护日志与概述"
+description: "整个Protocol库的当前状态、每轮维护和剩余工作。"
+---
+
+2026-10-19维护者已授权发布本轮积累内容；上线状态以本轮维护记录与GitHub Actions为准。后续变更按明确发布指令更新。
+
+## 当前概述
+
+现有 **8个操作模块、104条材料身份**，两条实验路线。方法仍按各自草案状态维护；现行编写标准v0.2，富集/沉淀保留v0.1首批结构样板标记。
+
+[编写标准与模板](../standards/index.qmd) · [参考规范与文件状态](../standards/reference-frameworks.qmd) · [全链路缺项](../review/readiness.qmd) · 工作区目录与归档（本地档案，不随公开版提供）
+
+另有6项[分析方法草案](../analysis/index.qmd)：先DIA-NN数据分析，再报告filter，衔接常规流程、常用包、实例习惯与绘图风格；版本按各条目记录。
+
+## 每轮维护
+
+| 日期 / 编号 | 主题及整体变化 | 检查与发布状态 |
+|---|---|---|
+| 2026-10-19<br>MAINT-20261019-07 | [v0.2.0公开更新与发布检查](entries/2026-10-19-07.qmd)<br>按维护者新指令发布积累内容：补齐分析/绘图下载的公开清单，更新设备材料与规范模板、总日志、首页和标志；原始研究资料继续本地保存。 | 公开包171源文件、108个HTML页链接/锚点/大小写/公开文件检查通过；14项DIA-NN合成测试和总日志/编写标准/分析检查通过；12份方法/算法/品牌文件哈希不变；首页互动口径文案更新，6项行为检查通过。<br>v0.2.0 publication; deployment result in GitHub Actions |
+| 2026-10-19<br>MAINT-20261019-06 | [Experitome标志设计与页眉应用](entries/2026-10-19-06.qmd)<br>使用生图模型设计深青色E/书页标志，透明PNG接入项目名称旁；保留原标志和首页横幅，附生成来源与维护记录。 | 1254px透明PNG及原图/副本哈希一致；110页链接、3项HTTP检查与实际浏览器展示通过；总日志/编写标准/分析检查通过；8方法、原占位图、横幅和互动组件共11文件未变。<br>local logo preview; publication deferred |
+| 2026-10-19<br>MAINT-20261019-05 | [甲胺瓶签、绘图风格与首页互动预览](entries/2026-10-19-05.qmd)<br>补齐M102702瓶签并复核SDS参考密度；新增大字/简轴/无背景绘图规范与主题；首页增加明确标注的演示浏览量和可保留状态的点赞。 | 材料/照片/10页SDS关联通过；6项互动行为及实际浏览器点赞/取消/刷新检查通过；样例透明底/左下轴/无网格通过；109页链接、12项HTTP下载检查通过。消化参数不变，7个其他方法正文未变。<br>local preview with disclosed demo statistics; not deployed |
+| 2026-10-19<br>MAINT-20261019-04 | [DIA-NN实用选择与论文分析经验整理](entries/2026-10-19-04.qmd)<br>改为先DIA-NN分析、后filter；按情形推荐设置，增加论文/活动实例提炼的常规流程、包选择、习惯与分析计划模板。 | 14项合成测试、5条目版本/顺序、工具包哈希及算法不变检查通过；142份受检源文件与8方法正文哈希不变；107页本地HTML链接检查通过。<br>local accumulation; no publication |
+| 2026-10-19<br>MAINT-20261019-03 | [DIA-NN通用筛选与基础设置记录](entries/2026-10-19-03.qmd)<br>增加通用主报告筛选、参数配置、设置记录、日志提取与合成示例；按用户澄清保留上游RT-dependent后默认不额外归一化的策略。 | 14项合成测试、两配置端到端检查、工具包哈希及真实报告1000行投影兼容检查通过（非全量重跑）；原项目3文件与8方法正文哈希不变；103页本地HTML链接检查通过。<br>local draft; publication deferred |
+| 2026-10-19<br>MAINT-20261019-02 | [总维护日志、规范来源扩充与工作区整理](entries/2026-10-19-02.qmd)<br>明确先积累内容再上线；建立总日志和概述；归档STAR官方模板及MDAR/MIAPE参考；按依赖整理旧构建与临时文件。 | 本轮结构/总日志检查通过；9份官方原件校验通过；47组共1,609个归档文件哈希一致；25份原始文档及8个方法正文未变；100页本地HTML链接检查通过。<br>local accumulation; publication deferred |
+| 2026-10-19<br>MAINT-20261019-01 | [补充实验条件、设备身份与首版规范](entries/2026-10-19-01.qmd)<br>写入洗脱合并、biotin/DMSO、未测定pH和丙酮洗涤条件；建立首版标准与五类模板。 | 上轮保存报告：结构检查通过；93个HTML页面链接检查通过；7个页面/下载返回HTTP 200；25个原始文件哈希不变。不是本轮重新运行。<br>local-only; no remote update |
+
+## 当前方法版本
+
+| 模块 | 方法版本 | 方法状态 |
+|---|---|---|
+| [MOD-PROT-001](../protocols/modules/MOD-PROT-001_蛋白定量与留样.qmd) | 0.4 | 草案 |
+| [MOD-PROT-002](../protocols/modules/MOD-PROT-002_蛋白沉淀.qmd) | 0.6 | 草案 |
+| [MOD-PROT-003](../protocols/modules/MOD-PROT-003_胰酶消化.qmd) | 0.6 | 草案 |
+| [MOD-PROT-004](../protocols/modules/MOD-PROT-004_C18-StageTip脱盐.qmd) | 0.5 | 草案 |
+| [MOD-PROT-005](../protocols/modules/MOD-PROT-005_肽段定量与上样.qmd) | 0.3 | 草案 |
+| [MOD-TURBOID-001](../protocols/modules/MOD-TURBOID-001_链霉亲和素富集.qmd) | 0.9 | 草案 |
+| [MOD-TURBOID-002](../protocols/modules/MOD-TURBOID-002_TurboID标记与验证.qmd) | 0.7 | 草案 |
+| [MOD-WORM-001](../protocols/modules/MOD-WORM-001_线虫收集与裂解.qmd) | 0.7 | 草案 |
+
+## 后续维护约定
+
+每轮新增唯一维护编号与整体概述，记录来源取得、检查、文件整理、未决项及发布状态。模块版本历史继续独立维护；文档整理不自动升级方法验证状态。
+
+[总维护记录模板](../templates/maintenance-entry.qmd.txt)。早期没有总日志的维护不凭印象补成精确时间线；如补建，注明依据与补记性质。

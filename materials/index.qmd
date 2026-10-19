@@ -5,7 +5,7 @@ subtitle: "产品身份 · 规格等级 · 储液配制 · 保存与来源"
 
 ::: {.module-actions}
 [配液库](buffers/index.qmd)
-[下载完整登记表](../sources/index.qmd)
+下载完整登记表（本地档案，不随公开版提供）
 [材料待补与身份差异](../review/materials_identity.qmd)
 :::
 

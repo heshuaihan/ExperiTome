@@ -1,4 +1,4 @@
-共 **103 项**材料；其中 **30 项**关联核心操作模块。
+共 **104 项**材料；其中 **31 项**关联核心操作模块。
 
 ## 核心制样与标记材料
 
@@ -24,18 +24,19 @@
 | [尿素](../materials/reagents/MAT-067_51456.qmd)<br>Sigma-Aldrich · **51456** | BioUltra，Molecular Biology，99%（T）（官方51456） | 来源记载；库存批次另行登记 |
 | [Tris-HCl 储备液](../materials/reagents/MAT-068_T885402.qmd)<br>Macklin · **T885402** | 1 M，pH8.5（原附录） | 来源记载；库存批次另行登记 |
 | [碘乙酰胺（IAA）](../materials/reagents/MAT-069_I799261.qmd)<br>Macklin · **I799261** | 原附录未注明等级；分子量184.96用于计算 | 来源记载；库存批次另行登记 |
-| [一甲胺](../materials/reagents/MAT-070_M102702.qmd)<br>Aladdin · **M102702** | M102702；实际含量/化学形式待瓶签或COA | 实验室已确认使用 |
-| [甲酸](../materials/reagents/MAT-071_F809715.qmd)<br>Macklin · **F809715** | LC-MS级（原附录） | 来源记载；库存批次另行登记 |
+| [一甲胺](../materials/reagents/MAT-070_M102702.qmd)<br>Aladdin · **M102702** | 甲胺水溶液；40 wt.%（质量分数），100 mL | 瓶签确认40 wt.%水溶液；SDS密度参考值已复核，体积法先核对适用口径 |
+| [甲酸](../materials/reagents/MAT-071_F809715.qmd)<br>Macklin · **F809715** | LC-MS级（原附录） | 实物货号及100 mL包装已确认；批次留本地 |
 | [甲醇（质谱用）](../materials/reagents/MAT-072_M813903.qmd)<br>Macklin · **M813903** | LC-MS级（原附录）；区别于A506806分子生物学级 | 来源记载；库存批次另行登记 |
 | [乙腈](../materials/reagents/MAT-073_A864782.qmd)<br>Macklin · **A864782** | 原附录仅标无水乙腈，尚未证实该货号为LC-MS级 | 来源记载；库存批次另行登记 |
 | [无 EDTA 蛋白酶抑制剂片](../materials/reagents/MAT-096_A32965.qmd)<br>Thermo Scientific · **A32965** | 20片；厂家1片用于50 mL裂解液 | 实验室已确认使用 |
 | [高容量链霉亲和素琼脂糖](../materials/reagents/MAT-097_20357.qmd)<br>Thermo Scientific · **20357** | 2 mL沉降树脂，提供为4 mL 50%浆液 | 实验室已确认使用 |
 | [StageTip冲切钝头针](../materials/reagents/MAT-098_90516.qmd)<br>Hamilton · **90516** | 16G；2007方法所列工具，实验室库存未确认 | 文献工具；库存未确认 |
 | [StageTip推杆](../materials/reagents/MAT-099_1122-01.qmd)<br>Hamilton · **1122-01** | 配套推杆；2007方法所列工具，实验室库存未确认 | 文献工具；库存未确认 |
-| [水（质谱用）](../materials/reagents/MAT-100_identity.qmd)<br>待登记 · **待补** | LC-MS级或经确认适用的超纯水 | 规格已记录；货号待补 |
+| [水（在用）](../materials/reagents/MAT-100_identity.qmd)<br>Macklin · **W750078** | 在用货号已确认；产品等级、包装及批次待核 | Macklin W750078已确认；不推定LC-MS等级 |
 | [氢氧化钠](../materials/reagents/MAT-101_identity.qmd)<br>待登记 · **待补** | 1 M滴定液；原料等级未注明 | 规格已记录；货号待补 |
-| [氧化锆研磨珠](../materials/reagents/MAT-102_identity.qmd)<br>待登记 · **待补** | 0.5 mm；包装/厂家待补 | 规格已记录；货号待补 |
-| [StageTip枪头与低吸附收集管](../materials/reagents/MAT-103_identity.qmd)<br>待登记 · **待补** | 200 µL枪头；低吸附管具体型号待补 | 规格已记录；货号待补 |
+| [氧化锆研磨珠](../materials/reagents/MAT-102_identity.qmd)<br>待登记 · **待补** | 0.5 mm；包装/厂家待补 | 0.5 mm氧化锆珠；厂家/货号暂未找到 |
+| [StageTip 枪头](../materials/reagents/MAT-103_identity.qmd)<br>Axygen · **待补** | 200 µL；是否滤芯及具体型号待补 | Axygen品牌已确认；货号待补 |
+| [低吸附收集管](../materials/reagents/MAT-104_identity.qmd)<br>Thermo Fisher Scientific · **待补** | 用户称低吸附；具体容量、系列、材质待补 | Thermo Fisher品牌已确认；系列/货号待补 |
 
 ## 质谱制样与 TurboID 核心材料
 
