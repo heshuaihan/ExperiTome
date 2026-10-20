@@ -30,3 +30,9 @@ search: false
 部署采用现有[GitHub仓库](https://github.com/heshuaihan/Experitome)和[GitHub Actions记录](https://github.com/heshuaihan/Experitome/actions/workflows/publish.yml)，在构建/链接检查通过后部署。实际提交与部署结果以对应运行记录为准。
 
 [网站首页](https://heshuaihan.github.io/Experitome/) · [总维护概述](../index.qmd)
+
+## 部署后核验 · 本地补记
+
+2026-10-19已发布v0.2.0，提交77980c4；[Actions运行39254628424](https://github.com/heshuaihan/Experitome/actions/runs/39254628424)的build与deploy均成功。线上10项页面/资源HTTP 200，标志、工具包、计划空表、R主题和互动脚本共5份下载与源文件逐字节一致。实际浏览器核对首页/分析入口，点赞、取消及刷新保留正常。首页醒目提示行已移除，计数范围留在About与辅助说明。
+
+公开版108个HTML页面，本地主本111个HTML页面；独立发布仓库main与远端一致且工作区干净，本地准备提交另存备份分支。发布走已连接GitHub通道，无需维护者重新登录。本地补记和部署状态供后续维护使用，不为写回部署结果重复触发上线。完整检查报告与截图保存在本地output/maintenance/20261019-publish。

@@ -23,6 +23,8 @@ project:
     - maintenance/entries/2026-10-19-05.qmd
     - maintenance/entries/2026-10-19-06.qmd
     - maintenance/entries/2026-10-19-07.qmd
+    - maintenance/entries/2026-10-19-08.qmd
+    - maintenance/entries/2026-10-20-01.qmd
     - maintenance/index.qmd
     - materials/buffers/BUF-BCA-001_工作液.qmd
     - materials/buffers/BUF-TURBOID-001_富集缓冲液.qmd

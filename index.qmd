@@ -6,7 +6,7 @@ body-classes: "library-home research-home"
 ---
 
 ```{=html}
-<section class="home-engagement" data-home-engagement data-engagement-mode="demo" data-initial-views="1280" data-initial-likes="86" aria-label="浏览与点赞" aria-describedby="engagement-scope" title="计数含初始展示值与本浏览器交互；不是全站访客统计。详见About。">
+<section class="home-engagement" data-home-engagement data-counter-api="https://experitome-engagement.heshuaihan.chatgpt.site/api/engagement" aria-label="浏览与点赞" aria-describedby="engagement-scope" title="新增浏览与点赞由所有访客共享累计；显示值含初始基数，详见About。">
   <div class="engagement-intro"><span>研究经验，持续积累</span><p>内容对你有帮助？留下一个赞。</p></div>
   <div class="engagement-metrics">
     <div class="engagement-stat" aria-label="浏览量">
@@ -18,10 +18,11 @@ body-classes: "library-home research-home"
       <span class="engagement-value" data-likes>—</span><span class="engagement-caption" data-like-label>点赞</span>
     </button>
   </div>
-  <p class="engagement-disclosure visually-hidden" id="engagement-scope" data-disclosure>计数含初始展示值与本浏览器交互；不是全站访客统计。</p>
+  <p class="engagement-disclosure visually-hidden" id="engagement-scope" data-disclosure>所有访客共享新增浏览与点赞；同一浏览器每天访问计一次，显示值含历史初始基数。</p>
+  <p class="engagement-disclosure" data-counter-status role="status" aria-live="polite" hidden></p>
 </section>
 <noscript><p>启用JavaScript后可使用点赞。</p></noscript>
-<script src="assets/engagement.js" defer></script>
+<script src="assets/engagement-shared.js" defer></script>
 ```
 
 ::: {.brand-hero}
