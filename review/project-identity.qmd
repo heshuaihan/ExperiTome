@@ -1,12 +1,12 @@
 ---
-title: "Experitome · 品牌与项目定位"
+title: "ExperiTome · 品牌与项目定位"
 subtitle: "名称确认于 2026-10-18"
 search: false
 ---
 
 ## 正式名称
 
-**Experitome**  
+**ExperiTome**
 **Built on experience. Made for discovery.**  
 Protocols. Analysis. Data.
 
@@ -30,14 +30,14 @@ Experi 取自 experiment，并呼应 experience；tome 表达经过整理、持�
 
 ## 品牌主视觉
 
-采用维护者于2026-10-18确认的第三版图稿：双色Experitome名称、主标语，以及Protocols、Analysis、Data三条书页路径。名称构词解释保留在文字简介中，图上仅保留核心品牌信息。图稿用于仓库README和网站首页。图中的笔记、图像和图表为生成的示意素材，不作为实验数据或证据。
+采用维护者于2026-10-18确认的第三版图稿：双色ExperiTome名称、主标语，以及Protocols、Analysis、Data三条书页路径。名称构词解释保留在文字简介中，图上仅保留核心品牌信息。图稿用于仓库README和网站首页。图中的笔记、图像和图表为生成的示意素材，不作为实验数据或证据。
 
 ## 命名查询记录
 
-2026-10-18的公开GitHub仓库名与PyPI对应名查询未发现同名项目；网页查询未见明确同名科研项目，但有无关网页出现该字符串。记录反映查询时间与范围，不代表注册或排他权。尚未注册独立域名；仓库已上传至[heshuaihan/Experitome](https://github.com/heshuaihan/Experitome)。
+2026-10-18的公开GitHub仓库名与PyPI对应名查询未发现同名项目；网页查询未见明确同名科研项目，但有无关网页出现该字符串。记录反映查询时间与范围，不代表注册或排他权。尚未注册独立域名；仓库已上传至[heshuaihan/ExperiTome](https://github.com/heshuaihan/ExperiTome)。
 
 ## 项目信息
 
-个人署名与单位见[About](../about.qmd)，内容与代码许可见[许可范围](../licensing/index.qmd)。仓库地址为[heshuaihan/Experitome](https://github.com/heshuaihan/Experitome)，网站部署目标为[Experitome](https://heshuaihan.github.io/Experitome/)。原始资料、第三方全文与内部记录保持本地归档。
+个人署名与单位见[About](../about.qmd)，内容与代码许可见[许可范围](../licensing/index.qmd)。仓库地址为[heshuaihan/ExperiTome](https://github.com/heshuaihan/ExperiTome)，网站部署目标为[ExperiTome](https://heshuaihan.github.io/ExperiTome/)。原始资料、第三方全文与内部记录保持本地归档。
 
 [主页](../index.qmd) · [发展路线](../roadmap.qmd) · [首次发布步骤](launch-checklist.qmd)

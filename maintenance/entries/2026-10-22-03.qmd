@@ -1,0 +1,20 @@
+---
+title: "仓库改名后的主站地址修复"
+maintenance_id: "MAINT-20261022-03"
+date: "2026-10-22"
+search: false
+---
+
+## 目的与范围
+
+维护者将仓库改名为ExperiTome后请求修复主站访问。本次v0.2.2只修复既有公开版的网站基址、品牌大小写及现行入口链接，并重新运行构建和部署。新地址为[ExperiTome](https://heshuaihan.github.io/ExperiTome/)。
+
+## 版本与检查
+
+实验方法及分析算法版本不变；共享浏览／点赞服务配置不变。部署前检查受保护文件与限定变更清单，并运行Quarto构建及公开站点链接检查；部署状态以本次GitHub Actions和实际网页为准。
+
+GitHub Pages项目地址包含仓库名；仓库改名不保证旧Pages网址自动跳转。参考[GitHub官方改名说明](https://docs.github.com/en/repositories/creating-and-managing-repositories/renaming-a-repository)。
+
+## 后续内容
+
+ExperiAtlas界面优化和扩展数据库仍在本地审阅，其代码、参考数据和私人研究文件没有随此修复版公开。整体维护主本另保留本轮界面检查记录；本页是公开修复范围的摘录。文档和软件检查不等于实验验证。

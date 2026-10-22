@@ -18,7 +18,7 @@ description: "内容、代码、数据及第三方材料的许可范围与引用
 
 本库原创整理与说明署名：**Shuaihan He（何帅涵）**。引用具体方法、数据或软件时，仍需保留相应原始作者和来源。
 
-可使用“Shuaihan He, Experitome，条目标题及版本，访问日期，条目网址”这一格式。仓库地址为[https://github.com/heshuaihan/Experitome](https://github.com/heshuaihan/Experitome)；仓库提供[CITATION.cff](../CITATION.cff)。
+可使用“Shuaihan He, ExperiTome，条目标题及版本，访问日期，条目网址”这一格式。仓库地址为[https://github.com/heshuaihan/ExperiTome](https://github.com/heshuaihan/ExperiTome)；仓库提供[CITATION.cff](../CITATION.cff)。
 
 ## 许可原文
 

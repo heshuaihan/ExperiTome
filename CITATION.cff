@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "Please cite the relevant source publications for scientific methods and datasets. Cite this repository for its original documentation and curation."
 type: software
-title: "Experitome: Protocols, Analysis and Data"
+title: "ExperiTome: Protocols, Analysis and Data"
 version: "0.2.1"
 authors:
   - family-names: "He"
@@ -14,5 +14,5 @@ keywords:
   - proteomics
   - reproducible analysis
   - data curation
-repository-code: "https://github.com/heshuaihan/Experitome"
-url: "https://heshuaihan.github.io/Experitome/"
+repository-code: "https://github.com/heshuaihan/ExperiTome"
+url: "https://heshuaihan.github.io/ExperiTome/"

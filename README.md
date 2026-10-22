@@ -1,22 +1,22 @@
-# Experitome
+# ExperiTome
 
-![Experitome — Built on experience. Made for discovery. Protocols, Analysis and Data.](assets/experitome-hero.png)
+![ExperiTome — Built on experience. Made for discovery. Protocols, Analysis and Data.](assets/experitome-hero.png)
 
 **源于实践，助力发现。**
 
 ## 网页阅读
 
-**[打开 Experitome 网站 →](https://heshuaihan.github.io/Experitome/)**
+**[打开 ExperiTome 网站 →](https://heshuaihan.github.io/ExperiTome/)**
 
-[实验方法](https://heshuaihan.github.io/Experitome/protocols/index.html) · [分析流程](https://heshuaihan.github.io/Experitome/analysis/index.html) · [配套数据](https://heshuaihan.github.io/Experitome/data/index.html) · [项目介绍](https://heshuaihan.github.io/Experitome/about.html) · [发展路线](https://heshuaihan.github.io/Experitome/roadmap.html)
+[实验方法](https://heshuaihan.github.io/ExperiTome/protocols/index.html) · [分析流程](https://heshuaihan.github.io/ExperiTome/analysis/index.html) · [配套数据](https://heshuaihan.github.io/ExperiTome/data/index.html) · [项目介绍](https://heshuaihan.github.io/ExperiTome/about.html) · [发展路线](https://heshuaihan.github.io/ExperiTome/roadmap.html)
 
 浏览实验路线、操作步骤、试剂与配液，使用目录导航和全文搜索查找所需内容。
 
-Experitome is an open-source project for organizing research experience, experimental protocols, data resources, and analysis workflows into a connected, traceable knowledge library. Beginning with life-science methods, it aims to help researchers build and maintain their own reusable research libraries. Chinese-first documentation; English support planned.
+ExperiTome is an open-source project for organizing research experience, experimental protocols, data resources, and analysis workflows into a connected, traceable knowledge library. Beginning with life-science methods, it aims to help researchers build and maintain their own reusable research libraries. Chinese-first documentation; English support planned.
 
-Experitome 从实际研究经验出发，连接实验方法、数据资源与分析流程，建设可追溯、可复用的研究知识库，并逐步探索经验交流、AI 协同检索与方法整理工具。
+ExperiTome 从实际研究经验出发，连接实验方法、数据资源与分析流程，建设可追溯、可复用的研究知识库，并逐步探索经验交流、AI 协同检索与方法整理工具。
 
-## Why Experitome
+## Why ExperiTome
 
 **Experi + tome** connects experiment and experience with an organized body of knowledge.
 
@@ -49,7 +49,7 @@ Install Quarto 1.10.18 and Python 3. Run `quarto render`, then open `_site/index
 
 ## GitHub Pages
 
-The source package includes `.github/workflows/publish.yml`. In repository Settings → Pages select GitHub Actions. Updates to main and manual workflow runs build, check and deploy; pull requests build and check only. Repository: https://github.com/heshuaihan/Experitome. Website target: https://heshuaihan.github.io/Experitome/.
+The source package includes `.github/workflows/publish.yml`. In repository Settings → Pages select GitHub Actions. Updates to main and manual workflow runs build, check and deploy; pull requests build and check only. Repository: https://github.com/heshuaihan/ExperiTome. Website target: https://heshuaihan.github.io/ExperiTome/.
 
 Keep `.github/` and the supplied `.gitignore`; do not upload the rendered `_site/`, `.quarto/`, private manuscripts, original reports, third-party full-text PDFs, raw datasets or internal snapshots.
 

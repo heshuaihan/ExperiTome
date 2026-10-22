@@ -1,5 +1,5 @@
 {
-  "name": "Experitome",
+  "name": "ExperiTome",
   "repository_name": "experitome",
   "working_name": false,
   "tagline": "Built on experience. Made for discovery.",
@@ -9,7 +9,7 @@
   "planned_languages": [
     "en"
   ],
-  "site_version": "0.2.1",
+  "site_version": "0.2.2",
   "maintainer": {
     "name_en": "Shuaihan He",
     "name_zh": "何帅涵",
@@ -44,8 +44,8 @@
     "quarto",
     "research-workflows"
   ],
-  "repository_url": "https://github.com/heshuaihan/Experitome",
-  "site_url": "https://heshuaihan.github.io/Experitome/",
+  "repository_url": "https://github.com/heshuaihan/ExperiTome",
+  "site_url": "https://heshuaihan.github.io/ExperiTome/",
   "publication_status": "site-published",
   "prepared_on": "2026-10-18",
   "naming_status": "confirmed",
@@ -76,14 +76,14 @@
   "website_status": "deployed",
   "maintenance_mode": "local-first",
   "release_policy": "publish-authorized-release",
-  "library_revision": "2026-10-20.01",
+  "library_revision": "2026-10-22-rename-repair",
   "standard_version": "0.2",
   "logo_asset": "assets/experitome-logo-v1.png",
   "logo_version": "v1",
   "logo_generated_on": "2026-10-19",
-  "release_authorized_on": "2026-10-20",
+  "release_authorized_on": "2026-10-22",
   "last_published_version": "0.2.0",
   "last_published_commit": "77980c4e597bb93cc4ee46bb014ab0efac34b1b5",
-  "last_deployment_run": "https://github.com/heshuaihan/Experitome/actions/runs/39254628424",
+  "last_deployment_run": "https://github.com/heshuaihan/ExperiTome/actions/runs/39254628424",
   "last_publication_date": "2026-10-19"
 }

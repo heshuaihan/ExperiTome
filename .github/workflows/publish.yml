@@ -1,4 +1,4 @@
-name: Publish Experitome
+name: Publish ExperiTome
 on:
   push:
     branches: [main]

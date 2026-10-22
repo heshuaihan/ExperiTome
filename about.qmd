@@ -1,9 +1,9 @@
 ---
-title: "About Experitome"
+title: "About ExperiTome"
 description: "项目定位、维护者与内容范围。"
 ---
 
-**Experitome** 是从实际研究经验出发，连接实验方法、数据资源与分析流程的开源项目，由何帅涵（Shuaihan He）发起并维护。
+**ExperiTome** 是从实际研究经验出发，连接实验方法、数据资源与分析流程的开源项目，由何帅涵（Shuaihan He）发起并维护。
 
 **Built on experience. Made for discovery.**  
 源于实践，助力发现。
@@ -12,7 +12,7 @@ Protocols. Analysis. Data.
 
 ## 名称与愿景
 
-**Experi + tome → Experitome。** Experi 取自 experiment，也呼应 experience；tome 表达经过整理、能够持续积累的知识。结尾的 ome 还带有生命科学中“集合”的联想。这是项目赋予组合词的品牌含义。
+**Experi + tome → ExperiTome。** Experi 取自 experiment，也呼应 experience；tome 表达经过整理、能够持续积累的知识。结尾的 ome 还带有生命科学中“集合”的联想。这是项目赋予组合词的品牌含义。
 
 愿景是将研究中的方法、数据与经验组织成可追溯、可复用的知识，帮助研究者建立和维护自己的研究知识库。
 
@@ -54,7 +54,7 @@ The Hong Kong University of Science and Technology (Guangzhou)
 
 ## 使用与引用
 
-优先引用各方法、数据和工具的原始出处；引用本库的整理与说明时，请注明 **Shuaihan He, Experitome**、对应条目及版本/访问日期。项目仓库为[heshuaihan/Experitome](https://github.com/heshuaihan/Experitome)；网页阅读入口为[Experitome](https://heshuaihan.github.io/Experitome/)，在Pages部署完成后可用。
+优先引用各方法、数据和工具的原始出处；引用本库的整理与说明时，请注明 **Shuaihan He, ExperiTome**、对应条目及版本/访问日期。项目仓库为[heshuaihan/ExperiTome](https://github.com/heshuaihan/ExperiTome)；网页阅读入口为[ExperiTome](https://heshuaihan.github.io/ExperiTome/)，在Pages部署完成后可用。
 
 [许可范围](licensing/index.qmd) · [版本与维护](review/index.qmd) · [内容路线图](roadmap.qmd)
 

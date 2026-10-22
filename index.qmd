@@ -1,5 +1,5 @@
 ---
-title: "Experitome"
+title: "ExperiTome"
 subtitle: "Built on experience. Made for discovery."
 description: "从实际研究经验出发，连接实验方法、数据与分析，建设可追溯、可复用的研究知识库。"
 body-classes: "library-home research-home"
@@ -26,7 +26,7 @@ body-classes: "library-home research-home"
 ```
 
 ::: {.brand-hero}
-![](assets/experitome-hero.png){fig-alt="Experitome。Built on experience. Made for discovery. 一本研究记录展开为实验方法、分析流程和配套数据三条主线。"}
+![](assets/experitome-hero.png){fig-alt="ExperiTome。Built on experience. Made for discovery. 一本研究记录展开为实验方法、分析流程和配套数据三条主线。"}
 :::
 
 ::: {.library-lead}
