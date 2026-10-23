@@ -8,11 +8,13 @@
 
 **[打开 ExperiTome 网站 →](https://heshuaihan.github.io/ExperiTome/)**
 
-[实验方法](https://heshuaihan.github.io/ExperiTome/protocols/index.html) · [分析流程](https://heshuaihan.github.io/ExperiTome/analysis/index.html) · [配套数据](https://heshuaihan.github.io/ExperiTome/data/index.html) · [项目介绍](https://heshuaihan.github.io/ExperiTome/about.html) · [发展路线](https://heshuaihan.github.io/ExperiTome/roadmap.html)
+[实验方法](https://heshuaihan.github.io/ExperiTome/protocols/index.html) · [主站 Data 说明](https://heshuaihan.github.io/ExperiTome/data/index.html) · [分析流程](https://heshuaihan.github.io/ExperiTome/analysis/index.html) · [项目介绍](https://heshuaihan.github.io/ExperiTome/about.html) · [发展路线](https://heshuaihan.github.io/ExperiTome/roadmap.html)
+
+**[打开 ExperiAtlas 在线工作台 →](https://experiatlas.heshuaihan.chatgpt.site)**
 
 浏览实验路线、操作步骤、试剂与配液，使用目录导航和全文搜索查找所需内容。
 
-ExperiTome is an open-source project for organizing research experience, experimental protocols, data resources, and analysis workflows into a connected, traceable knowledge library. Beginning with life-science methods, it aims to help researchers build and maintain their own reusable research libraries. Chinese-first documentation; English support planned.
+ExperiTome is an open-source project for organizing research experience, experimental protocols, data resources, and analysis workflows into a connected, traceable knowledge library. ExperiAtlas is a separate public v0.2.1 service for cross-species lookup and selected expression resources, based on fixed versioned snapshots. The main-site update described here targets v0.3.0; final publication status is recorded in the current maintenance entry. Chinese-first documentation; English support planned.
 
 ExperiTome 从实际研究经验出发，连接实验方法、数据资源与分析流程，建设可追溯、可复用的研究知识库，并逐步探索经验交流、AI 协同检索与方法整理工具。
 
@@ -26,7 +28,7 @@ Experi 取自 experiment，也呼应 experience；tome 表达经过整理、持�
 - **Connected through exchange:** develop methods through attributed, version-specific feedback.
 - **Discover with AI:** explore source-linked retrieval and organization, with researcher review of extracted and missing information.
 
-The current release is a static methods library. A dedicated community platform, AI-assisted discovery and a reusable skill are planned; they are not available services in this release.
+The ExperiTome site is a static knowledge library; this update targets main-site v0.3.0. ExperiAtlas v0.2.1 is available separately as a public service using fixed snapshots. A dedicated community platform, AI-assisted discovery and a reusable skill are planned; they are not available services in this release.
 
 ## Contents
 
@@ -35,7 +37,7 @@ The current release is a static methods library. A dedicated community platform,
 | Protocols | 8 Chinese detailed modules, 2 C. elegans proteomics/TurboID routes; methods remain drafts |
 | Materials | 104 material identities, including 30 core materials; buffers and instrument settings |
 | Analysis | 6 draft guides: DIA-NN settings/filter, routine workflows, package choices, reusable practices and plot style; generic starter code and synthetic example |
-| Data | Planned; example inputs, processed results and supplementary tables; no released dataset collection yet |
+| Data | Public ExperiAtlas v0.2.1: fixed-snapshot cross-species identity, homology and selected expression resources; source versions and reuse limits are documented |
 
 ## Author
 
@@ -45,7 +47,7 @@ Personal project; affiliation does not imply institutional endorsement. See [AUT
 
 ## Local use
 
-Install Quarto 1.10.18 and Python 3. Run `quarto render`, then open `_site/index.html`. The current site is static; it does not provide a running database server or remote analysis service.
+Install Quarto 1.10.18 and Python 3. Run `quarto render`, then open `_site/index.html`. The ExperiTome site is static; ExperiAtlas is accessed separately through its [public workbench](https://experiatlas.heshuaihan.chatgpt.site) and [Data guide](https://heshuaihan.github.io/ExperiTome/data/index.html). Personal measurements and private research records are not part of this package.
 
 ## GitHub Pages
 

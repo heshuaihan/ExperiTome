@@ -26,6 +26,7 @@ project:
     - maintenance/entries/2026-10-19-08.qmd
     - maintenance/entries/2026-10-20-01.qmd
     - maintenance/entries/2026-10-22-03.qmd
+    - maintenance/entries/2026-10-23-01.qmd
     - maintenance/index.qmd
     - materials/buffers/BUF-BCA-001_工作液.qmd
     - materials/buffers/BUF-TURBOID-001_富集缓冲液.qmd
@@ -137,10 +138,10 @@ website:
     left:
       - text: Protocols
         href: protocols/index.qmd
-      - text: Analysis
-        href: analysis/index.qmd
       - text: Data
         href: data/index.qmd
+      - text: Analysis
+        href: analysis/index.qmd
       - text: Resources
         href: materials/index.qmd
       - text: About

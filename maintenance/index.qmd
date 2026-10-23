@@ -3,7 +3,7 @@ title: "总维护日志与概述"
 description: "整个Protocol库的当前状态、每轮维护和剩余工作。"
 ---
 
-2026-10-20维护者已授权发布本轮积累内容；上线状态以本轮维护记录与GitHub Actions为准。后续变更按明确发布指令更新。
+2026-10-23维护者已授权公开Atlas并更新主站入口；上线状态以本轮维护记录与GitHub Actions为准。后续变更按明确发布指令更新。
 
 ## 当前概述
 
@@ -17,6 +17,7 @@ description: "整个Protocol库的当前状态、每轮维护和剩余工作。"
 
 | 日期 / 编号 | 主题及整体变化 | 检查与发布状态 |
 |---|---|---|
+| 2026-10-23<br>MAINT-20261023-01 | [ExperiAtlas公开上线与Data入口](entries/2026-10-23-01.qmd)<br>新增三物种基因／蛋白mapping、功能注释和精选表达查询；固定公共快照与个人测量分开。 | 38项软件测试、类型/生产构建及匿名远端13项检查通过；1,143分片全部校验；临时导入口和密钥已移除。<br>Atlas v0.2.1 public; main-site v0.3.0 release |
 | 2026-10-22<br>MAINT-20261022-03 | [仓库改名后的主站地址修复](entries/2026-10-22-03.qmd)<br>同步ExperiTome大小写、网站基址与引用链接，重新部署现有公开内容。 | v0.2.2修复版；保留既有实验方法、分析代码和计数功能；ExperiAtlas仍为本地审阅。 |
 | 2026-10-20<br>MAINT-20261020-01 | [共享计数公开接入与v0.2.1发布](entries/2026-10-20-01.qmd)<br>按明确授权公开独立计数服务并接入主站：新增浏览/点赞全站共享，刷新每日去重，点赞可取消。 | 5项SQLite核心、6项前端/SQLite组合测试通过；匿名GET/POST及跨域预检通过；公开包174源文件、110个HTML页面及本地113页链接检查通过；17份方法/分析/品牌文件哈希不变。<br>public counter enabled; v0.2.1 release candidate verified; deployment tracked in GitHub Actions |
 | 2026-10-19<br>MAINT-20261019-08 | [首页共享计数与匿名互动服务](entries/2026-10-19-08.qmd)<br>准备持久化共享浏览/点赞、每日去重、状态式点赞和断网重试；独立计数服务已私有部署，公开接入待授权。 | 5项SQLite核心、6项前端/SQLite组合测试通过；本机D1接口7次调用及实际浏览器点赞/取消/刷新通过；候选公开版109页、本地112页链接检查通过；17份受检方法/分析/品牌文件未变。私有服务部署成功。<br>counter service v1 deployed owner-private; anonymous public access pending |

@@ -3,13 +3,13 @@
   "repository_name": "experitome",
   "working_name": false,
   "tagline": "Built on experience. Made for discovery.",
-  "description_en": "An open-source project connecting research experience, protocols, data resources, and analysis workflows in a traceable, reusable knowledge library. Chinese-first; exchange and AI-assisted discovery are planned.",
-  "description_zh": "从实际研究经验出发，连接实验方法、数据资源与分析流程，建设可追溯、可复用的研究知识库；逐步探索经验交流与 AI 协同检索。",
+  "description_en": "An open-source project connecting research experience, protocols, public ExperiAtlas data resources, and analysis workflows in a traceable, reusable knowledge library. ExperiAtlas provides cross-species lookup and curated expression evidence.",
+  "description_zh": "从实际研究经验出发，连接实验方法、公开ExperiAtlas数据资源与分析流程；ExperiAtlas提供跨物种身份检索和精选表达证据。",
   "language": "zh",
   "planned_languages": [
     "en"
   ],
-  "site_version": "0.2.2",
+  "site_version": "0.3.0",
   "maintainer": {
     "name_en": "Shuaihan He",
     "name_zh": "何帅涵",
@@ -53,8 +53,8 @@
   "name_confirmed_on": "2026-10-18",
   "content_pillars": [
     "Protocols",
-    "Analysis",
-    "Data"
+    "Data",
+    "Analysis"
   ],
   "brand_values": [
     "Built from experience",
@@ -63,27 +63,30 @@
   ],
   "feature_status": {
     "protocol_library": "draft-content",
-    "data_collection": "planned",
+    "data_collection": "public-ExperiAtlas-v0.2.1",
     "analysis_collection": "draft-guides-and-generic-tools",
     "community_platform": "planned",
     "ai_assisted_discovery": "planned",
-    "skill": "planned"
+    "skill": "planned",
+    "experiatlas": "public-v0.2.1"
   },
   "tagline_zh": "源于实践，助力发现。",
   "brand_asset": "assets/experitome-hero.png",
   "brand_asset_version": "v3",
-  "repository_description": "Built on experience. Made for discovery. A research knowledge library connecting protocols, analysis, and supporting data.",
+  "repository_description": "Built on experience. Made for discovery. A research knowledge library connecting protocols, public ExperiAtlas data, and analysis.",
   "website_status": "deployed",
   "maintenance_mode": "local-first",
   "release_policy": "publish-authorized-release",
-  "library_revision": "2026-10-22-rename-repair",
+  "library_revision": "2026-10-23-atlas-public",
   "standard_version": "0.2",
   "logo_asset": "assets/experitome-logo-v1.png",
   "logo_version": "v1",
   "logo_generated_on": "2026-10-19",
-  "release_authorized_on": "2026-10-22",
-  "last_published_version": "0.2.0",
-  "last_published_commit": "77980c4e597bb93cc4ee46bb014ab0efac34b1b5",
-  "last_deployment_run": "https://github.com/heshuaihan/ExperiTome/actions/runs/39254628424",
-  "last_publication_date": "2026-10-19"
+  "release_authorized_on": "2026-10-23",
+  "last_published_version": "0.2.2",
+  "last_published_commit": "cf4f9cd211790f3ec09ac524622323a1d64569df",
+  "last_deployment_run": "https://github.com/heshuaihan/ExperiTome/actions/runs/39767898435",
+  "last_publication_date": "2026-10-22",
+  "release_status": "0.3.0-release-candidate",
+  "experiatlas_url": "https://experiatlas.heshuaihan.chatgpt.site"
 }
