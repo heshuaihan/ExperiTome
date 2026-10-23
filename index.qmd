@@ -55,9 +55,9 @@ Shuaihan He · 中文内容优先 · 持续维护
 
 查询线虫、小鼠和人类的基因与蛋白身份、直接同源关系和精选表达证据。
 
-**当前：**公开 ExperiAtlas v0.2.1 · 三物种数据工作台
+**当前：**ExperiAtlas GitHub浏览器版 · 三物种数据工作台
 
-[打开 ExperiAtlas →](https://experiatlas.heshuaihan.chatgpt.site){.btn .btn-primary target="_blank" rel="noopener"}
+[打开 ExperiAtlas →](https://heshuaihan.github.io/ExperiTome/atlas/){.btn .btn-primary target="_blank" rel="noopener"}
 :::
 
 ::: {.route-card}

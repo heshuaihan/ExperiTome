@@ -9,7 +9,7 @@
   "planned_languages": [
     "en"
   ],
-  "site_version": "0.3.0",
+  "site_version": "0.3.1",
   "maintainer": {
     "name_en": "Shuaihan He",
     "name_zh": "何帅涵",
@@ -68,7 +68,7 @@
     "community_platform": "planned",
     "ai_assisted_discovery": "planned",
     "skill": "planned",
-    "experiatlas": "public-v0.2.1"
+    "experiatlas": "github-browser-v0.2.2"
   },
   "tagline_zh": "源于实践，助力发现。",
   "brand_asset": "assets/experitome-hero.png",
@@ -77,7 +77,7 @@
   "website_status": "deployed",
   "maintenance_mode": "local-first",
   "release_policy": "publish-authorized-release",
-  "library_revision": "2026-10-23-atlas-public",
+  "library_revision": "2026-10-23-atlas-github-access",
   "standard_version": "0.2",
   "logo_asset": "assets/experitome-logo-v1.png",
   "logo_version": "v1",
@@ -87,6 +87,6 @@
   "last_published_commit": "cf4f9cd211790f3ec09ac524622323a1d64569df",
   "last_deployment_run": "https://github.com/heshuaihan/ExperiTome/actions/runs/39767898435",
   "last_publication_date": "2026-10-22",
-  "release_status": "0.3.0-release-candidate",
-  "experiatlas_url": "https://experiatlas.heshuaihan.chatgpt.site"
+  "release_status": "0.3.1-candidate",
+  "experiatlas_url": "https://heshuaihan.github.io/ExperiTome/atlas/"
 }

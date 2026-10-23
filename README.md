@@ -10,11 +10,11 @@
 
 [实验方法](https://heshuaihan.github.io/ExperiTome/protocols/index.html) · [主站 Data 说明](https://heshuaihan.github.io/ExperiTome/data/index.html) · [分析流程](https://heshuaihan.github.io/ExperiTome/analysis/index.html) · [项目介绍](https://heshuaihan.github.io/ExperiTome/about.html) · [发展路线](https://heshuaihan.github.io/ExperiTome/roadmap.html)
 
-**[打开 ExperiAtlas 在线工作台 →](https://experiatlas.heshuaihan.chatgpt.site)**
+**[打开 ExperiAtlas 在线工作台 →](https://heshuaihan.github.io/ExperiTome/atlas/)**
 
 浏览实验路线、操作步骤、试剂与配液，使用目录导航和全文搜索查找所需内容。
 
-ExperiTome is an open-source project for organizing research experience, experimental protocols, data resources, and analysis workflows into a connected, traceable knowledge library. ExperiAtlas is a separate public v0.2.1 service for cross-species lookup and selected expression resources, based on fixed versioned snapshots. The main-site update described here targets v0.3.0; final publication status is recorded in the current maintenance entry. Chinese-first documentation; English support planned.
+ExperiTome is an open-source project for organizing research experience, experimental protocols, data resources, and analysis workflows into a connected, traceable knowledge library. ExperiAtlas is a separate public v0.2.1 service for cross-species lookup and selected expression resources, based on fixed versioned snapshots. The main-site update described here targets v0.3.1; final publication status is recorded in the current maintenance entry. Chinese-first documentation; English support planned.
 
 ExperiTome 从实际研究经验出发，连接实验方法、数据资源与分析流程，建设可追溯、可复用的研究知识库，并逐步探索经验交流、AI 协同检索与方法整理工具。
 
@@ -47,7 +47,7 @@ Personal project; affiliation does not imply institutional endorsement. See [AUT
 
 ## Local use
 
-Install Quarto 1.10.18 and Python 3. Run `quarto render`, then open `_site/index.html`. The ExperiTome site is static; ExperiAtlas is accessed separately through its [public workbench](https://experiatlas.heshuaihan.chatgpt.site) and [Data guide](https://heshuaihan.github.io/ExperiTome/data/index.html). Personal measurements and private research records are not part of this package.
+Install Quarto 1.10.18 and Python 3. Run `quarto render`, then open `_site/index.html`. The ExperiTome site is static; ExperiAtlas is accessed separately through its [public workbench](https://heshuaihan.github.io/ExperiTome/atlas/) and [Data guide](https://heshuaihan.github.io/ExperiTome/data/index.html). Personal measurements and private research records are not part of this package.
 
 ## GitHub Pages
 

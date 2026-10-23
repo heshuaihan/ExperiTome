@@ -6,12 +6,12 @@ description: "进入ExperiAtlas，查询线虫、小鼠和人类的基因／蛋�
 
 ## ExperiAtlas
 
-**ExperiTome 的 Data 工作台 · 公开版 v0.2.1**
+**ExperiTome 的 Data 工作台 · GitHub浏览器版 v0.2.2**
 
 连接 *Caenorhabditis elegans*、*Mus musculus* 和 *Homo sapiens* 的基因、蛋白与同源关系。输入一个名称或一份列表，查看完整对应路径、基础注释和所选公共数据集中的表达信息。
 
 ```{=html}
-<p><a class="btn btn-primary" href="https://experiatlas.heshuaihan.chatgpt.site" target="_blank" rel="noopener">打开 ExperiAtlas →</a></p>
+<p><a class="btn btn-primary" href="https://heshuaihan.github.io/ExperiTome/atlas/" target="_blank" rel="noopener">打开 ExperiAtlas →</a></p>
 ```
 
 ### 从这里开始
@@ -20,7 +20,7 @@ description: "进入ExperiAtlas，查询线虫、小鼠和人类的基因／蛋�
 2. 在结果中点击条目，查看“原始蛋白／组 → 来源基因 → 同源基因 → 关联蛋白”及所有候选；名称、历史别名和稳定ID分别标注。
 3. 打开“表达与定量”，选择公共数据集或在浏览器内读取自己的定量表。不同研究、RNA和蛋白数据分别查看，保留原始单位和缺失状态。
 
-页面会自动分批处理列表；公开接口每批最多25行、100个组成员。查询仅发送必要ID和物种，导入的定量值与文件名留在浏览器内。
+页面会自动分批处理列表，每批最多25行、100个组成员。查询在浏览器中完成，按需从本网站下载已核验的公共数据分片；输入ID、定量值与文件名不上传到查询服务。首次查询可能需要等待分片加载，后续可复用浏览器缓存。
 
 ## 当前资源与边界
 
@@ -35,7 +35,7 @@ description: "进入ExperiAtlas，查询线虫、小鼠和人类的基因／蛋�
 | 小鼠表达检出 | Bgee anatomy-only快照 | 检出调用和相对score；score不是TPM或蛋白丰度 |
 | CeNGEN | [官方数据与应用](https://www.cengen.org/downloads/)导读 | 特定矩阵再分发许可尚未确认，公共版不提供矩阵及派生TPM |
 
-公共服务使用固定版本快照。来源页标明各资源版本、适用层级、许可与官方链接；检查上游变化和启用新数据是分开的维护步骤，不把固定URL称为始终最新。
+GitHub浏览器版使用固定版本快照public-20261023-v021；查询界面和数据分片均从主站的GitHub地址提供。来源页标明各资源版本、适用层级、许可与官方链接；检查上游变化和启用新数据是分开的维护步骤，不把固定URL称为始终最新。
 
 ## 使用与下载
 
@@ -44,3 +44,9 @@ description: "进入ExperiAtlas，查询线虫、小鼠和人类的基因／蛋�
 项目自身代码／说明的许可不覆盖所有上游数据；请按工作台来源页注明实际使用的资源和版本。原始研究资料、内部批次记录和私人测量不随服务公开。
 
 [Analysis](../analysis/index.qmd) · [数据条目模板](../templates/data-entry.md.txt) · [许可范围](../licensing/index.qmd)
+
+## 更新与容量
+
+私有源码仓库的每周上游元信息检查继续运行；发现变化后，候选数据须核验来源、许可和结果，再发布新快照。每次网站构建使用固定版本与SHA-256校验的公共快照包，不会自动启用未经核验的数据。
+
+当前公共分片约826MB，按需加载，保留蛋白序列和四个表达资源。GitHub Pages有站点体积与流量限制；后续扩大资源规模时将重新评估承载方式。迁移改善与主站相同网络条件下的可达性，不保证所有网络均能访问。

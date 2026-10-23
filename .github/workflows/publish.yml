@@ -22,6 +22,8 @@ jobs:
         run: python3 scripts/build_public.py
       - name: Render
         run: quarto render
+      - name: Fetch verified Atlas reference
+        run: python3 scripts/fetch_atlas_reference.py --destination _site/atlas/reference
       - name: Check site
         run: python3 scripts/check_site.py _site --public
       - uses: actions/upload-pages-artifact@v4

@@ -27,6 +27,7 @@ project:
     - maintenance/entries/2026-10-20-01.qmd
     - maintenance/entries/2026-10-22-03.qmd
     - maintenance/entries/2026-10-23-01.qmd
+    - maintenance/entries/2026-10-23-02.qmd
     - maintenance/index.qmd
     - materials/buffers/BUF-BCA-001_工作液.qmd
     - materials/buffers/BUF-TURBOID-001_富集缓冲液.qmd
@@ -116,6 +117,7 @@ project:
     - standards/quality-checklist.qmd
     - standards/reference-frameworks.qmd
   resources:
+    - atlas/**
     - LICENSE
     - LICENSES/*.txt
     - LICENSES/*.json
