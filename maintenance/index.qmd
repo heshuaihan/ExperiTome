@@ -3,7 +3,7 @@ title: "总维护日志与概述"
 description: "整个Protocol库的当前状态、每轮维护和剩余工作。"
 ---
 
-2026-10-25维护者已授权发布本轮积累内容；上线状态以本轮维护记录与GitHub Actions为准。后续变更按明确发布指令更新。
+当前公开版 v0.4.0 已于 2026-10-25 上线；后续维护在明确发布指令后更新线上。
 
 ## 当前概述
 
@@ -19,7 +19,7 @@ description: "整个Protocol库的当前状态、每轮维护和剩余工作。"
 
 | 日期 / 编号 | 主题及整体变化 | 检查与发布状态 |
 |---|---|---|
-| 2026-10-25<br>MAINT-20261025-01 | [ExperiAnalysis、Atlas整合与作者页正式上线](entries/2026-10-25-01-public-analysis-profile.qmd)<br>按维护者明确授权发布ExperiTome v0.4.0，接入ExperiAnalysis v0.2.0浏览器工作台、独立本机助手下载、中英文作者页与Atlas目标ID入口；保留私有源码、原始数据和既有参考快照边界。 | 本轮发布检查进行中；最终公开允许清单、构建、软件回归、资源大小、下载指纹、部署与线上浏览器记录分别保存，不用旧报告替代。<br>v0.4.0 publication explicitly authorized; online/browser and optional local companion; private source repositories retained |
+| 2026-10-25<br>MAINT-20261025-01 | [ExperiAnalysis、Atlas整合与作者页正式上线](entries/2026-10-25-01-public-analysis-profile.qmd)<br>按维护者明确授权发布ExperiTome v0.4.0，接入ExperiAnalysis v0.2.0浏览器工作台、独立本机助手下载、中英文作者页与Atlas目标ID入口；保留私有源码、原始数据和既有参考快照边界。 | 32项Analysis测试、10项本机API、51项Atlas测试与类型检查、6项主站前端和5项API测试通过；124页公开链接无错，19份受保护文件不变。4096参考分片及151项在线分析资源指纹一致。线上LFQ limma、RNA edgeR、Atlas Snapin查询和双语作者页通过；助手匿名下载58213908字节、CRC/SHA一致。整站940336522字节。<br>ExperiTome v0.4.0 deployed; Analysis v0.2.0 and companion published; commit 98839df; Actions 40181617670 success; source repositories remain private |
 | 2026-10-24<br>MAINT-20261024-02 | [ExperiTome母工作区、分析节点与作者页整合](entries/2026-10-24-02-experitome-workspace-nodes.qmd)<br>四项目迁入ExperiTome，保留独立仓库；清理已核验Atlas中间文件约7.36GiB；ExperiAnalysis升级为节点可选的本机/浏览器流程，加入DIA-NN报告、XIC与作者页。 | 四目录搬移，5仓库HEAD/状态及82原始资料指纹一致；Atlas4096分片及9项查询通过，清理256中间文件7898835280分配字节。32项JS、10项本机API、R节点/RNA回归、16项源报告重放、3份真实报告、4764万行XIC及24Run的first-pass覆盖检查通过。浏览器真实420MiB报告/样本表/模型、Welch/BY、MinProb显示范围、设置恢复和29文件ZIP校验通过。19份受保护文件不变；17条日志/协议/分析/作者资料检查通过；124页223文件链接检查无错。 Atlas新增入口后51项测试、类型/静态构建通过；浏览器预填ID及实际查询通过，RNA counts和表达探索入口通过。<br>local v0.2.0 review; private Analysis 3d90f7e and Atlas a2d0c03 synchronized; GitHub CI 40103834004 success; main v0.3.1 unchanged; no public deployment |
 | 2026-10-24<br>MAINT-20261024-01 | [ExperiAnalysis独立浏览器工作台与本地核验](entries/2026-10-24-01-experianalysis.qmd)<br>实现独立ExperiAnalysis v0.1.0，支持LFQ、基础RNA counts和表达探索；完成浏览器与原生R核验、500万行导入及工作区分离，私有GitHub仓库同步。 | 独立项目30项测试、130文件96023817字节运行库指纹、LFQ/RNA数值核对、三模式ZIP/Parquet/PNG/GMT浏览器流程通过；500万行仅导入压力检查通过。16条维护记录、6项分析入口和协议文档结构检查通过；19份受保护文件不变。2271归档文件SHA一致；GitHub Actions39990405727成功。<br>ExperiAnalysis v0.1.0 private GitHub main 40fb515 synchronized and CI passed; independent local preview; bootstrap archived; no public deployment |
 | 2026-10-23<br>MAINT-20261023-02 | [ExperiAtlas访问修复与GitHub浏览器查询版](entries/2026-10-23-02.qmd)<br>修复部分网络遭chatgpt.site前置层拦截的问题；将ExperiAtlas查询与公共参考分片迁至主站GitHub Pages同域，保留独立源码、完整映射与每周上游检查。 | 48项应用测试、3项归档校验测试、类型/静态构建、9项真实查询等价性通过；4096分片826MB指纹核验通过。完整公开站点839MB/4277文件/114 HTML、本地120 HTML链接检查无错；17份保护文件不变。公开浏览器批量查询及8项匿名HTTP版本/指纹核验通过；Actions39940374970构建/部署成功。<br>ExperiAtlas GitHub browser v0.2.2 live; main v0.3.1 deployed 38f80af; original Sites retained |
