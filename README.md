@@ -1,6 +1,6 @@
 # ExperiTome
 
-![ExperiTome — Built on experience. Made for discovery. Protocols, Analysis and Data.](assets/experitome-hero.png)
+![ExperiTome — Built on experience. Made for discovery. Protocols, Data and Analysis.](assets/experitome-hero.png)
 
 **源于实践，助力发现。**
 
@@ -14,9 +14,9 @@
 
 浏览实验路线、操作步骤、试剂与配液，使用目录导航和全文搜索查找所需内容。
 
-ExperiTome is an open-source project for organizing research experience, experimental protocols, data resources, and analysis workflows into a connected, traceable knowledge library. ExperiAtlas is a separate public v0.2.1 service for cross-species lookup and selected expression resources, based on fixed versioned snapshots. The main-site update described here targets v0.3.1; final publication status is recorded in the current maintenance entry. Chinese-first documentation; English support planned.
+ExperiTome is an open-source project for organizing research experience, experimental protocols, data resources, and analysis workflows into a connected, traceable knowledge library. ExperiAtlas is a separate public v0.2.1 service for cross-species lookup and selected expression resources, based on fixed versioned snapshots. Main-site v0.4.0 includes ExperiAnalysis 0.2.0 with a static browser workbench and a licensed local companion download; its source repository remains private. The browser workbench processes selected files in the current browser tab without uploading them to a remote service. Chinese-first documentation; English support planned.
 
-ExperiTome 从实际研究经验出发，连接实验方法、数据资源与分析流程，建设可追溯、可复用的研究知识库，并逐步探索经验交流、AI 协同检索与方法整理工具。
+ExperiTome 从实际研究经验出发，连接实验方法、ExperiAtlas 数据入口与分析流程，建设可追溯、可复用的研究知识库，并逐步探索经验交流、AI 协同检索与方法整理工具。
 
 ## Why ExperiTome
 
@@ -28,22 +28,26 @@ Experi 取自 experiment，也呼应 experience；tome 表达经过整理、持�
 - **Connected through exchange:** develop methods through attributed, version-specific feedback.
 - **Discover with AI:** explore source-linked retrieval and organization, with researcher review of extracted and missing information.
 
-The ExperiTome site is a static knowledge library; this update targets main-site v0.3.0. ExperiAtlas v0.2.1 is available separately as a public service using fixed snapshots. A dedicated community platform, AI-assisted discovery and a reusable skill are planned; they are not available services in this release.
+The ExperiTome site is a static knowledge library. ExperiAtlas v0.2.1 is available separately as a public service using fixed snapshots. A dedicated community platform, AI-assisted discovery and a reusable skill are planned; they are not available services in this release.
 
 ## Contents
 
 | Collection | Current scope |
 |---|---|
 | Protocols | 8 Chinese detailed modules, 2 C. elegans proteomics/TurboID routes; methods remain drafts |
-| Materials | 104 material identities, including 30 core materials; buffers and instrument settings |
-| Analysis | 6 draft guides: DIA-NN settings/filter, routine workflows, package choices, reusable practices and plot style; generic starter code and synthetic example |
 | Data | Public ExperiAtlas v0.2.1: fixed-snapshot cross-species identity, homology and selected expression resources; source versions and reuse limits are documented |
+| Analysis | 6 draft guides plus the ExperiAnalysis 0.2.0 browser workbench and local companion; browser limit of 250 MiB per file and 5 million rows per DIA-NN report |
+| Materials | 104 material identities, including 30 core materials; buffers and instrument settings |
 
 ## Author
 
-**Shuaihan He（何帅涵）**, sole maintainer. PhD student, Bioscience and Biomedical Engineering Thrust; Brain and Intelligence Research Institute; The Hong Kong University of Science and Technology (Guangzhou).
+**Shuaihan He（何帅涵）**, sole maintainer. PhD student, Bioscience and Biomedical Engineering Thrust; Brain and Intelligence Research Institute; The Hong Kong University of Science and Technology (Guangzhou). [Author profile](profile/index.qmd).
 
 Personal project; affiliation does not imply institutional endorsement. See [AUTHORS.md](AUTHORS.md). Source publications and contributions to individual entries remain credited separately.
+
+## Analysis workbench
+
+For the v0.4.0 release, the browser workbench will be at [ExperiAnalysis](analysis/app/index.html). Browser input is limited to 250 MiB per file and 5 million rows per DIA-NN report. For larger DIA-NN reports, XIC tables, native R MinProb/kNN imputation, or ranked GSEA, [download the ExperiAnalysis 0.2.0 local companion](https://github.com/heshuaihan/ExperiAnalysis/releases/download/experianalysis-v0.2.0/ExperiAnalysis-0.2.0-local.zip).
 
 ## Local use
 

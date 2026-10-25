@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>ExperiAnalysis 分析工作台</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand-row">
+      <a class="brand" href="https://heshuaihan.github.io/ExperiTome/" target="_blank" rel="noopener">ExperiAnalysis <span>by ExperiTome</span></a>
+      <span class="draft-badge">公开版 · v0.2.0</span>
+    </div>
+    <div class="hero-copy">
+      <p class="eyebrow">DATA TO EVIDENCE</p>
+      <h1>分析工作台</h1>
+      <p class="lede">在本机整理样本设计、执行基础差异分析，并导出可回查的结果。</p>
+    </div>
+    <div class="scope-note"><span class="scope-mark" aria-hidden="true">i</span><span>浏览器端可分析 LFQ 蛋白定量表、RNA counts 与 TPM/FPKM。较大的 DIA-NN 报告、XIC 数据及需要 R 的插补可选用 Windows 本机助手；公开页面不会连接本机服务，文件也不会上传到远程服务。</span></div>
+  </header>
+
+  <main class="page-shell">
+    <nav class="step-nav" aria-label="工作流程">
+      <a href="#data-stage"><span>01</span> 导入数据</a>
+      <a href="#design-stage"><span>02</span> 样本设计</a>
+      <a href="#analysis-stage"><span>03</span> 分析与导出</a>
+    </nav>
+
+    <section class="panel" id="data-stage" aria-labelledby="data-heading">
+      <div class="panel-heading">
+        <div><p class="section-kicker">第一步 · 数据</p><h2 id="data-heading">选择输入表</h2></div>
+        <span id="dataStatus" class="status-pill">等待导入</span>
+      </div>
+      <div class="form-grid form-grid-main">
+        <label class="field"><span>数据类型</span>
+          <select id="dataMode">
+            <option value="proteomics">LFQ 蛋白定量</option>
+            <option value="counts">RNA-seq counts</option>
+            <option value="expression">TPM / FPKM</option>
+          </select>
+        </label>
+        <label class="field"><span>矩阵尺度</span>
+          <select id="dataScale">
+            <option value="linear">线性尺度</option>
+            <option value="log2">已转换为 log2</option>
+          </select>
+        </label>
+        <label class="field hidden" id="expressionUnitWrap"><span>表达量单位</span>
+          <select id="expressionUnit"><option value="TPM">TPM</option><option value="FPKM">FPKM</option></select>
+        </label>
+        <label class="field file-field"><span>CSV / TSV / TXT / Parquet</span>
+          <input id="dataFile" type="file" accept=".csv,.tsv,.txt,.parquet,text/csv,text/tab-separated-values,text/plain,application/octet-stream">
+        </label>
+      </div>
+      <p class="field-help">第一列应为 Protein.Group 或基因 ID，后续列为样本。导入前请核对尺度；工作台不会猜测或自动转换线性值与 log2 值。</p>
+
+            <section class="local-helper-card" aria-labelledby="helper-heading">
+        <div class="helper-title-row">
+          <div><p class="section-kicker">节点 01 · 本机文件与检查</p><h3 id="helper-heading">本机分析助手（可选）</h3></div>
+          <div class="helper-status-actions"><span id="helperStatus" class="status-pill">正在检查本机分析助手</span><button class="button button-small" id="helperRefreshButton" type="button">检查连接</button></div>
+        </div>
+        <p class="field-help">用于较大的 DIA-NN 结果报告与 XIC 数据。只有点击登记或选择文件后，本机分析助手才会读取所选文件。</p>
+        <div class="action-row helper-actions">
+          <a class="button button-secondary" href="https://github.com/heshuaihan/ExperiTome/releases/download/experianalysis-v0.2.0/ExperiAnalysis-0.2.0-local.zip" target="_blank" rel="noopener noreferrer">下载 Windows 本机助手 v0.2.0</a>
+          <span class="field-help">本机助手仅连接本机版工作台；公开版浏览器功能可独立使用。</span>
+        </div>
+        <div class="form-grid helper-path-grid">
+          <label class="field span-2"><span>本机文件路径</span><input id="helperPath" type="text" autocomplete="off" spellcheck="false" placeholder="例如 D:\data\report.parquet"></label>
+        </div>
+        <div class="action-row helper-actions">
+          <button class="button button-secondary" id="helperPickButton" type="button" disabled>从本机选择文件</button>
+          <button class="button button-secondary" id="helperRegisterButton" type="button" disabled>登记并检查</button>
+          <button class="button button-primary" id="helperImportButton" type="button" disabled>导入已登记报告</button>
+          <button class="button button-danger hidden" id="helperCancelButton" type="button" disabled>取消本机任务</button>
+          <span id="helperProgress" class="progress-copy" role="status" aria-live="polite"></span>
+        </div>
+        <div id="helperAlert" class="inline-alert hidden" role="alert"></div>
+        <div id="helperFileSummary" class="helper-file-summary hidden" role="status" aria-live="polite"></div>
+        <div id="helperCompareRegistration" class="helper-compare-registration hidden">
+          <div class="form-grid helper-path-grid">
+            <label class="field span-2"><span>第二份报告（可选，用于覆盖比较）</span><input id="helperComparePath" type="text" autocomplete="off" spellcheck="false" placeholder="登记另一份 DIA-NN 主报告"></label>
+          </div>
+          <div class="action-row helper-actions">
+            <button class="button button-secondary" id="helperComparePickButton" type="button" disabled>选择第二份报告</button>
+            <button class="button button-secondary" id="helperCompareRegisterButton" type="button" disabled>登记第二份报告</button>
+            <button class="button button-secondary" id="helperCompareButton" type="button" disabled>比较 Run 覆盖</button>
+          </div>
+          <div id="helperCompareSummary" class="helper-file-summary hidden" role="status" aria-live="polite"></div>
+          <div id="helperCompareResult" class="helper-result hidden" role="status" aria-live="polite"></div>
+        </div>
+        <details class="helper-sequence-tools hidden" id="helperSequenceTools">
+          <summary>可选：从 FASTA 核对目标蛋白序列</summary>
+          <p class="field-help">选择本机 FASTA 后查询精确蛋白 ID；可提供肽段以显示其序列位置与覆盖率。此功能只返回匹配序列与简要核对信息。</p>
+          <div class="form-grid helper-path-grid">
+            <label class="field span-2"><span>FASTA 文件路径</span><input id="helperFastaPath" type="text" autocomplete="off" spellcheck="false" placeholder="例如 D:\data\proteins.fasta"></label>
+          </div>
+          <div class="action-row helper-actions">
+            <button class="button button-secondary" id="helperFastaPickButton" type="button" disabled>选择 FASTA</button>
+            <button class="button button-secondary" id="helperFastaRegisterButton" type="button" disabled>登记 FASTA</button>
+          </div>
+          <div id="helperFastaSummary" class="helper-file-summary hidden" role="status" aria-live="polite"></div>
+          <div class="form-grid helper-query-grid">
+            <label class="field"><span>精确蛋白 ID</span><input id="helperProteinId" type="search" placeholder="输入 FASTA 标题中的 ID"></label>
+            <button class="button button-secondary helper-query-button" id="helperSequenceButton" type="button" disabled>核对序列</button>
+            <label class="field span-2"><span>目标肽段（可选，每行一条）</span><textarea id="helperPeptides" rows="3" placeholder="可粘贴肽段序列；支持换行、逗号或分号分隔"></textarea></label>
+          </div>
+          <div id="helperSequenceResult" class="helper-result hidden" role="status" aria-live="polite"></div>
+        </details>
+        <div id="helperInspectControls" class="helper-inspect hidden">
+          <div class="form-grid helper-query-grid">
+            <label class="field" id="helperTargetWrap"><span>报告目标查询</span><input id="helperTarget" type="search" placeholder="输入蛋白组或基因 ID"></label>
+            <button class="button button-secondary helper-query-button" id="helperTargetButton" type="button" disabled>预览 / 查询（最多 50 行）</button>
+            <label class="field hidden" id="helperXicWrap"><span>前体 / 特征 ID</span><input id="helperPrecursor" type="search" placeholder="输入 precursor ID"></label>
+            <button class="button button-secondary helper-query-button hidden" id="helperXicButton" type="button" disabled>提取 XIC（最多 1,500 点）</button>
+          </div>
+          <div id="helperTargetResult" class="helper-result hidden" role="status" aria-live="polite"></div>
+          <div id="helperXicResult" class="helper-result hidden" role="status" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <details class="filters-box" id="proteomicsFilters">
+        <summary>蛋白组行筛选与污染物规则</summary>
+        <p class="field-help">筛选在导入阶段执行。默认值适用于常见 DIA-NN 蛋白组表；请按当前项目的上游报告格式确认列名。</p>
+        <div class="form-grid filter-grid">
+          <label class="field"><span>Q.Value &lt;</span><input id="filterQValue" type="number" min="0" max="1" step="0.001" value="0.01"></label>
+          <label class="field"><span>Global.Q.Value &lt;</span><input id="filterGlobalQValue" type="number" min="0" max="1" step="0.001" value="0.01"></label>
+          <label class="field"><span>PG.Q.Value &lt;</span><input id="filterPgQValue" type="number" min="0" max="1" step="0.001" value="0.05"></label>
+          <label class="field"><span>Global.PG.Q.Value &lt;</span><input id="filterGlobalPgQValue" type="number" min="0" max="1" step="0.001" value="0.01"></label>
+          <label class="field"><span>最少 distinct peptides</span><input id="minimumPeptides" type="number" min="0" step="1" value="0"></label>
+          <label class="field"><span>peptide 计数范围</span>
+            <select id="peptideScope"><option value="protein_group">protein group</option><option value="run_protein_group">run × protein group</option></select>
+          </label>
+          <label class="field span-2"><span>污染物标记（可留空）</span><input id="contaminantText" type="text" placeholder="例如 CONTAMINANT；按字面包含匹配"></label>
+          <label class="field"><span>Lib.Peptidoform.Q.Value &lt;（可留空）</span><input id="filterLibPeptidoformQValue" type="number" min="0" max="1" step="0.001" placeholder="留空不筛选"></label>
+          <label class="field"><span>Quantity.Quality &gt;（可留空）</span><input id="filterQuantityQuality" type="number" step="0.01" placeholder="留空不筛选"></label>
+          <label class="field"><span>PG.MaxLFQ.Quality &gt;（可留空）</span><input id="filterPgMaxLfqQuality" type="number" step="0.01" placeholder="留空不筛选"></label>
+          <label class="field span-2"><span class="check-field"><input id="requireProteotypicGroup" type="checkbox"> 仅保留 proteotypic group</span></label>
+        </div>
+      </details>
+
+      <details class="filters-box helper-report-options" id="helperReportOptions">
+        <summary>节点 02 · 报告特征与重复值（本机导入）</summary>
+        <p class="field-help">仅在上方登记 DIA-NN 主报告后启用。特征与定量列须属于同一层级；缺少所选列时会明确提示，不会猜测替代列。</p>
+        <div class="form-grid filter-grid">
+          <label class="field"><span>特征列</span><select id="featureColumn"><option value="Protein.Group">Protein.Group（推荐）</option><option value="Genes">Genes</option><option value="Precursor.Id">Precursor.Id</option></select></label>
+          <label class="field"><span>定量列</span><select id="quantityColumn"><option value="PG.MaxLFQ">PG.MaxLFQ（推荐）</option><option value="Genes.MaxLFQ">Genes.MaxLFQ</option><option value="Genes.MaxLFQ.Unique">Genes.MaxLFQ.Unique</option><option value="Precursor.Normalised">Precursor.Normalised</option><option value="Precursor.Quantity">Precursor.Quantity</option><option value="Ms1.Area">Ms1.Area</option><option value="Ms1.Normalised">Ms1.Normalised</option></select></label>
+          <label class="field"><span>重复行规则</span><select id="duplicatePolicy"><option value="error">不一致时报错（推荐）</option><option value="mean">均值合并</option></select></label>
+        </div>
+      </details>
+
+      <div class="action-row">
+        <button class="button button-primary" id="loadButton" type="button">导入所选文件</button>
+        <button class="button button-secondary" id="demoButton" type="button">载入合成示例</button>
+        <div id="loadProgress" class="progress-copy" role="status" aria-live="polite"></div>
+      </div>
+      <div id="dataAlert" class="inline-alert hidden" role="alert"></div>
+      <div id="datasetSummary" class="dataset-summary hidden"></div>
+    </section>
+
+    <section class="panel hidden" id="design-stage" aria-labelledby="design-heading">
+      <div class="panel-heading">
+        <div><p class="section-kicker">第二步 · 设计</p><h2 id="design-heading">核对样本与分组</h2></div>
+        <span id="designCount" class="muted-label"></span>
+      </div>
+      <p class="field-help" id="designHelp">每行对应一个输入 run。相同生物学样本的技术重复可填写相同“生物样本”名称；排除样本请勾选对应行。分组标签由你填写。</p>
+      <div class="design-tools action-row">
+        <label class="field design-file-field"><span>样本表 CSV / TSV</span><input id="designFile" type="file" accept=".csv,.tsv,.txt,text/csv,text/tab-separated-values,text/plain"></label>
+        <button class="button button-secondary" id="importDesignButton" type="button" disabled>导入样本表</button>
+        <span id="designImportStatus" class="progress-copy" role="status" aria-live="polite">样本表需覆盖每个输入 Run，且 Run 名称精确匹配。</span>
+      </div>
+      <div class="session-tools action-row">
+        <button class="button button-secondary" id="saveSessionButton" type="button" disabled>保存分析设置</button>
+        <input id="sessionFile" class="hidden" type="file" accept=".json,application/json">
+        <button class="button button-secondary" id="loadSessionButton" type="button" disabled>加载分析设置</button>
+        <span id="sessionStatus" class="progress-copy" role="status" aria-live="polite">设置文件仅保存样本设计与分析参数，不包含原始数据。</span>
+      </div>
+      <div class="table-wrap">
+        <table class="design-table">
+          <thead><tr><th scope="col">输入 run</th><th scope="col">生物样本</th><th scope="col">组别</th><th scope="col" class="check-cell">排除</th></tr></thead>
+          <tbody id="designRows"></tbody>
+        </table>
+      </div>
+      <section class="pipeline-node aggregation-node" id="aggregationNode" aria-labelledby="aggregation-heading">
+        <div class="node-title-row"><div><p class="section-kicker">节点 03 · 技术重复与观测</p><h3 id="aggregation-heading">样本汇总</h3></div><span class="recommended-tag">推荐设置</span></div>
+        <p class="field-help" id="aggregationHelp">技术重复按线性尺度取均值后再进行 log2 分析；RNA counts 保留原有计数求和流程。</p>
+        <div class="form-grid node-controls">
+          <label class="field" id="technicalAggregationWrap"><span>技术重复汇总</span><select id="technicalAggregation"><option value="mean">均值（推荐）</option><option value="median">中位数</option></select></label>
+            <label class="field" id="minimumObservedWrap"><span>每组最少原始观测数</span><input id="minimumObserved" type="number" min="1" step="1" value="2"></label>
+        </div>
+      </section>
+      <div class="form-grid contrast-grid" id="contrastGrid">
+        <label class="field"><span>处理组（case）</span><select id="caseGroup"><option value="">先填写组别</option></select></label>
+        <label class="field"><span>对照组（control）</span><select id="controlGroup"><option value="">先填写组别</option></select></label>
+      </div>
+      <div id="designAlert" class="inline-alert hidden" role="alert"></div>
+    </section>
+
+    <section class="panel hidden" id="analysis-stage" aria-labelledby="analysis-heading">
+      <div class="panel-heading">
+        <div><p class="section-kicker">第三步 · 分析</p><h2 id="analysis-heading">设置并运行</h2></div>
+        <span class="muted-label">方法与参数会写入结果记录</span>
+      </div>
+      <div class="confirm-box">
+        <label class="checkbox-label"><input id="upstreamConfirmed" type="checkbox"><span>我已确认输入表的上游处理状态与矩阵尺度。</span></label>
+        <p>请参考上游软件记录确认归一化与过滤。工作台不会额外重复做上游归一化；蛋白组的中位数归一化是单独的可选分析步骤。</p>
+      </div>
+      <p class="pipeline-intro">固定顺序：样本与重复汇总 → 归一化与缺失处理 → 差异检验 → 结果检查与导出。每个节点的推荐选项可直接使用，高级设置单独展开。</p>
+      <div class="pipeline-stack">
+        <section class="pipeline-node" aria-labelledby="processing-heading">
+          <div class="node-title-row"><div><p class="section-kicker">节点 04 · 归一化与缺失值</p><h3 id="processing-heading">数据处理</h3></div><span class="recommended-tag">推荐：不重复归一化、不插补</span></div>
+          <div class="form-grid node-controls">
+            <label class="field" id="normalizationWrap"><span>归一化</span><select id="normalization"><option value="none">无额外归一化（推荐）</option><option value="median">中位数</option><option value="quantile">分位数</option></select></label>
+            <label class="field" id="imputationWrap"><span>缺失值处理</span><select id="imputation"><option value="none">不插补（推荐）</option><option value="MinProb">MinProb</option><option value="knn">KNN</option></select></label>
+          </div>
+          <p id="processingRuntimeNote" class="field-help hidden" role="status"></p>
+          <details class="node-advanced" id="imputationAdvanced">
+            <summary>高级选项</summary>
+            <div class="form-grid node-controls">
+              <label class="field" id="imputationScopeWrap"><span>插补用途</span><select id="imputationScope"><option value="visualization">仅用于可视化（推荐）</option><option value="model">统计模型</option><option value="both">可视化与统计模型</option></select></label>
+              <label class="field" id="seedWrap"><span>随机种子</span><input id="seed" type="number" step="1" value="417"></label>
+            </div>
+          </details>
+        </section>
+        <section class="pipeline-node" id="statisticsNode" aria-labelledby="statistics-heading">
+          <div class="node-title-row"><div><p class="section-kicker">节点 05 · 差异检验</p><h3 id="statistics-heading">比较与判定</h3></div><span class="recommended-tag">推荐：limma · BH</span></div>
+          <div class="form-grid node-controls options-grid">
+            <label class="field" id="statisticalMethodWrap"><span>统计方法</span><select id="statisticalMethod"><option value="limma">limma（推荐）</option><option value="welch">Welch t-test</option></select></label>
+            <label class="field" id="pAdjustWrap"><span>多重检验校正</span><select id="pAdjust"><option value="BH">Benjamini–Hochberg（BH，推荐）</option><option value="BY">Benjamini–Yekutieli（BY）</option></select></label>
+            <label class="field" id="analysisAlphaWrap"><span>FDR（分析阈值）</span><input id="analysisAlpha" type="number" min="0.0001" max="1" step="0.001" value="0.05"></label>
+            <label class="field" id="analysisLfcWrap"><span>|log2FC|（分析阈值）</span><input id="analysisLfc" type="number" min="0" step="0.05" value="0"></label>
+          </div>
+          <p class="field-help" id="analysisOptionsHelp">阈值控制结果判定；下方的查看阈值只改变图表与表格展示。</p>
+        </section>
+      </div>
+      <p id="expressionModeNote" class="inline-note hidden">TPM/FPKM 模式仅作表达探索，不计算差异 P 值或 FDR，也不运行基因集富集。</p>
+      <div class="action-row run-row">
+        <button class="button button-primary" id="runButton" type="button" disabled>运行分析</button>
+        <button class="button button-danger hidden" id="cancelButton" type="button">取消分析</button>
+        <div id="runProgress" class="progress-copy" role="status" aria-live="polite">请确认上游处理状态并填写样本组别。</div>
+      </div>
+      <div class="progress-track hidden" id="progressTrack"><div id="progressBar" class="progress-bar"></div></div>
+      <div id="runAlert" class="inline-alert hidden" role="alert"></div>
+
+      <details class="enrichment-box" id="enrichmentOptions">
+        <summary>可选：富集分析设置</summary>
+        <p class="field-help">差异分析完成后可单独运行。选择物种并提供 GMT 基因集；不上传外部服务。</p>
+        <div class="form-grid enrichment-grid">
+          <label class="field"><span>富集方法</span><select id="enrichmentMethod"><option value="ora">过度表示（ORA，推荐）</option><option id="rankedEnrichmentOption" value="ranked" disabled>排序富集（本机 R）</option></select></label>
+          <label class="field" id="enrichmentSpeciesWrap"><span>物种</span><select id="enrichmentSpecies"><option value="worm">C. elegans</option><option value="mouse">Mouse</option><option value="human">Human</option></select></label>
+          <label class="field file-field"><span>GMT 文件（可选）</span><input id="gmtFile" type="file" accept=".gmt,.txt,text/plain"></label>
+          <label class="field span-2"><span>或粘贴 GMT 内容</span><textarea id="gmtText" rows="4" placeholder="每行：集合名称、描述、成员基因……"></textarea></label>
+          <div class="form-grid enrichment-grid hidden span-2" id="rankedEnrichmentOptions">
+            <label class="field"><span>最小基因集大小</span><input id="enrichmentMinSize" type="number" min="5" step="1" value="5"></label>
+            <label class="field"><span>最大基因集大小</span><input id="enrichmentMaxSize" type="number" min="5" step="1" value="500"></label>
+            <label class="field"><span>随机种子</span><input id="enrichmentSeed" type="number" step="1" value="417"></label>
+          </div>
+        </div>
+        <button class="button button-secondary" id="enrichButton" type="button" disabled>运行富集分析</button>
+        <span id="enrichmentStatus" class="progress-copy" role="status" aria-live="polite"></span>
+      </details>
+    </section>
+
+    <section class="panel hidden" id="results-stage" aria-labelledby="results-heading">
+      <div class="panel-heading results-heading">
+        <div><p class="section-kicker">结果 · 本地分析</p><h2 id="results-heading">质量检查与差异结果</h2></div>
+        <div class="action-row compact-actions">
+          <button class="button button-secondary" id="downloadHtmlButton" type="button">下载 HTML 报告</button>
+          <button class="button button-primary" id="downloadZipButton" type="button">下载完整结果包</button>
+        </div>
+      </div>
+      <p id="resultOverview" class="result-overview"></p>
+      <details class="methods-box"><summary>查看方法、版本与完整筛选记录</summary>
+        <div id="methodSummary" class="method-summary"></div>
+      </details>
+      <div id="resultWarnings" class="warning-panel hidden" role="status" aria-live="polite"></div>
+      <section class="result-block" aria-labelledby="qc-heading">
+        <div class="subheading"><div><p class="section-kicker">样本 QC</p><h3 id="qc-heading">数据分布与样本关系</h3></div></div>
+        <div class="table-wrap"><table><thead><tr><th>样本</th><th>组别</th><th>检测特征数</th><th>缺失比例</th><th>中位数</th><th>技术重复 CV 中位数</th></tr></thead><tbody id="qcRows"></tbody></table></div>
+        <div class="chart-grid">
+          <figure class="chart-card"><figcaption><span>样本相关性</span><span class="chart-actions"><button data-chart="correlation" data-format="svg">SVG</button><button data-chart="correlation" data-format="png">PNG</button></span></figcaption><div class="chart-frame" id="correlationChart"></div></figure>
+          <figure class="chart-card"><figcaption><span>PCA</span><span class="chart-actions"><button data-chart="pca" data-format="svg">SVG</button><button data-chart="pca" data-format="png">PNG</button></span></figcaption><div class="chart-frame" id="pcaChart"></div></figure>
+          <figure class="chart-card chart-wide"><figcaption><span>样本分布</span><span class="chart-actions"><button data-chart="distributions" data-format="svg">SVG</button><button data-chart="distributions" data-format="png">PNG</button></span></figcaption><div class="chart-frame" id="distributionChart"></div></figure>
+        </div>
+      </section>
+
+      <section class="result-block" aria-labelledby="diff-heading">
+        <div class="subheading"><div><p class="section-kicker" id="diffKicker">差异分析</p><h3 id="diff-heading">比较与目标 feature</h3></div></div>
+        <div class="form-grid result-controls">
+          <label class="field" id="viewMetricWrap"><span>查看显著性依据</span><select id="viewMetric"><option value="FDR">FDR</option><option value="PValue">P value</option></select></label>
+          <label class="field slider-field" id="viewThresholdWrap"><span>查看阈值 <output id="viewThresholdLabel" for="viewThreshold">≤ 0.050</output></span><input id="viewThreshold" type="range" min="0.0001" max="0.2" step="0.0001" value="0.05"></label>
+          <label class="field"><span id="targetFeatureLabel">查找 feature</span><input id="targetFeature" type="search" list="featureOptions" placeholder="输入或选择 ID"><datalist id="featureOptions"></datalist></label>
+          <label class="field"><span id="tableSearchLabel">搜索结果表</span><input id="tableSearch" type="search" placeholder="按 feature ID 搜索"></label>
+        </div>
+        <div class="action-row atlas-launch-row">
+          <label class="field"><span>注释物种</span><select id="atlasSpecies"><option value="">请选择</option><option value="worm">C. elegans</option><option value="mouse">Mouse</option><option value="human">Human</option></select></label>
+          <a class="button button-secondary" id="atlasLink" aria-disabled="true" tabindex="-1" target="_blank" rel="noopener noreferrer">在 ExperiAtlas 查看注释</a>
+          <span class="muted-label" id="atlasPreviewLabel">公开参考快照</span>
+        </div>
+        <p class="field-help" id="atlasLinkNote" aria-live="polite">请选择注释物种和结果中的完整目标 ID。ID 按原样传递，分号连接的 ID 不会拆分。</p>
+        <label class="checkbox-label view-filter-label" id="onlyAboveThresholdWrap"><input id="onlyAboveThreshold" type="checkbox"><span id="onlyAboveThresholdLabel">结果表仅显示达到查看阈值的 feature</span></label>
+        <p class="field-help">查看阈值只刷新图表标色与表格，不会重跑分析或改变导出数值。点图中的任意 feature 可将其设为目标。</p>
+        <div id="targetSummary" class="target-summary hidden" aria-live="polite"></div>
+        <div class="chart-grid differential-grid">
+          <figure class="chart-card chart-wide" id="volcanoPanel"><figcaption><span>Volcano plot</span><span class="chart-actions"><button data-chart="volcano" data-format="svg">SVG</button><button data-chart="volcano" data-format="png">PNG</button></span></figcaption><div class="chart-frame" id="volcanoChart"></div></figure>
+          <figure class="chart-card chart-wide" id="maPanel"><figcaption><span>MA plot</span><span class="chart-actions"><button data-chart="ma" data-format="svg">SVG</button><button data-chart="ma" data-format="png">PNG</button></span></figcaption><div class="chart-frame" id="maChart"></div></figure>
+          <figure class="chart-card chart-wide"><figcaption><span id="heatmapCaption">差异 feature 热图 · 最多 40 个</span><span class="chart-actions"><button data-chart="heatmap" data-format="svg">SVG</button><button data-chart="heatmap" data-format="png">PNG</button></span></figcaption><div class="chart-frame" id="heatmapChart"></div></figure>
+        </div>
+        <p class="field-help" id="heatmapHelp">热图按 feature 行标准化后显示相对模式，仅用于颜色展示；灰色单元格表示缺失。</p>
+        <div class="table-toolbar"><span id="tableCount" class="muted-label"></span><div class="action-row compact-actions"><button class="button button-small" id="downloadCsvButton" type="button">下载 CSV</button><button class="button button-small" id="downloadTsvButton" type="button">下载 TSV</button></div></div>
+        <div class="table-wrap result-table-wrap"><table class="result-table"><thead><tr><th id="diffFeatureHead">蛋白组 / 基因 ID</th><th id="diffLogFCHead">log2FC</th><th id="diffPValueHead">P value</th><th id="diffFdrHead">FDR</th><th id="diffStatusHead">状态</th><th id="diffCaseNHead">Case n</th><th id="diffControlNHead">Control n</th></tr></thead><tbody id="differentialRows"></tbody></table></div>
+      </section>
+
+      <section class="result-block hidden" id="enrichmentResultsBlock" aria-labelledby="enrichment-results-heading">
+        <div class="subheading"><div><p class="section-kicker">富集结果</p><h3 id="enrichment-results-heading">基因集富集</h3></div></div>
+        <div class="table-wrap"><table><thead><tr><th id="enrichmentSetHead">集合</th><th id="enrichmentDescriptionHead">描述</th><th id="enrichmentOverlapHead">命中数</th><th id="enrichmentScoreHead">富集分数</th><th id="enrichmentFdrHead">FDR</th><th id="enrichmentLeadingEdgeHead" class="hidden">Leading edge</th></tr></thead><tbody id="enrichmentRows"></tbody></table></div>
+      </section>
+      <div id="resultAlert" class="inline-alert hidden" role="status"></div>
+    </section>
+  <footer class="page-footer"><span>ExperiAnalysis · by ExperiTome · v0.2.0</span><span>数据由浏览器本地处理；结果需结合实验设计与原始记录复核。</span></footer>
+  </main>
+  <script type="module" src="./ui.mjs"></script>
+</body>
+</html>

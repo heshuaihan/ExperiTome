@@ -1,24 +1,45 @@
 ---
 title: "Analysis"
-subtitle: "怎么选、按什么顺序做、结果怎样回查"
-description: "从DIA-NN数据分析、报告filter到常规蛋白组学统计与结果整理。"
+subtitle: "LFQ 与 bulk RNA-seq 浏览器工作台及常规分析参考"
+description: "ExperiAnalysis 0.2.0 浏览器工作台入口、输入边界与本机辅助分析，并衔接 DIA-NN 和常规分析参考。"
 ---
 
-以下为持续维护的方法草案。先按场景选参数，再运行与检查，最后进入统计；常用做法主要来自维护者的论文与活动分析实例。
+## ExperiAnalysis 浏览器工作台
 
-## 按顺序开始
+ExperiAnalysis 0.2.0 提供 LFQ 与 bulk RNA-seq 浏览器分析，并附带本机辅助器。ExperiTome 主站 v0.4.0 仍待发布部署。先看[输入范围与使用说明](browser-workbench.qmd)，了解数据类型、节点选择和限制。
 
-| 顺序 | 入口 | 能直接得到什么 |
-|---|---|---|
-| 1 | [DIA-NN数据分析：设置怎么选](diann-settings.qmd) · v0.2.0 | 普通总蛋白/IP、timsTOF/其他仪器、软件/格式/线程的选择起点 |
-| 2 | [DIA-NN报告filter](diann-filter.qmd) · v0.2.0 | 可修改配置、行筛选代码与逐步审计 |
-| 3 | [常规蛋白组分析流程](proteomics-workflow.qmd) · v0.1.0 | 建矩阵、样本QC、技术重复、缺失、差异、富集与交付 |
-| 配套 | [常用包怎么选](proteomics-packages.qmd) · v0.1.0 | R/Python各用什么，先装哪组，如何记录环境 |
-| 绘图 | [绘图风格：大字、简轴、无背景](plot-style.qmd) · v0.1.0 | 图形原则、例外、合成样例与R/Python主题 |
-| 实例 | [从论文与现有项目提炼的习惯](practice-cases.qmd) · v0.1.0 | 7处实例的用途、可复用做法与专属条件 |
+::: {.callout-note}
+**浏览器工作台**
 
-普通总蛋白在DIA-NN中一般开启RT-dependent归一化；IP/亲和富集另定策略。确认上游已做后，下游默认不额外归一化；新增处理需有QC依据。
+[打开 ExperiAnalysis 浏览器工作台](app/index.html){.btn .btn-primary}
 
-[DIA-NN通用工具包v0.2.0](diann/Experitome_DIA-NN_starter_v0.2.0.zip) · [分析计划空表](../templates/proteomics-analysis-plan.md.txt) · [分析条目模板](../templates/analysis-entry.md.txt)
+浏览器工作台在当前浏览器标签页中处理输入文件，不会把文件上传到远端。每个输入文件上限为 250 MiB；DIA-NN 报告上限为 500 万行。本机辅助器可读取大型 DIA-NN 报告，并支持已导出的 XIC 表、本机原生 R MinProb/kNN 插补和 ranked GSEA。
+:::
 
-实例研究的原数据、参数和结果留在原项目；本库提炼通用做法，把论文特定阈值与新项目推荐分开记录。[本轮总维护](../maintenance/entries/2026-10-19-04.qmd)
+| 模块 | 输入与用途 |
+|---|---|
+| **蛋白组 LFQ** | 浏览器可导入矩阵或 DIA-NN 报告；本机辅助器也可直接读本机报告；技术重复先在线性尺度汇总，默认 limma。 |
+| **Bulk RNA-seq** | 原始计数矩阵与样本分组；两组差异分析使用 edgeR。 |
+| **TPM / FPKM 探索** | 描述性检查和图表；不用于差异检验。 |
+| **已导出的 XIC 表** | 本机筛查前体色谱轨迹；不读取厂商原始仪器文件。 |
+
+LFQ 默认不额外归一化或插补。浏览器单文件上限为 250 MiB，DIA-NN 报告上限为 500 万行；bulk RNA-seq 输入文件同样受 250 MiB 上限约束。需要处理更大的 DIA-NN 报告、查看 XIC、运行本机原生 R MinProb/kNN 插补或 ranked GSEA 时，使用[ExperiAnalysis 0.2.0 本机辅助器](https://github.com/heshuaihan/ExperiAnalysis/releases/download/experianalysis-v0.2.0/ExperiAnalysis-0.2.0-local.zip)。本机报告按原路径读取，不受浏览器文件大小和报告行数上限约束；汇总矩阵仍限 500 万个单元格、50,000 个特征和 100 个 runs。完整边界见[工作台说明](browser-workbench.qmd)。
+
+本机验证记录包含对约 4,760 万行 XIC 表的实际查询检查。该记录说明此输入路径已在本机检查过，不代表实验验证或公开服务可用。
+
+## 继续查看现有分析材料
+
+以下方法草案补充软件设置、报告筛选和更广泛的分析流程。DIA-NN 导入前，先确定[数据分析设置](diann-settings.qmd)（v0.2.0），再查看[报告 filter](diann-filter.qmd)（v0.2.0）。
+
+| 入口 | 能直接得到什么 |
+|---|---|
+| [常规蛋白组分析流程](proteomics-workflow.qmd) · v0.1.0 | 建矩阵、样本 QC、技术重复、缺失、差异、富集与交付 |
+| [常用包怎么选](proteomics-packages.qmd) · v0.1.0 | R/Python 各用什么，先装哪组，如何记录环境 |
+| [绘图风格：大字、简轴、无背景](plot-style.qmd) · v0.1.0 | 图形原则、例外、合成样例与 R/Python 主题 |
+| [从论文与现有项目提炼的习惯](practice-cases.qmd) · v0.1.0 | 7 处实例的用途、可复用做法与专属条件 |
+
+普通总蛋白在 DIA-NN 中一般开启 RT-dependent 归一化；IP/亲和富集另定策略。确认上游已做后，下游默认不额外归一化；新增处理需有 QC 依据。
+
+[DIA-NN 通用工具包 v0.2.0](diann/Experitome_DIA-NN_starter_v0.2.0.zip) · [分析计划空表](../templates/proteomics-analysis-plan.md.txt) · [分析条目模板](../templates/analysis-entry.md.txt)
+
+实例研究的原数据、参数和结果留在原项目；本库提炼通用做法，把论文特定阈值与新项目推荐分开记录。[本轮总维护](../maintenance/entries/2026-10-24-01-experianalysis.qmd)

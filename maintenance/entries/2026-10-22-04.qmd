@@ -1,0 +1,36 @@
+---
+title: "ExperiAtlas公开部署准备与暂停检查点"
+maintenance_id: "MAINT-20261022-04"
+date: "2026-10-22"
+search: false
+---
+
+## 整体目的与暂停位置
+
+维护者授权将ExperiAtlas上线并接入主站Data入口；随后明确要求停在可恢复节点，明天继续。本轮停在许可与托管架构预检阶段，子任务已中断，不继续构建、上传数据、推送或公开部署。实验方法与分析算法版本无变化。
+
+## 已完成及实际核验
+
+- 重新阅读主本、总维护日志、Atlas数据／仓库边界及Sites存储约定。
+- 两个限定子任务完成只读许可与托管限制核查；适配器实现子任务在写入前中断。本次检查时`lib/public-reference.mjs`和对应测试文件尚不存在，现行`lib/route.ts`没有改动。
+- 仅创建一个默认私有、尚无版本和线上网址的Sites项目。唯一ID已保存于Atlas主本`.openai/hosting.json`。暂停前原生读取确认`latest_version_number=0`、`current_live_url=null`、访问模式`custom`。以后必须复用此ID，不得重复创建。
+- Atlas私有Git主本仍为`9d49f86d787beb07fe4ebab98c11866cd6bd542c`；本次跟踪文件差异仅托管配置。未同步这项未完成变更，未上传数据库、设置导入密钥或更改公开访问权限。
+
+## 来源与访问限制
+
+CeNGEN官方[下载页](https://www.cengen.org/downloads/)和[Data Q&A入口](https://www.cengen.org/cengenapp/)本轮仍未提供已确认适用于threshold-2矩阵的再分发许可；Q&A DOCX未能从当前工具读取。候选公开包应排除此矩阵及派生TPM，保留官方链接。其余来源的条款与署名初步复核记录于本轮检查点文件，正式发布前还需将逐源许可、版本、原研究和处理说明落实到公共来源页。
+
+## 容量与实现方向（尚未执行）
+
+本地有效SQLite约7.72 GB，不能将其直接装入128 MB的Worker内存。现有pack_seed只会生成原表SQL，未验证远端导入。候选方向是按实体、别名token及表达基因分组的只读压缩对象索引，保留当前科学映射函数；需实测总大小、最大对象、查询扇出及D1运行配额，再决定是否采用。还没有生成公共索引或验证远端容量。
+
+官方约束参考：[D1限制](https://developers.cloudflare.com/d1/platform/limits/) · [Workers限制](https://developers.cloudflare.com/workers/platform/limits/) · [R2限制](https://developers.cloudflare.com/r2/platform/limits/)。部署数据另设允许清单；私有研究数据和未确认许可数据不进入上传。
+
+## 恢复工作
+
+1. 从`output/maintenance/20261022-atlas-public/checkpoint.md`恢复，复用已登记的托管ID；旧临时凭据不落盘，过期时向同一项目重新取凭据。
+2. 完成许可允许清单及体积实测，再实现、测试公共只读适配器和受保护的数据导入。
+3. 先检查私有部署及真实查询；关闭临时导入入口，按已授权范围公开并匿名验证。
+4. 验证Atlas可用后再更新主站Data入口；保留单独维护日志和发布范围检查。
+
+本轮只运行登记／文档结构检查；未重新运行23项应用测试，也未重新渲染站点，不把前轮检查记作本轮新验收。公开主站未因本轮准备而改变。

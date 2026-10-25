@@ -3,7 +3,7 @@ title: "总维护日志与概述"
 description: "整个Protocol库的当前状态、每轮维护和剩余工作。"
 ---
 
-2026-10-23维护者已授权公开Atlas并更新主站入口；上线状态以本轮维护记录与GitHub Actions为准。后续变更按明确发布指令更新。
+2026-10-25维护者已授权发布本轮积累内容；上线状态以本轮维护记录与GitHub Actions为准。后续变更按明确发布指令更新。
 
 ## 当前概述
 
@@ -13,14 +13,22 @@ description: "整个Protocol库的当前状态、每轮维护和剩余工作。"
 
 另有6项[分析方法草案](../analysis/index.qmd)：先DIA-NN数据分析，再报告filter，衔接常规流程、常用包、实例习惯与绘图风格；版本按各条目记录。
 
+[ExperiAnalysis 独立分析工作台](../analysis/browser-workbench.qmd)提供 LFQ 与基础转录组分析；浏览器工作台与本机助手按本轮授权发布；独立源码仓库继续私有维护。
+
 ## 每轮维护
 
 | 日期 / 编号 | 主题及整体变化 | 检查与发布状态 |
 |---|---|---|
-| 2026-10-23<br>MAINT-20261023-02 | [ExperiAtlas访问修复与GitHub浏览器查询版](entries/2026-10-23-02.qmd)<br>将查询与公共参考分片迁到主站同一GitHub域名，保留每周上游检查及核验后激活。 | 48项软件测试、类型／静态构建、9项真实结果等价及25条件导出核对通过；公共分片约826MB。<br>GitHub browser release v0.2.2; main-site v0.3.1 candidate |
-| 2026-10-23<br>MAINT-20261023-01 | [ExperiAtlas公开上线与Data入口](entries/2026-10-23-01.qmd)<br>新增三物种基因／蛋白mapping、功能注释和精选表达查询；固定公共快照与个人测量分开。 | 38项软件测试、类型/生产构建及匿名远端13项检查通过；1,143分片全部校验；临时导入口和密钥已移除。<br>Atlas v0.2.1 public; main-site v0.3.0 release |
-| 2026-10-22<br>MAINT-20261022-03 | [仓库改名后的主站地址修复](entries/2026-10-22-03.qmd)<br>同步ExperiTome大小写、网站基址与引用链接，重新部署现有公开内容。 | v0.2.2修复版；保留既有实验方法、分析代码和计数功能；ExperiAtlas仍为本地审阅。 |
-| 2026-10-20<br>MAINT-20261020-01 | [共享计数公开接入与v0.2.1发布](entries/2026-10-20-01.qmd)<br>按明确授权公开独立计数服务并接入主站：新增浏览/点赞全站共享，刷新每日去重，点赞可取消。 | 5项SQLite核心、6项前端/SQLite组合测试通过；匿名GET/POST及跨域预检通过；公开包174源文件、110个HTML页面及本地113页链接检查通过；17份方法/分析/品牌文件哈希不变。<br>public counter enabled; v0.2.1 release candidate verified; deployment tracked in GitHub Actions |
+| 2026-10-25<br>MAINT-20261025-01 | [ExperiAnalysis、Atlas整合与作者页正式上线](entries/2026-10-25-01-public-analysis-profile.qmd)<br>按维护者明确授权发布ExperiTome v0.4.0，接入ExperiAnalysis v0.2.0浏览器工作台、独立本机助手下载、中英文作者页与Atlas目标ID入口；保留私有源码、原始数据和既有参考快照边界。 | 本轮发布检查进行中；最终公开允许清单、构建、软件回归、资源大小、下载指纹、部署与线上浏览器记录分别保存，不用旧报告替代。<br>v0.4.0 publication explicitly authorized; online/browser and optional local companion; private source repositories retained |
+| 2026-10-24<br>MAINT-20261024-02 | [ExperiTome母工作区、分析节点与作者页整合](entries/2026-10-24-02-experitome-workspace-nodes.qmd)<br>四项目迁入ExperiTome，保留独立仓库；清理已核验Atlas中间文件约7.36GiB；ExperiAnalysis升级为节点可选的本机/浏览器流程，加入DIA-NN报告、XIC与作者页。 | 四目录搬移，5仓库HEAD/状态及82原始资料指纹一致；Atlas4096分片及9项查询通过，清理256中间文件7898835280分配字节。32项JS、10项本机API、R节点/RNA回归、16项源报告重放、3份真实报告、4764万行XIC及24Run的first-pass覆盖检查通过。浏览器真实420MiB报告/样本表/模型、Welch/BY、MinProb显示范围、设置恢复和29文件ZIP校验通过。19份受保护文件不变；17条日志/协议/分析/作者资料检查通过；124页223文件链接检查无错。 Atlas新增入口后51项测试、类型/静态构建通过；浏览器预填ID及实际查询通过，RNA counts和表达探索入口通过。<br>local v0.2.0 review; private Analysis 3d90f7e and Atlas a2d0c03 synchronized; GitHub CI 40103834004 success; main v0.3.1 unchanged; no public deployment |
+| 2026-10-24<br>MAINT-20261024-01 | [ExperiAnalysis独立浏览器工作台与本地核验](entries/2026-10-24-01-experianalysis.qmd)<br>实现独立ExperiAnalysis v0.1.0，支持LFQ、基础RNA counts和表达探索；完成浏览器与原生R核验、500万行导入及工作区分离，私有GitHub仓库同步。 | 独立项目30项测试、130文件96023817字节运行库指纹、LFQ/RNA数值核对、三模式ZIP/Parquet/PNG/GMT浏览器流程通过；500万行仅导入压力检查通过。16条维护记录、6项分析入口和协议文档结构检查通过；19份受保护文件不变。2271归档文件SHA一致；GitHub Actions39990405727成功。<br>ExperiAnalysis v0.1.0 private GitHub main 40fb515 synchronized and CI passed; independent local preview; bootstrap archived; no public deployment |
+| 2026-10-23<br>MAINT-20261023-02 | [ExperiAtlas访问修复与GitHub浏览器查询版](entries/2026-10-23-02.qmd)<br>修复部分网络遭chatgpt.site前置层拦截的问题；将ExperiAtlas查询与公共参考分片迁至主站GitHub Pages同域，保留独立源码、完整映射与每周上游检查。 | 48项应用测试、3项归档校验测试、类型/静态构建、9项真实查询等价性通过；4096分片826MB指纹核验通过。完整公开站点839MB/4277文件/114 HTML、本地120 HTML链接检查无错；17份保护文件不变。公开浏览器批量查询及8项匿名HTTP版本/指纹核验通过；Actions39940374970构建/部署成功。<br>ExperiAtlas GitHub browser v0.2.2 live; main v0.3.1 deployed 38f80af; original Sites retained |
+| 2026-10-23<br>MAINT-20261023-01 | [ExperiAtlas公共部署、参考索引与主站入口](entries/2026-10-23-01.qmd)<br>完成ExperiAtlas三物种公共部署、固定版本参考数据与逐源许可说明；公开主站v0.3.0接通首页和Data入口。CeNGEN矩阵保持本地，仅提供官方链接。 | 公共1,143分片、3,575,967对象校验通过；39项应用测试、类型/生产构建及匿名13项远端验收通过，9项核心结果与本地有效快照精确一致。主站112个公开HTML页和119个本地HTML页链接检查通过；17份受保护文件指纹不变。7文件发布边界、正常Git推送及Actions39889888835构建/部署成功。实际E-MTAB25条件的阶段/性别提取与TSV一致性通过；最终界面修正版构建通过。<br>Atlas v0.2.1 public; main-site v0.3.0 deployed ef35166; source UI correction tested/pushed but hosted save blocked by upload transport errors |
+| 2026-10-22<br>MAINT-20261022-04 | [ExperiAtlas公开部署准备与暂停检查点](entries/2026-10-22-04.qmd)<br>按上线授权完成许可与托管架构预检、登记唯一私有Sites项目；维护者要求暂停，保存可恢复检查点，未执行公开部署或数据上传。 | 暂停前原生读取确认Sites版本0、无线上网址；Atlas跟踪文件仅hosting配置变化、现行路由未改、候选适配器尚未写入。仅运行总日志/文档结构检查，无本轮应用测试或站点重新渲染。<br>paused by user; private Site registered, no version/deployment/data upload; resume only on user request |
+| 2026-10-22<br>MAINT-20261022-03 | [ExperiAtlas视觉整理与主站改名修复](entries/2026-10-22-03.qmd)<br>改善工作台字号、配色和页面层次；独立核实仓库改名导致旧Pages地址404，限定11文件修复主站现行入口并重新部署。 | 23项核心测试、类型/生产构建、桌面与390/760px浏览器检查通过；公开111页、本地117页链接检查通过；11文件发布边界及17份受保护文件指纹不变；Actions构建/部署与7项线上检查通过。<br>main-site rename repair v0.2.2 deployed cf4f9cd; Atlas visual update local review and private code synchronization |
+| 2026-10-22<br>MAINT-20261022-02 | [ExperiAtlas独立工程、三物种身份与精选表达资源](entries/2026-10-22-02.qmd)<br>统一ExperiTome品牌与Data入口；分离ExperiAtlas工程，扩展三物种直接同源、名称登记、GO/Reactome及精选组织表达资源，建立候选更新与私有维护流程。 | 23项核心测试、类型和生产构建、12项最终HTTP检查通过；浏览器核对三物种查询、名称／组织／GO证据、5份表达与分页、精确异构体。61份资产指纹、17份受保护文件不变、192份旧原型源文件归档核验通过；私有仓库212份允许文件同步并核对。主站本地116页链接检查通过。 私有每周检查首次Actions成功，报告ZIP指纹核验及本地同步完成。<br>local v0.2.0 review; private repository synchronized at 7adf512; no public deployment |
+| 2026-10-22<br>MAINT-20261022-01 | [跨物种组学工作台首版：基因、蛋白与定量](entries/2026-10-22-01.qmd)<br>建立线虫↔小鼠身份、同源mapping、蛋白/异构体注释及表达/本地定量原型，增加Tools入口；固定公共快照并保留完整证据。 | 类型与构建、14项核心测试、8项本地HTTP检查通过；浏览器核实身份/异构体/多成员/重复行、25条件RNA表达及本地定量解析；mapping TSV与精确异构体FASTA下载核对通过。定量下载授权未通过，未重试或绕过。24份上游原件指纹一致，17份既有方法/分析/品牌文件未变；本地115页、候选公开112页链接检查通过，176源文件允许清单不含私人研究数据或services。<br>local review prototype; no remote publication |
+| 2026-10-20<br>MAINT-20261020-01 | [共享计数公开接入与v0.2.1发布](entries/2026-10-20-01.qmd)<br>按明确授权公开独立计数服务并接入主站：新增浏览/点赞全站共享，刷新每日去重，点赞可取消。 | 5项SQLite核心、6项前端/SQLite组合测试通过；匿名GET/POST及跨域预检通过；公开包174源文件、110个HTML页面及本地113页链接检查通过；17份方法/分析/品牌文件哈希不变。 GitHub Actions构建/检查/部署成功；6项线上页面/代码检查通过；线上浏览器与独立匿名读取验证共享值、点赞/取消及刷新去重。<br>v0.2.1 deployed; public shared counter connected; commit 2911095 |
 | 2026-10-19<br>MAINT-20261019-08 | [首页共享计数与匿名互动服务](entries/2026-10-19-08.qmd)<br>准备持久化共享浏览/点赞、每日去重、状态式点赞和断网重试；独立计数服务已私有部署，公开接入待授权。 | 5项SQLite核心、6项前端/SQLite组合测试通过；本机D1接口7次调用及实际浏览器点赞/取消/刷新通过；候选公开版109页、本地112页链接检查通过；17份受检方法/分析/品牌文件未变。私有服务部署成功。<br>counter service v1 deployed owner-private; anonymous public access pending |
 | 2026-10-19<br>MAINT-20261019-07 | [v0.2.0公开更新与发布检查](entries/2026-10-19-07.qmd)<br>按维护者新指令发布积累内容：补齐分析/绘图下载的公开清单，更新设备材料与规范模板、总日志、首页和标志；原始研究资料继续本地保存。 | 公开包171源文件、108个HTML页链接/锚点/大小写/公开文件检查通过；14项DIA-NN合成测试和总日志/编写标准/分析检查通过；12份方法/算法/品牌文件哈希不变；首页互动口径文案更新，6项行为检查通过。部署后10项页面/下载核验通过，5份下载与源文件一致；线上浏览器首页/分析入口、点赞/取消/刷新通过。<br>v0.2.0 deployed; commit 77980c4; GitHub Actions 39254628424 succeeded |
 | 2026-10-19<br>MAINT-20261019-06 | [Experitome标志设计与页眉应用](entries/2026-10-19-06.qmd)<br>使用生图模型设计深青色E/书页标志，透明PNG接入项目名称旁；保留原标志和首页横幅，附生成来源与维护记录。 | 1254px透明PNG及原图/副本哈希一致；110页链接、3项HTTP检查与实际浏览器展示通过；总日志/编写标准/分析检查通过；8方法、原占位图、横幅和互动组件共11文件未变。<br>local logo preview; publication deferred |

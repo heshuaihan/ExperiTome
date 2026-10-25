@@ -26,11 +26,11 @@ body-classes: "library-home research-home"
 ```
 
 ::: {.brand-hero}
-![](assets/experitome-hero.png){fig-alt="ExperiTome。Built on experience. Made for discovery. 一本研究记录展开为实验方法、分析流程和配套数据三条主线。"}
+![](assets/experitome-hero.png){fig-alt="ExperiTome。Built on experience. Made for discovery. 一本研究记录展开为实验方法、数据与分析三条主线。"}
 :::
 
 ::: {.library-lead}
-从实际研究经验出发，连接实验方法、数据资源与分析流程，让研究积累能够被理解、交流和复用。
+ExperiTome从实际研究经验出发，连接实验方法、ExperiAtlas数据入口与分析流程，让研究积累能够被理解、交流和复用。
 :::
 
 ::: {.library-meta}
@@ -63,11 +63,13 @@ Shuaihan He · 中文内容优先 · 持续维护
 ::: {.route-card}
 ### Analysis
 
-记录实际使用的分析方法、代码、参数和输出，方便回查与复核。
+导入 LFQ 蛋白组或基础转录组数据，逐节点选择参数，查看结果并导出图形和复现代码。
 
-**方法草案：**DIA-NN分析 → 报告filter → 常规流程、常用包与绘图风格
+**当前：**ExperiAnalysis v0.2.0 · 浏览器分析 · 可选本机助手
 
-[查看分析条目 →](analysis/index.qmd)
+[打开 ExperiAnalysis →](analysis/app/index.html){.btn .btn-primary}
+
+[方法与使用说明](analysis/index.qmd)
 :::
 :::
 
@@ -93,8 +95,9 @@ Shuaihan He · 中文内容优先 · 持续维护
 [来源](sources/index.qmd)
 [版本记录](review/versions/index.qmd)
 [绘图风格](analysis/plot-style.qmd)
+[ExperiAtlas数据入口](data/index.qmd)
 :::
 
 由 **何帅涵（Shuaihan He）** 个人维护。当前从线虫蛋白质组学与TurboID起步，按实际研究需要逐步扩展。
 
-[About](about.qmd) · [Roadmap](roadmap.qmd) · [License & Attribution](licensing/index.qmd)
+[作者简介与简历](profile/index.qmd) · [About](about.qmd) · [Roadmap](roadmap.qmd) · [License & Attribution](licensing/index.qmd)

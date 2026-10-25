@@ -1,0 +1,10 @@
+{
+  "component": "locfit",
+  "version": "1.5-9.12",
+  "numericalSources": "unchanged upstream",
+  "sourceSHA256": "fa31b9d407f3557a6fcb7105cbd7b16a32a6fb868a7c60bc38a3e33cb7a39343",
+  "binarySHA256": "88b53bba064d45027bbf3f5212e916ac5efddff49cee7585c762b3d68172214f",
+  "workflow": "https://github.com/heshuaihan/ExperiAnalysis/actions/runs/39980577180",
+  "image": "ghcr.io/r-wasm/webr@sha256:3fbf3dc3537c5b31bca94dd797dc25364693b18d71b1d0975f318fbfd6269d86",
+  "change": "Explicit Emscripten CC/C17 compiler selection only; see scripts/build_locfit.R"
+}

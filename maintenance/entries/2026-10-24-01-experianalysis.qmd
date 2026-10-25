@@ -1,0 +1,47 @@
+---
+title: "ExperiAnalysis 独立浏览器工作台与本地核验"
+maintenance_id: "MAINT-20261024-01"
+date: "2026-10-24"
+search: false
+---
+
+## 目的与项目边界
+
+将 LFQ 蛋白组与基础 bulk RNA-seq 分析实现为独立子项目 **ExperiAnalysis v0.1.0**。使用者可导入表格、调整筛选与样本设计、查看结果并导出报告，无需编写代码。主库仅保留 [Analysis 入口](../../analysis/index.qmd) 和 [范围说明](../../analysis/browser-workbench.qmd)；当前主本位于同级 ../ExperiAnalysis，软件与运行库均未留在主库活动目录。
+
+用户授权创建及同步的新 [GitHub 仓库](https://github.com/heshuaihan/ExperiAnalysis)已核验为私有，main 提交为 **40fb515706650506c8454f46ba82aa86ad71ec4b**，远端与本地一致、工作树干净。[Actions 39990405727](https://github.com/heshuaihan/ExperiAnalysis/actions/runs/39990405727) 完成测试与运行库核验。本轮未公开部署，亦未改动既有发布仓库或线上站点。
+
+## 软件功能与方法版本
+
+LFQ 支持矩阵与 DIA-NN 主报告（CSV/TSV/TXT/Parquet）。主报告按明确规则筛选前体行，保留上游 PG.MaxLFQ；重复值不相加，冲突值明确报错。技术重复在线性尺度合并后取 log2；默认不插补、不追加归一化。两组差异使用 limma；单组全缺失保留检出状态，不生成虚构 P 值。
+
+RNA 原始 counts 使用 edgeR 的 filterByExpr、TMM 与 quasi-likelihood 两组比较。TPM/FPKM 仅供表达探索，界面与报告不生成差异 P/FDR 或显著基因富集。两种正式模型均只支持独立两组、每组至少两个生物学样本，少于三个时提醒；配对、多因素、时间序列、FASTQ 与原始仪器文件不在范围内。
+
+可导出 SVG/PNG、结果表、配置与审计记录、HTML/ZIP；结果包区分输入汇总矩阵、QC 矩阵和实际模型矩阵。通路解释支持内置 Reactome 与自定义 GMT 的过度富集。原有实验协议及六篇分析方法文档版本均未变化，标准仍为 v0.2；软件检查不等于实验验证。
+
+## 来源、许可与获取限制
+
+软件使用 WebR 0.6.0 / R 4.6.0、DuckDB WASM 1.32.0、limma 3.68.5、edgeR 4.10.7、statmod 1.5.2、locfit 1.5-9.12、lattice 0.23-1、jsonlite 2.0.0。固定浏览器包、逐文件指纹和各组件许可随独立项目保留。DuckDB 的 Arrow 依赖通过锁文件打包为浏览器 ESM，保留 Apache Arrow 等原始许可。
+
+locfit 从[官方版本源码](https://cran.r-project.org/src/contrib/locfit_1.5-9.12.tar.gz)在固定 WebR 镜像构建；[构建记录](https://github.com/heshuaihan/ExperiAnalysis/actions/runs/39980577180)及原始源码、二进制指纹均保留。为修复上游 r-wasm/rwasm issue 62，显式指定 Emscripten C/C17 编译器，仅调整工具链配置，未修改数值算法。部分官方包下载端对默认客户端返回 403，改用普通明确 User-Agent 后获取成功；没有把访问失败误作资源不存在。
+
+通路包固定为 [Reactome 97](https://reactome.org/download/current/) 的线虫、小鼠和人快照。Reactome 为 CC0，UniProt、HGNC 与 MGI 映射分别保留 CC BY 4.0、CC0、CC BY 4.0 归属。精确稳定 ID 与唯一映射才进入计算，歧义候选保留，不扩展为多个观测；映射覆盖不足逐项登记。逐源记录位于独立项目 data/manifest.json。
+
+GitHub 项目调研参考 [AMICA](https://github.com/tbaccata/amica)、[AlphaPeptStats](https://github.com/MannLabs/alphapeptstats) 和 [DIA-NN](https://github.com/vdemichev/DiaNN)。实际集成采用 DIA-NN 输出接口与可复查的统计组件，没有把这些项目整体复制或将其名称当作内置依赖。
+
+## 实际核验
+
+- 独立项目 30 项测试通过；130 个运行库文件的 SHA-256 和总大小核验通过，合计 96,023,817 bytes，低于 100,000,000 bytes。
+- 浏览器 LFQ 与原生 R 在 238 个可检验条目的 logFC/P/FDR 最大绝对差均为 0；RNA 240 个基因的最大 FDR 差为 4.99×10⁻¹¹。此结论仅覆盖记录的合成测试输入。
+- 三种模式均实际计算并下载 ZIP，CRC 通过；表达探索不含推断结果列。Parquet 报告 2,880 行输入、2,876 行保留，通过分析及 21 文件结果包导出；冲突定量与缺少必要列均被明确拒绝。
+- 5,000,000 行合成 Parquet（25,336,414 bytes）实际导入成功：100 runs、10,000 蛋白组、1,000,000 个数值、无缺失。此压力检查覆盖导入，未运行该尺寸的完整差异模型。
+- 自定义 GMT 实际完成两个集合检验，包含零重叠集合；PNG 实际导出并解码为 968×652。SVG、配置、方法和输入指纹随 ZIP 保留。
+- 维护日志、六项分析入口/下载完整性、协议文档结构检查均通过；19 份受保护协议/方法文件的指纹不变。已刷新索引与模板；本地站点渲染和链接检查另存当次生成报告。
+
+测试仅使用合成材料，没有读取或上传研究原始数据。输入在浏览器内处理，运行库与参考包来自同域静态文件，没有分析后端或用户跟踪。
+
+## 分离、归档与未覆盖范围
+
+临时 analysis/workbench 与三个启动期辅助脚本已移至 archive/workspace/20261024-experianalysis，保留原相对路径。2,271 个文件、315,998,444 bytes 搬移前后逐一 SHA-256 核对通过；file-manifest.json 和 relocation-manifest.json 可用于恢复。归档不代表释放空间，也没有永久删除文件。最终辅助脚本在独立项目 scripts/ 维护。
+
+当前交付为可运行的本地预览与私有源码仓库。公开上线需要后续明确安排；尚未覆盖所有真实项目、复杂设计、浏览器/设备组合或大尺寸完整分析。软件数值核对不支持任何新增生物学或因果结论。

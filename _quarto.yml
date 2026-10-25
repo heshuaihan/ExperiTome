@@ -2,9 +2,11 @@ project:
   type: website
   output-dir: _site
   pre-render:
+    - python scripts/build_profile.py
     - python scripts/build_public.py
   render:
     - about.qmd
+    - analysis/browser-workbench.qmd
     - analysis/diann-filter.qmd
     - analysis/diann-settings.qmd
     - analysis/index.qmd
@@ -25,9 +27,15 @@ project:
     - maintenance/entries/2026-10-19-07.qmd
     - maintenance/entries/2026-10-19-08.qmd
     - maintenance/entries/2026-10-20-01.qmd
+    - maintenance/entries/2026-10-22-01.qmd
+    - maintenance/entries/2026-10-22-02.qmd
     - maintenance/entries/2026-10-22-03.qmd
+    - maintenance/entries/2026-10-22-04.qmd
     - maintenance/entries/2026-10-23-01.qmd
     - maintenance/entries/2026-10-23-02.qmd
+    - maintenance/entries/2026-10-24-01-experianalysis.qmd
+    - maintenance/entries/2026-10-24-02-experitome-workspace-nodes.qmd
+    - maintenance/entries/2026-10-25-01-public-analysis-profile.qmd
     - maintenance/index.qmd
     - materials/buffers/BUF-BCA-001_工作液.qmd
     - materials/buffers/BUF-TURBOID-001_富集缓冲液.qmd
@@ -66,6 +74,7 @@ project:
     - materials/reagents/MAT-102_identity.qmd
     - materials/reagents/MAT-103_identity.qmd
     - materials/reagents/MAT-104_identity.qmd
+    - profile/index.qmd
     - protocols/index.qmd
     - protocols/modules/MOD-PROT-001_蛋白定量与留样.qmd
     - protocols/modules/MOD-PROT-002_蛋白沉淀.qmd
@@ -116,14 +125,17 @@ project:
     - standards/index.qmd
     - standards/quality-checklist.qmd
     - standards/reference-frameworks.qmd
+    - tools/index.qmd
   resources:
     - atlas/**
+    - analysis/app/**
     - LICENSE
     - LICENSES/*.txt
     - LICENSES/*.json
     - AUTHORS.md
     - CONTRIBUTING.md
     - CITATION.cff
+    - profile/public-cv.md
     - assets/**
     - materials/reagent_catalog.csv
     - templates/*.txt
@@ -148,14 +160,16 @@ website:
         href: materials/index.qmd
       - text: About
         href: about.qmd
+      - text: Author
+        href: profile/index.qmd
   sidebar:
     style: docked
     collapse-level: 1
     contents:
       - index.qmd
       - protocols/index.qmd
-      - analysis/index.qmd
       - data/index.qmd
+      - analysis/index.qmd
       - section: 实验路线
         contents:
           - protocols/worm/PROT-WORM-001_线虫蛋白质质谱样品制备.qmd
@@ -178,6 +192,7 @@ website:
           - standards/index.qmd
           - sources/index.qmd
           - about.qmd
+          - profile/index.qmd
           - roadmap.qmd
           - licensing/index.qmd
       - section: 版本与维护

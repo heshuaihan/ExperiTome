@@ -3,7 +3,7 @@ title: "网站维护与发布"
 search: false
 ---
 
-本目录为Experitome的中文网站源文件。项目名为英文，内容以中文为主；Analysis包含DIA-NN设置/filter、常规流程、常用包、实例习惯和绘图风格，Data仍为规划。安装 Quarto 1.10.18 与 Python 3 后，运行 `quarto render`，生成 `_site/`；构建前自动更新模块元信息和材料索引。
+本目录为ExperiTome的网站源文件。Data入口提供ExperiAtlas固定版本参考查询，Analysis提供ExperiAnalysis浏览器工作台与可选本机助手，Author提供中英文作者页。安装 Quarto 1.10.18 与 Python 3 后，运行 `quarto render`，生成 `_site/`；构建前自动更新公开索引。
 
 ## 维护
 
@@ -11,6 +11,6 @@ search: false
 
 ## 发布
 
-作者与单位见[About](../about.qmd)，许可文件见[许可范围](../licensing/index.qmd)。项目名称为Experitome；确认GitHub发布信息后，将源文件放入独立发布仓库。具体操作见[首次发布步骤](launch-checklist.qmd)。在仓库 Pages 设置选择 GitHub Actions。工作流在 main 更新或手动触发时构建、检查并部署；PR 仅构建检查。实际域名和仓库子路径应在部署后复查。
+作者与单位见[About](../about.qmd)，许可文件见[许可范围](../licensing/index.qmd)。项目名称为ExperiTome；确认GitHub发布信息后，将源文件放入独立发布仓库。具体操作见[首次发布步骤](launch-checklist.qmd)。在仓库 Pages 设置选择 GitHub Actions。工作流在 main 更新或手动触发时构建、检查并部署；PR 仅构建检查。实际域名和仓库子路径应在部署后复查。
 
 官方部署说明：[Quarto](https://quarto.org/docs/publishing/github-pages.html) · [GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)。

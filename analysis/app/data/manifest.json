@@ -1,0 +1,454 @@
+{
+  "files": [
+    {
+      "bytes": 869367,
+      "counts": {
+        "aliasCount": 149295,
+        "aliasesWithMultipleCandidates": 322,
+        "ambiguousAssociationRows": 0,
+        "ambiguousSymbolAliasesOmitted": 797,
+        "distinctMemberGenes": 4451,
+        "pathwayCount": 1409,
+        "pathwaysWithMembers": 1409,
+        "proteinRecordsWithStableGenes": 26617,
+        "resolvedAssociationRows": 68505,
+        "sourceAssociations": 92901,
+        "symbolAliasesIncluded": 47375,
+        "uniqueMemberships": 43500,
+        "unmappedAssociationRows": 24396
+      },
+      "path": "reactome-worm-6239-v97.json.gz",
+      "sha256": "e267e6bc910c32de86b0de1890eb6d3f7867ef1eb6011000d50dd5e2de76a7fb",
+      "source": {
+        "assets": {
+          "associations.jsonl": {
+            "bytes": 444908221,
+            "sha256": "40e9ffc0317b972c227e73e0a74d62e9509633a8c0ba60a096f72e7cd6d7fa85"
+          },
+          "pathways.jsonl": {
+            "bytes": 1187671,
+            "sha256": "81c7f119c70e212ab989a8f49be312b2927ff205537c725c3680ebb5ab2c43a3"
+          }
+        },
+        "attribution": [
+          "Reactome pathway data (CC0 1.0)",
+          "UniProtKB (CC BY 4.0)"
+        ],
+        "identifierMappings": [
+          {
+            "asset": {
+              "bytes": 2105386424,
+              "path": "records.jsonl",
+              "sha256": "76ed9ff2bec8fdbbc903ba180abcae88fea76c986d0cd69f648b2825803520d2"
+            },
+            "license": {
+              "name": "CC BY 4.0",
+              "url": "https://www.uniprot.org/help/license"
+            },
+            "name": "UniProtKB",
+            "retrieved": "2026-10-22T09:50:56.947785+00:00",
+            "scope": "Exact Ensembl/EnsemblMetazoa/WormBase GeneId links; accession, transcript, protein, and gene-name candidates.",
+            "url": "https://www.uniprot.org/",
+            "version": "2026_03"
+          }
+        ],
+        "license": {
+          "name": "CC0 1.0 (Reactome data and annotation files)",
+          "url": "https://reactome.org/license"
+        },
+        "resolutionPolicy": "Pathway members are stable gene IDs resolved by exact source IDs. Only one-candidate mappings enter membership; ambiguous or unresolved associations are excluded and counted in the bundle manifest. Alias values are candidate arrays. Gene symbols are included only when uniquely mapped.",
+        "retrieved": "2026-10-22T09:39:09Z",
+        "sha256": {
+          "associations.jsonl": "40e9ffc0317b972c227e73e0a74d62e9509633a8c0ba60a096f72e7cd6d7fa85",
+          "pathways.jsonl": "81c7f119c70e212ab989a8f49be312b2927ff205537c725c3680ebb5ab2c43a3"
+        },
+        "url": "https://reactome.org/download/current/"
+      },
+      "species": "worm"
+    },
+    {
+      "bytes": 1330021,
+      "counts": {
+        "aliasCount": 175133,
+        "aliasesWithMultipleCandidates": 0,
+        "ambiguousAssociationRows": 0,
+        "ambiguousSymbolAliasesOmitted": 768,
+        "distinctMemberGenes": 9316,
+        "pathwayCount": 1845,
+        "pathwaysWithMembers": 1843,
+        "proteinRecordsWithStableGenes": 86,
+        "resolvedAssociationRows": 95157,
+        "sourceAssociations": 371099,
+        "symbolAliasesIncluded": 111089,
+        "uniqueMemberships": 94267,
+        "unmappedAssociationRows": 275942
+      },
+      "path": "reactome-mouse-10090-v97.json.gz",
+      "sha256": "2a87f833c4a5e9f51820b57a6686a977aab72a3eb7a9259ca8fb2b58ed284077",
+      "source": {
+        "assets": {
+          "associations.jsonl": {
+            "bytes": 444908221,
+            "sha256": "40e9ffc0317b972c227e73e0a74d62e9509633a8c0ba60a096f72e7cd6d7fa85"
+          },
+          "pathways.jsonl": {
+            "bytes": 1187671,
+            "sha256": "81c7f119c70e212ab989a8f49be312b2927ff205537c725c3680ebb5ab2c43a3"
+          }
+        },
+        "attribution": [
+          "Reactome pathway data (CC0 1.0)",
+          "UniProtKB (CC BY 4.0)",
+          "Mouse Genome Informatics (CC BY 4.0)"
+        ],
+        "identifierMappings": [
+          {
+            "asset": {
+              "bytes": 2105386424,
+              "path": "records.jsonl",
+              "sha256": "76ed9ff2bec8fdbbc903ba180abcae88fea76c986d0cd69f648b2825803520d2"
+            },
+            "license": {
+              "name": "CC BY 4.0",
+              "url": "https://www.uniprot.org/help/license"
+            },
+            "name": "UniProtKB",
+            "retrieved": "2026-10-22T09:50:56.947785+00:00",
+            "scope": "Exact Ensembl/EnsemblMetazoa/WormBase GeneId links; accession, transcript, protein, and gene-name candidates.",
+            "url": "https://www.uniprot.org/",
+            "version": "2026_03"
+          },
+          {
+            "asset": {
+              "bytes": 70745525,
+              "path": "genes.jsonl",
+              "sha256": "dbd0cedf25f283d4b3cebb32c548e6c6bebb04866205627493046767bcda34b8"
+            },
+            "license": {
+              "name": "CC BY 4.0",
+              "url": "https://www.informatics.jax.org/mgihome/other/copyright.shtml"
+            },
+            "name": "Mouse Genome Informatics",
+            "retrieved": "2026-10-22T09:55:15.823406+00:00",
+            "scope": "Current official symbol and unique aliases linked to exact Ensembl gene IDs.",
+            "url": "https://www.informatics.jax.org/mgihome/other/copyright.shtml",
+            "version": "MGI 6.29; database update 2026-10-06"
+          }
+        ],
+        "license": {
+          "name": "CC0 1.0 (Reactome data and annotation files)",
+          "url": "https://reactome.org/license"
+        },
+        "resolutionPolicy": "Pathway members are stable gene IDs resolved by exact source IDs. Only one-candidate mappings enter membership; ambiguous or unresolved associations are excluded and counted in the bundle manifest. Alias values are candidate arrays. Gene symbols are included only when uniquely mapped.",
+        "retrieved": "2026-10-22T09:39:09Z",
+        "sha256": {
+          "associations.jsonl": "40e9ffc0317b972c227e73e0a74d62e9509633a8c0ba60a096f72e7cd6d7fa85",
+          "pathways.jsonl": "81c7f119c70e212ab989a8f49be312b2927ff205537c725c3680ebb5ab2c43a3"
+        },
+        "url": "https://reactome.org/download/current/"
+      },
+      "species": "mouse"
+    },
+    {
+      "bytes": 2017865,
+      "counts": {
+        "aliasCount": 270841,
+        "aliasesWithMultipleCandidates": 754,
+        "ambiguousAssociationRows": 0,
+        "ambiguousSymbolAliasesOmitted": 2985,
+        "distinctMemberGenes": 13074,
+        "pathwayCount": 2883,
+        "pathwaysWithMembers": 2837,
+        "proteinRecordsWithStableGenes": 20747,
+        "resolvedAssociationRows": 172562,
+        "sourceAssociations": 1003115,
+        "symbolAliasesIncluded": 101592,
+        "uniqueMemberships": 158222,
+        "unmappedAssociationRows": 830553
+      },
+      "path": "reactome-human-9606-v97.json.gz",
+      "sha256": "08a2d001dac87c3b6ae05335f80c1fc3cdc5138cb96ea62d09ff7256840b4392",
+      "source": {
+        "assets": {
+          "associations.jsonl": {
+            "bytes": 444908221,
+            "sha256": "40e9ffc0317b972c227e73e0a74d62e9509633a8c0ba60a096f72e7cd6d7fa85"
+          },
+          "pathways.jsonl": {
+            "bytes": 1187671,
+            "sha256": "81c7f119c70e212ab989a8f49be312b2927ff205537c725c3680ebb5ab2c43a3"
+          }
+        },
+        "attribution": [
+          "Reactome pathway data (CC0 1.0)",
+          "UniProtKB (CC BY 4.0)",
+          "HGNC (CC0)"
+        ],
+        "identifierMappings": [
+          {
+            "asset": {
+              "bytes": 2105386424,
+              "path": "records.jsonl",
+              "sha256": "76ed9ff2bec8fdbbc903ba180abcae88fea76c986d0cd69f648b2825803520d2"
+            },
+            "license": {
+              "name": "CC BY 4.0",
+              "url": "https://www.uniprot.org/help/license"
+            },
+            "name": "UniProtKB",
+            "retrieved": "2026-10-22T09:50:56.947785+00:00",
+            "scope": "Exact Ensembl/EnsemblMetazoa/WormBase GeneId links; accession, transcript, protein, and gene-name candidates.",
+            "url": "https://www.uniprot.org/",
+            "version": "2026_03"
+          },
+          {
+            "asset": {
+              "bytes": 70745525,
+              "path": "genes.jsonl",
+              "sha256": "dbd0cedf25f283d4b3cebb32c548e6c6bebb04866205627493046767bcda34b8"
+            },
+            "license": {
+              "name": "CC0",
+              "url": "https://hgnc.genenames.org/about/license/"
+            },
+            "name": "HGNC",
+            "retrieved": "2026-10-22T09:55:15.823406+00:00",
+            "scope": "Current official symbol and unique aliases linked to exact Ensembl gene IDs.",
+            "url": "https://hgnc.genenames.org/about/license/",
+            "version": "complete set snapshot; last-modified Fri, 16 Oct 2026 13:36:15 GMT"
+          }
+        ],
+        "license": {
+          "name": "CC0 1.0 (Reactome data and annotation files)",
+          "url": "https://reactome.org/license"
+        },
+        "resolutionPolicy": "Pathway members are stable gene IDs resolved by exact source IDs. Only one-candidate mappings enter membership; ambiguous or unresolved associations are excluded and counted in the bundle manifest. Alias values are candidate arrays. Gene symbols are included only when uniquely mapped.",
+        "retrieved": "2026-10-22T09:39:09Z",
+        "sha256": {
+          "associations.jsonl": "40e9ffc0317b972c227e73e0a74d62e9509633a8c0ba60a096f72e7cd6d7fa85",
+          "pathways.jsonl": "81c7f119c70e212ab989a8f49be312b2927ff205537c725c3680ebb5ab2c43a3"
+        },
+        "url": "https://reactome.org/download/current/"
+      },
+      "species": "human"
+    }
+  ],
+  "id": "analysis-reactome-ora-reference",
+  "inputSnapshots": {
+    "identities": {
+      "asset": {
+        "bytes": 70745525,
+        "path": "genes.jsonl",
+        "rows": 106378,
+        "sha256": "dbd0cedf25f283d4b3cebb32c548e6c6bebb04866205627493046767bcda34b8"
+      },
+      "version": "HGNC complete set snapshot; last-modified Fri, 16 Oct 2026 13:36:15 GMT; MGI 6.29; database update 2026-10-06"
+    },
+    "reactome": {
+      "assets": {
+        "associations.jsonl": {
+          "bytes": 444908221,
+          "path": "associations.jsonl",
+          "rows": 1467115,
+          "sha256": "40e9ffc0317b972c227e73e0a74d62e9509633a8c0ba60a096f72e7cd6d7fa85"
+        },
+        "pathways.jsonl": {
+          "bytes": 1187671,
+          "path": "pathways.jsonl",
+          "rows": 6137,
+          "sha256": "81c7f119c70e212ab989a8f49be312b2927ff205537c725c3680ebb5ab2c43a3"
+        }
+      },
+      "version": "97"
+    },
+    "uniprot": {
+      "asset": {
+        "bytes": 2105386424,
+        "path": "records.jsonl",
+        "rows": 326249,
+        "sha256": "76ed9ff2bec8fdbbc903ba180abcae88fea76c986d0cd69f648b2825803520d2"
+      },
+      "version": "2026_03"
+    }
+  },
+  "limitations": [
+    "Membership is limited to exact Reactome associations resolved to a single stable gene ID; ambiguous and unmapped association rows are counted and excluded.",
+    "Protein accessions and exact protein/transcript identifiers retain candidate arrays; downstream analysis must resolve grouped/ambiguous inputs without treating candidates as independent observations.",
+    "The approved identity-v02 snapshot contains official HGNC and MGI records, but no separate WormBase gene catalog; worm aliases are limited to exact names in UniProtKB records and unique mappings.",
+    "This bundle contains pathway memberships and exact ID aliases only; it does not include Reactome hierarchy, evidence codes, pathway inference status, expression values, or descriptions."
+  ],
+  "name": "Offline Reactome ORA reference bundles",
+  "schemaVersion": 1,
+  "sources": {
+    "human": {
+      "assets": {
+        "associations.jsonl": {
+          "bytes": 444908221,
+          "sha256": "40e9ffc0317b972c227e73e0a74d62e9509633a8c0ba60a096f72e7cd6d7fa85"
+        },
+        "pathways.jsonl": {
+          "bytes": 1187671,
+          "sha256": "81c7f119c70e212ab989a8f49be312b2927ff205537c725c3680ebb5ab2c43a3"
+        }
+      },
+      "attribution": [
+        "Reactome pathway data (CC0 1.0)",
+        "UniProtKB (CC BY 4.0)",
+        "HGNC (CC0)"
+      ],
+      "identifierMappings": [
+        {
+          "asset": {
+            "bytes": 2105386424,
+            "path": "records.jsonl",
+            "sha256": "76ed9ff2bec8fdbbc903ba180abcae88fea76c986d0cd69f648b2825803520d2"
+          },
+          "license": {
+            "name": "CC BY 4.0",
+            "url": "https://www.uniprot.org/help/license"
+          },
+          "name": "UniProtKB",
+          "retrieved": "2026-10-22T09:50:56.947785+00:00",
+          "scope": "Exact Ensembl/EnsemblMetazoa/WormBase GeneId links; accession, transcript, protein, and gene-name candidates.",
+          "url": "https://www.uniprot.org/",
+          "version": "2026_03"
+        },
+        {
+          "asset": {
+            "bytes": 70745525,
+            "path": "genes.jsonl",
+            "sha256": "dbd0cedf25f283d4b3cebb32c548e6c6bebb04866205627493046767bcda34b8"
+          },
+          "license": {
+            "name": "CC0",
+            "url": "https://hgnc.genenames.org/about/license/"
+          },
+          "name": "HGNC",
+          "retrieved": "2026-10-22T09:55:15.823406+00:00",
+          "scope": "Current official symbol and unique aliases linked to exact Ensembl gene IDs.",
+          "url": "https://hgnc.genenames.org/about/license/",
+          "version": "complete set snapshot; last-modified Fri, 16 Oct 2026 13:36:15 GMT"
+        }
+      ],
+      "license": {
+        "name": "CC0 1.0 (Reactome data and annotation files)",
+        "url": "https://reactome.org/license"
+      },
+      "resolutionPolicy": "Pathway members are stable gene IDs resolved by exact source IDs. Only one-candidate mappings enter membership; ambiguous or unresolved associations are excluded and counted in the bundle manifest. Alias values are candidate arrays. Gene symbols are included only when uniquely mapped.",
+      "retrieved": "2026-10-22T09:39:09Z",
+      "sha256": {
+        "associations.jsonl": "40e9ffc0317b972c227e73e0a74d62e9509633a8c0ba60a096f72e7cd6d7fa85",
+        "pathways.jsonl": "81c7f119c70e212ab989a8f49be312b2927ff205537c725c3680ebb5ab2c43a3"
+      },
+      "url": "https://reactome.org/download/current/"
+    },
+    "mouse": {
+      "assets": {
+        "associations.jsonl": {
+          "bytes": 444908221,
+          "sha256": "40e9ffc0317b972c227e73e0a74d62e9509633a8c0ba60a096f72e7cd6d7fa85"
+        },
+        "pathways.jsonl": {
+          "bytes": 1187671,
+          "sha256": "81c7f119c70e212ab989a8f49be312b2927ff205537c725c3680ebb5ab2c43a3"
+        }
+      },
+      "attribution": [
+        "Reactome pathway data (CC0 1.0)",
+        "UniProtKB (CC BY 4.0)",
+        "Mouse Genome Informatics (CC BY 4.0)"
+      ],
+      "identifierMappings": [
+        {
+          "asset": {
+            "bytes": 2105386424,
+            "path": "records.jsonl",
+            "sha256": "76ed9ff2bec8fdbbc903ba180abcae88fea76c986d0cd69f648b2825803520d2"
+          },
+          "license": {
+            "name": "CC BY 4.0",
+            "url": "https://www.uniprot.org/help/license"
+          },
+          "name": "UniProtKB",
+          "retrieved": "2026-10-22T09:50:56.947785+00:00",
+          "scope": "Exact Ensembl/EnsemblMetazoa/WormBase GeneId links; accession, transcript, protein, and gene-name candidates.",
+          "url": "https://www.uniprot.org/",
+          "version": "2026_03"
+        },
+        {
+          "asset": {
+            "bytes": 70745525,
+            "path": "genes.jsonl",
+            "sha256": "dbd0cedf25f283d4b3cebb32c548e6c6bebb04866205627493046767bcda34b8"
+          },
+          "license": {
+            "name": "CC BY 4.0",
+            "url": "https://www.informatics.jax.org/mgihome/other/copyright.shtml"
+          },
+          "name": "Mouse Genome Informatics",
+          "retrieved": "2026-10-22T09:55:15.823406+00:00",
+          "scope": "Current official symbol and unique aliases linked to exact Ensembl gene IDs.",
+          "url": "https://www.informatics.jax.org/mgihome/other/copyright.shtml",
+          "version": "MGI 6.29; database update 2026-10-06"
+        }
+      ],
+      "license": {
+        "name": "CC0 1.0 (Reactome data and annotation files)",
+        "url": "https://reactome.org/license"
+      },
+      "resolutionPolicy": "Pathway members are stable gene IDs resolved by exact source IDs. Only one-candidate mappings enter membership; ambiguous or unresolved associations are excluded and counted in the bundle manifest. Alias values are candidate arrays. Gene symbols are included only when uniquely mapped.",
+      "retrieved": "2026-10-22T09:39:09Z",
+      "sha256": {
+        "associations.jsonl": "40e9ffc0317b972c227e73e0a74d62e9509633a8c0ba60a096f72e7cd6d7fa85",
+        "pathways.jsonl": "81c7f119c70e212ab989a8f49be312b2927ff205537c725c3680ebb5ab2c43a3"
+      },
+      "url": "https://reactome.org/download/current/"
+    },
+    "worm": {
+      "assets": {
+        "associations.jsonl": {
+          "bytes": 444908221,
+          "sha256": "40e9ffc0317b972c227e73e0a74d62e9509633a8c0ba60a096f72e7cd6d7fa85"
+        },
+        "pathways.jsonl": {
+          "bytes": 1187671,
+          "sha256": "81c7f119c70e212ab989a8f49be312b2927ff205537c725c3680ebb5ab2c43a3"
+        }
+      },
+      "attribution": [
+        "Reactome pathway data (CC0 1.0)",
+        "UniProtKB (CC BY 4.0)"
+      ],
+      "identifierMappings": [
+        {
+          "asset": {
+            "bytes": 2105386424,
+            "path": "records.jsonl",
+            "sha256": "76ed9ff2bec8fdbbc903ba180abcae88fea76c986d0cd69f648b2825803520d2"
+          },
+          "license": {
+            "name": "CC BY 4.0",
+            "url": "https://www.uniprot.org/help/license"
+          },
+          "name": "UniProtKB",
+          "retrieved": "2026-10-22T09:50:56.947785+00:00",
+          "scope": "Exact Ensembl/EnsemblMetazoa/WormBase GeneId links; accession, transcript, protein, and gene-name candidates.",
+          "url": "https://www.uniprot.org/",
+          "version": "2026_03"
+        }
+      ],
+      "license": {
+        "name": "CC0 1.0 (Reactome data and annotation files)",
+        "url": "https://reactome.org/license"
+      },
+      "resolutionPolicy": "Pathway members are stable gene IDs resolved by exact source IDs. Only one-candidate mappings enter membership; ambiguous or unresolved associations are excluded and counted in the bundle manifest. Alias values are candidate arrays. Gene symbols are included only when uniquely mapped.",
+      "retrieved": "2026-10-22T09:39:09Z",
+      "sha256": {
+        "associations.jsonl": "40e9ffc0317b972c227e73e0a74d62e9509633a8c0ba60a096f72e7cd6d7fa85",
+        "pathways.jsonl": "81c7f119c70e212ab989a8f49be312b2927ff205537c725c3680ebb5ab2c43a3"
+      },
+      "url": "https://reactome.org/download/current/"
+    }
+  },
+  "version": "97"
+}

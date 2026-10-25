@@ -1,0 +1,11 @@
+---
+title: "Tools · 兼容入口"
+subtitle: "ExperiAtlas 已归入 Data"
+description: "旧 Tools 路由的兼容导读。"
+---
+
+此页面保留旧 `/tools/` 路由，便于访问既有书签。ExperiTome 的主导航入口已整理为 **Protocols、Data、Analysis**；跨物种数据产品统一从 **Data → ExperiAtlas** 进入。
+
+[前往 Data / ExperiAtlas →](../data/index.qmd)
+
+旧原型的资料与历史记录仍按其原位置保留，待ExperiAtlas v0.2验收后再完成归档整理。该页面不是独立服务入口，也不表示产品已上线。

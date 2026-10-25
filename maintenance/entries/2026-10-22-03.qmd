@@ -1,20 +1,36 @@
 ---
-title: "仓库改名后的主站地址修复"
+title: "ExperiAtlas视觉整理与主站改名修复"
 maintenance_id: "MAINT-20261022-03"
 date: "2026-10-22"
 search: false
 ---
 
-## 目的与范围
+## 整体目的与范围
 
-维护者将仓库改名为ExperiTome后请求修复主站访问。本次v0.2.2只修复既有公开版的网站基址、品牌大小写及现行入口链接，并重新运行构建和部署。新地址为[ExperiTome](https://heshuaihan.github.io/ExperiTome/)。
+按维护者请求改善ExperiAtlas的前端可读性，并修复仓库改名为ExperiTome后的主站地址。由两个gpt-6-luna Max子Agent分别承担限定CSS整理和独立只读故障核查，主Agent复核、构建、验收和发布。
 
-## 版本与检查
+## 方法版本与界面
 
-实验方法及分析算法版本不变；共享浏览／点赞服务配置不变。部署前检查受保护文件与限定变更清单，并运行Quarto构建及公开站点链接检查；部署状态以本次GitHub Actions和实际网页为准。
+实验方法和分析算法版本不变。ExperiAtlas仍为本地v0.2审阅版：统一暖白、浅绿与深青配色，增大正文、表单、注释和表格字体，调整行距、标题层级、卡片、按钮及键盘焦点；优化760px与460px断点。保留基因斜体、稳定ID正体及来源／缺失值／异构体边界。数据库、映射规则和计数服务未改。
 
-GitHub Pages项目地址包含仓库名；仓库改名不保证旧Pages网址自动跳转。参考[GitHub官方改名说明](https://docs.github.com/en/repositories/creating-and-managing-repositories/renaming-a-repository)。
+## 主站故障与修复
 
-## 后续内容
+只读HTTP检查确认旧路径`/Experitome/`返回404，新路径`/ExperiTome/`返回200；原公开About等现行入口仍指向旧路径。Pages设置已识别新仓库，发布源继续为GitHub Actions，未更改域名或安全设置。
 
-ExperiAtlas界面优化和扩展数据库仍在本地审阅，其代码、参考数据和私人研究文件没有随此修复版公开。整体维护主本另保留本轮界面检查记录；本页是公开修复范围的摘录。文档和软件检查不等于实验验证。
+以原公开提交`29110951b05706e950aea01024eb3ffcf8679534`为基线，仅更新11个允许文件：网站基址、品牌大小写、现行文档链接、工作流显示名称及本次公开维护摘录。没有用本地全量发布生成器覆盖公开仓库。公开v0.2.2提交为`cf4f9cd211790f3ec09ac524622323a1d64569df`，已正常推送，无历史改写。
+
+[GitHub官方仓库改名说明](https://docs.github.com/en/repositories/creating-and-managing-repositories/renaming-a-repository)明确项目Pages地址不随旧仓库地址自动跳转。新主站为[ExperiTome](https://heshuaihan.github.io/ExperiTome/)。历史维护记录中旧网址保留为当时记录，旧收藏需更新；本轮没有创建额外占名仓库作跳转。
+
+## 实际检查与发布状态
+
+公开修复包：111个HTML、172文件链接检查通过；11文件限定变更清单通过；17个既有方法／分析／品牌／计数文件指纹不变。首次临时构建发现新增日志的YAML缩进错误，修正后在第三个全新隔离工程完整构建通过，前两份失败日志保留。
+
+ExperiAtlas：TypeScript、生产构建及23项既有核心测试通过；浏览器检查5行真实ID查询（4匹配、1未知）、基因详情与斜体、RNA公共表达、来源状态和390px／760px布局，无整页横向溢出。桌面正文16px、表格和表单15px；定量下载未重试。原始JSON及快照未因版式变动重建。
+
+公开主站：[Actions 39767898435](https://github.com/heshuaihan/ExperiTome/actions/runs/39767898435)的build与deploy均成功；7项独立HTTP与资源检查通过，共享计数代码和标志与主本完全一致。浏览器刷新后核对新标题、样式资源及About跳转。旧浏览器缓存可能暂留原页面，刷新可取得新部署。
+
+主站本地117个HTML、215文件链接检查通过；总维护登记和规范结构检查通过。这些属于软件和文档检查。独立Atlas私有仓库仅同步界面、返回主站链接及其维护记录；没有公开Atlas服务。具体日志、截图、限定发布清单和哈希见`output/maintenance/20261022-visual-repair/`。
+
+## 剩余工作
+
+ExperiAtlas本地参考数据、CeNGEN许可及公开容量边界继续按前轮记录维护；本次不开展新数据取得或公开Atlas服务。文档／软件检查不代表实验验证。

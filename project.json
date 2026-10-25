@@ -1,15 +1,15 @@
 {
   "name": "ExperiTome",
-  "repository_name": "experitome",
+  "repository_name": "ExperiTome",
   "working_name": false,
   "tagline": "Built on experience. Made for discovery.",
-  "description_en": "An open-source project connecting research experience, protocols, public ExperiAtlas data resources, and analysis workflows in a traceable, reusable knowledge library. ExperiAtlas provides cross-species lookup and curated expression evidence.",
-  "description_zh": "从实际研究经验出发，连接实验方法、公开ExperiAtlas数据资源与分析流程；ExperiAtlas提供跨物种身份检索和精选表达证据。",
+  "description_en": "An open-source research knowledge library connecting experience, protocols, public ExperiAtlas data resources, and analysis workflows. ExperiAtlas provides cross-species lookup and curated expression evidence; study-specific measurements remain with the user.",
+  "description_zh": "ExperiTome从实际研究经验出发，连接实验方法、公开ExperiAtlas数据资源与分析流程；ExperiAtlas提供跨物种身份检索和精选表达证据，个人测量数据仍由使用者自行保管。",
   "language": "zh",
   "planned_languages": [
     "en"
   ],
-  "site_version": "0.3.1",
+  "site_version": "0.4.0",
   "maintainer": {
     "name_en": "Shuaihan He",
     "name_zh": "何帅涵",
@@ -27,7 +27,230 @@
     ],
     "github_username": "heshuaihan",
     "orcid": null,
-    "public_email": null
+    "public_email": null,
+    "public_profile": {
+      "updated_on": "2026-10-24",
+      "bio_zh": "何帅涵现为香港科技大学（广州）生命科学与生物医学工程学域、脑与智能研究所博士生。研究兴趣包括群体遗传与地方猪遗传资源、计算蛋白质组学与多组学整合，以及脑衰老相关的分子机制。",
+      "bio_en": "Shuaihan He is a PhD student in the Bioscience and Biomedical Engineering Thrust and Brain and Intelligence Research Institute at The Hong Kong University of Science and Technology (Guangzhou). His interests include population genetics and indigenous pig resources, computational proteomics and multi-omics integration, and molecular mechanisms related to brain aging.",
+      "research_interests": [
+        {
+          "zh": "群体遗传、遗传变异与地方猪遗传资源",
+          "en": "Population genetics, genetic variation, and indigenous pig resources"
+        },
+        {
+          "zh": "计算蛋白质组学与多组学整合分析",
+          "en": "Computational proteomics and integrative multi-omics analysis"
+        },
+        {
+          "zh": "脑衰老相关的突触可塑性与分子机制",
+          "en": "Synaptic plasticity and molecular mechanisms related to brain aging"
+        }
+      ],
+      "education": [
+        {
+          "degree_zh": "博士研究生",
+          "degree_en": "PhD student",
+          "school_zh": "香港科技大学（广州）",
+          "school_en": "The Hong Kong University of Science and Technology (Guangzhou)",
+          "field_zh": "生命科学与生物医学工程学域 · 脑与智能研究所",
+          "field_en": "Bioscience and Biomedical Engineering Thrust · Brain and Intelligence Research Institute",
+          "dates_zh": "2023年至今",
+          "dates_en": "2023–present",
+          "current": true
+        },
+        {
+          "degree_zh": "理学硕士",
+          "degree_en": "MSc",
+          "school_zh": "中国农业大学",
+          "school_en": "China Agricultural University",
+          "field_zh": "动物遗传育种与繁殖",
+          "field_en": "Animal Genetics, Breeding and Reproduction",
+          "dates_zh": "2020–2023",
+          "dates_en": "2020–2023",
+          "current": false
+        },
+        {
+          "degree_zh": "农学学士",
+          "degree_en": "BSc",
+          "school_zh": "中国农业大学",
+          "school_en": "China Agricultural University",
+          "field_zh": "动物科学",
+          "field_en": "Animal Science",
+          "dates_zh": "2016–2020",
+          "dates_en": "2016–2020",
+          "current": false
+        },
+        {
+          "degree_zh": "文学学士",
+          "degree_en": "BA",
+          "school_zh": "中国农业大学",
+          "school_en": "China Agricultural University",
+          "field_zh": "英语",
+          "field_en": "English",
+          "dates_zh": "2017–2020",
+          "dates_en": "2017–2020",
+          "current": false
+        }
+      ],
+      "publications": [
+        {
+          "year": "2024",
+          "authors": "He, S.; Wang, Y.; Luo, Y.; et al.",
+          "title": "Integrated analysis strategy of genome-wide functional gene mining reveals DKK2 gene underlying meat quality in Shaziling synthesized pigs.",
+          "journal": "BMC Genomics",
+          "detail": "25(1), 30",
+          "doi": "10.1186/s12864-023-09925-x",
+          "source_url": "https://pubmed.ncbi.nlm.nih.gov/38178019/",
+          "source_label": "PubMed",
+          "role_zh": "共同第一作者",
+          "role_en": "Co-first author",
+          "featured": true
+        },
+        {
+          "year": "2023",
+          "authors": "Fang, M.; He, S.; Dong, N.; et al.",
+          "title": "新农科建设背景下《动物遗传学》思政教学的探索与实践。",
+          "journal": "畜牧兽医杂志",
+          "detail": "42(6), 110–114, 117",
+          "source_url": "https://faculty.cau.edu.cn/fmy/",
+          "source_label": "CAU faculty publication list"
+        },
+        {
+          "year": "2023",
+          "authors": "Fang, M.; He, S.; Dong, N.; et al.",
+          "title": "新农科背景下动物科学专业课程思政教育的探索。",
+          "journal": "养殖与饲料",
+          "detail": "22(12), 105–110",
+          "doi": "10.13300/j.cnki.cn42-1648/s.2023.12.016"
+        },
+        {
+          "year": "2023",
+          "authors": "Song, Y.; Ni, S.; Wang, F.; He, S.; et al.",
+          "title": "定安猪保种及改良现状调查。",
+          "journal": "黑龙江畜牧兽医",
+          "detail": "(10), 63–67",
+          "doi": "10.13881/j.cnki.hljxmsy.2022.07.0262"
+        },
+        {
+          "year": "2022",
+          "authors": "Liu, X.; Bai, Y.; Cui, R.; He, S.; et al.",
+          "title": "Sus_circPAPPA2 Regulates Fat Deposition in Castrated Pigs through the miR-2366/GK Pathway.",
+          "journal": "Biomolecules",
+          "detail": "12(6), 753",
+          "doi": "10.3390/biom12060753",
+          "source_url": "https://pubmed.ncbi.nlm.nih.gov/35740877/",
+          "source_label": "PubMed"
+        },
+        {
+          "year": "2022",
+          "authors": "Liu, X.; Bai, Y.; Cui, R.; He, S.; et al.",
+          "title": "Integrated Analysis of the ceRNA Network and M-7474 Function in Testosterone-Mediated Fat Deposition in Pigs.",
+          "journal": "Genes",
+          "detail": "13(4), 668",
+          "doi": "10.3390/genes13040668",
+          "source_url": "https://pubmed.ncbi.nlm.nih.gov/35456474/",
+          "source_label": "PubMed"
+        },
+        {
+          "year": "2022",
+          "authors": "Xiao, L.; Xu, Q.; Liu, X.; Chan, S.; Luo, Y.; He, S.; Fang, M.",
+          "title": "The Novel-miR-659/SPP1 Interaction Regulates Fat Deposition in Castrated Male Pigs.",
+          "journal": "Animals",
+          "detail": "12(8), 944",
+          "doi": "10.3390/ani12080944",
+          "source_url": "https://pubmed.ncbi.nlm.nih.gov/35454191/",
+          "source_label": "PubMed"
+        },
+        {
+          "year": "2022",
+          "authors": "Wang, Y.; Xiao, L.; He, S.; et al.",
+          "title": "基于50K SNP芯片信息的枣庄黑盖猪群体遗传结构分析。",
+          "journal": "中国畜牧杂志",
+          "detail": "58(9), 168–171, 178",
+          "source_url": "https://faculty.cau.edu.cn/fmy/",
+          "source_label": "CAU faculty publication list"
+        },
+        {
+          "year": "2022",
+          "authors": "Fang, M.; He, S.; Tang, Q.; et al.",
+          "title": "浅谈农科院校《动物遗传学》课程教学内容的思考与设计。",
+          "journal": "教育现代化",
+          "detail": "9(13), 129–132",
+          "source_url": "https://faculty.cau.edu.cn/fmy/",
+          "source_label": "CAU faculty publication list"
+        }
+      ],
+      "patents": [
+        {
+          "number": "CN115786527B",
+          "year": "2025",
+          "granted_on": "2025-06-20",
+          "title_zh": "与猪肌内脂肪性状相关的SNP分子标记及其应用与检测方法",
+          "title_en": "SNP markers associated with porcine intramuscular fat traits, including their uses and detection methods",
+          "role_zh": "发明人",
+          "role_en": "Inventor",
+          "url": "https://patents.google.com/patent/CN115786527B/zh"
+        },
+        {
+          "number": "CN116004843B",
+          "year": "2025",
+          "granted_on": "2025-06-20",
+          "title_zh": "一种与猪体长性状相关的SNP分子标记及其检测方法",
+          "title_en": "SNP markers associated with pig body-length traits and their detection method",
+          "role_zh": "发明人",
+          "role_en": "Inventor",
+          "url": "https://patents.google.com/patent/CN116004843B/zh"
+        },
+        {
+          "number": "CN113203618B",
+          "year": "2022",
+          "granted_on": "2022-04-26",
+          "title_zh": "一种制备全脑组织石蜡切片的方法与应用",
+          "title_en": "Method for preparing paraffin sections of whole-brain tissue and its applications",
+          "role_zh": "发明人",
+          "role_en": "Inventor",
+          "url": "https://patents.google.com/patent/CN113203618B/zh"
+        }
+      ],
+      "projects": [
+        {
+          "year": "2024",
+          "name_zh": "香港科技大学（广州）Coral Cola 团队 · iGEM",
+          "name_en": "HKUST (Guangzhou) Coral Cola · iGEM",
+          "role_zh": "学生顾问",
+          "role_en": "Student advisor",
+          "recognition_zh": "团队获金奖，并获 Best New Basic Part（本科生组）提名。",
+          "recognition_en": "The team won a Gold Medal and was nominated for Best New Basic Part (Undergrad).",
+          "official_url": "https://www.hkust-gz.edu.cn/2024/10/28/making-history-undergraduate-team-from-hkustgz-wins-the-gold-award-at-igem/",
+          "team_url": "https://2024.igem.wiki/hkust-gz/"
+        }
+      ],
+      "honors": [
+        {
+          "period_zh": "2016–2020",
+          "period_en": "2016–2020",
+          "title_zh": "本科阶段奖项",
+          "title_en": "Undergraduate honors",
+          "summary_zh": "院长奖学金、优秀学习奖学金、优秀学生奖学金、三好学生和学生干部等荣誉。",
+          "summary_en": "Dean’s Scholarship, Excellent Learning Scholarship, Outstanding Student Scholarship, Merit Student, and student-leadership honors."
+        },
+        {
+          "period_zh": "2020–2023",
+          "period_en": "2020–2023",
+          "title_zh": "硕士阶段奖项",
+          "title_en": "Master’s honors",
+          "summary_zh": "硕士研究生学业奖学金、优秀毕业生和三好学生等荣誉。",
+          "summary_en": "Master’s Academic Scholarship, Outstanding Graduate, and Merit Student honors."
+        }
+      ],
+      "public_links": [
+        {
+          "label_zh": "GitHub",
+          "label_en": "GitHub",
+          "url": "https://github.com/heshuaihan"
+        }
+      ]
+    }
   },
   "content_license": "CC-BY-4.0",
   "code_license": "MIT",
@@ -47,6 +270,7 @@
   "repository_url": "https://github.com/heshuaihan/ExperiTome",
   "site_url": "https://heshuaihan.github.io/ExperiTome/",
   "publication_status": "site-published",
+  "release_status": "0.4.0-authorized-release",
   "prepared_on": "2026-10-18",
   "naming_status": "confirmed",
   "name_check_date": "2026-10-18",
@@ -64,29 +288,30 @@
   "feature_status": {
     "protocol_library": "draft-content",
     "data_collection": "public-ExperiAtlas-v0.2.1",
-    "analysis_collection": "draft-guides-and-generic-tools",
+    "analysis_collection": "public-ExperiAnalysis-v0.2.0",
     "community_platform": "planned",
     "ai_assisted_discovery": "planned",
     "skill": "planned",
-    "experiatlas": "github-browser-v0.2.2"
+    "experiatlas": "github-browser-v0.2.2",
+    "author_profile": "public-bilingual-profile"
   },
   "tagline_zh": "源于实践，助力发现。",
   "brand_asset": "assets/experitome-hero.png",
   "brand_asset_version": "v3",
-  "repository_description": "Built on experience. Made for discovery. A research knowledge library connecting protocols, public ExperiAtlas data, and analysis.",
-  "website_status": "deployed",
+  "repository_description": "Built on experience. Made for discovery. ExperiTome connects protocols, ExperiAtlas data resources, and analysis.",
+  "website_status": "publishing",
   "maintenance_mode": "local-first",
   "release_policy": "publish-authorized-release",
-  "library_revision": "2026-10-23-atlas-github-access",
+  "library_revision": "2026-10-25-public-analysis-profile",
   "standard_version": "0.2",
   "logo_asset": "assets/experitome-logo-v1.png",
   "logo_version": "v1",
   "logo_generated_on": "2026-10-19",
-  "release_authorized_on": "2026-10-23",
-  "last_published_version": "0.2.2",
-  "last_published_commit": "cf4f9cd211790f3ec09ac524622323a1d64569df",
-  "last_deployment_run": "https://github.com/heshuaihan/ExperiTome/actions/runs/39767898435",
-  "last_publication_date": "2026-10-22",
-  "release_status": "0.3.1-candidate",
-  "experiatlas_url": "https://heshuaihan.github.io/ExperiTome/atlas/"
+  "release_authorized_on": "2026-10-25",
+  "last_published_version": "0.3.1",
+  "last_published_commit": "38f80af03916f2ea015ce165479ecd62183aa591",
+  "last_deployment_run": "https://github.com/heshuaihan/ExperiTome/actions/runs/39940374970",
+  "last_publication_date": "2026-10-23",
+  "experiatlas_url": "https://heshuaihan.github.io/ExperiTome/atlas/",
+  "experianalysis_url": "https://heshuaihan.github.io/ExperiTome/analysis/app/"
 }

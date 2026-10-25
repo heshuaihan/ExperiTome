@@ -1,0 +1,52 @@
+Package: edgeR
+Version: 4.10.7
+License: GPL (>=2)
+Depends: R (>= 3.6.0), limma (>= 3.63.6)
+Imports: methods, graphics, stats, utils, locfit
+Built: R 4.6.0; wasm32-unknown-emscripten; 2026-10-17 14:00:46 UTC; unix
+SHA256: cbfb38b62246842a240ef87c4794256a95068660dc982a349098b6fbbab93367
+File: edgeR_4.10.7.tgz
+
+Package: jsonlite
+Version: 2.0.0
+License: MIT + file LICENSE
+Depends: methods
+Built: R 4.6.0; wasm32-unknown-emscripten; 2026-05-13 09:48:20 UTC; unix
+SHA256: 35df0622339690661adc69521caab76a7b54e3a2f39b4b0d53832d2be3ccd5ea
+File: jsonlite_2.0.0.tgz
+
+Package: lattice
+Version: 0.23-1
+Depends: R (>= 4.0.0)
+Imports: grid, grDevices, graphics, stats, utils
+License: GPL (>= 2)
+Built: R 4.6.0; wasm32-unknown-emscripten; 2026-10-10 05:36:55 UTC; unix
+SHA256: b1f6c45be57330e13595bfeb87550c21e3b09d6ee2a58551c19911d345a72722
+File: lattice_0.23-1.tgz
+
+Package: limma
+Version: 3.68.5
+License: GPL (>=2)
+Depends: R (>= 3.6.0)
+Imports: grDevices, graphics, stats, utils, methods, statmod
+Built: R 4.6.0; wasm32-unknown-emscripten; 2026-10-09 09:44:38 UTC; unix
+SHA256: 28597a270cd17b8e22b216c06bdd4d0cac3361fc81c5da03069bb1e856babb08
+File: limma_3.68.5.tgz
+
+Package: statmod
+Version: 1.5.2
+Depends: R (>= 3.0.0)
+Imports: stats, graphics
+License: GPL-2 | GPL-3
+Built: R 4.6.0; wasm32-unknown-emscripten; 2026-05-18 19:30:27 UTC; unix
+SHA256: 9391546e8e5959c61b48c43e0d9dc92afbbc0198fa3681b611849b440cf4da02
+File: statmod_1.5.2.tgz
+
+Package: locfit
+Version: 1.5-9.12
+Depends: R (>= 4.1.0)
+Imports: lattice
+License: GPL (>= 2)
+Built: R 4.6.0; wasm32-unknown-emscripten; 2026-10-23 15:44:23 UTC; unix
+SHA256: 88b53bba064d45027bbf3f5212e916ac5efddff49cee7585c762b3d68172214f
+File: locfit_1.5-9.12.tgz
