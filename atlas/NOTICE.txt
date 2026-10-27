@@ -1,1 +1,3 @@
 ExperiAtlas browser application. Original software: MIT; original explanatory curation: CC BY 4.0. Third-party software and upstream public reference data retain their own licences. Source/version/attribution information is available in the application source page and reference manifest. Public snapshot public-20261023-v021 excludes the CeNGEN matrix and private research measurements.
+
+The independent Alliance method-support snapshot and its attribution are described in method-support/NOTICE.txt and method-support/manifest.json. It does not alter the public-20261023-v021 reference.

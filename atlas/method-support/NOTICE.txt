@@ -1,0 +1,9 @@
+ExperiAtlas method support snapshot, published 2026-10-27.
+Source: Alliance of Genome Resources combined orthology Stringent export.
+File version 9.0.0, generated 2026-04-05, FMS export 339902; acquired 2026-10-26.
+Official file: https://download.alliancegenome.org/9.0.0/ORTHOLOGY-ALLIANCE/COMBINED/ORTHOLOGY-ALLIANCE_COMBINED_13.tsv.gz
+Terms: https://www.alliancegenome.org/terms-of-use
+Open-data statement: https://github.com/alliance-genome/agr_open_data
+The official statement describes most Alliance data as CC0 and some as CC BY. No file-specific licence was provided for this export; this package does not assert a uniform licence or replace upstream terms. Retain Alliance and contributing method/source attribution.
+Derived processing: exact-ID crosswalk to the fixed ExperiAtlas gene index; unresolved IDs retained; three-species directed records split by SHA-256 prefix. Full method catalogues verified from the same source file. Not listed as support does not mean explicit opposition. Methods are not independent experimental validations.
+FMS also associates the same file with 9.2.0; this does not change the file's self-reported version. No DIOPT v10 results were merged. No private experimental measurements or CeNGEN data are included.

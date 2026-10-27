@@ -1,1 +1,5 @@
 analysis/app/** -text
+atlas/assets/** -text
+atlas/index.html -text
+atlas/method-support/** -text
+atlas/method-support-release.json -text

@@ -1,0 +1,2051 @@
+{
+  "format": "experiatlas-method-support-1",
+  "source": {
+    "id": "alliance-orthology-fms",
+    "name": "Alliance of Genome Resources combined orthology export",
+    "version": "Alliance file 9.0.0 / export 339902",
+    "retrieved_utc": "2026-10-26T09:38:03Z",
+    "url": "https://download.alliancegenome.org/9.0.0/ORTHOLOGY-ALLIANCE/COMBINED/ORTHOLOGY-ALLIANCE_COMBINED_13.tsv.gz",
+    "metadata_url": "https://fms.alliancegenome.org/api/datafile/by/ORTHOLOGY-ALLIANCE/COMBINED",
+    "licence_url": "https://www.alliancegenome.org/terms-of-use",
+    "fms_datafile_id": 339902,
+    "fms_path": "9.0.0/ORTHOLOGY-ALLIANCE/COMBINED/ORTHOLOGY-ALLIANCE_COMBINED_13.tsv.gz",
+    "fms_release_versions": [
+      {
+        "id": 325353,
+        "releaseVersion": "9.0.0",
+        "releaseDate": "2026-05-14T16:00:00.000+00:00"
+      },
+      {
+        "id": 325401,
+        "releaseVersion": "9.1.0",
+        "releaseDate": "2026-09-02T10:00:00.000+00:00"
+      },
+      {
+        "id": 325451,
+        "releaseVersion": "9.2.0",
+        "releaseDate": "2026-10-14T10:00:00.000+00:00"
+      }
+    ],
+    "fms_upload_date": "2026-04-05T03:34:59.977+00:00",
+    "fms_md5": "7d091b84f3227ea576826ed1f02642e9",
+    "license_assessment": "FMS per-file metadata does not expose a license. The official Alliance open-data README states most Alliance data is CC0 1.0 and some datasets may be CC-BY 4.0; this export's specific license was not inferred. The official terms page and README are saved in raw/license/.",
+    "catalogue_release": "9.2.0",
+    "releases": [
+      {
+        "id": 325353,
+        "releaseVersion": "9.0.0",
+        "releaseDate": "2026-05-14T16:00:00.000+00:00"
+      },
+      {
+        "id": 325401,
+        "releaseVersion": "9.1.0",
+        "releaseDate": "2026-09-02T10:00:00.000+00:00"
+      },
+      {
+        "id": 325451,
+        "releaseVersion": "9.2.0",
+        "releaseDate": "2026-10-14T10:00:00.000+00:00"
+      }
+    ],
+    "file_generated_utc": "2026-04-05T03:33Z",
+    "orthology_filter": "Stringent"
+  },
+  "snapshot": {
+    "datafile_id": 339902,
+    "s3_path_directory_version": "9.0.0",
+    "fms_release_versions": [
+      {
+        "id": 325353,
+        "releaseVersion": "9.0.0",
+        "releaseDate": "2026-05-14T16:00:00.000+00:00"
+      },
+      {
+        "id": 325401,
+        "releaseVersion": "9.1.0",
+        "releaseDate": "2026-09-02T10:00:00.000+00:00"
+      },
+      {
+        "id": 325451,
+        "releaseVersion": "9.2.0",
+        "releaseDate": "2026-10-14T10:00:00.000+00:00"
+      }
+    ],
+    "revision_note": "FMS suffixes are revision identifiers. This snapshot uses the single valid datafile associated with FMS catalogue release 9.2.0 (ID 339902); its TSV preamble self-identifies Alliance Database Version 9.0.0 and file generation time 2026-04-05T03:33Z. Older suffixes were not concatenated.",
+    "stable_url_probe": {
+      "url": "https://fms.alliancegenome.org/download/ORTHOLOGY-ALLIANCE_COMBINED.tsv.gz",
+      "resolved_url": "https://fms.alliancegenome.org/download/ORTHOLOGY-ALLIANCE_COMBINED.tsv.gz",
+      "bytes": 15302140,
+      "sha256": "977ad252878d25a6cf486a9054448feff0e308e83e2fe5d6e8b6ec31c45491d4",
+      "md5": "c684c49f4d6a25f2bb8b9f325b383db1",
+      "byte_identical_to_selected_datafile": true
+    },
+    "header_preamble_path": "data/method-support-20261026/raw/orthology-header-preamble.txt",
+    "header_preamble": [
+      "##########################################################################",
+      "#",
+      "# Data type: Orthology",
+      "# Data format: tsv",
+      "# README: ",
+      "# Source: Alliance of Genome Resources (Alliance)",
+      "# Source URL: http://alliancegenome.org/downloads",
+      "# Help Desk: help@alliancegenome.org",
+      "# Orthology Filter: Stringent",
+      "# Taxon IDs: NCBITaxon:9606, NCBITaxon:10116, NCBITaxon:10090, NCBITaxon:7955, NCBITaxon:8364, NCBITaxon:8355, NCBITaxon:7227, NCBITaxon:6239, NCBITaxon:559292",
+      "# Species: Homo sapiens, Rattus norvegicus, Mus musculus, Danio rerio, Xenopus tropicalis, Xenopus laevis, Drosophila melanogaster, Caenorhabditis elegans, Saccharomyces cerevisiae",
+      "# Alliance Database Version: 9.0.0",
+      "# Date file generated (UTC): 2026-04-05 03:33",
+      "#",
+      "##########################################################################",
+      "Gene1ID\tGene1Symbol\tGene1SpeciesTaxonID\tGene1SpeciesName\tGene2ID\tGene2Symbol\tGene2SpeciesTaxonID\tGene2SpeciesName\tAlgorithms\tAlgorithmsMatch\tOutOfAlgorithms\tIsBestScore\tIsBestRevScore"
+    ],
+    "crosswalk": {
+      "reference_path": "work/reference.sqlite",
+      "method": "WormBase WB:WBGene IDs stripped to WBGene and validated in genes(species='worm', id=?). Mouse/human IDs mapped only by exact aliases(species=?, token=?, entity_type='gene').",
+      "unresolved": "No symbol-based guessing; unresolved Alliance IDs and symbols are retained."
+    },
+    "file_version": "9.0.0",
+    "catalogue_release": "9.2.0",
+    "file_generated_utc": "2026-04-05T03:33Z",
+    "orthology_filter": "Stringent"
+  },
+  "method_universe_complete": true,
+  "method_universe": null,
+  "method_universe_note": "Per-species-pair methods are reconstructed from all same-version export rows, checked against constant OutOfAlgorithms and an actual full-support witness. Not the full DIOPT method universe.",
+  "absent_method_semantics": "not listed as supporting this pair; not an explicit negative call",
+  "absent_pair_semantics": "unknown; not represented as a negative call",
+  "coverage": {
+    "species": [
+      "worm",
+      "mouse",
+      "human"
+    ],
+    "taxon_ids": {
+      "worm": "6239",
+      "mouse": "10090",
+      "human": "9606"
+    },
+    "directed_species_pairs": [
+      "worm_to_mouse",
+      "mouse_to_worm",
+      "worm_to_human",
+      "human_to_worm",
+      "human_to_mouse",
+      "mouse_to_human"
+    ],
+    "representation": "Observed Alliance combined orthology rows. Each pair uses its original Gene1-to-Gene2 row when present; reverse fallback is used only if direct orientation is absent. All original directional observations are retained separately.",
+    "alliance_diopt_scope": "Alliance orthology is based on a subset of DIOPT data; not the full DIOPT universe."
+  },
+  "summary": {
+    "input_rows": 986972,
+    "directional_rows": {
+      "mouse_to_human": 24592,
+      "worm_to_human": 15460,
+      "human_to_worm": 15460,
+      "mouse_to_worm": 17436,
+      "human_to_mouse": 24592,
+      "worm_to_mouse": 17436
+    },
+    "normalized_pairs_by_direction": {
+      "mouse_to_human": 24592,
+      "human_to_mouse": 24592,
+      "worm_to_human": 15460,
+      "human_to_worm": 15460,
+      "mouse_to_worm": 17436,
+      "worm_to_mouse": 17436
+    },
+    "fallback_pairs_by_direction": {},
+    "unresolved_source_rows_by_direction": {
+      "mouse_to_human": 208,
+      "human_to_mouse": 131,
+      "worm_to_human": 0,
+      "human_to_worm": 2,
+      "mouse_to_worm": 48,
+      "worm_to_mouse": 0
+    },
+    "unresolved_target_rows_by_direction": {
+      "mouse_to_human": 131,
+      "human_to_mouse": 208,
+      "worm_to_human": 2,
+      "human_to_worm": 0,
+      "mouse_to_worm": 0,
+      "worm_to_mouse": 48
+    },
+    "source_gene_ids_by_direction": {
+      "mouse_to_human": 20050,
+      "human_to_mouse": 19322,
+      "worm_to_human": 7432,
+      "human_to_worm": 9772,
+      "mouse_to_worm": 9790,
+      "worm_to_mouse": 7411
+    },
+    "target_gene_ids_by_direction": {
+      "mouse_to_human": 19322,
+      "human_to_mouse": 20050,
+      "worm_to_human": 9772,
+      "human_to_worm": 7432,
+      "mouse_to_worm": 7411,
+      "worm_to_mouse": 9790
+    },
+    "available_method_counts_by_species_pair": {
+      "human_mouse": [
+        10
+      ],
+      "human_worm": [
+        9
+      ],
+      "mouse_worm": [
+        9
+      ]
+    },
+    "score_method_count_mismatches": 0,
+    "same_direction_duplicate_rows": 0,
+    "unordered_pair_count_by_species_pair": {
+      "human_mouse": 24592,
+      "human_worm": 15460,
+      "mouse_worm": 17436
+    },
+    "reverse_method_set_agreements": 57488,
+    "reverse_score_agreements": 57488,
+    "reverse_best_flag_agreements": 57488,
+    "observed_methods": {
+      "Ensembl Compara": 85706,
+      "HGNC": 36416,
+      "Hieranoid": 73110,
+      "InParanoid": 81186,
+      "OMA": 80788,
+      "OrthoFinder": 87378,
+      "OrthoInspector": 82944,
+      "PANTHER": 93150,
+      "PhylomeDB": 79634,
+      "SonicParanoid": 90622
+    },
+    "normalized_record_count": 73985,
+    "normalized_pair_count": 114976,
+    "method_universe_complete": true,
+    "method_universe_note": "Per-species-pair methods are reconstructed from all same-version export rows, checked against constant OutOfAlgorithms and an actual full-support witness. Not the full DIOPT method universe.",
+    "absent_pair_semantics": "unknown; no negative result is inferred",
+    "absent_method_semantics": "not listed as supporting; no explicit negative result is inferred",
+    "reference_db_bytes": 7721922560
+  },
+  "raw_files": [
+    {
+      "path": "data/method-support-20261026/raw/fms-orthology-combined-index.json",
+      "url": "https://fms.alliancegenome.org/api/datafile/by/ORTHOLOGY-ALLIANCE/COMBINED",
+      "resolved_url": "https://fms.alliancegenome.org/api/datafile/by/ORTHOLOGY-ALLIANCE/COMBINED",
+      "bytes": 477019,
+      "sha256": "e93081cb43e7ae74e74bd56899350ae020959c92167535481bf08a8e30f15cb7",
+      "md5": "dcbcc74d8bdf07b063f5154cb59f01b6"
+    },
+    {
+      "path": "data/method-support-20261026/raw/fms-datafile-metadata.json",
+      "url": "https://fms.alliancegenome.org/api/datafile/by/ORTHOLOGY-ALLIANCE/COMBINED",
+      "bytes": 1154,
+      "sha256": "c3d6da8c0f8a627a668c2b072a719ae892c6a3cae0da524ab95885f971dc48f6",
+      "md5": "ad894cdbd71a8f6968778a67af696814"
+    },
+    {
+      "path": "data/method-support-20261026/raw/ORTHOLOGY-ALLIANCE_COMBINED_13.tsv.gz",
+      "url": "https://download.alliancegenome.org/9.0.0/ORTHOLOGY-ALLIANCE/COMBINED/ORTHOLOGY-ALLIANCE_COMBINED_13.tsv.gz",
+      "resolved_url": "https://download.alliancegenome.org/9.0.0/ORTHOLOGY-ALLIANCE/COMBINED/ORTHOLOGY-ALLIANCE_COMBINED_13.tsv.gz",
+      "bytes": 15302140,
+      "sha256": "977ad252878d25a6cf486a9054448feff0e308e83e2fe5d6e8b6ec31c45491d4",
+      "md5": "c684c49f4d6a25f2bb8b9f325b383db1",
+      "uncompressed_bytes": 187203864,
+      "uncompressed_sha256": "7cec774daa29bc807906756b0e4a02503807f1a2d52af0cbec4cab330269ccfa",
+      "uncompressed_md5": "7d091b84f3227ea576826ed1f02642e9",
+      "fms_md5": "7d091b84f3227ea576826ed1f02642e9",
+      "fms_md5_scope": "decompressed TSV payload",
+      "md5_verified": true,
+      "fms_datafile_id": 339902
+    },
+    {
+      "path": "data/method-support-20261026/raw/orthology-header-preamble.txt",
+      "derived_from": "data/method-support-20261026/raw/ORTHOLOGY-ALLIANCE_COMBINED_13.tsv.gz",
+      "bytes": 996,
+      "sha256": "f31737582aad6a6cb344af6b911801838758a35b6e5e85f0dca8d44edc2b43fd",
+      "md5": "12cda654715f3259ba3aa863cb5adcec"
+    },
+    {
+      "path": "data/method-support-20261026/raw/license/alliance-terms-of-use.html",
+      "url": "https://www.alliancegenome.org/terms-of-use",
+      "bytes": 1729,
+      "sha256": "eb3b00d92d564ee8ec3f54e6f7f467943f4a186fdf193769fd62ea248739b5f3",
+      "md5": "46a64383882538e24cd88c3ea4cd945d"
+    },
+    {
+      "path": "data/method-support-20261026/raw/license/agr-open-data-README.md",
+      "url": "https://raw.githubusercontent.com/alliance-genome/agr_open_data/main/README.md",
+      "bytes": 14767,
+      "sha256": "3456c8c6d5be294fe58ce7f66f5759d49174df091c6c205be66b931910084f6b",
+      "md5": "2f161bb0600faa6af425393052eddc4c"
+    },
+    {
+      "path": "data/method-support-20261026/raw/license/agr-orthology-methods.html",
+      "url": "https://community.alliancegenome.org/t/orthology-methods/6679",
+      "bytes": 24437,
+      "sha256": "7b3064f645006ffa29ab18c493c19d5f9951c26be241ec0e704eadfb9af17031",
+      "md5": "f47cb7956549fe4376d9c40d601664d6"
+    },
+    {
+      "path": "data/method-support-20261026/raw/documentation/diopt-v10.html",
+      "url": "https://www.flyrnai.org/DIOPT_documentation_v10.html",
+      "bytes": 53940,
+      "sha256": "0ad3ba6066d94f4422603c89212375b660f4e0be71721a887ea114e222235f6a",
+      "md5": "69e7c43304b9327146606c87b0a06435"
+    },
+    {
+      "path": "data/method-support-20261026/raw/documentation/diopt-api.html",
+      "url": "https://www.flyrnai.org/tools/diopt/web/api",
+      "bytes": 19654,
+      "sha256": "7808b31e118c6f281a95959bc52933fb27ba57f61948ed5241a9c099f5c5841e",
+      "md5": "252d283bffe656efb64d7d16ff2297e4"
+    },
+    {
+      "path": "data/method-support-20261026/raw/crosscheck/diopt-v10-wht1-api-response.txt",
+      "url": "https://www.flyrnai.org/tools/diopt/web/diopt_api/v10/get_orthologs_from_entrez/6239/175859/10090/none",
+      "bytes": 22,
+      "sha256": "ca3eb3168ce760ce955f2dcb08f457cd8b51f0eb42541dfe7fe518acd7a8b55c",
+      "md5": "be88358c3d648496f0a8bfaaf5292c68",
+      "probe": "diopt_v10_api"
+    },
+    {
+      "path": "data/method-support-20261026/raw/crosscheck/diopt-v9-wht1-api.json",
+      "url": "https://www.flyrnai.org/tools/diopt/web/diopt_api/v9/get_orthologs_from_entrez/6239/175859/10090/none",
+      "bytes": 2748,
+      "sha256": "643575f2196410f323c9ac7d8d6d5b01b02bbe0e737bfa285792783abb4616ed",
+      "md5": "4f6ad4fd4d9b3e0b56be8fd4da782da0",
+      "probe": "diopt_v9_api"
+    },
+    {
+      "path": "data/method-support-20261026/raw/crosscheck/diopt-v10-wht1-ui.html",
+      "url": "https://www.flyrnai.org/cgi-bin/DRSC_orthologs.pl?additional_filter=None&gene_list=WBGene00015479&input_species=6239&output_species=10090&search_datasets=All&search_fields=WormBase",
+      "bytes": 49329,
+      "sha256": "3bb2e0c4d55f59b2cb851c5d5d77f5919d75e0426153ea716d33fcc6e6b6225d",
+      "md5": "8b39030c5aa4060de6cddc963e7ee8fa",
+      "probe": "diopt_v10_ui"
+    }
+  ],
+  "license_evidence_files": [
+    {
+      "path": "data/method-support-20261026/raw/license/alliance-terms-of-use.html",
+      "url": "https://www.alliancegenome.org/terms-of-use",
+      "bytes": 1729,
+      "sha256": "eb3b00d92d564ee8ec3f54e6f7f467943f4a186fdf193769fd62ea248739b5f3",
+      "md5": "46a64383882538e24cd88c3ea4cd945d"
+    },
+    {
+      "path": "data/method-support-20261026/raw/license/agr-open-data-README.md",
+      "url": "https://raw.githubusercontent.com/alliance-genome/agr_open_data/main/README.md",
+      "bytes": 14767,
+      "sha256": "3456c8c6d5be294fe58ce7f66f5759d49174df091c6c205be66b931910084f6b",
+      "md5": "2f161bb0600faa6af425393052eddc4c"
+    },
+    {
+      "path": "data/method-support-20261026/raw/license/agr-orthology-methods.html",
+      "url": "https://community.alliancegenome.org/t/orthology-methods/6679",
+      "bytes": 24437,
+      "sha256": "7b3064f645006ffa29ab18c493c19d5f9951c26be241ec0e704eadfb9af17031",
+      "md5": "f47cb7956549fe4376d9c40d601664d6"
+    },
+    {
+      "path": "data/method-support-20261026/raw/documentation/diopt-v10.html",
+      "url": "https://www.flyrnai.org/DIOPT_documentation_v10.html",
+      "bytes": 53940,
+      "sha256": "0ad3ba6066d94f4422603c89212375b660f4e0be71721a887ea114e222235f6a",
+      "md5": "69e7c43304b9327146606c87b0a06435"
+    },
+    {
+      "path": "data/method-support-20261026/raw/documentation/diopt-api.html",
+      "url": "https://www.flyrnai.org/tools/diopt/web/api",
+      "bytes": 19654,
+      "sha256": "7808b31e118c6f281a95959bc52933fb27ba57f61948ed5241a9c099f5c5841e",
+      "md5": "252d283bffe656efb64d7d16ff2297e4"
+    }
+  ],
+  "evidence_fetch_errors": [],
+  "crosscheck": {
+    "diopt_v10_api_status": "Version not suppported",
+    "diopt_v9_api_dataset_version": 9.1,
+    "diopt_v9_api_pair_count": 6,
+    "diopt_v9_api_raw_methods_by_mgi": {
+      "MGI:107704": [
+        "Compara",
+        "Domainoid",
+        "Inparanoid",
+        "OrthoDB",
+        "OrthoFinder",
+        "SonicParanoid",
+        "orthoMCL"
+      ],
+      "MGI:1347061": [
+        "Compara",
+        "Domainoid",
+        "OrthoDB",
+        "OrthoFinder",
+        "OrthoInspector",
+        "SonicParanoid",
+        "orthoMCL"
+      ],
+      "MGI:1890594": [
+        "Compara",
+        "Domainoid",
+        "Inparanoid",
+        "OrthoDB",
+        "OrthoFinder",
+        "SonicParanoid",
+        "orthoMCL"
+      ],
+      "MGI:1351624": [
+        "Compara",
+        "Domainoid",
+        "OrthoDB",
+        "OrthoInspector",
+        "SonicParanoid",
+        "orthoMCL"
+      ],
+      "MGI:1914720": [
+        "Compara",
+        "Domainoid",
+        "OrthoDB",
+        "OrthoFinder",
+        "orthoMCL"
+      ],
+      "MGI:1351659": [
+        "OrthoDB",
+        "orthoMCL"
+      ]
+    },
+    "diopt_v10_ui_dataset_version": "10.0 per official DIOPT v10 page",
+    "diopt_v10_ui_wht1_mouse_pairs": [
+      {
+        "target_alliance_gene_id": "MGI:107704",
+        "target_symbol": "Abcg1",
+        "score": 7,
+        "best": true,
+        "best_reverse": false,
+        "methods": [
+          "Compara",
+          "Domainoid",
+          "Inparanoid",
+          "OrthoDB",
+          "OrthoFinder",
+          "SonicParanoid",
+          "orthoMCL"
+        ]
+      },
+      {
+        "target_alliance_gene_id": "MGI:1890594",
+        "target_symbol": "Abcg4",
+        "score": 7,
+        "best": true,
+        "best_reverse": false,
+        "methods": [
+          "Compara",
+          "Domainoid",
+          "Inparanoid",
+          "OrthoDB",
+          "OrthoFinder",
+          "SonicParanoid",
+          "orthoMCL"
+        ]
+      },
+      {
+        "target_alliance_gene_id": "MGI:1347061",
+        "target_symbol": "Abcg2",
+        "score": 7,
+        "best": true,
+        "best_reverse": false,
+        "methods": [
+          "Compara",
+          "Domainoid",
+          "OrthoDB",
+          "OrthoFinder",
+          "OrthoInspector",
+          "SonicParanoid",
+          "orthoMCL"
+        ]
+      },
+      {
+        "target_alliance_gene_id": "MGI:1351624",
+        "target_symbol": "Abcg3",
+        "score": 6,
+        "best": false,
+        "best_reverse": false,
+        "methods": [
+          "Compara",
+          "Domainoid",
+          "OrthoDB",
+          "OrthoInspector",
+          "SonicParanoid",
+          "orthoMCL"
+        ]
+      },
+      {
+        "target_alliance_gene_id": "MGI:1914720",
+        "target_symbol": "Abcg8",
+        "score": 5,
+        "best": false,
+        "best_reverse": false,
+        "methods": [
+          "Compara",
+          "Domainoid",
+          "OrthoDB",
+          "OrthoFinder",
+          "orthoMCL"
+        ]
+      },
+      {
+        "target_alliance_gene_id": "MGI:1351659",
+        "target_symbol": "Abcg5",
+        "score": 2,
+        "best": false,
+        "best_reverse": false,
+        "methods": [
+          "OrthoDB",
+          "orthoMCL"
+        ]
+      }
+    ],
+    "diopt_v10_ui_pair_count": 6,
+    "bulk_wht1_mouse_pair_count": 4,
+    "v9_api_shared_bulk_pairs": [
+      "MGI:107704",
+      "MGI:1347061",
+      "MGI:1351624",
+      "MGI:1890594"
+    ],
+    "v10_ui_shared_bulk_pairs": [
+      "MGI:107704",
+      "MGI:1347061",
+      "MGI:1351624",
+      "MGI:1890594"
+    ],
+    "not_used_to_fill_bulk": true,
+    "scope": "One public wht-1 query only; crosscheck rows never fill or alter the Alliance export."
+  },
+  "shards": {
+    "00": {
+      "path": "shards/00.json.gz",
+      "bytes": 51310,
+      "sha256": "c19b08d55dc334a3554be592f29341028f68385fa3b9d49408e1c15c77966faf"
+    },
+    "01": {
+      "path": "shards/01.json.gz",
+      "bytes": 61621,
+      "sha256": "4e0fd5e58c4fd1e523978ef1502f0febe5c0e5dc9c582aad686aa296bef46b39"
+    },
+    "02": {
+      "path": "shards/02.json.gz",
+      "bytes": 57673,
+      "sha256": "c50f476f96e9fa358604df04ac7b0357987d0e05363d8f021b63872d6b9ef838"
+    },
+    "03": {
+      "path": "shards/03.json.gz",
+      "bytes": 46790,
+      "sha256": "186c3c5ffe1608737a4556b09088986eefd1b8712cd6b1b3c89cd152956bbb41"
+    },
+    "04": {
+      "path": "shards/04.json.gz",
+      "bytes": 40329,
+      "sha256": "00c65b5a7e0e4a13a4d54c15601bd72d7f2281f7f9fd3390292883187d48951f"
+    },
+    "05": {
+      "path": "shards/05.json.gz",
+      "bytes": 44425,
+      "sha256": "81557c27c82f21fd7f7a4ede2c5f9867dce13319eee50f4d29470fe1522d3187"
+    },
+    "06": {
+      "path": "shards/06.json.gz",
+      "bytes": 47757,
+      "sha256": "ac65afdf2021ac17a00c20aa1b79dfd1048ff882475227868193625cea796bcf"
+    },
+    "07": {
+      "path": "shards/07.json.gz",
+      "bytes": 59386,
+      "sha256": "65e3a94b70e8bca7804dd9dd221d48a5e09cbfa451596ac32e42d6edac0ceda6"
+    },
+    "08": {
+      "path": "shards/08.json.gz",
+      "bytes": 46105,
+      "sha256": "de75140c131dd3e71fb5acd6a05774436d9918b51b3a71b6bd3f38a585939bdc"
+    },
+    "09": {
+      "path": "shards/09.json.gz",
+      "bytes": 53001,
+      "sha256": "7d75beaf8307459cdeaae64c27154d4e4e82ef1c53e4f4bff236f676f0dd5ef0"
+    },
+    "0a": {
+      "path": "shards/0a.json.gz",
+      "bytes": 49347,
+      "sha256": "8988d510178d1fb108afb01d55852af6fed827436eb243cdb3cca3e4a2cb9b73"
+    },
+    "0b": {
+      "path": "shards/0b.json.gz",
+      "bytes": 39825,
+      "sha256": "0cdb44e50cc9a1a092b390be7971d09c986be39179e3933b2345afc817f18a51"
+    },
+    "0c": {
+      "path": "shards/0c.json.gz",
+      "bytes": 47551,
+      "sha256": "cb877810ba7472af86ba07d839a2dd75ff16ed5818dc6c791ac47bbe5a3e15bf"
+    },
+    "0d": {
+      "path": "shards/0d.json.gz",
+      "bytes": 50502,
+      "sha256": "77f2dd4a39578eeab93ad170011407a41a75104313aee6f2a78ae8db5e2822f5"
+    },
+    "0e": {
+      "path": "shards/0e.json.gz",
+      "bytes": 44107,
+      "sha256": "6f4a2bad8c63e9d2a5258fc63f06a356892ef411406262c49372cd412ebf5e86"
+    },
+    "0f": {
+      "path": "shards/0f.json.gz",
+      "bytes": 49415,
+      "sha256": "8ac60003d5ea5d178efdc320c5c0aee53681624f226d06dcd617cedcc7f72fcb"
+    },
+    "10": {
+      "path": "shards/10.json.gz",
+      "bytes": 54468,
+      "sha256": "cf93947045a49011973d06e3863535aac435a4fa5fc0be32a77fdc6743908179"
+    },
+    "11": {
+      "path": "shards/11.json.gz",
+      "bytes": 50027,
+      "sha256": "7f77a71dd35f4d7e3405df8a2b96706e2d6066bfa11173dfe14bfe273055d4fb"
+    },
+    "12": {
+      "path": "shards/12.json.gz",
+      "bytes": 54739,
+      "sha256": "167470742a90cfec39cd9d1c1da80177a43a849c901359ad733c53a3df805b40"
+    },
+    "13": {
+      "path": "shards/13.json.gz",
+      "bytes": 49108,
+      "sha256": "d76baca968541243b63b23ad706828e72beff636bfa847070fd1af551213b359"
+    },
+    "14": {
+      "path": "shards/14.json.gz",
+      "bytes": 49185,
+      "sha256": "1bb6162d4d0887940822d5c4b4787e282e2a6edacffc2dd2d2c460a1a39e1943"
+    },
+    "15": {
+      "path": "shards/15.json.gz",
+      "bytes": 61237,
+      "sha256": "85e8e31ce901450eb9be0055e230565acaddb9287bfdd747dbca66b188b26d4c"
+    },
+    "16": {
+      "path": "shards/16.json.gz",
+      "bytes": 45551,
+      "sha256": "58173fa2a8643508fd895b4f80c4c4a1e92982480a8ab2a4b8054e4539828b7b"
+    },
+    "17": {
+      "path": "shards/17.json.gz",
+      "bytes": 55476,
+      "sha256": "db860f007756f6943ed6c254c57bcfc8b6ba44b82dcd1ede8f7633b333d84fd8"
+    },
+    "18": {
+      "path": "shards/18.json.gz",
+      "bytes": 45724,
+      "sha256": "baee9e65ed53018fb1f9c2dfc776cc715bf7a47848c61bb7fb514e1ad70e0282"
+    },
+    "19": {
+      "path": "shards/19.json.gz",
+      "bytes": 49979,
+      "sha256": "15d621b7f05c8e7ba560f8df03590e507c688aa7f808647d49478f22ad99529c"
+    },
+    "1a": {
+      "path": "shards/1a.json.gz",
+      "bytes": 49441,
+      "sha256": "e6d753271690d74ed3b617a357a8a143617a98107607319e777e570d6326b9c5"
+    },
+    "1b": {
+      "path": "shards/1b.json.gz",
+      "bytes": 49676,
+      "sha256": "4f499a5ffcaa4327b7f4be32901432bd09c32b19e17895c31424297d2f93cd2c"
+    },
+    "1c": {
+      "path": "shards/1c.json.gz",
+      "bytes": 53653,
+      "sha256": "7f0c918723fd79f512657a5cfa7f9c097fc5ccef0cb903ae848a7c286988471f"
+    },
+    "1d": {
+      "path": "shards/1d.json.gz",
+      "bytes": 46286,
+      "sha256": "a6d7542632014810b7e135fdcab8c049373497f1530d3c340a92592127a42415"
+    },
+    "1e": {
+      "path": "shards/1e.json.gz",
+      "bytes": 51431,
+      "sha256": "5924a7d76d6866dc009cf30ee9f6b8c4fe4d2a0f51289a00f96b5813d59994ba"
+    },
+    "1f": {
+      "path": "shards/1f.json.gz",
+      "bytes": 51154,
+      "sha256": "7d18119ce859c5157bbd59a5b95aeff057e8b932c79231a803c69e4025dd8063"
+    },
+    "20": {
+      "path": "shards/20.json.gz",
+      "bytes": 52023,
+      "sha256": "4b578de348c77db3e27446cff3cb47d7f059bdcafbe0a273a557f4ef8ac01a27"
+    },
+    "21": {
+      "path": "shards/21.json.gz",
+      "bytes": 50701,
+      "sha256": "3587ba787a9589259513f18c714793d560c27e7d7d9a990e4935f0bd3e787098"
+    },
+    "22": {
+      "path": "shards/22.json.gz",
+      "bytes": 53258,
+      "sha256": "12f6346fa2d25147366a5542e04cebd9c7ef30fc3387def445aa4917af5fcef9"
+    },
+    "23": {
+      "path": "shards/23.json.gz",
+      "bytes": 50364,
+      "sha256": "1536120001d7a3aa9f0767ea799f20684d6616a6c49bf99a0a8e2da146ef7fe1"
+    },
+    "24": {
+      "path": "shards/24.json.gz",
+      "bytes": 52570,
+      "sha256": "cf02875c68c01e4bfbacc8786e0d2a3a613d10380ca9282740ba5c0d2bed1764"
+    },
+    "25": {
+      "path": "shards/25.json.gz",
+      "bytes": 51259,
+      "sha256": "ae690f8259dc7627afbd73eb524d2b52010c2b557bb41c9b6694ac011657bc9b"
+    },
+    "26": {
+      "path": "shards/26.json.gz",
+      "bytes": 47442,
+      "sha256": "ad2f2154c9c933ccd0f11482eb98667420b023de275f00186d921bb463a34e41"
+    },
+    "27": {
+      "path": "shards/27.json.gz",
+      "bytes": 53127,
+      "sha256": "a21f14963f6c27c973ac6e614474400ed24c1ea016460d1b230a291b44bb468e"
+    },
+    "28": {
+      "path": "shards/28.json.gz",
+      "bytes": 51247,
+      "sha256": "105df30c17a369d8c05417f86de53d49df7f972f282ffff690d985dbda0cb396"
+    },
+    "29": {
+      "path": "shards/29.json.gz",
+      "bytes": 56626,
+      "sha256": "e4a015f6a161c338ca0af7a5a2a6e896f89f6283589ca1daab172a11a1377e94"
+    },
+    "2a": {
+      "path": "shards/2a.json.gz",
+      "bytes": 49603,
+      "sha256": "0e1c6455c72614afa48a455b8b98593a93378ad5d91bf44e2c1d1b9ec4a24bae"
+    },
+    "2b": {
+      "path": "shards/2b.json.gz",
+      "bytes": 53989,
+      "sha256": "30216dc0f0c5e30fb818e1ddd8351048c9e62f380def3cc737557864f9c0d33b"
+    },
+    "2c": {
+      "path": "shards/2c.json.gz",
+      "bytes": 53731,
+      "sha256": "229a990ea5425b061c1597500dd050027bcc26bda0b889dd4328ea7d662a9e3b"
+    },
+    "2d": {
+      "path": "shards/2d.json.gz",
+      "bytes": 56558,
+      "sha256": "5319fc1a3f5002daa4aa87f967f3eecf6d46f6c77203cf89cca7eec95fcd5ece"
+    },
+    "2e": {
+      "path": "shards/2e.json.gz",
+      "bytes": 48942,
+      "sha256": "afd418826628e086baf42389c5b08efe393d3533d46f1ba53a2e829e1c2a2605"
+    },
+    "2f": {
+      "path": "shards/2f.json.gz",
+      "bytes": 51046,
+      "sha256": "20b246fefae6ba60693c1762dc9ef39079fa9ee0fb363626ec1642b59febaf3d"
+    },
+    "30": {
+      "path": "shards/30.json.gz",
+      "bytes": 46619,
+      "sha256": "bf50d5c017a307867ad52818d526e17e363585924d9017e5ab9818c416d80687"
+    },
+    "31": {
+      "path": "shards/31.json.gz",
+      "bytes": 44805,
+      "sha256": "a06272dc60da15dae48fd93d45d72ed8831026394ac8190ee0afe8c2e23e5890"
+    },
+    "32": {
+      "path": "shards/32.json.gz",
+      "bytes": 54500,
+      "sha256": "b0791b2228fd5899ffca417bd1dacd18a6a3e9e2448001f23d1e57f9d8708864"
+    },
+    "33": {
+      "path": "shards/33.json.gz",
+      "bytes": 54820,
+      "sha256": "6ab11e3e758b68b1e3873a7953acf699af303b53438bdfb87271f0ba65c8800e"
+    },
+    "34": {
+      "path": "shards/34.json.gz",
+      "bytes": 54863,
+      "sha256": "4af9cea4eca238f9c5db48b261a7e55ebbe2524f8e1aa23b67091e31bed5d8c9"
+    },
+    "35": {
+      "path": "shards/35.json.gz",
+      "bytes": 50349,
+      "sha256": "9ddeaf58e0976cfc9bab2ad4da399a16ff2515b0e785eb45bd962ce2d9fb3200"
+    },
+    "36": {
+      "path": "shards/36.json.gz",
+      "bytes": 51091,
+      "sha256": "3bba1b537cc7495a86152b1d727e33d55412e6f552aba6bb11a0ab5ee6f8a49d"
+    },
+    "37": {
+      "path": "shards/37.json.gz",
+      "bytes": 55100,
+      "sha256": "74a19252095ec8569b1c09b6b93877befd623c645ee37f4d43a009994f3f054a"
+    },
+    "38": {
+      "path": "shards/38.json.gz",
+      "bytes": 53206,
+      "sha256": "43a49eff90a3d2b78626f818a5af7b40d278436b6cf86ee8c4b99a3107334db6"
+    },
+    "39": {
+      "path": "shards/39.json.gz",
+      "bytes": 46777,
+      "sha256": "93e2311b989c994ebf5b9ab411e535b921c68c6a7468d7c4e181bf3bdf203c2d"
+    },
+    "3a": {
+      "path": "shards/3a.json.gz",
+      "bytes": 50675,
+      "sha256": "df89359ef23826ed00bb7b39d661ad1ebf7712296f6c8a38e1e1dba3fbbe5e30"
+    },
+    "3b": {
+      "path": "shards/3b.json.gz",
+      "bytes": 45879,
+      "sha256": "3f01533c0eeeb21fed50d6b754ff746ed140b07eef681a905477c69b3531f1e2"
+    },
+    "3c": {
+      "path": "shards/3c.json.gz",
+      "bytes": 51285,
+      "sha256": "820ed9c2ea5849c7873734ba72dd0549bfbeea1f0e7ed10fa24e5fc3affcc524"
+    },
+    "3d": {
+      "path": "shards/3d.json.gz",
+      "bytes": 55604,
+      "sha256": "81f29ddadb68ae7c36a997f3519162c112c649175eaa51a984a2d5afc953ae1d"
+    },
+    "3e": {
+      "path": "shards/3e.json.gz",
+      "bytes": 51719,
+      "sha256": "aafa502565087311fe6baa6037fd0b5722c8010c14b6aeb0179464faf5db7852"
+    },
+    "3f": {
+      "path": "shards/3f.json.gz",
+      "bytes": 45700,
+      "sha256": "55ad4f23a035d1b102c6db50892472380f41dd4b5b5940b300acbe1f185a1ec6"
+    },
+    "40": {
+      "path": "shards/40.json.gz",
+      "bytes": 48593,
+      "sha256": "e10529334f98b896334751de5f5369194395c5f3ff5a9a928702d80f2c4733bc"
+    },
+    "41": {
+      "path": "shards/41.json.gz",
+      "bytes": 45535,
+      "sha256": "3fc65a60d503d3b76e881b87de29ab8e7750a2d3bf0601e1e30bf209b1c4e1cf"
+    },
+    "42": {
+      "path": "shards/42.json.gz",
+      "bytes": 48981,
+      "sha256": "6208209b89a1995fa03d4933925e6a7f41f436ab7ecfabebc3645822b3968829"
+    },
+    "43": {
+      "path": "shards/43.json.gz",
+      "bytes": 54985,
+      "sha256": "fbfcf8129d36ec8b2b51d6d0c585be7eb76db8ba3c1e7e0f59e7c4b0aa6277a9"
+    },
+    "44": {
+      "path": "shards/44.json.gz",
+      "bytes": 51899,
+      "sha256": "5aef74645a3456a9678f9ebb006594aeead3bb8d7e19d8271aca47c9605baf9f"
+    },
+    "45": {
+      "path": "shards/45.json.gz",
+      "bytes": 52851,
+      "sha256": "145679761eb00e51100f4fc26c08530568a138324df728e64cf31b7a270e03ac"
+    },
+    "46": {
+      "path": "shards/46.json.gz",
+      "bytes": 50043,
+      "sha256": "d4544b94a058791542a838dd6c29e9dae787485226bb72e010ef8a0b6201d72c"
+    },
+    "47": {
+      "path": "shards/47.json.gz",
+      "bytes": 46303,
+      "sha256": "937cf6030601f9b7b1fce7896e9b3c21700460c641eb58b57f0c3aa0f6438fbd"
+    },
+    "48": {
+      "path": "shards/48.json.gz",
+      "bytes": 52397,
+      "sha256": "76da2b2e8f8335c7a3b529c2e20e8e0a816ca02ec6a997c5d0eadf50c24b2c80"
+    },
+    "49": {
+      "path": "shards/49.json.gz",
+      "bytes": 53209,
+      "sha256": "fdb803e26ccb3bccea2fd8dcf38ed42ab091c74ae7294c26766f55be805b7d66"
+    },
+    "4a": {
+      "path": "shards/4a.json.gz",
+      "bytes": 52171,
+      "sha256": "8378463fabcf8c51baee2305f2cbc2e3f38b0131d682dd06a1b09e495deb6f1e"
+    },
+    "4b": {
+      "path": "shards/4b.json.gz",
+      "bytes": 50231,
+      "sha256": "b7b615e43d50842d9a499516c350b25b90deed45bc80b8d45abc63942534458e"
+    },
+    "4c": {
+      "path": "shards/4c.json.gz",
+      "bytes": 46641,
+      "sha256": "1dee908ee758c8cb11d918561d3898a115a4245abdf62b69d9d39e245fa030a0"
+    },
+    "4d": {
+      "path": "shards/4d.json.gz",
+      "bytes": 50153,
+      "sha256": "19db99edf993c4809e4573dff3ed9efab0537f82847664d09b12d41f732c549d"
+    },
+    "4e": {
+      "path": "shards/4e.json.gz",
+      "bytes": 52722,
+      "sha256": "fa57606e0d2ee766a32afe3e45eb2fdefc26d575a09cba001a736cd518a92bee"
+    },
+    "4f": {
+      "path": "shards/4f.json.gz",
+      "bytes": 51466,
+      "sha256": "c7579622875db98e665ddbf1411ca3b3741f27e555c29400170dbd7376404f9b"
+    },
+    "50": {
+      "path": "shards/50.json.gz",
+      "bytes": 46370,
+      "sha256": "ec8f046c5251dde822b8088d0db4ac83fb4437669df2fe5c7ba4fd28ae51cd5f"
+    },
+    "51": {
+      "path": "shards/51.json.gz",
+      "bytes": 48285,
+      "sha256": "dfdcf4c126b34daed1d1b500de52097ed72cbf7590af53d56d531192c0b73b77"
+    },
+    "52": {
+      "path": "shards/52.json.gz",
+      "bytes": 53044,
+      "sha256": "e7f425b76a9d4286e522a7ca4e3a12c28090ded8b5761266e61bfdc608340efc"
+    },
+    "53": {
+      "path": "shards/53.json.gz",
+      "bytes": 57657,
+      "sha256": "ac8d17b70b1580d1fa721f62352ac81dfef4eb66d561149af5751412d4910ea0"
+    },
+    "54": {
+      "path": "shards/54.json.gz",
+      "bytes": 50200,
+      "sha256": "193c68892966f29a10fca4b149fef8cd13e524f7f6583f7a0f29586641676890"
+    },
+    "55": {
+      "path": "shards/55.json.gz",
+      "bytes": 55157,
+      "sha256": "28b409b8f252d045bac3f05bf49a3b23590d364c19a1054b8c08ff1e5f199fbe"
+    },
+    "56": {
+      "path": "shards/56.json.gz",
+      "bytes": 52390,
+      "sha256": "aafe35ca666ee57257d13e86ec4d1df2a3a0c163bb483789693c0a9843742b5b"
+    },
+    "57": {
+      "path": "shards/57.json.gz",
+      "bytes": 55523,
+      "sha256": "f381c2dec03cbdaeb82270e68fb55836aa8173b573e1ad6162b05a201a619e02"
+    },
+    "58": {
+      "path": "shards/58.json.gz",
+      "bytes": 51045,
+      "sha256": "6132b44c357ac654508aedc3f1bd4fee07f3e84d79d63b7ab2a3feaa556103ee"
+    },
+    "59": {
+      "path": "shards/59.json.gz",
+      "bytes": 61076,
+      "sha256": "2032870fd8e322c86b945cdacf70226cc342f22e8b1f4194607e9b4ff7344273"
+    },
+    "5a": {
+      "path": "shards/5a.json.gz",
+      "bytes": 48744,
+      "sha256": "9e5b52b4b3dd32da1e5e5460d9a9a0cd76346dcc98a41799626fcc3bc0059a22"
+    },
+    "5b": {
+      "path": "shards/5b.json.gz",
+      "bytes": 55149,
+      "sha256": "faa4c92eb0840ea542299c54212b22ab61e402a307eefe7e127776a4342f08c3"
+    },
+    "5c": {
+      "path": "shards/5c.json.gz",
+      "bytes": 50753,
+      "sha256": "11ab68fc0ebe9d5aee56160381028c97e241a27d9601fd27dfc9ad30fbd62b70"
+    },
+    "5d": {
+      "path": "shards/5d.json.gz",
+      "bytes": 48433,
+      "sha256": "544f28a35423962ccf1c7c8b61c8fd5beb761291bbd00b8a16096e136b0dae4a"
+    },
+    "5e": {
+      "path": "shards/5e.json.gz",
+      "bytes": 48124,
+      "sha256": "3963529ec3a6bba15b2bab1d11a3576de8dbb827c03d18c052b9dee816088046"
+    },
+    "5f": {
+      "path": "shards/5f.json.gz",
+      "bytes": 50832,
+      "sha256": "eb81578148cc08d4e531d76147684b7283c9fb5807b835097ddf69dd0312523f"
+    },
+    "60": {
+      "path": "shards/60.json.gz",
+      "bytes": 51432,
+      "sha256": "cbdfca811020e13bbfa490c404678c0d77c9dee8b194a6a1f63a7aa0dd5f7587"
+    },
+    "61": {
+      "path": "shards/61.json.gz",
+      "bytes": 48863,
+      "sha256": "b576d5e216ea64c7129a8067de3d78f47fd188c7d1b5240593b4d58e64d3e6fa"
+    },
+    "62": {
+      "path": "shards/62.json.gz",
+      "bytes": 55506,
+      "sha256": "5ebb4045ba4b49778d8a50ffffc87cce1eed6c7f55bf18910a5b82db8c5d9ad2"
+    },
+    "63": {
+      "path": "shards/63.json.gz",
+      "bytes": 48804,
+      "sha256": "58536e5a83e5fee124be825fbcb24c537f4d913e46b5ad335684c4e0eed40add"
+    },
+    "64": {
+      "path": "shards/64.json.gz",
+      "bytes": 53279,
+      "sha256": "16326b6b249c8e3a5fbe089fe7d69dd8abf1b9939ad1bbfc6fd6a2ef3d82a141"
+    },
+    "65": {
+      "path": "shards/65.json.gz",
+      "bytes": 46111,
+      "sha256": "6f9b4af2953701ea523f46367126c33481951700727777aa8dbac31fd611e3dd"
+    },
+    "66": {
+      "path": "shards/66.json.gz",
+      "bytes": 54035,
+      "sha256": "ca458de6a2e2de1587caee835005ced0c541d715d1c70ab74fd9c7b174f4181c"
+    },
+    "67": {
+      "path": "shards/67.json.gz",
+      "bytes": 50321,
+      "sha256": "dc3019f4a7948f1d4d7f9f7d5a08d17df749749c57f36351832588896e30193f"
+    },
+    "68": {
+      "path": "shards/68.json.gz",
+      "bytes": 43928,
+      "sha256": "cf1b9095c4e4c74c48434d040d4426433056b44f5b9a433065972b54e96ed126"
+    },
+    "69": {
+      "path": "shards/69.json.gz",
+      "bytes": 45607,
+      "sha256": "dd55a6870c8248d2f6ce46f832177d796dc71687c8fa77f01d295592b3988c17"
+    },
+    "6a": {
+      "path": "shards/6a.json.gz",
+      "bytes": 57266,
+      "sha256": "c8b1559828fbec08db4434f1a23b34e247e46074a3d13f9e0eed49cf457769a3"
+    },
+    "6b": {
+      "path": "shards/6b.json.gz",
+      "bytes": 50487,
+      "sha256": "9266dd8a1ab8a46abba8a555f029dd1d311cd37af5b769ae53ce028260581f66"
+    },
+    "6c": {
+      "path": "shards/6c.json.gz",
+      "bytes": 52308,
+      "sha256": "f7094e84e8d8f08b65b712eb81a48a4be55d1504fd01caf45df1e9cc41748795"
+    },
+    "6d": {
+      "path": "shards/6d.json.gz",
+      "bytes": 56429,
+      "sha256": "f75aa2dc539d58992d158a09f8ffcd80c0babde28527bfdb328b2fc9ea5d86ac"
+    },
+    "6e": {
+      "path": "shards/6e.json.gz",
+      "bytes": 46621,
+      "sha256": "9925580dcf8093ef0a874fe242a580cb912d50e9dea04009f653919d7b337ab8"
+    },
+    "6f": {
+      "path": "shards/6f.json.gz",
+      "bytes": 54660,
+      "sha256": "f781c310ac410e45d5f5faca2c55efe3ec2798e51aec3bf9adbf132bc9611cd1"
+    },
+    "70": {
+      "path": "shards/70.json.gz",
+      "bytes": 51108,
+      "sha256": "2b5c151c449c2811da6daf26d304880de8c3068ac89517c39be5a232b0581d64"
+    },
+    "71": {
+      "path": "shards/71.json.gz",
+      "bytes": 57521,
+      "sha256": "dad29b9c4d6ba04234769b3a45de80e76bd6e8f6d8176814290580d2d0d0a31c"
+    },
+    "72": {
+      "path": "shards/72.json.gz",
+      "bytes": 46891,
+      "sha256": "48ac475093b81b146651c58a14f170e6993a85e35ba1776731ef0e50a27356a1"
+    },
+    "73": {
+      "path": "shards/73.json.gz",
+      "bytes": 49404,
+      "sha256": "67dd849e5fe11088962a9141976e4cfdc97f42adc136f5f7e082d7d376135a89"
+    },
+    "74": {
+      "path": "shards/74.json.gz",
+      "bytes": 46060,
+      "sha256": "c5bc6907226c28b2b899cefbfbd29f85313acca776c93bdf32c550d230ead67e"
+    },
+    "75": {
+      "path": "shards/75.json.gz",
+      "bytes": 55803,
+      "sha256": "42d3b858e5621ff0d6718980b4f57099eaf562154e07dfab4e87ab6cc5109c8d"
+    },
+    "76": {
+      "path": "shards/76.json.gz",
+      "bytes": 47645,
+      "sha256": "a0dbd4c014359eb5fe464afb604c1841deb749998fd335c6c700a683eaf82c79"
+    },
+    "77": {
+      "path": "shards/77.json.gz",
+      "bytes": 61716,
+      "sha256": "8cebbfde12fd2d345643d9552179421bdca70e04b47158ee875c0fadc1b23b61"
+    },
+    "78": {
+      "path": "shards/78.json.gz",
+      "bytes": 53967,
+      "sha256": "bef5b82a660714da00987aff5bd5d71be8281f3a211fac012ea86c61fd703f53"
+    },
+    "79": {
+      "path": "shards/79.json.gz",
+      "bytes": 50782,
+      "sha256": "0300835f8ccf7c82a1fb325835f18df4cccfff9e2889cbb445dcb6aa0d4abec7"
+    },
+    "7a": {
+      "path": "shards/7a.json.gz",
+      "bytes": 46367,
+      "sha256": "cd5aed3cde2f71c057c97dd59d104c2c1fa70868f4158e85a7ded803846b0b4f"
+    },
+    "7b": {
+      "path": "shards/7b.json.gz",
+      "bytes": 54655,
+      "sha256": "874716a004f713d656556a06c4e30f1b075f6b458a8ca54a7ca8785667409264"
+    },
+    "7c": {
+      "path": "shards/7c.json.gz",
+      "bytes": 49503,
+      "sha256": "f6463fab52251fd573311b76dd96af59cb1b8dbc0fa70fb9890ba675a2ba886e"
+    },
+    "7d": {
+      "path": "shards/7d.json.gz",
+      "bytes": 46263,
+      "sha256": "d92f1b9ade844848e63ec0cfc76c945e4ee330bac05954f38b2b6ba836d515b8"
+    },
+    "7e": {
+      "path": "shards/7e.json.gz",
+      "bytes": 48083,
+      "sha256": "b34557a196bcff2b5991513cce8c9ece5d2afc61c046d176f0c96db71428db4e"
+    },
+    "7f": {
+      "path": "shards/7f.json.gz",
+      "bytes": 53736,
+      "sha256": "58c7fe215db090c6bf639060e5e118dd986181839490afde146a1d8574f89359"
+    },
+    "80": {
+      "path": "shards/80.json.gz",
+      "bytes": 51899,
+      "sha256": "c4bb4c1d9cb668d78f8288b34ce78b13b7884f1c109e9f4f2867d7813805a93c"
+    },
+    "81": {
+      "path": "shards/81.json.gz",
+      "bytes": 54340,
+      "sha256": "56d24810f5908feca94195963472c28ef8e83be2c5968b55b40a661063fafe9b"
+    },
+    "82": {
+      "path": "shards/82.json.gz",
+      "bytes": 48570,
+      "sha256": "39d78a5a8e3f6097db20e4c9add842bebb6e918abcaa473227a8dd548bb3db60"
+    },
+    "83": {
+      "path": "shards/83.json.gz",
+      "bytes": 60679,
+      "sha256": "c5e64b81ed69ba1b6cf46255fc2976bddfd107a2d55f83e1f6be69c1f5e1ba73"
+    },
+    "84": {
+      "path": "shards/84.json.gz",
+      "bytes": 52627,
+      "sha256": "6ca49e00a340125f80f855c66179d91c5ece647bd3cfd58542bf2a10b13a7b84"
+    },
+    "85": {
+      "path": "shards/85.json.gz",
+      "bytes": 51860,
+      "sha256": "698b4780516b25bb1b0104aeb7bb66a8ae2c4b9bfcd0fd543574f2b597d72656"
+    },
+    "86": {
+      "path": "shards/86.json.gz",
+      "bytes": 51053,
+      "sha256": "7dc415af72fcd1eec8f9102b1f7431e3bfcc7a17e082bf28506ce2d4a07b3f9c"
+    },
+    "87": {
+      "path": "shards/87.json.gz",
+      "bytes": 54063,
+      "sha256": "47073fe27891a62d6bfbdceaef248582b7fc554b3bc1981555af003561e58580"
+    },
+    "88": {
+      "path": "shards/88.json.gz",
+      "bytes": 52017,
+      "sha256": "da23df3fc4979344497cad259c3cd4123e68528143db7618029889f02163bd8e"
+    },
+    "89": {
+      "path": "shards/89.json.gz",
+      "bytes": 45982,
+      "sha256": "09bba883f214e257df56db4381e34f5beb9cdf4ffc9ed3370ee69c743ccbbd5b"
+    },
+    "8a": {
+      "path": "shards/8a.json.gz",
+      "bytes": 50277,
+      "sha256": "3c3386709ffb8b6659cdcb8e9ef95760537fd26f62290d1aaa6735092642d6d3"
+    },
+    "8b": {
+      "path": "shards/8b.json.gz",
+      "bytes": 49876,
+      "sha256": "cbadcf4d39a4c13e2ecdbf2d4472a6651d3f6fef12d1c03fc30d989fa0f1986f"
+    },
+    "8c": {
+      "path": "shards/8c.json.gz",
+      "bytes": 51866,
+      "sha256": "f86a505b9862c42648a6bfa20d10324cce1b4209df58a1c14b4b751ede3a60fb"
+    },
+    "8d": {
+      "path": "shards/8d.json.gz",
+      "bytes": 50985,
+      "sha256": "cd77eb6bb13d1ee0a0d76e6d49b0c7d15ea494b516f191ee840ce34323e00caa"
+    },
+    "8e": {
+      "path": "shards/8e.json.gz",
+      "bytes": 53668,
+      "sha256": "33ca9a67546941859168c8266b1d0e3927be85a632522e74a0b9822b968ecfd8"
+    },
+    "8f": {
+      "path": "shards/8f.json.gz",
+      "bytes": 46024,
+      "sha256": "353a6a8b18ffdaf98e41549d047e23def997d4707907588fc4f7b72c3c0536fb"
+    },
+    "90": {
+      "path": "shards/90.json.gz",
+      "bytes": 47179,
+      "sha256": "0f3b4390b46fe33659832b13ce1167ed9128b6c64a9bc7741f73eab0c02c0ef4"
+    },
+    "91": {
+      "path": "shards/91.json.gz",
+      "bytes": 44124,
+      "sha256": "d92c516f36f91c103694dd4e2d2a77f132f6b98c73622f70de7545a7e9c9a98d"
+    },
+    "92": {
+      "path": "shards/92.json.gz",
+      "bytes": 41652,
+      "sha256": "8c908e150f06d421a35ea5bb2937cfcaf996a85a3086d6bf2f53d28899b252c3"
+    },
+    "93": {
+      "path": "shards/93.json.gz",
+      "bytes": 45943,
+      "sha256": "2b8c42547318621683af56b1d4018da8ecd48cb4d07794293b5d7ce814465f5f"
+    },
+    "94": {
+      "path": "shards/94.json.gz",
+      "bytes": 50201,
+      "sha256": "16e9cb2838685a4541a29828be07644a89368dc0e2c769229a534c187010f950"
+    },
+    "95": {
+      "path": "shards/95.json.gz",
+      "bytes": 48112,
+      "sha256": "7d6e4964f0d0e27eae1254f27bdfef0dc82c411a74c8c9984d4e3ff066def9fd"
+    },
+    "96": {
+      "path": "shards/96.json.gz",
+      "bytes": 52546,
+      "sha256": "700e3c08ae920b7b75ad4300666db12070169f23bf1ae748456f251ba563d3fc"
+    },
+    "97": {
+      "path": "shards/97.json.gz",
+      "bytes": 50235,
+      "sha256": "53c93663d7fb52f2218b2f1c43db6520665eae605a5e69e6ffc9041b89a68fb8"
+    },
+    "98": {
+      "path": "shards/98.json.gz",
+      "bytes": 51401,
+      "sha256": "435fa05e72a32667181bb022ca904d18f97b5defce78b85a56c910d3dd12f153"
+    },
+    "99": {
+      "path": "shards/99.json.gz",
+      "bytes": 52295,
+      "sha256": "da84fbbb923a37b9ccbf5b9473a3db9a090b598201bc04a20c341706d0cbc5ee"
+    },
+    "9a": {
+      "path": "shards/9a.json.gz",
+      "bytes": 47152,
+      "sha256": "ded2357625ebefed61cca08c85c0289970f3c9fb002d43020b6bba96c3d3b0ab"
+    },
+    "9b": {
+      "path": "shards/9b.json.gz",
+      "bytes": 61606,
+      "sha256": "cb019d1f2ccc79133e192e7215734dd35e74a621f4a63a52ccd552574e735745"
+    },
+    "9c": {
+      "path": "shards/9c.json.gz",
+      "bytes": 60376,
+      "sha256": "ec10d101bd50b8e2c00c1e24656bcd3508789617842e281cb14e6af00a3aae18"
+    },
+    "9d": {
+      "path": "shards/9d.json.gz",
+      "bytes": 64616,
+      "sha256": "6bfb28a7c9af28d62b543c75af752bf376cf62a9361692bdc723759229dac4b6"
+    },
+    "9e": {
+      "path": "shards/9e.json.gz",
+      "bytes": 62521,
+      "sha256": "11a5d6940cbc6375e8fc84a9998f86fdc3b8b5de8b39762778f125b4ae8798e3"
+    },
+    "9f": {
+      "path": "shards/9f.json.gz",
+      "bytes": 48547,
+      "sha256": "0df8a675c0c0320d1b0a4efe8b48311fbfd2e48c4c9830d02b8ff6a74e8aaf67"
+    },
+    "a0": {
+      "path": "shards/a0.json.gz",
+      "bytes": 50488,
+      "sha256": "07a69510ccc7dafe911632210381e596b5220d04527354cfce6e2d892153bddb"
+    },
+    "a1": {
+      "path": "shards/a1.json.gz",
+      "bytes": 49036,
+      "sha256": "a1ca7dcf7a2c38fee2752edc4a36225824922b51c27906c3559393e099f42f28"
+    },
+    "a2": {
+      "path": "shards/a2.json.gz",
+      "bytes": 51666,
+      "sha256": "5f49f73f7fb1fd0f47fe236a11541b413ab81254d62c6b0d27886b2f6329f348"
+    },
+    "a3": {
+      "path": "shards/a3.json.gz",
+      "bytes": 47117,
+      "sha256": "ba42152a51bdbeff011e29e5930cb355074a9aac5cad19c44e854b0b3d8a24b7"
+    },
+    "a4": {
+      "path": "shards/a4.json.gz",
+      "bytes": 53629,
+      "sha256": "8e1b7e620fef6712d96ff537a6d770998bc1612c49bf3a5e2e61367fe1cebff4"
+    },
+    "a5": {
+      "path": "shards/a5.json.gz",
+      "bytes": 54036,
+      "sha256": "2069d2c0ecbf1b28ec780ca196127d5baae0a4ea19843b473869ce2700013eee"
+    },
+    "a6": {
+      "path": "shards/a6.json.gz",
+      "bytes": 47116,
+      "sha256": "c8e0a3b2742dbeefa9c962524ba23aed8900eff6b3c74b8daad8c97d759d67c6"
+    },
+    "a7": {
+      "path": "shards/a7.json.gz",
+      "bytes": 47629,
+      "sha256": "19daa5f1bf95ed085036000516ed7ba8d9e34c41371450669de488520a808113"
+    },
+    "a8": {
+      "path": "shards/a8.json.gz",
+      "bytes": 42961,
+      "sha256": "93960f3b28c990c03a23618daf7a60b0336dec39ba2f258f3116c38e237382de"
+    },
+    "a9": {
+      "path": "shards/a9.json.gz",
+      "bytes": 50340,
+      "sha256": "562b2426fece68db69e6b6214653f561c014be2fff11e6f498ee2f43d855458f"
+    },
+    "aa": {
+      "path": "shards/aa.json.gz",
+      "bytes": 50551,
+      "sha256": "671ed3d6d2f1f54ce7bcad8aef6de18376585068b86f17fb859a572c67624700"
+    },
+    "ab": {
+      "path": "shards/ab.json.gz",
+      "bytes": 53883,
+      "sha256": "22cca9bab9bd9193cceaf026b65f196bf74b5ffff961a1179a3c8ea6ee789572"
+    },
+    "ac": {
+      "path": "shards/ac.json.gz",
+      "bytes": 51885,
+      "sha256": "d7ed88cfe7c7196de9fac19e495e03f86b60ed6a41cf2f8c717013ae10c9973c"
+    },
+    "ad": {
+      "path": "shards/ad.json.gz",
+      "bytes": 51704,
+      "sha256": "8d754483065f383a8cb460f7675d8e459333c74e85f99e55fd561ac66fe74883"
+    },
+    "ae": {
+      "path": "shards/ae.json.gz",
+      "bytes": 55123,
+      "sha256": "70c266c1a14c180225b4d56f5f11b3a005d5dc2d549519d8c3a9d70586bd617a"
+    },
+    "af": {
+      "path": "shards/af.json.gz",
+      "bytes": 51520,
+      "sha256": "e8fc0326c995fa4d55d8c4aea81c7ed1fe120215ea15f0a201ba62bb5f58e36e"
+    },
+    "b0": {
+      "path": "shards/b0.json.gz",
+      "bytes": 49166,
+      "sha256": "0273363781174b8a0b5199703d3694dc30fcd944c4c60c2edd4863da32e59226"
+    },
+    "b1": {
+      "path": "shards/b1.json.gz",
+      "bytes": 55464,
+      "sha256": "75a4bf50b199dfacbcff7061a0ed29efaab3a15a4daab009fea568917db28db2"
+    },
+    "b2": {
+      "path": "shards/b2.json.gz",
+      "bytes": 51595,
+      "sha256": "588bdc7013bcd735d776864617e6b12134e9592c7ec51a9bfb9bc2d21a2d5fa1"
+    },
+    "b3": {
+      "path": "shards/b3.json.gz",
+      "bytes": 52385,
+      "sha256": "a5770e6e1303b67ccee1ae35795c3a7c40fac4ea978d23c066036c7506232595"
+    },
+    "b4": {
+      "path": "shards/b4.json.gz",
+      "bytes": 45398,
+      "sha256": "31247d51e2d76c06d05866e877e3b13bfb3d1547b5bc8b79ba1b76a3fc09c7e3"
+    },
+    "b5": {
+      "path": "shards/b5.json.gz",
+      "bytes": 49454,
+      "sha256": "e2c9fc6af68083d4799dcf1d3c8bb451f8d70206ff0c5a1ea37bf1afeae252f4"
+    },
+    "b6": {
+      "path": "shards/b6.json.gz",
+      "bytes": 47107,
+      "sha256": "fa66c47a03261cbd026ce57be26a6076bf952d3604fff5150fe493efa0a1bd40"
+    },
+    "b7": {
+      "path": "shards/b7.json.gz",
+      "bytes": 52390,
+      "sha256": "50df083653942f49897c9a13e75cf9baa00f2caa6ca31d26b96c149e3b2d6a39"
+    },
+    "b8": {
+      "path": "shards/b8.json.gz",
+      "bytes": 50957,
+      "sha256": "996dad9e1098388f7bb186c996d841fdc6ab3b8868b70a9fcff87fefc1d8e25e"
+    },
+    "b9": {
+      "path": "shards/b9.json.gz",
+      "bytes": 50777,
+      "sha256": "a14dc0636501b7c23249a050f1701a0e751acf3995f797e35e60d85e814b8f84"
+    },
+    "ba": {
+      "path": "shards/ba.json.gz",
+      "bytes": 48593,
+      "sha256": "39fef8617378b4ab478aa01dd4ae0468180b127118e2c2755bd1b1639211007f"
+    },
+    "bb": {
+      "path": "shards/bb.json.gz",
+      "bytes": 45997,
+      "sha256": "8840548be93572bf79736e3ce0df842e8ea5a419c8f33965d31946806cc96ed4"
+    },
+    "bc": {
+      "path": "shards/bc.json.gz",
+      "bytes": 46002,
+      "sha256": "a218e1fceb72983846dca4b3edc897b08b64a09c6f9e6d038717e4437d3abffc"
+    },
+    "bd": {
+      "path": "shards/bd.json.gz",
+      "bytes": 48992,
+      "sha256": "41d9c97cfa8a555d1290bda06c6b1b50172c4ec40f3622fb76f16998cfe8646c"
+    },
+    "be": {
+      "path": "shards/be.json.gz",
+      "bytes": 57573,
+      "sha256": "68c3d557083ad89355e55fb5220d2d4e7e8ed4a88ecbfb56d9a70443e592acc4"
+    },
+    "bf": {
+      "path": "shards/bf.json.gz",
+      "bytes": 48788,
+      "sha256": "527009883753028ebbcaa4d1dc6d0625516fe2d408c2701c807190ec67730799"
+    },
+    "c0": {
+      "path": "shards/c0.json.gz",
+      "bytes": 58212,
+      "sha256": "a2cffc82559f184bdb14b805f48f629dd7fd3c2512027c279ca9d8e90563a880"
+    },
+    "c1": {
+      "path": "shards/c1.json.gz",
+      "bytes": 53215,
+      "sha256": "0c1deb8c2102b88049a99d40a660b72ee248a3a1845acb21e7ec0bc4eb22dc4d"
+    },
+    "c2": {
+      "path": "shards/c2.json.gz",
+      "bytes": 40325,
+      "sha256": "578be65b8facdf25dba836737fdfae69b8d8f5403f9b107623dbbb8189ec1e3f"
+    },
+    "c3": {
+      "path": "shards/c3.json.gz",
+      "bytes": 48845,
+      "sha256": "3ab7f8c2ed879e335c10cf5e79c24188694e8f83a6a4db740877a1bf3ab9dcac"
+    },
+    "c4": {
+      "path": "shards/c4.json.gz",
+      "bytes": 60852,
+      "sha256": "c29c466273707645155e28655546db64391a93e2519a7d06efe77a518fc62944"
+    },
+    "c5": {
+      "path": "shards/c5.json.gz",
+      "bytes": 54235,
+      "sha256": "1b94a8352b5a7664e56ef479eeaedb28b4452c664569a427a61c63104bc94580"
+    },
+    "c6": {
+      "path": "shards/c6.json.gz",
+      "bytes": 49116,
+      "sha256": "237b8598f5d243e6685f66508fdb5e564116b77b68f5bfa5c2c64d71bcdbe678"
+    },
+    "c7": {
+      "path": "shards/c7.json.gz",
+      "bytes": 49483,
+      "sha256": "f1c1c4e3397347947f236c1b1bbb82f78afd28442384792b697ae6f62f44e967"
+    },
+    "c8": {
+      "path": "shards/c8.json.gz",
+      "bytes": 57074,
+      "sha256": "8baefa450e02f050b63bc7f732daaa1b861834bc93231b9b0cb3ac51e45e144f"
+    },
+    "c9": {
+      "path": "shards/c9.json.gz",
+      "bytes": 51920,
+      "sha256": "30d5873d2136c391cd08f157350c3afad072e72e9c9f2622059eca9d4bd0367f"
+    },
+    "ca": {
+      "path": "shards/ca.json.gz",
+      "bytes": 53363,
+      "sha256": "157134cbdde0608ae6adc12dc41e6cc87ed17c51f763c793ce8d70b2c149881c"
+    },
+    "cb": {
+      "path": "shards/cb.json.gz",
+      "bytes": 57050,
+      "sha256": "af577b3ec5bf112f1f1451f102719464016131c808f489feafb8b49381d73074"
+    },
+    "cc": {
+      "path": "shards/cc.json.gz",
+      "bytes": 47353,
+      "sha256": "5841e3cbdf4e3fce6bf6ac63cc866036d91612f54c9cd2120704524fb80e56d9"
+    },
+    "cd": {
+      "path": "shards/cd.json.gz",
+      "bytes": 47031,
+      "sha256": "990cd95efacd43d2e65a16a583c67456cd45ab1d811e86f56aef472b201ad7c9"
+    },
+    "ce": {
+      "path": "shards/ce.json.gz",
+      "bytes": 50113,
+      "sha256": "88c473b7cf5f957e18f35007ab2e016041f548e199bfb040345fe059dec4fd2f"
+    },
+    "cf": {
+      "path": "shards/cf.json.gz",
+      "bytes": 45588,
+      "sha256": "089e98bbce9901e62be2e0e22532a866344864b938d1a91e83edf9716f17c9b3"
+    },
+    "d0": {
+      "path": "shards/d0.json.gz",
+      "bytes": 48987,
+      "sha256": "798a11856307724b6474a6383f86ff6cba4e95d573399601f2c73056903dec1c"
+    },
+    "d1": {
+      "path": "shards/d1.json.gz",
+      "bytes": 48629,
+      "sha256": "26fc15eb889e6cce63b85c283f8ac389dc530db5aaf0ef38722eaffde4aeae68"
+    },
+    "d2": {
+      "path": "shards/d2.json.gz",
+      "bytes": 45390,
+      "sha256": "4b7e889d248b86241575b0942c46efb8d83e2400fed268aa1dae4596352cdc8a"
+    },
+    "d3": {
+      "path": "shards/d3.json.gz",
+      "bytes": 51779,
+      "sha256": "c655b8781775acf09dedd64f4cee8119292d3151e38cfd4a29d229de64ec3475"
+    },
+    "d4": {
+      "path": "shards/d4.json.gz",
+      "bytes": 54686,
+      "sha256": "7b057567d8a7ae0370e323fe8d9174f60b728b007f19d6921de427835a258c0a"
+    },
+    "d5": {
+      "path": "shards/d5.json.gz",
+      "bytes": 51936,
+      "sha256": "21e21867adbc3b8f7437a7148a37fefcc8124ef013fff2a22caed341926f8e7c"
+    },
+    "d6": {
+      "path": "shards/d6.json.gz",
+      "bytes": 47685,
+      "sha256": "7f262354efab35982aafc25af76cc007af995f99ab83ae0483596cb530f53669"
+    },
+    "d7": {
+      "path": "shards/d7.json.gz",
+      "bytes": 46784,
+      "sha256": "a6843d3dbe10fcf8866069f0522d8da87aff622f47d13919c29c7c6875c77b88"
+    },
+    "d8": {
+      "path": "shards/d8.json.gz",
+      "bytes": 57705,
+      "sha256": "0c20ddd8435f6365dc4fbdc3c2c664c3cdd90b3b067c27e89ec510f4a40dc580"
+    },
+    "d9": {
+      "path": "shards/d9.json.gz",
+      "bytes": 50024,
+      "sha256": "9a9670890d7b5f87f9f62220b178f645052a16f9c7429ed1709dd44a683ab0be"
+    },
+    "da": {
+      "path": "shards/da.json.gz",
+      "bytes": 48092,
+      "sha256": "e7bf122ffcc76d890e2d8aba0713fc14d116fbd4e92a4bf0eccd38f605bbcc71"
+    },
+    "db": {
+      "path": "shards/db.json.gz",
+      "bytes": 49516,
+      "sha256": "3b484d25ad7a0d7a65ad6a163e57ce07f42732f2fb23c12587d302eeb100b565"
+    },
+    "dc": {
+      "path": "shards/dc.json.gz",
+      "bytes": 49603,
+      "sha256": "f90519ee855c7edfc7f5c878b9d4ffd6aa98219d71024a10721c798eadd59f2a"
+    },
+    "dd": {
+      "path": "shards/dd.json.gz",
+      "bytes": 49505,
+      "sha256": "e2be050f8d1e792e91d844d912f3e8525cc9dd4aa422725e4528aa085326effb"
+    },
+    "de": {
+      "path": "shards/de.json.gz",
+      "bytes": 48414,
+      "sha256": "ae4153cb4a769578ead9718d65c564433cf9dbd3944f6d1569ce3d1470190bd6"
+    },
+    "df": {
+      "path": "shards/df.json.gz",
+      "bytes": 46198,
+      "sha256": "92da73732b9708efc2d01717d1df744cfb0ec37aa703b4d4c0074ac91ade9ee3"
+    },
+    "e0": {
+      "path": "shards/e0.json.gz",
+      "bytes": 48416,
+      "sha256": "69a15c3684a3f88d52c6d968ff7cebe91fa3ed15df3227a46d67cc94b03764bb"
+    },
+    "e1": {
+      "path": "shards/e1.json.gz",
+      "bytes": 45575,
+      "sha256": "0f5563904a8b33cf88dff6d75cb25709335bfdc2ec185b3ffb992915a50f3901"
+    },
+    "e2": {
+      "path": "shards/e2.json.gz",
+      "bytes": 55206,
+      "sha256": "cb16e32100cb499fd90335cead530e93b5aa0f9acf0830500db6400732f94b2a"
+    },
+    "e3": {
+      "path": "shards/e3.json.gz",
+      "bytes": 45227,
+      "sha256": "530b89a883d978e5920c8be68a25d57becd8cbef8b0b16858a47def9493efc6c"
+    },
+    "e4": {
+      "path": "shards/e4.json.gz",
+      "bytes": 49834,
+      "sha256": "5d046a21f9c5cf5ea755103fb5ae934289beebe27c3398c1e22deaae4f791487"
+    },
+    "e5": {
+      "path": "shards/e5.json.gz",
+      "bytes": 57516,
+      "sha256": "50d84ddb7814e5d3223694f397a4ff4d81dfb391fb573f371fbc965d49778800"
+    },
+    "e6": {
+      "path": "shards/e6.json.gz",
+      "bytes": 50331,
+      "sha256": "3772af1169a14dbfa377c5a6286d2ac749b03d678328b6c918eaa649183e5ae4"
+    },
+    "e7": {
+      "path": "shards/e7.json.gz",
+      "bytes": 57488,
+      "sha256": "a04f38946acda39b0c27aec6b5facfde5f97bc8b9a52ebe31e6ed94031ec485d"
+    },
+    "e8": {
+      "path": "shards/e8.json.gz",
+      "bytes": 56707,
+      "sha256": "79cbf99f0081e81d83a5b24bf07c05fe107e72c7fb662b66251bce2cd346cd6c"
+    },
+    "e9": {
+      "path": "shards/e9.json.gz",
+      "bytes": 46098,
+      "sha256": "291efa7f49fc2e7cf24271dd2a22c030457762c81350de0b75a7c6b94c4f2e58"
+    },
+    "ea": {
+      "path": "shards/ea.json.gz",
+      "bytes": 52386,
+      "sha256": "8e65816a58c93b73eedb1de8be7f64ed40bb389ef77bacf74824dbdeea612ff8"
+    },
+    "eb": {
+      "path": "shards/eb.json.gz",
+      "bytes": 43314,
+      "sha256": "e856c675bda62f2c5fd0c920abe64f0e443065777b9d9e993c628b2f9f13c8a4"
+    },
+    "ec": {
+      "path": "shards/ec.json.gz",
+      "bytes": 46934,
+      "sha256": "e3542d7d8644a9c932679dfd5d098c98a5fea93277bcf2af656a5c636d061ec6"
+    },
+    "ed": {
+      "path": "shards/ed.json.gz",
+      "bytes": 46464,
+      "sha256": "d33f7b58b8efe74179d45283cf74689332c05fecdb83d287833ce77bc71b3b55"
+    },
+    "ee": {
+      "path": "shards/ee.json.gz",
+      "bytes": 50239,
+      "sha256": "491a6fe36ad945b65b2f5a8307cd1efd766d881d4f50dc04cc6b596b7d0128af"
+    },
+    "ef": {
+      "path": "shards/ef.json.gz",
+      "bytes": 45333,
+      "sha256": "9ecdf0bb90630c31c74806739701881bfd7011b7ea8b0c3388faa9ebcec44c5a"
+    },
+    "f0": {
+      "path": "shards/f0.json.gz",
+      "bytes": 49171,
+      "sha256": "52518eccbb935c8e334f9c72e36b2d93ea4088b999a28aa3a255fd4945807b6c"
+    },
+    "f1": {
+      "path": "shards/f1.json.gz",
+      "bytes": 53009,
+      "sha256": "eefab4553e3aefa59201fdf960a659830af5a9e36afcf94ce53c304d57746d98"
+    },
+    "f2": {
+      "path": "shards/f2.json.gz",
+      "bytes": 52064,
+      "sha256": "7212e1e6ed69ee574fab76cf5d0c6204319ad5173c4600314023b9f211c6e666"
+    },
+    "f3": {
+      "path": "shards/f3.json.gz",
+      "bytes": 58750,
+      "sha256": "ba3f052aae885d9822328d2c6f63d190acae32b74c2c84dd646a8a5edf9544f2"
+    },
+    "f4": {
+      "path": "shards/f4.json.gz",
+      "bytes": 55540,
+      "sha256": "b020540069689bf9dee44f8ed18ab072280717db5b9ddca0b49ac818500acc69"
+    },
+    "f5": {
+      "path": "shards/f5.json.gz",
+      "bytes": 46941,
+      "sha256": "2c296de9bd528b5d3c2ebc045e49e6870500a012c56b66c9b858e0b62ce47806"
+    },
+    "f6": {
+      "path": "shards/f6.json.gz",
+      "bytes": 51697,
+      "sha256": "86a5ac21959d6589f2a7c1236ad2295caf9f35b0a90a8622a78facac537d1c8f"
+    },
+    "f7": {
+      "path": "shards/f7.json.gz",
+      "bytes": 46457,
+      "sha256": "a30fe3acd4c02be8a41354ba9998797cb8075ac3782c2be5778a3b6a4eb781c2"
+    },
+    "f8": {
+      "path": "shards/f8.json.gz",
+      "bytes": 62389,
+      "sha256": "4944747807ec1f1bf6b02784df61b568fd94835c4f3b01068a80fa7d2ce15d34"
+    },
+    "f9": {
+      "path": "shards/f9.json.gz",
+      "bytes": 49110,
+      "sha256": "f3a99359a5c7ce83e318c429e8c8f365d3320d64866af5bda36ff6437b1ab962"
+    },
+    "fa": {
+      "path": "shards/fa.json.gz",
+      "bytes": 48503,
+      "sha256": "b06c412334e1f6818d4300b137065a556a290fb9b2f891588d91d4f5ec3ea517"
+    },
+    "fb": {
+      "path": "shards/fb.json.gz",
+      "bytes": 45918,
+      "sha256": "3f90f30a64abd41c4eb03308a452d135dcb5ba508902e1d259a77a0f14902e1c"
+    },
+    "fc": {
+      "path": "shards/fc.json.gz",
+      "bytes": 51178,
+      "sha256": "4de75a6ca04ccba9cb9f598fb55cfa3e535a7818a83eeb016be6ca933c9e4a14"
+    },
+    "fd": {
+      "path": "shards/fd.json.gz",
+      "bytes": 53575,
+      "sha256": "4b2a4cfca55daec0b316eb065036414dd1bc29631453cf1138542fdff4060109"
+    },
+    "fe": {
+      "path": "shards/fe.json.gz",
+      "bytes": 54186,
+      "sha256": "a4a2becbc4b1f2629d20b712a751c849cc9dbc1cb169dc8ca3043cb2c836b7a9"
+    },
+    "ff": {
+      "path": "shards/ff.json.gz",
+      "bytes": 51087,
+      "sha256": "a67cf45a5f80997c237b3d72a42c8e29983c11e3ccfc02b70d58f08825947aa6"
+    }
+  },
+  "method_universes": {
+    "human/mouse": {
+      "methods": [
+        "Ensembl Compara",
+        "HGNC",
+        "Hieranoid",
+        "InParanoid",
+        "OMA",
+        "OrthoFinder",
+        "OrthoInspector",
+        "PANTHER",
+        "PhylomeDB",
+        "SonicParanoid"
+      ],
+      "available_method_count": 10,
+      "complete": true,
+      "reported_available_counts": [
+        10
+      ],
+      "rows_examined": 24592,
+      "invalid_rows": 0,
+      "full_support_witness": {
+        "source_row": 847210,
+        "source_original_id": "HGNC:12523",
+        "target_original_id": "MGI:98919",
+        "score": 10,
+        "methods": [
+          "Ensembl Compara",
+          "HGNC",
+          "Hieranoid",
+          "InParanoid",
+          "OMA",
+          "OrthoFinder",
+          "OrthoInspector",
+          "PANTHER",
+          "PhylomeDB",
+          "SonicParanoid"
+        ]
+      },
+      "basis": "full_export_union_with_full_support_witness"
+    },
+    "human/worm": {
+      "methods": [
+        "Ensembl Compara",
+        "Hieranoid",
+        "InParanoid",
+        "OMA",
+        "OrthoFinder",
+        "OrthoInspector",
+        "PANTHER",
+        "PhylomeDB",
+        "SonicParanoid"
+      ],
+      "available_method_count": 9,
+      "complete": true,
+      "reported_available_counts": [
+        9
+      ],
+      "rows_examined": 15460,
+      "invalid_rows": 0,
+      "full_support_witness": {
+        "source_row": 748798,
+        "source_original_id": "HGNC:117",
+        "target_original_id": "WB:WBGene00000040",
+        "score": 9,
+        "methods": [
+          "Ensembl Compara",
+          "Hieranoid",
+          "InParanoid",
+          "OMA",
+          "OrthoFinder",
+          "OrthoInspector",
+          "PANTHER",
+          "PhylomeDB",
+          "SonicParanoid"
+        ]
+      },
+      "basis": "full_export_union_with_full_support_witness"
+    },
+    "mouse/human": {
+      "methods": [
+        "Ensembl Compara",
+        "HGNC",
+        "Hieranoid",
+        "InParanoid",
+        "OMA",
+        "OrthoFinder",
+        "OrthoInspector",
+        "PANTHER",
+        "PhylomeDB",
+        "SonicParanoid"
+      ],
+      "available_method_count": 10,
+      "complete": true,
+      "reported_available_counts": [
+        10
+      ],
+      "rows_examined": 24592,
+      "invalid_rows": 0,
+      "full_support_witness": {
+        "source_row": 466186,
+        "source_original_id": "MGI:2152878",
+        "target_original_id": "HGNC:5",
+        "score": 10,
+        "methods": [
+          "Ensembl Compara",
+          "HGNC",
+          "Hieranoid",
+          "InParanoid",
+          "OMA",
+          "OrthoFinder",
+          "OrthoInspector",
+          "PANTHER",
+          "PhylomeDB",
+          "SonicParanoid"
+        ]
+      },
+      "basis": "full_export_union_with_full_support_witness"
+    },
+    "mouse/worm": {
+      "methods": [
+        "Ensembl Compara",
+        "Hieranoid",
+        "InParanoid",
+        "OMA",
+        "OrthoFinder",
+        "OrthoInspector",
+        "PANTHER",
+        "PhylomeDB",
+        "SonicParanoid"
+      ],
+      "available_method_count": 9,
+      "complete": true,
+      "reported_available_counts": [
+        9
+      ],
+      "rows_examined": 17436,
+      "invalid_rows": 0,
+      "full_support_witness": {
+        "source_row": 748794,
+        "source_original_id": "MGI:87879",
+        "target_original_id": "WB:WBGene00000040",
+        "score": 9,
+        "methods": [
+          "Ensembl Compara",
+          "Hieranoid",
+          "InParanoid",
+          "OMA",
+          "OrthoFinder",
+          "OrthoInspector",
+          "PANTHER",
+          "PhylomeDB",
+          "SonicParanoid"
+        ]
+      },
+      "basis": "full_export_union_with_full_support_witness"
+    },
+    "worm/human": {
+      "methods": [
+        "Ensembl Compara",
+        "Hieranoid",
+        "InParanoid",
+        "OMA",
+        "OrthoFinder",
+        "OrthoInspector",
+        "PANTHER",
+        "PhylomeDB",
+        "SonicParanoid"
+      ],
+      "available_method_count": 9,
+      "complete": true,
+      "reported_available_counts": [
+        9
+      ],
+      "rows_examined": 15460,
+      "invalid_rows": 0,
+      "full_support_witness": {
+        "source_row": 466261,
+        "source_original_id": "WB:WBGene00006351",
+        "target_original_id": "HGNC:21298",
+        "score": 9,
+        "methods": [
+          "Ensembl Compara",
+          "Hieranoid",
+          "InParanoid",
+          "OMA",
+          "OrthoFinder",
+          "OrthoInspector",
+          "PANTHER",
+          "PhylomeDB",
+          "SonicParanoid"
+        ]
+      },
+      "basis": "full_export_union_with_full_support_witness"
+    },
+    "worm/mouse": {
+      "methods": [
+        "Ensembl Compara",
+        "Hieranoid",
+        "InParanoid",
+        "OMA",
+        "OrthoFinder",
+        "OrthoInspector",
+        "PANTHER",
+        "PhylomeDB",
+        "SonicParanoid"
+      ],
+      "available_method_count": 9,
+      "complete": true,
+      "reported_available_counts": [
+        9
+      ],
+      "rows_examined": 17436,
+      "invalid_rows": 0,
+      "full_support_witness": {
+        "source_row": 847375,
+        "source_original_id": "WB:WBGene00004416",
+        "target_original_id": "MGI:102854",
+        "score": 9,
+        "methods": [
+          "Ensembl Compara",
+          "Hieranoid",
+          "InParanoid",
+          "OMA",
+          "OrthoFinder",
+          "OrthoInspector",
+          "PANTHER",
+          "PhylomeDB",
+          "SonicParanoid"
+        ]
+      },
+      "basis": "full_export_union_with_full_support_witness"
+    }
+  },
+  "method_catalogue_source": {
+    "source_url": "https://download.alliancegenome.org/9.0.0/ORTHOLOGY-ALLIANCE/COMBINED/ORTHOLOGY-ALLIANCE_COMBINED_13.tsv.gz",
+    "fms_datafile_id": 339902,
+    "file_version": "9.0.0",
+    "sha256": "977ad252878d25a6cf486a9054448feff0e308e83e2fe5d6e8b6ec31c45491d4",
+    "compressed_bytes": 15302140,
+    "absent_cell_semantics": "not listed as supporting; not an explicit negative call"
+  }
+}

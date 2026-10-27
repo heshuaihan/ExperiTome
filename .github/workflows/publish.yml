@@ -24,6 +24,8 @@ jobs:
         run: quarto render
       - name: Fetch verified Atlas reference
         run: python3 scripts/fetch_atlas_reference.py --destination _site/atlas/reference
+      - name: Verify pinned Atlas method support
+        run: python3 scripts/verify_atlas_methods.py --directory _site/atlas/method-support
       - name: Check site
         run: python3 scripts/check_site.py _site --public
       - uses: actions/upload-pages-artifact@v4

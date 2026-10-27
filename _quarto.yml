@@ -36,6 +36,7 @@ project:
     - maintenance/entries/2026-10-24-01-experianalysis.qmd
     - maintenance/entries/2026-10-24-02-experitome-workspace-nodes.qmd
     - maintenance/entries/2026-10-25-01-public-analysis-profile.qmd
+    - maintenance/entries/2026-10-27-01-atlas-mapping.qmd
     - maintenance/index.qmd
     - materials/buffers/BUF-BCA-001_工作液.qmd
     - materials/buffers/BUF-TURBOID-001_富集缓冲液.qmd
