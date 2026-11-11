@@ -3,8 +3,9 @@ import { runAnalysis, runEnrichment } from './compute.mjs';
 import { importFile } from './import.mjs';
 import { LocalHelperClient } from './local-helper-client.mjs';
 import {
-  drawCorrelation, drawDistributions, drawHeatmap, drawMA, drawPca, drawVolcano,
+  drawCorrelation, drawDistributions, drawHeatmap, drawMA, drawPca, drawVolcano, drawFeatureAbundance, drawMissingness,
 } from './charts.mjs';
+import { serializeFigure, exportFigurePng } from './figure-export.mjs';
 
 const $ = (id) => document.getElementById(id);
 const state = {
@@ -29,10 +30,10 @@ const state = {
 
 const CHART_IDS = {
   correlation: 'correlationChart', pca: 'pcaChart', distributions: 'distributionChart',
-  volcano: 'volcanoChart', ma: 'maChart', heatmap: 'heatmapChart',
+  volcano: 'volcanoChart', ma: 'maChart', heatmap: 'heatmapChart', abundance: 'abundanceChart', missingness: 'missingnessChart',
 };
 
-function show(id, visible = true) { $(id).classList.toggle('hidden', !visible); }
+function show(id, visible = true) { $(id).classList.toggle('hidden', !visible); if (id.endsWith('-stage')) syncNavigation(); }
 function setAlert(id, message = '', success = false) {
   const node = $(id);
   node.textContent = message;
@@ -1330,7 +1331,7 @@ function updateAtlasLink() {
 }
 
 function currentView() {
-  return { metric: $('viewMetric').value, threshold: Number($('viewThreshold').value), lfcThreshold: Number(state.analysisOptions?.lfcThreshold) || 0, target: state.selectedFeature };
+  return { metric: $('viewMetric').value, threshold: Number($('viewThreshold').value), lfcThreshold: Number(state.analysisOptions?.lfcThreshold) || 0, target: state.selectedFeature, maxFeatures: Number($('heatmapRows').value) };
 }
 
 function renderCharts() {
@@ -1357,6 +1358,7 @@ function renderCharts() {
   $('diff-heading').textContent = exploration ? '表达模式与目标基因' : `比较与目标${activeMode() === 'proteomics' ? '蛋白组' : '基因'}`;
   $('results-heading').textContent = exploration ? '质量检查与表达探索' : '质量检查与差异结果';
   $('heatmapCaption').textContent = exploration ? 'TPM/FPKM 基因表达模式热图 · 最多 40 个' : activeMode() === 'proteomics' ? '差异蛋白组热图 · 最多 40 个' : '差异基因热图 · 最多 40 个';
+  $('heatmapCaption').textContent = $('heatmapCaption').textContent.replace('40', $('heatmapRows').value);
   $('heatmapHelp').textContent = exploration
     ? '按行标准化后的 TPM/FPKM 表达模式图，仅用于颜色展示；不表示差异检验结果；灰色单元格表示缺失。'
     : '热图按 feature 行标准化后显示相对模式，仅用于颜色展示；灰色单元格表示缺失。';
@@ -1380,6 +1382,8 @@ function renderCharts() {
     drawMA($('maChart'), state.results, { ...view, onSelect: selectFeature });
   }
   drawHeatmap($('heatmapChart'), state.results, state.design, { ...view, mode: activeMode(), onSelect: selectFeature });
+  drawMissingness($('missingnessChart'), samples, state.results, state.design);
+  drawFeatureAbundance($('abundanceChart'), state.selectedFeature, state.results, samples, state.design);
   renderTargetSummary();
   updateAtlasLink();
 }
@@ -1541,6 +1545,12 @@ function renderResults() {
   const tested = result?.audit?.testedFeatures ?? 0;
   $('resultOverview').textContent = `${result.sampleIds.length} 个生物样本 · ${result.featureIds.length.toLocaleString()} 个特征${result.mode === 'expression' ? ' · 仅表达探索' : ` · ${tested.toLocaleString()} 个有效检验`}。技术重复已按样本汇总，原始观测与插补标记随结果包保留。`;
   $('methodSummary').textContent = methodSummary();
+  $('resultMetrics').replaceChildren();
+  for (const [value,label] of [[result.sampleIds.length,'生物样本'],[result.featureIds.length,'输入特征'],[tested,result.mode === 'expression' ? '未进行差异检验' : '有效检验']]) {
+    const card=document.createElement('div'); const strong=document.createElement('strong'); strong.textContent=result.mode==='expression' && label==='未进行差异检验' ? '—' : Number(value).toLocaleString();
+    const caption=document.createElement('span'); caption.textContent=label; card.append(strong,caption); $('resultMetrics').append(card);
+  }
+  syncNavigation();
   renderResultWarnings();
   renderQcTable();
   renderCharts();
@@ -1661,49 +1671,80 @@ function downloadTable(delimiter, extension, mime) {
   saveBlob(new Blob([content], { type: `${mime};charset=utf-8` }), `experianalysis_${stem}.${extension}`);
 }
 
+const FIGURE_LABELS = {correlation:'样本相关性',pca:'PCA',distributions:'样本分布',volcano:'Volcano plot',ma:'MA plot',heatmap:'表达模式热图',abundance:'目标表达 · 各生物样本',missingness:'样本观测与缺失'};
+const figureTitles = {};
+function chartNode(id) { return $(CHART_IDS[id])?.querySelector('svg'); }
+function availableCharts() { return Object.keys(CHART_IDS).filter(id => chartNode(id) && !$(CHART_IDS[id]).closest('.hidden')); }
+function figureOptions(id, studio = false) { return {width: studio ? Number($('studioWidth').value) : undefined, background: studio ? $('studioBackground').value : 'white', title: studio ? ($('studioTitleInput').value.trim() || undefined) : undefined}; }
 function chartSvgMarkup(id) {
-  const svg = $(CHART_IDS[id])?.querySelector('svg');
-  if (!svg) throw new Error('此图当前没有可导出的 SVG。');
-  const clone = svg.cloneNode(true);
-  clone.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
-  clone.setAttribute('width', svg.viewBox.baseVal.width);
-  clone.setAttribute('height', svg.viewBox.baseVal.height);
-  clone.removeAttribute('role');
-  clone.querySelectorAll('[tabindex]').forEach((node) => node.removeAttribute('tabindex'));
-  return new XMLSerializer().serializeToString(clone);
+  const svg=chartNode(id); if(!svg) throw new Error('请先选择目标或生成此图。');
+  return serializeFigure(svg, {background:'white'});
 }
-
-async function downloadChart(id, format) {
+async function downloadChart(id, format, studio = false) {
   try {
-    const markup = chartSvgMarkup(id);
-    if (format === 'svg') {
-      saveBlob(new Blob([markup], { type: 'image/svg+xml;charset=utf-8' }), `experianalysis_${id}.svg`);
-      return;
+    const svg=chartNode(id); if(!svg) throw new Error('请先选择目标或生成此图。');
+    const options=studio ? figureOptions(id,true) : {width:2400,background:'white'};
+    const blob=format==='svg' ? new Blob([serializeFigure(svg,options)],{type:'image/svg+xml;charset=utf-8'}) : await exportFigurePng(svg,options);
+    saveBlob(blob,`experianalysis_${id}.${format}`);
+    if(studio) $('studioStatus').textContent=`已生成 ${format.toUpperCase()} · ${options.width} px 宽。`;
+    else setAlert('resultAlert',`${FIGURE_LABELS[id]} ${format.toUpperCase()} 已生成。`,true);
+  } catch(error) { if(studio) $('studioStatus').textContent=error.message; else setAlert('resultAlert',error.message); }
+}
+function renderStudio() {
+  const id=$('studioChart').value; const svg=chartNode(id); $('studioPreview').replaceChildren();
+  if(!svg){$('studioStatus').textContent='此图暂无数据，请返回结果页选择目标。';return;}
+  try {
+    const xml=new DOMParser().parseFromString(serializeFigure(svg,figureOptions(id,true)),'image/svg+xml');
+    if(xml.querySelector('parsererror')) throw new Error('图形解析失败，请重新选择。');
+    $('studioPreview').append(document.importNode(xml.documentElement,true));
+    $('studioPreview').parentElement.classList.toggle('is-transparent',$('studioBackground').value==='transparent');
+    $('studioStatus').textContent=`${FIGURE_LABELS[id]} · 导出宽度 ${$('studioWidth').value} px · 高度按原图比例计算`;
+  } catch(error){$('studioStatus').textContent=error.message;}
+}
+function openStudio(id) {
+  const ids=availableCharts(); if(!ids.length){setAlert('resultAlert','请先完成分析，再打开制图工作室。');return;}
+  $('studioChart').replaceChildren(...ids.map(key=>new Option(FIGURE_LABELS[key],key)));
+  $('studioChart').value=ids.includes(id)?id:ids.includes('pca')?'pca':ids[0];
+  $('studioTitleInput').value=figureTitles[$('studioChart').value]||'';
+  renderStudio(); $('figureStudio').showModal();
+}
+async function downloadAllFigures() {
+  try {
+    const {zipStore}=await import('./export.mjs'); const files={}; const id=$('studioChart').value;
+    figureTitles[id]=$('studioTitleInput').value.trim();
+    const records=[];
+    for(const key of availableCharts()) {
+      const options={width:Number($('studioWidth').value),background:$('studioBackground').value,title:figureTitles[key]||undefined};
+      files[`${key}.svg`]=serializeFigure(chartNode(key),options);
+      records.push({id:key,label:FIGURE_LABELS[key],...options});
     }
-    const blob = new Blob([markup], { type: 'image/svg+xml;charset=utf-8' });
-    const loadSvgImage = () => new Promise((resolve, reject) => {
-        const image = new Image();
-        const url = URL.createObjectURL(blob);
-        const timer = setTimeout(() => { URL.revokeObjectURL(url); reject(new Error('图形转换超时，请重试或导出 SVG。')); }, 10000);
-        image.onload = () => { clearTimeout(timer); URL.revokeObjectURL(url); resolve(image); };
-        image.onerror = () => { clearTimeout(timer); URL.revokeObjectURL(url); reject(new Error('无法将 SVG 转为 PNG。')); };
-        image.src = url;
-      });
-    let bitmap;
-    try { bitmap = 'createImageBitmap' in window ? await createImageBitmap(blob) : await loadSvgImage(); }
-    catch { bitmap = await loadSvgImage(); }
-    const vb = $(CHART_IDS[id]).querySelector('svg').viewBox.baseVal;
-    const canvas = document.createElement('canvas');
-    canvas.width = Math.ceil(vb.width * 2); canvas.height = Math.ceil(vb.height * 2);
-    const context = canvas.getContext('2d');
-    context.fillStyle = '#ffffff'; context.fillRect(0, 0, canvas.width, canvas.height);
-    context.drawImage(bitmap, 0, 0, canvas.width, canvas.height);
-    if (bitmap.close) bitmap.close();
-    const png = await new Promise((resolve, reject) => canvas.toBlob((value) => value ? resolve(value) : reject(new Error('PNG 导出失败。')), 'image/png'));
-    saveBlob(png, `experianalysis_${id}.png`);
-    setAlert('resultAlert', 'PNG 图形已生成。', true);
-  } catch (error) {
-    setAlert('resultAlert', error?.message || String(error));
+    files['figure-settings.json']=JSON.stringify({figures:records,view:currentView(),note:'Display settings only; numerical analysis unchanged.'},null,2);
+    saveBlob(zipStore(files),'experianalysis_figures.zip'); $('studioStatus').textContent=`已打包 ${records.length} 张 SVG 与制图设置。`;
+  } catch(error){$('studioStatus').textContent=error.message;}
+}
+function syncNavigation() {
+  document.querySelectorAll('.rail-nav a,.step-nav a').forEach(link=>{
+    const section=document.querySelector(link.getAttribute('href'));
+    link.setAttribute('aria-disabled',String(!section||section.classList.contains('hidden')));
+  });
+}
+function initializeWorkspace() {
+  syncNavigation();
+  document.querySelectorAll('.rail-nav a,.step-nav a').forEach(link=>link.addEventListener('click',event=>{if(link.getAttribute('aria-disabled')==='true')event.preventDefault();}));
+  const observer=new IntersectionObserver(entries=>{for(const entry of entries){if(entry.isIntersecting){document.querySelectorAll('.rail-nav a').forEach(a=>{const active=a.getAttribute('href')===`#${entry.target.id}`;a.classList.toggle('is-active',active);if(active)a.setAttribute('aria-current','step');else a.removeAttribute('aria-current');});}}},{rootMargin:'-5% 0px -65% 0px'});
+  document.querySelectorAll('main>.panel').forEach(panel=>{observer.observe(panel);new MutationObserver(syncNavigation).observe(panel,{attributes:true,attributeFilter:['class']});});
+  $('openStudioButton').addEventListener('click',()=>openStudio());
+  $('closeStudioButton').addEventListener('click',()=>$('figureStudio').close());
+  $('studioForm').addEventListener('submit',event=>event.preventDefault());
+  $('studioChart').addEventListener('change',()=>{$('studioTitleInput').value=figureTitles[$('studioChart').value]||'';renderStudio();});
+  $('studioTitleInput').addEventListener('input',()=>{figureTitles[$('studioChart').value]=$('studioTitleInput').value;renderStudio();});
+  for(const id of ['studioWidth','studioBackground'])$(id).addEventListener('change',renderStudio);
+  $('studioSvg').addEventListener('click',()=>downloadChart($('studioChart').value,'svg',true));
+  $('studioPng').addEventListener('click',()=>downloadChart($('studioChart').value,'png',true));
+  $('allFiguresButton').addEventListener('click',downloadAllFigures);
+  for(const [key,chartId] of Object.entries(CHART_IDS)) {
+    const actions=$(chartId).closest('figure')?.querySelector('.chart-actions');if(!actions)continue;
+    const button=document.createElement('button');button.type='button';button.textContent='编辑 ↗';button.setAttribute('aria-label',`编辑${FIGURE_LABELS[key]}`);button.addEventListener('click',()=>openStudio(key));actions.prepend(button);
   }
 }
 
@@ -1711,7 +1752,7 @@ function reportHtml() {
   const exploration = activeMode() === 'expression';
   const method = escapeHtml(methodSummary());
   const chartIds = Object.keys(CHART_IDS).filter((id) => !exploration || !['volcano', 'ma'].includes(id));
-  const chartLabels = { correlation: '样本相关性', pca: 'PCA', distributions: '样本分布', volcano: 'Volcano plot', ma: 'MA plot', heatmap: exploration ? 'TPM/FPKM 表达模式热图' : '差异 feature 热图' };
+  const chartLabels = { abundance:'目标表达 · 各生物样本',missingness:'样本观测与缺失', correlation: '样本相关性', pca: 'PCA', distributions: '样本分布', volcano: 'Volcano plot', ma: 'MA plot', heatmap: exploration ? 'TPM/FPKM 表达模式热图' : '差异 feature 热图' };
   const charts = chartIds.map((id) => {
     let markup = '';
     try { markup = chartSvgMarkup(id); } catch { /* This chart is unavailable for the current result. */ }
@@ -1840,6 +1881,7 @@ function bindEvents() {
   $('runButton').addEventListener('click', run);
   $('cancelButton').addEventListener('click', cancelRun);
   $('viewMetric').addEventListener('change', updateView);
+  $('heatmapRows').addEventListener('change', renderCharts);
   $('viewThreshold').addEventListener('input', updateView);
   $('onlyAboveThreshold').addEventListener('change', renderDifferentialTable);
   $('tableSearch').addEventListener('input', renderDifferentialTable);
@@ -1866,3 +1908,5 @@ updateHelperControls();
 updateDesignTools();
 updateAtlasLink();
 void refreshHelperStatus();
+
+initializeWorkspace();

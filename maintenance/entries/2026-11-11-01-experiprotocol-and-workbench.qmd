@@ -1,0 +1,12 @@
+---
+title: "ExperiProtocol 品牌与工作台修订"
+maintenance_id: "MAINT-20261111-01"
+date: "2026-11-11"
+search: false
+---
+
+[ExperiTome 总站](../../index.qmd)恢复原版 E 标志。[ExperiProtocol](../../protocols/index.qmd)使用书页标志，沿用原有实验方法入口和章节地址。
+
+[ExperiAnalysis 浏览器工作台](../../analysis/app/index.html)更新导航、结果页、目标表达图、缺失率图和制图工作室，支持 PNG 和 SVG 导出。[ExperiAtlas](../../atlas/index.html)更新界面、手机布局和标志。
+
+本轮使用已有品牌素材。实验方法版本、Atlas 公开参考及同源方法数据的版本沿用上一轮。本机助手的已发布下载仍是原有版本。

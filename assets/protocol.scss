@@ -187,3 +187,25 @@ code { font-size: .85em; color: #2f6463; background: #eef4f4; }
 .engagement-disclosure { grid-column: 1 / -1; margin: 0; text-align: right; font-size: .7rem; color: #6c7d87; }
 @media (max-width: 600px) { .home-engagement { grid-template-columns: 1fr; gap: .7rem; } .engagement-metrics { justify-content: space-between; } .engagement-disclosure { text-align: left; } }
 @media print { .home-engagement { display: none !important; } }
+
+.research-home .route-card { position: relative; }
+.research-home .route-card h3 { padding-right: 2.9rem; overflow-wrap: anywhere; }
+.research-home .route-card .route-mark {
+  position: absolute;
+  inset: 0.9rem 1rem auto auto;
+  width: 2.35rem;
+  height: 2.35rem;
+  object-fit: contain;
+}
+.protocol-home #title-block-header .title {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+.protocol-home #title-block-header .title::before {
+  content: "";
+  width: 1.55em;
+  height: 1.55em;
+  flex: 0 0 auto;
+  background: url("assets/experiprotocol-mark.svg") center / contain no-repeat;
+}

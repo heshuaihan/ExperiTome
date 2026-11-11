@@ -37,6 +37,7 @@ project:
     - maintenance/entries/2026-10-24-02-experitome-workspace-nodes.qmd
     - maintenance/entries/2026-10-25-01-public-analysis-profile.qmd
     - maintenance/entries/2026-10-27-01-atlas-mapping.qmd
+    - maintenance/entries/2026-11-11-01-experiprotocol-and-workbench.qmd
     - maintenance/index.qmd
     - materials/buffers/BUF-BCA-001_工作液.qmd
     - materials/buffers/BUF-TURBOID-001_富集缓冲液.qmd
@@ -146,16 +147,17 @@ project:
 website:
   site-url: https://heshuaihan.github.io/ExperiTome/
   title: ExperiTome
+  favicon: assets/experitome-logo-v1.png
   search: true
   navbar:
     logo: assets/experitome-logo-v1.png
     logo-alt: ExperiTome
     left:
-      - text: Protocols
+      - text: ExperiProtocol
         href: protocols/index.qmd
-      - text: Data
+      - text: ExperiAtlas
         href: data/index.qmd
-      - text: Analysis
+      - text: ExperiAnalysis
         href: analysis/index.qmd
       - text: Resources
         href: materials/index.qmd

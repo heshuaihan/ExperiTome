@@ -13,8 +13,8 @@
     },
     {
       "path": "charts.mjs",
-      "bytes": 24433,
-      "sha256": "ced4f99b2f90c7615948c67b83c6296f41f7c5e284df627ef80a5b8658c20d9f"
+      "bytes": 39330,
+      "sha256": "c52aa68c4ee9b184669efad337859ad3036f0f5c1d7a1a4af72305e0409c6f60"
     },
     {
       "path": "compute.mjs",
@@ -53,8 +53,13 @@
     },
     {
       "path": "export.mjs",
-      "bytes": 8331,
-      "sha256": "f936b21fe2c63237b4d9f4bf7630f41677558a07699aa0d24e98e8b6ec62081a"
+      "bytes": 8417,
+      "sha256": "472ebabf871b4f7856feeb0e3472739f3bd96f206a958d43ee8a1c2a23cd4c62"
+    },
+    {
+      "path": "figure-export.mjs",
+      "bytes": 11700,
+      "sha256": "e4d16645e912f2e8e0f5a1f071ab48bd0841def341b86383a968cccc17e4dd44"
     },
     {
       "path": "import-worker.mjs",
@@ -68,13 +73,18 @@
     },
     {
       "path": "index.html",
-      "bytes": 31442,
-      "sha256": "4a7e6b1d0d83516b0bae39f5414b5d0e7a8e85b7dc4092c9e09a3a26c0c3c907"
+      "bytes": 36717,
+      "sha256": "db3ac543d06baaa9038ba4e61a29b035eaaf1930b9f2303bf52376fdd8da0436"
     },
     {
       "path": "local-helper-client.mjs",
       "bytes": 7415,
       "sha256": "b54c59b1d16e6bcb9d28f8f32ab00c81c45b9c3669ab02743907830647db83f4"
+    },
+    {
+      "path": "logo.svg",
+      "bytes": 676,
+      "sha256": "aa385aaf1a6d5b0bf353680ada35ebc437e39b6ea86221e7f92c98191161b851"
     },
     {
       "path": "pipeline.mjs",
@@ -93,13 +103,13 @@
     },
     {
       "path": "styles.css",
-      "bytes": 18902,
-      "sha256": "23a2fbf2ee10d6782a86adca558df957fee6c31f1c26d8fb12dd44afc74fb277"
+      "bytes": 29420,
+      "sha256": "0b340ee22fa7dc6b650b174422399f4276bd9afef0acb7b12b86a7252b9024a2"
     },
     {
       "path": "ui.mjs",
-      "bytes": 107809,
-      "sha256": "9f1e8a9b7eef27fa3fb53ab0182c6ebb19ff1b7cd0b1babdce0a1730b2deb7fa"
+      "bytes": 113785,
+      "sha256": "b13e704a0f696a5ef9cd4bbcd94df058bdbdc78375bed927eca603db8956580c"
     },
     {
       "path": "vendor/duckdb/LICENSE",

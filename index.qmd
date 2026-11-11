@@ -30,42 +30,48 @@ body-classes: "library-home research-home"
 :::
 
 ::: {.library-lead}
-ExperiTome从实际研究经验出发，连接实验方法、ExperiAtlas数据入口与分析流程，让研究积累能够被理解、交流和复用。
+ExperiTome 汇集实验方法、跨物种数据查询和分析工具。
 :::
 
 ::: {.library-meta}
 Shuaihan He · 中文内容优先 · 持续维护
 :::
 
-## Explore
+## 选择工具
 
 ::: {.route-grid .research-grid}
 ::: {.route-card}
-### Protocols
+### ExperiProtocol
+
+<img class="route-mark" src="assets/experiprotocol-mark.svg" width="42" height="42" alt="">
 
 从实验路线进入，查看编号步骤、配液、试剂与设备。
 
 **当前：**2条路线 · 8个核心模块 · 方法草案
 
-[进入实验方法 →](protocols/index.qmd)
+[打开 ExperiProtocol →](protocols/index.qmd){.btn .btn-primary}
 :::
 
 ::: {.route-card}
-### Data
+### ExperiAtlas
+
+<img class="route-mark" src="assets/experiatlas-mark.svg" width="42" height="42" alt="">
 
 查询线虫、小鼠和人类的基因与蛋白身份、直接同源关系和精选表达证据。
 
 **当前：**ExperiAtlas GitHub浏览器版 · 三物种数据工作台
 
-[打开 ExperiAtlas →](https://heshuaihan.github.io/ExperiTome/atlas/){.btn .btn-primary target="_blank" rel="noopener"}
+[打开 ExperiAtlas →](atlas/index.html){.btn .btn-primary}
 :::
 
 ::: {.route-card}
-### Analysis
+### ExperiAnalysis
+
+<img class="route-mark" src="assets/experianalysis-mark.svg" width="42" height="42" alt="">
 
 导入 LFQ 蛋白组或基础转录组数据，逐节点选择参数，查看结果并导出图形和复现代码。
 
-**当前：**ExperiAnalysis v0.2.0 · 浏览器分析 · 可选本机助手
+**浏览器工作台：**数据分析、质控与制图
 
 [打开 ExperiAnalysis →](analysis/app/index.html){.btn .btn-primary}
 

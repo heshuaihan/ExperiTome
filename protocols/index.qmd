@@ -1,8 +1,8 @@
 ---
-title: "Protocols"
+title: "ExperiProtocol"
 subtitle: "实验方法与工作流 · 中文详细版"
 description: "总蛋白质组与 TurboID 两条路线，八个操作模块。"
-body-classes: "library-home"
+body-classes: "library-home protocol-home"
 ---
 
 ::: {.library-lead}

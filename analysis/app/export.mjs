@@ -2,6 +2,7 @@
 import {escapeHTML as h,tableToTSV,VERSION} from './core.mjs';
 import {aggregateSamples} from './core.mjs';
 import {nodeConfiguration} from './pipeline.mjs';
+import {serializeFigure} from './figure-export.mjs';
 const encoder=new TextEncoder();
 const crcTable=Array.from({length:256},(_,i)=>{let n=i;for(let j=0;j<8;j++)n=(n&1)?0xedb88320^(n>>>1):n>>>1;return n>>>0;});
 export function crc32(data){let c=0xffffffff;for(const b of data)c=crcTable[(c^b)&255]^(c>>>8);return (c^0xffffffff)>>>0;}
@@ -30,7 +31,7 @@ export function standaloneReport(result,svgs=[]){
 }
 export async function makeResultZip(result,dataset,design,options){
   const clean=Object.fromEntries(Object.entries(options??{}).filter(([k,v])=>k!=='signal'&&typeof v!=='function'&&!(typeof File!=='undefined'&&v instanceof File)));
-  const svgs=typeof document!=='undefined'?[...document.querySelectorAll('.chart-container svg, .chart-host svg, .chart-card svg')].map(s=>new XMLSerializer().serializeToString(s)):[];
+  const svgs=typeof document!=='undefined'?[...document.querySelectorAll('.chart-container svg, .chart-host svg, .chart-card svg')].filter(s=>!s.closest('.hidden')).map(s=>serializeFigure(s,{background:'white'})):[];
   const reproductionInput={dataset:aggregateSamples(dataset,design,clean),options:result.options??clean};
   const files={
     'pipeline.json':JSON.stringify(nodeConfiguration({...clean,filters:dataset.audit?.filters}),null,2),

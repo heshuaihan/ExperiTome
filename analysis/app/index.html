@@ -5,32 +5,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="color-scheme" content="light">
   <title>ExperiAnalysis 分析工作台</title>
+  <link rel="icon" href="./logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
+  <a class="skip-link" href="#data-stage">跳到数据导入</a>
+  <aside class="workspace-rail" aria-label="ExperiAnalysis 导航">
+    <a class="workspace-brand" href="#"><img src="./logo.svg" alt="" width="32" height="32"><span>ExperiAnalysis<small>AN EXPERITOME WORKSPACE</small></span></a>
+    <div class="rail-label">ANALYSIS / 分析工作区</div>
+    <nav class="rail-nav">
+      <a href="#data-stage" class="is-active"><span>01</span> 导入数据 <b>↗</b></a>
+      <a href="#design-stage" aria-disabled="true"><span>02</span> 样本设计 <b>↗</b></a>
+      <a href="#analysis-stage" aria-disabled="true"><span>03</span> 设置分析 <b>↗</b></a>
+      <a href="#results-stage" aria-disabled="true"><span>04</span> 结果与制图 <b>↗</b></a>
+    </nav>
+    <div class="rail-label rail-tools">EXPLORE / 更多工具</div>
+    <a class="rail-link" href="https://heshuaihan.github.io/ExperiTome/atlas/" target="_blank" rel="noopener">ExperiAtlas <span>↗</span></a>
+    <a class="rail-link" href="https://heshuaihan.github.io/ExperiTome/" target="_blank" rel="noopener">实验知识库 <span>↗</span></a>
+    <div class="rail-foot"><span class="privacy-dot"></span> 本地处理 · 文件不上传<small>让分析可探索，让结果可回查。</small></div>
+  </aside>
   <header class="site-header">
-    <div class="brand-row">
-      <a class="brand" href="https://heshuaihan.github.io/ExperiTome/" target="_blank" rel="noopener">ExperiAnalysis <span>by ExperiTome</span></a>
-      <span class="draft-badge">公开版 · v0.2.0</span>
+    <div class="brand-row"><span class="breadcrumb">ExperiTome <span>/</span> Analysis workspace</span><span class="draft-badge">LFQ proteomics & RNA</span></div>
+    <div class="hero-layout">
+      <div class="hero-copy"><p class="eyebrow">FROM DATA TO DISCOVERY</p><h1>从数据出发，<br><span>让结果清晰可见。</span></h1><p class="lede">整理样本，探索差异，制作图表。<br>一条连贯的分析流程，由你选择每一步。</p><a class="hero-start" href="#data-stage">开始分析 <span>↓</span></a></div>
+      <div class="workflow-art" aria-label="分析流程：导入、质控、比较、制图">
+        <div class="workflow-art-top"><span>YOUR ANALYSIS, CONNECTED</span><span class="art-index">01 — 04</span></div>
+        <div class="art-flow"><span class="art-node"><b>01</b>数据</span><i></i><span class="art-node"><b>02</b>设计</span><i></i><span class="art-node"><b>03</b>分析</span></div>
+        <div class="art-output"><span class="art-star">✳</span><div><small>EXPLORE. REFINE. EXPORT.</small><strong>从一个问题，到一组清晰的图。</strong></div><span>↗</span></div>
+        <div class="art-formats"><span>PCA</span><span>Volcano</span><span>Heatmap</span><span>SVG / PNG</span></div>
+      </div>
     </div>
-    <div class="hero-copy">
-      <p class="eyebrow">DATA TO EVIDENCE</p>
-      <h1>分析工作台</h1>
-      <p class="lede">在本机整理样本设计、执行基础差异分析，并导出可回查的结果。</p>
-    </div>
-    <div class="scope-note"><span class="scope-mark" aria-hidden="true">i</span><span>浏览器端可分析 LFQ 蛋白定量表、RNA counts 与 TPM/FPKM。较大的 DIA-NN 报告、XIC 数据及需要 R 的插补可选用 Windows 本机助手；公开页面不会连接本机服务，文件也不会上传到远程服务。</span></div>
+    <details class="scope-note"><summary>支持哪些数据？<span>LFQ · DIA-NN · RNA counts · TPM / FPKM</span></summary><p>浏览器可分析准备好的矩阵。较大的 DIA-NN 报告、XIC 数据和需要 R 的插补可使用 Windows 本机助手；不处理仪器原始文件或 FASTQ。文件在本地读取，不上传到远程服务。</p></details>
   </header>
 
   <main class="page-shell">
     <nav class="step-nav" aria-label="工作流程">
       <a href="#data-stage"><span>01</span> 导入数据</a>
       <a href="#design-stage"><span>02</span> 样本设计</a>
-      <a href="#analysis-stage"><span>03</span> 分析与导出</a>
+      <a href="#analysis-stage"><span>03</span> 设置分析</a>
+      <a href="#results-stage"><span>04</span> 结果与制图</a>
     </nav>
 
     <section class="panel" id="data-stage" aria-labelledby="data-heading">
       <div class="panel-heading">
-        <div><p class="section-kicker">第一步 · 数据</p><h2 id="data-heading">选择输入表</h2></div>
+        <div><p class="section-kicker">第一步 · 数据</p><h2 id="data-heading">把数据带进来。</h2></div>
         <span id="dataStatus" class="status-pill">等待导入</span>
       </div>
       <div class="form-grid form-grid-main">
@@ -50,13 +68,13 @@
         <label class="field hidden" id="expressionUnitWrap"><span>表达量单位</span>
           <select id="expressionUnit"><option value="TPM">TPM</option><option value="FPKM">FPKM</option></select>
         </label>
-        <label class="field file-field"><span>CSV / TSV / TXT / Parquet</span>
+        <label class="field file-field"><span>选择数据文件 <small>CSV / TSV / TXT / Parquet</small></span>
           <input id="dataFile" type="file" accept=".csv,.tsv,.txt,.parquet,text/csv,text/tab-separated-values,text/plain,application/octet-stream">
         </label>
       </div>
       <p class="field-help">第一列应为 Protein.Group 或基因 ID，后续列为样本。导入前请核对尺度；工作台不会猜测或自动转换线性值与 log2 值。</p>
 
-            <section class="local-helper-card" aria-labelledby="helper-heading">
+            <details class="local-helper-card"><summary class="helper-disclosure">大文件与 DIA-NN 深入检查 <span>展开本机助手 ↗</span></summary><div class="helper-body">
         <div class="helper-title-row">
           <div><p class="section-kicker">节点 01 · 本机文件与检查</p><h3 id="helper-heading">本机分析助手（可选）</h3></div>
           <div class="helper-status-actions"><span id="helperStatus" class="status-pill">正在检查本机分析助手</span><button class="button button-small" id="helperRefreshButton" type="button">检查连接</button></div>
@@ -118,7 +136,7 @@
           <div id="helperTargetResult" class="helper-result hidden" role="status" aria-live="polite"></div>
           <div id="helperXicResult" class="helper-result hidden" role="status" aria-live="polite"></div>
         </div>
-      </section>
+      </div></details>
 
       <details class="filters-box" id="proteomicsFilters">
         <summary>蛋白组行筛选与污染物规则</summary>
@@ -152,7 +170,7 @@
 
       <div class="action-row">
         <button class="button button-primary" id="loadButton" type="button">导入所选文件</button>
-        <button class="button button-secondary" id="demoButton" type="button">载入合成示例</button>
+        <button class="button button-secondary" id="demoButton" type="button">用合成示例体验</button>
         <div id="loadProgress" class="progress-copy" role="status" aria-live="polite"></div>
       </div>
       <div id="dataAlert" class="inline-alert hidden" role="alert"></div>
@@ -266,19 +284,20 @@
       <div class="panel-heading results-heading">
         <div><p class="section-kicker">结果 · 本地分析</p><h2 id="results-heading">质量检查与差异结果</h2></div>
         <div class="action-row compact-actions">
+          <button class="button button-secondary" id="openStudioButton" type="button">打开制图工作室 ↗</button>
           <button class="button button-secondary" id="downloadHtmlButton" type="button">下载 HTML 报告</button>
           <button class="button button-primary" id="downloadZipButton" type="button">下载完整结果包</button>
         </div>
       </div>
-      <p id="resultOverview" class="result-overview"></p>
+      <p id="resultOverview" class="result-overview"></p><div id="resultMetrics" class="result-metrics"></div>
       <details class="methods-box"><summary>查看方法、版本与完整筛选记录</summary>
         <div id="methodSummary" class="method-summary"></div>
       </details>
       <div id="resultWarnings" class="warning-panel hidden" role="status" aria-live="polite"></div>
       <section class="result-block" aria-labelledby="qc-heading">
         <div class="subheading"><div><p class="section-kicker">样本 QC</p><h3 id="qc-heading">数据分布与样本关系</h3></div></div>
-        <div class="table-wrap"><table><thead><tr><th>样本</th><th>组别</th><th>检测特征数</th><th>缺失比例</th><th>中位数</th><th>技术重复 CV 中位数</th></tr></thead><tbody id="qcRows"></tbody></table></div>
-        <div class="chart-grid">
+        <details class="qc-table-details"><summary>查看逐样本 QC 数值</summary><div class="table-wrap"><table><thead><tr><th>样本</th><th>组别</th><th>检测特征数</th><th>缺失比例</th><th>中位数</th><th>技术重复 CV 中位数</th></tr></thead><tbody id="qcRows"></tbody></table></div></details>
+        <div class="chart-grid"><figure class="chart-card chart-wide"><figcaption><span>样本观测与缺失</span><span class="chart-actions"><button data-chart="missingness" data-format="svg">SVG</button><button data-chart="missingness" data-format="png">PNG</button></span></figcaption><div class="chart-frame" id="missingnessChart"></div></figure>
           <figure class="chart-card"><figcaption><span>样本相关性</span><span class="chart-actions"><button data-chart="correlation" data-format="svg">SVG</button><button data-chart="correlation" data-format="png">PNG</button></span></figcaption><div class="chart-frame" id="correlationChart"></div></figure>
           <figure class="chart-card"><figcaption><span>PCA</span><span class="chart-actions"><button data-chart="pca" data-format="svg">SVG</button><button data-chart="pca" data-format="png">PNG</button></span></figcaption><div class="chart-frame" id="pcaChart"></div></figure>
           <figure class="chart-card chart-wide"><figcaption><span>样本分布</span><span class="chart-actions"><button data-chart="distributions" data-format="svg">SVG</button><button data-chart="distributions" data-format="png">PNG</button></span></figcaption><div class="chart-frame" id="distributionChart"></div></figure>
@@ -288,6 +307,7 @@
       <section class="result-block" aria-labelledby="diff-heading">
         <div class="subheading"><div><p class="section-kicker" id="diffKicker">差异分析</p><h3 id="diff-heading">比较与目标 feature</h3></div></div>
         <div class="form-grid result-controls">
+          <label class="field"><span>热图特征数</span><select id="heatmapRows"><option value="10">10 个</option><option value="20">20 个</option><option value="40" selected>40 个</option><option value="80">80 个</option></select></label>
           <label class="field" id="viewMetricWrap"><span>查看显著性依据</span><select id="viewMetric"><option value="FDR">FDR</option><option value="PValue">P value</option></select></label>
           <label class="field slider-field" id="viewThresholdWrap"><span>查看阈值 <output id="viewThresholdLabel" for="viewThreshold">≤ 0.050</output></span><input id="viewThreshold" type="range" min="0.0001" max="0.2" step="0.0001" value="0.05"></label>
           <label class="field"><span id="targetFeatureLabel">查找 feature</span><input id="targetFeature" type="search" list="featureOptions" placeholder="输入或选择 ID"><datalist id="featureOptions"></datalist></label>
@@ -302,7 +322,7 @@
         <label class="checkbox-label view-filter-label" id="onlyAboveThresholdWrap"><input id="onlyAboveThreshold" type="checkbox"><span id="onlyAboveThresholdLabel">结果表仅显示达到查看阈值的 feature</span></label>
         <p class="field-help">查看阈值只刷新图表标色与表格，不会重跑分析或改变导出数值。点图中的任意 feature 可将其设为目标。</p>
         <div id="targetSummary" class="target-summary hidden" aria-live="polite"></div>
-        <div class="chart-grid differential-grid">
+        <div class="chart-grid differential-grid"><figure class="chart-card chart-wide"><figcaption><span>目标表达 · 各生物样本</span><span class="chart-actions"><button data-chart="abundance" data-format="svg">SVG</button><button data-chart="abundance" data-format="png">PNG</button></span></figcaption><div class="chart-frame" id="abundanceChart"></div></figure>
           <figure class="chart-card chart-wide" id="volcanoPanel"><figcaption><span>Volcano plot</span><span class="chart-actions"><button data-chart="volcano" data-format="svg">SVG</button><button data-chart="volcano" data-format="png">PNG</button></span></figcaption><div class="chart-frame" id="volcanoChart"></div></figure>
           <figure class="chart-card chart-wide" id="maPanel"><figcaption><span>MA plot</span><span class="chart-actions"><button data-chart="ma" data-format="svg">SVG</button><button data-chart="ma" data-format="png">PNG</button></span></figcaption><div class="chart-frame" id="maChart"></div></figure>
           <figure class="chart-card chart-wide"><figcaption><span id="heatmapCaption">差异 feature 热图 · 最多 40 个</span><span class="chart-actions"><button data-chart="heatmap" data-format="svg">SVG</button><button data-chart="heatmap" data-format="png">PNG</button></span></figcaption><div class="chart-frame" id="heatmapChart"></div></figure>
@@ -320,6 +340,16 @@
     </section>
   <footer class="page-footer"><span>ExperiAnalysis · by ExperiTome · v0.2.0</span><span>数据由浏览器本地处理；结果需结合实验设计与原始记录复核。</span></footer>
   </main>
+  <dialog id="figureStudio" class="figure-studio" aria-labelledby="studioTitle">
+    <div class="studio-heading"><div><p class="eyebrow">FIGURE STUDIO</p><h2 id="studioTitle">把发现，呈现得更清晰。</h2></div><button id="closeStudioButton" class="studio-close" aria-label="关闭制图工作室">×</button></div>
+    <div class="studio-layout"><div class="studio-canvas"><div id="studioPreview"></div><p id="studioStatus" role="status" aria-live="polite"></p></div>
+    <form class="studio-controls" id="studioForm"><label class="field"><span>选择图形</span><select id="studioChart"></select></label>
+    <label class="field"><span>图标题（可选）</span><input id="studioTitleInput" maxlength="90" placeholder="输入图标题"></label>
+    <label class="field"><span>PNG / SVG 宽度</span><select id="studioWidth"><option value="1200">1,200 px · 快速分享</option><option value="2400" selected>2,400 px · 报告与排版</option><option value="3600">3,600 px · 大幅图形</option></select></label>
+    <label class="field"><span>背景</span><select id="studioBackground"><option value="white">纯白</option><option value="transparent">透明</option></select></label>
+    <div class="studio-export"><button type="button" class="button button-primary" id="studioPng">下载 PNG</button><button type="button" class="button button-secondary" id="studioSvg">下载 SVG</button><button type="button" class="button button-secondary" id="allFiguresButton">打包全部图形 SVG</button></div>
+    <p class="field-help">SVG 保留矢量文字与图形。样式设置不改变分析数值；查看阈值与所选目标沿用结果页。</p></form></div>
+  </dialog>
   <script type="module" src="./ui.mjs"></script>
 </body>
 </html>
